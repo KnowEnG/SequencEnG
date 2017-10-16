@@ -15,6 +15,10 @@ let treeData = {
 $.getJSON("./data/tree.json")
     .done(function( data ) {
 
+      $(".modalclose").click(function(){
+          $("#modalbox").hide();
+      });
+
     	let dataObject = {};
 
 
@@ -87,8 +91,25 @@ function show_description(data){
         let $divRowButton = $("<div>", {"class": "row justify-content-md-center button-row"});
         $divRowButton.append("<button class='btn btn-sucess show-chart'>Show steps</button>");
 
+        let $imgBox = $("<div>", {"class" : "row"});
+        
+        let $figure = $("<figure>",{"class" : "normalimg"});
+        let $descimg = $("<img>", {"id" : "descimg", "alt" : data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg"});
+        $figure.append($descimg);
+        $imgBox.append($figure);
 
-        $divContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper, $divRowButton);
+
+        let $modal = $("#modalbox");
+        let $imgmodal = $("#img-modal");
+
+        //modal event
+        $descimg.click(function(){
+            $modal.show();
+            $imgmodal.attr("src",  "./img/"+data.seq_name+".jpeg");
+            $("#caption").text(data.seq_fullname);
+        });
+
+        $divContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper, $imgBox, $divRowButton);
 
         return $divContainer;
 
