@@ -1,5 +1,25 @@
+/*TITLE*/
+h1 {
+    margin-top: 0;
+    color: coral;
+    font-size: 50px;
+}
+.main-title .app-name{
+  text-align: center;
+}
+.main-title .app-fund{
+  text-align: right;
+}
+
+
+#main{
+  display: none;
+}
+
+
+/*FLOW CHART*/
 #table,table,thead,tbody,th,tr{
-	text-align: center;
+  text-align: center;
 }
 
 div.dataTables_wrapper {
@@ -7,15 +27,17 @@ div.dataTables_wrapper {
 }
 
 .block-arrow{
-	font-size: 30px;
-	font-weight: bold;
-	text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 
- .node circle {
- 
-  stroke: seagreen;
-  stroke-width: 3px;
+
+
+/*DESKTOP NODE CIRCLE*/
+.node circle {
+ stroke: seagreen;
+ stroke-width: 3px;
 }
 
 .link {
@@ -24,62 +46,57 @@ div.dataTables_wrapper {
   stroke-width: 2px;
 }
 
-.desc-text{
-	display: none;
-    border-radius: 5px;
-   
-
-}
-
+/*LARGE DESKTOP SCREEN SIZE > 1200 px */
 @media screen and (min-width: 1200px) {
-  #desc-detail{
-    position: fixed;
-    top:50%;
-    height: 350px;
-    width: 350px;
-    transform: translate(0,-50%);
-
+  .tree-field{
+    position : relative;
   }
 
+  #desc-detail{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+  }
+  
   .leaf-node{
-    font-size: 14px;
     font-weight: bold;
   }
 }
 
 
 
+/*MOBILE TABLET */
+.mobile-selected rect{
+  stroke: green;
+  stroke-width: 3; 
+}
 
+
+
+/*COMMON*/
+.desc-text{
+  display: none;
+ 
+}
 #desc-detail .row{
-	margin-bottom: 30px;
+  margin-bottom: 30px;
   font-size: 14px;
 }
 
 .hovered{
-	display: block;
+  display: block;
 
 }
 
-h1 {
-    margin-top: 0;
-    color: coral;
-    font-size: 50px;
-}
-
-#main{
-	display: none;
-}
-
-.main-title .app-name{
-  text-align: center;
-}
-.main-title .app-fund{
-  text-align: right;
+.figure-box{
+  //padding: 0 10px;
 }
 
 #descimg { 
-  width:150px;
-  height : 200px;
+  width:100%;
+  
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
@@ -91,6 +108,9 @@ h1 {
   opacity: 0.7;
 }
 
+
+
+/*MODAL*/
 .modal{
    display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

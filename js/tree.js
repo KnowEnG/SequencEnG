@@ -1,7 +1,13 @@
 
 
 //device viewport
-const deviceW = $(window).width();   // returns width of browser viewport
+const CURRENT_WINDOW_WIDTH = $(window).width();   // returns width of browser viewport
+const DESKTOP_WINDOW_LIMIT = 1200;
+const DESKTOP_TREE_WIDTH = CURRENT_WINDOW_WIDTH * 0.65;
+const DESKTOP_TREE_HEIGHT = 1200;
+
+const DESKTOP_DETAIL_BOX_SIZE = (CURRENT_WINDOW_WIDTH * 0.25) + 'px';
+
 
 
 let treeData = {
@@ -21,6 +27,8 @@ $.getJSON("./data/tree.json")
 
     	let dataObject = {};
 
+
+      //Data to tree structure 
 
     	for(let i= 0; i < data.length; i++){
     		if(typeof dataObject[data[i].seq_goal_level1] !== 'undefined'){
@@ -76,25 +84,33 @@ $.getJSON("./data/tree.json")
 function show_description(data){
 
 
-      let $divContainer = $("<div>", {id: "desc-detail", "class": "container"});
+      let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper"});
     
       // notes, seq_fullname, year, paper_title paper_link
-        let $divRowName = $("<div>", {"class": "row "});
-        $divRowName.append("<div>Full name : " + data.seq_fullname + "</div>");
-        let $divRowNote = $("<div>", {"class": "row"});
-        $divRowNote.append("<div>Description : " + data.notes + "</div>");
-        let $divRowYear = $("<div>", {"class": "row"});
-        $divRowYear.append("<div>Year : " + data.year + "</div>"); 
-        let $divRowPaper = $("<div>", {"class": "row"});
-        $divRowPaper.append("Paper  <a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a>");
+        let $divRowName = data.seq_fullname?
+                          $("<div>", {"class": "chart-title row justify-content-center"})
+                          .append("<div>" + data.seq_fullname + "</div>"):"";
+
+        
+        let $divRowNote = data.notes?
+                          $("<div>", {"class": "row chart-notes"})
+                          .append("<div>Description : " + data.notes + "</div>"):"";
+        
+        let $divRowYear = data.year?
+                          $("<div>", {"class": "row chart-notes"})
+                         .append("<div>Year : " + data.year + "</div>"):""; 
+        
+        let $divRowPaper = data.paper_link?
+                          $("<div>", {"class": "row chart-notes"})
+                          .append("Paper :  <a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a>"):"";
 
         let $divRowButton = $("<div>", {"class": "row justify-content-md-center button-row"});
         $divRowButton.append("<button class='btn btn-sucess show-chart'>Show steps</button>");
 
         let $imgBox = $("<div>", {"class" : "row"});
         
-        let $figure = $("<figure>",{"class" : "normalimg"});
-        let $descimg = $("<img>", {"id" : "descimg", "alt" : data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg"});
+        let $figure = $("<figure>",{"class" : "figure-box"});
+        let $descimg = $("<img>", {"id" : "descimg", "alt" : "Image of " + data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg", "title" : "Click for bigger image"});
         $figure.append($descimg);
         $imgBox.append($figure);
 
@@ -116,13 +132,13 @@ function show_description(data){
 
 }    	
 
-//desktop
-if(deviceW > 1024){
+//Laege desktop
+if(CURRENT_WINDOW_WIDTH > DESKTOP_WINDOW_LIMIT){
 
     
   let margin = {top: 20, right: 90, bottom: 30, left: 90},
-      width = 1000 - margin.left - margin.right,
-      height =1200- margin.top - margin.bottom;
+      width = DESKTOP_TREE_WIDTH - margin.left - margin.right,
+      height = DESKTOP_TREE_HEIGHT - margin.top - margin.bottom;
 
   let svg = d3.select("#tree").append("svg")
       .attr("width", width + margin.right + margin.left)
@@ -192,7 +208,7 @@ if(deviceW > 1024){
             return d.children || d._children ? "end" : "start";
         })
         .attr("font-size", function(d){
-          return d.children || d._children ? "12" : "14";
+          return d.children || d._children ? "14" : "16";
         })
         .attr("font-weight",function(d){
           return d.children || d._children ? "normal" : "bold";
@@ -205,6 +221,7 @@ if(deviceW > 1024){
                 $descText.hide();
 
                 $("#desc").html($descText);
+                $("#desc-detail").css("width", DESKTOP_DETAIL_BOX_SIZE);
 
                 $(".show-chart").on('click', function(){
                     $(".tree-field").slideUp('slow');
@@ -320,7 +337,7 @@ if(deviceW > 1024){
 else{
 
   let margin = {top: 30, right: 20, bottom: 30, left: 20},
-      width = deviceW - margin.right - margin.left,
+      width = CURRENT_WINDOW_WIDTH - margin.right - margin.left,
       barHeight = 30,
       barWidth = width;
 
@@ -432,8 +449,11 @@ else{
   // Toggle children on click.
   function click(d) {
 
+
     if(typeof d.data.children === 'undefined'){
 
+                $("g.node").removeClass("mobile-selected");
+                $(this).parent().addClass('mobile-selected');
 
                 let $descText = show_description(d.data);
                 $descText.hide();
