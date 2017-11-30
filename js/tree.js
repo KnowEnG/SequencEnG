@@ -1,147 +1,22 @@
 
 
 //device viewport
-const CURRENT_WINDOW_WIDTH = $(window).width();   // returns width of browser viewport
-const DESKTOP_WINDOW_LIMIT = 1200;
+let CURRENT_WINDOW_WIDTH = $(window).width();   // returns width of browser viewport
+const DESKTOP_WINDOW_LIMIT = 1280;
 const DESKTOP_TREE_WIDTH = CURRENT_WINDOW_WIDTH * 0.65;
-const DESKTOP_TREE_HEIGHT = 1200;
+const DESKTOP_TREE_HEIGHT = 1280;
 
 const DESKTOP_DETAIL_BOX_SIZE = (CURRENT_WINDOW_WIDTH * 0.25) + 'px';
 
 
 
-let treeData = {
-	"name" : "Training",
-	 "parent": "null",
-    "children": []
-
-}
-
-
-$.getJSON("./data/tree.json")
-    .done(function( data ) {
-
-      $(".modalclose").click(function(){
-          $("#modalbox").hide();
-      });
-
-    	let dataObject = {};
-
-
-      //Data to tree structure 
-
-    	for(let i= 0; i < data.length; i++){
-    		if(typeof dataObject[data[i].seq_goal_level1] !== 'undefined'){
-    			let leafNode = data[i];
-    			leafNode.name = data[i].seq_name;
-    			if(typeof dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] !== "undefined"){
-    				dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
-    			}
-
-    			else{
-    				dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] = [];
-    				dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
-    			}
-
-    		}
-    		else{
-    			dataObject[data[i].seq_goal_level1] = {};
-    			dataObject[data[i].seq_goal_level1].child = {};
-
-    			dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] = [];
-
-
-    			let leafNode = data[i];
-    			leafNode.name = data[i].seq_name;
-    			dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
-
-
-    		}
-
-
-    	}
-
-    	
-
-    	for(let key in dataObject){
-    		let child_node = {};
-    		child_node.name = key; 
-    		child_node.children = []; 
-
-    		for(let childKey in dataObject[key].child){
-    			let childObject = {};
-    			childObject.name = childKey;
-    			childObject.children = dataObject[key].child[childKey];
-    			child_node.children.push(childObject);
-    		}
-
-    		treeData.children.push(child_node);
-
-    	}
-
-
-
-function show_description(data){
-
-
-      let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper"});
-    
-      // notes, seq_fullname, year, paper_title paper_link
-        let $divRowName = data.seq_fullname?
-                          $("<div>", {"class": "chart-title row justify-content-center"})
-                          .append("<div>" + data.seq_fullname + "</div>"):"";
-
-        
-        let $divRowNote = data.notes?
-                          $("<div>", {"class": "row chart-notes"})
-                          .append("<div>Description : " + data.notes + "</div>"):"";
-        
-        let $divRowYear = data.year?
-                          $("<div>", {"class": "row chart-notes"})
-                         .append("<div>Year : " + data.year + "</div>"):""; 
-        
-        let $divRowPaper = data.paper_link?
-                          $("<div>", {"class": "row chart-notes"})
-                          .append("Paper :  <a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a>"):"";
-
-        let $divRowButton = $("<div>", {"class": "row justify-content-md-center button-row"});
-        $divRowButton.append("<button class='btn btn-sucess show-chart'>Show steps</button>");
-
-        let $imgBox = $("<div>", {"class" : "row"});
-        
-        let $figure = $("<figure>",{"class" : "figure-box"});
-        let $descimg = $("<img>", {"id" : "descimg", "alt" : "Image of " + data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg", "title" : "Click for bigger image"});
-        $figure.append($descimg);
-        $imgBox.append($figure);
-
-
-        let $modal = $("#modalbox");
-        let $imgmodal = $("#img-modal");
-
-        //modal event
-        $descimg.click(function(){
-            $modal.show();
-            $imgmodal.attr("src",  "./img/"+data.seq_name+".jpeg");
-            $("#caption").text(data.seq_fullname);
-        });
-
-        $divContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper, $imgBox, $divRowButton);
-
-        return $divContainer;
-
-
-}    	
-
-//Laege desktop
-if(CURRENT_WINDOW_WIDTH > DESKTOP_WINDOW_LIMIT){
-
-    
+function draw_tree(){
   let margin = {top: 20, right: 90, bottom: 30, left: 90},
       width = DESKTOP_TREE_WIDTH - margin.left - margin.right,
       height = DESKTOP_TREE_HEIGHT - margin.top - margin.bottom;
 
   let svg = d3.select("#tree").append("svg")
-      .attr("width", width + margin.right + margin.left)
+      .attr("width", "100%")
       .attr("height", height + margin.top + margin.bottom)
     .append("g")
       .attr("transform", "translate("
@@ -215,6 +90,7 @@ if(CURRENT_WINDOW_WIDTH > DESKTOP_WINDOW_LIMIT){
         })
         .text(function(d) { return d.data.name; })
         .on("mouseenter", function(d){
+          
             //console.log(d);
             if(typeof d.data.children === 'undefined'){
                 let $descText = show_description(d.data);
@@ -328,14 +204,9 @@ if(CURRENT_WINDOW_WIDTH > DESKTOP_WINDOW_LIMIT){
   }
 
 
-
-
 }
 
-
-//tablet, mobile
-else{
-
+function draw_table(){
   let margin = {top: 30, right: 20, bottom: 30, left: 20},
       width = CURRENT_WINDOW_WIDTH - margin.right - margin.left,
       barHeight = 30,
@@ -482,6 +353,164 @@ else{
   function color(d) {
     return d._children ? "seagreen" : d.children ? "mediumseagreen" : "lightgreen";
   }
+}
+
+function show_description(data){
+
+
+      let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper"});
+    
+      // notes, seq_fullname, year, paper_title paper_link
+        let $divRowName = data.seq_fullname?
+                          $("<div>", {"class": "chart-title row justify-content-center"})
+                          .append("<div>" + data.seq_fullname + "</div>"):"";
+
+        
+        let $divRowNote = data.notes?
+                          $("<div>", {"class": "row chart-notes"})
+                          .append("<div>Description : " + data.notes + "</div>"):"";
+        
+        let $divRowYear = data.year?
+                          $("<div>", {"class": "row chart-notes"})
+                         .append("<div>Year : " + data.year + "</div>"):""; 
+        
+        let $divRowPaper = data.paper_link?
+                          $("<div>", {"class": "row chart-notes"})
+                          .append("Paper :  <a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a>"):"";
+
+        let $divRowButton = $("<div>", {"class": "row justify-content-md-center button-row"});
+        $divRowButton.append("<button class='btn btn-sucess show-chart'>Show steps</button>");
+
+        let $imgBox = $("<div>", {"class" : "row"});
+        
+        let $figure = $("<figure>",{"class" : "figure-box"});
+        let $descimg = $("<img>", {"id" : "descimg", "alt" : "Image of " + data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg", "title" : "Click for bigger image"});
+        $figure.append($descimg);
+        $imgBox.append($figure);
+
+
+        let $modal = $("#modalbox");
+        let $imgmodal = $("#img-modal");
+
+        //modal event
+        $descimg.click(function(){
+            $modal.show();
+            $imgmodal.attr("src",  "./img/"+data.seq_name+".jpeg");
+            $("#caption").text(data.seq_fullname);
+        });
+
+        $divContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper, $imgBox, $divRowButton);
+
+        return $divContainer;
+
+
+}
+
+$(window).resize(function(){
+      let changed = $(window).width(); 
+      if(changed > DESKTOP_WINDOW_LIMIT && CURRENT_WINDOW_WIDTH < DESKTOP_WINDOW_LIMIT){
+        d3.select("svg").remove();
+        $('#desc-detail').hide();
+        CURRENT_WINDOW_WIDTH = changed;
+        draw_tree();
+      }
+      else if(changed < DESKTOP_WINDOW_LIMIT && CURRENT_WINDOW_WIDTH > DESKTOP_WINDOW_LIMIT){
+        d3.select("svg").remove();
+         $('#desc-detail').hide();
+         CURRENT_WINDOW_WIDTH = changed;
+        draw_table();
+      }
+});
+
+let treeData = {
+	"name" : "Training",
+	 "parent": "null",
+    "children": []
+
+}
+
+
+$.getJSON("./data/tree.json")
+    .done(function( data ) {
+
+      $(".modalclose").click(function(){
+          $("#modalbox").hide();
+      });
+
+    	let dataObject = {};
+
+
+      //Data to tree structure 
+
+    	for(let i= 0; i < data.length; i++){
+    		if(typeof dataObject[data[i].seq_goal_level1] !== 'undefined'){
+    			let leafNode = data[i];
+    			leafNode.name = data[i].seq_name;
+    			if(typeof dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] !== "undefined"){
+    				dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
+    			}
+
+    			else{
+    				dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] = [];
+    				dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
+    			}
+
+    		}
+    		else{
+    			dataObject[data[i].seq_goal_level1] = {};
+    			dataObject[data[i].seq_goal_level1].child = {};
+
+    			dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] = [];
+
+
+    			let leafNode = data[i];
+    			leafNode.name = data[i].seq_name;
+    			dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
+
+
+    		}
+
+
+    	}
+
+    	
+
+    	for(let key in dataObject){
+    		let child_node = {};
+    		child_node.name = key; 
+    		child_node.children = []; 
+
+    		for(let childKey in dataObject[key].child){
+    			let childObject = {};
+    			childObject.name = childKey;
+    			childObject.children = dataObject[key].child[childKey];
+    			child_node.children.push(childObject);
+    		}
+
+    		treeData.children.push(child_node);
+
+    	}
+
+
+
+    	
+
+
+//Laege desktop
+if(CURRENT_WINDOW_WIDTH > DESKTOP_WINDOW_LIMIT){
+
+    
+  
+  draw_tree();
+
+}
+
+
+//tablet, mobile
+else{
+
+  draw_table();
+  
 
 }
 

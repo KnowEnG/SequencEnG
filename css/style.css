@@ -46,8 +46,8 @@ div.dataTables_wrapper {
   stroke-width: 2px;
 }
 
-/*LARGE DESKTOP SCREEN SIZE > 1200 px */
-@media screen and (min-width: 1200px) {
+/*LARGE DESKTOP SCREEN SIZE > 1280 px */
+@media screen and (min-width: 1280px) {
   .tree-field{
     position : relative;
   }
