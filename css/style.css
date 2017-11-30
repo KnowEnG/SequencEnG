@@ -1,3 +1,5 @@
+
+
 /*TITLE*/
 h1 {
     margin-top: 0;
@@ -46,8 +48,10 @@ div.dataTables_wrapper {
   stroke-width: 2px;
 }
 
+
+
 /*LARGE DESKTOP SCREEN SIZE > 1280 px */
-@media screen and (min-width: 1280px) {
+@media only screen and (min-width: 1200px) {
   .tree-field{
     position : relative;
   }
@@ -65,14 +69,41 @@ div.dataTables_wrapper {
     font-weight: bold;
   }
 }
+@media only screen and (max-width: 1200px){
+    .node rect {
+    cursor: pointer;
+    fill: #fff;
+    fill-opacity: .5;
+    stroke: #3182bd;
+    stroke-width: 1px;
+  }
+
+  .node text {
+  
+    pointer-events: none;
+   transform: perspective(1px) scale(1.1) translate3d(0,0,0);
+  }
+
+  #tree{
+  
 
 
+  }
+  #tree svg{
+       -webkit-transition: height 0.4s;
+    transition: height 0.4s;
+  
 
-/*MOBILE TABLET */
+  }
+
+  /*MOBILE TABLET */
 .mobile-selected rect{
-  stroke: green;
+  stroke: #4c8c4c;
   stroke-width: 3; 
 }
+
+}
+
 
 
 
@@ -92,7 +123,7 @@ div.dataTables_wrapper {
 }
 
 .figure-box{
-  //padding: 0 10px;
+  padding: 0 10px;
 }
 
 #descimg { 

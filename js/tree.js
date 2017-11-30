@@ -2,9 +2,9 @@
 
 //device viewport
 let CURRENT_WINDOW_WIDTH = $(window).width();   // returns width of browser viewport
-const DESKTOP_WINDOW_LIMIT = 1280;
+const DESKTOP_WINDOW_LIMIT = 1200;
 const DESKTOP_TREE_WIDTH = CURRENT_WINDOW_WIDTH * 0.65;
-const DESKTOP_TREE_HEIGHT = 1280;
+const DESKTOP_TREE_HEIGHT = 1200;
 
 const DESKTOP_DETAIL_BOX_SIZE = (CURRENT_WINDOW_WIDTH * 0.25) + 'px';
 
@@ -214,12 +214,13 @@ function draw_table(){
 
 
   let i = 0,
-      duration = 750,
+      duration = 400,
       root;
 
 
   let svg = d3.select("#tree").append("svg")
       .attr('width', width + margin.right + margin.left)
+      .attr('height', "100%")
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -258,9 +259,11 @@ function draw_table(){
     })
 
 
+    $("#tree svg").height(nodesSort.length * barHeight + margin.top + margin.bottom);
+
     d3.select("svg").transition()
         .duration(duration)
-        .attr("height", nodesSort.length * barHeight + margin.top + margin.bottom);
+        // .attr("height", nodesSort.length * barHeight + margin.top + margin.bottom);
 
     // Update the nodes…
     let node = svg.selectAll("g.node")
@@ -283,8 +286,7 @@ function draw_table(){
         .attr("dy", 3.5)
         .attr("dx", 5.5)
         .text(function (d) {
-          return d.depth == 0 ? d.data.name + " >>>" : d.depth == 1 ? d.data.name + " >>" : d.data.name ; })
-         .on("click", click);
+          return d.depth == 0 ? d.data.name + " >>>" : d.depth == 1 ? d.data.name + " >>" : d.data.name ; });
 
     // Transition nodes to their new position.
     nodeEnter.transition()
@@ -347,6 +349,8 @@ function draw_table(){
       d.children = d._children;
       d._children = null;
     }
+
+
     update(d);
   }
 
