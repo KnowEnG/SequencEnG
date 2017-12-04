@@ -50,26 +50,35 @@ div.dataTables_wrapper {
 
 
 
-/*LARGE DESKTOP SCREEN SIZE > 1280 px */
-@media only screen and (min-width: 1200px) {
+/*LARGE DESKTOP SCREEN SIZE > 768 px */
+@media only screen and (min-width: 768px) {
+
+  #tree{
+
+  }
   .tree-field{
     position : relative;
-  }
-
-  #desc-detail{
-    position: absolute;
-    top:50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin-right: -50%;
 
   }
   
-  .leaf-node{
-    font-weight: bold;
+  
+  #desc-detail{
+   
+  }
+  
+  #desc{
+      position: absolute;
+    top:30%;
+    right: 0;
+    transform: translate(0,-30%);
+    margin-right: 100px;
+  }
+
+  .node text{
+    cursor: pointer;
   }
 }
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 768px){
     .node rect {
     cursor: pointer;
     fill: #fff;

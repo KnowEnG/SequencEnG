@@ -26,13 +26,14 @@ $(document).ready(function() {
 	});
 
   $("#tree-button").click(function(){
+
        $("#main").slideUp('slow');
       $(".tree-field").delay('850').slideDown('slow');
+       $(".tree-button").show();
   });
 
 	var step = ['quality control of reads','read mapping', 'quality control after mapping','differential binding', 'peak calling','peak annotation','motif analysis',  'gene ontology analysis']
 
-	var data = [];
 	$.getJSON("./data/data.json")
     .done(function( data ) {
 
@@ -46,9 +47,15 @@ $(document).ready(function() {
        		}
 
        		else{
+
+            //set a block key as step name
        			Blocks[key] = new Block(key);
 
+
+            //get software description field 
        			Blocks[key].set_fields(Object.keys(data[i]), 1);
+
+            //push software data relate to step
        			Blocks[key].push_data(data[i], data[i].software);
        		}
 
