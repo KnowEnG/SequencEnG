@@ -1,15 +1,38 @@
-function Block(name){
+function Block(name, order, parent, nextStep,nextStepCount, seq_name){
 	
-
+	//step name
 	this.name = name;
 
+	this.id = this.name.replace(/\s/g,''); 
+
+	//software datas
 	this.data = {};
 
+	//software info table 
 	this.table = "";
 
+
+	//block frame
 	this.frame = "";
 
+
+	//software data fields 
 	this.fields = [];
+
+
+	//order of step
+	this.order = seq_name + "-" + order.toString().replace(".", "\.");
+
+	//parent step 
+	this.parent = parent;
+
+	this.seq_name = seq_name;
+
+	this.nextStep = nextStep;
+
+	this.nextStepCount = nextStepCount;
+
+	this.subStepCount = 0;
 
 
 
@@ -26,21 +49,50 @@ Block.prototype.push_data = function(data, key) {
 };
 
 
-Block.prototype.render = function(horizontal){
+Block.prototype.render = function(){
 
-	var id = this.name.replace(/\s/g,''); 
-	this.frame = "<div class=\'" + horizontal + " block\'>"
-					+"<div class=\'container\'>"
+	let isSub = this.parent!==""?"-sub":"";
+	let order = "#" + this.order + isSub;
+
+	let containerID = this.id + "-container";
+
+	if(!$(order).length){
+		
+		let orderFrame = "<div class=\'row justify-content-center order-frame\' id=\'" + this.order + isSub +  "\'></div>";
+		$("#chart").append(orderFrame);
+	}
+
+	else{
+		$(order).removeClass("justify-content-center");
+		$(order).addClass('justify-content-between');
+	}
+
+	this.frame = "<div class=\'col-md-4 block\'>"
+					+"<div id=\'"+containerID+"\' class=\'container-fluid\'>"
 						+"<div class=\'row justify-content-center \'>"
-							+"<Button class=\'block-button btn btn-outline-primary\' id=\'"+id+"\'>" + this.name + "</Button>"
+							+"<Button class=\'block-button btn btn-outline-primary\' id=\'"+this.id+"\'>" + this.name + "</Button>"
 						+"</div>"
-						+"<div class=\'row justify-content-md-center arrow-container\'>"
-							+"<div class=\'col-md-2 block-arrow d-none d-md-block\' id=\'" + id + "swarr\'></div>"
-							+"<div class=\'col-md-2 block-arrow\' id=\'" + id + "darr\'></div>"
-							+"<div class=\'col-md-2 block-arrow d-none d-md-block\' id=\'" + id + "searr\'></div>"
-						+ "</div>"
 					+"</div>"
 				+"</div>";
+
+
+	$(order).append(this.frame);
+
+	//not first step, getting arrow 
+	if(this.nextStep !== 2){
+		$("#" + containerID + " .row .block-button").append("<span class=\'arrowTarget\'></span>")
+
+	}
+
+
+	
+	
+	if(isSub !== ""){
+		$(order).hide();
+	}
+	
+
+
 
 };
 

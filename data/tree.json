@@ -138,7 +138,7 @@
     "seq_fullname": "chromatin immunoprecipitation sequencing",
     "year": 2007,
     "paper_title": "Genome-wide profiles of STAT1 DNA association using chromatin immunoprecipitation and massively parallel sequencing.",
-    "has_step": 0,
+    "has_step": 1,
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17558387",
     "notes": "widely used"
   },
@@ -534,7 +534,7 @@
     "seq_fullname": "",
     "year": "",
     "paper_title": "",
-    "has_step": 0,
+    "has_step": 1,
     "paper_link": "",
     "notes": "basic sequencing method for gene expression quantification."
   },

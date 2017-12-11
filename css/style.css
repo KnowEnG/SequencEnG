@@ -28,12 +28,69 @@ div.dataTables_wrapper {
         width: 100%;
 }
 
-.block-arrow{
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
+.order-frame .block{
+  margin-bottom: 65px;
+}
+.order-frame .block .row{
+   position: relative;
 }
 
+.order-frame .block .block-button{
+  
+  background-color: white;
+    position: relative;
+}
+.order-frame .block .block-button:hover{
+  background-color: blue;
+  color:white;
+}
+
+.order-frame .block .block-button-selected{
+  background-color: blue;
+  color:white;
+}
+
+.order-frame .block .block-button .arrowTarget{
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  margin-right: -50%;
+   transform: translate(-50%, 0);
+  width: 0;
+  height: 0;
+  opacity: 0;
+
+  
+
+
+  
+}
+
+
+#svgContainer { 
+  opacity:  0.5;
+  margin:   2.5em 2.5em;
+  position: absolute;  
+}
+
+#svgContainer svg path { 
+  fill:   none;
+  stroke: #000;
+  stroke-width: 0.2em;
+   stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash linear;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+ 
+}
+ @keyframes dash {
+ 
+  to {
+     stroke-dashoffset: 0;
+  }
+}
 
 
 /*DESKTOP NODE CIRCLE*/

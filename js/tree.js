@@ -14,7 +14,16 @@ const TREE_HEIGHT = 1500;
 function show_chart(){
    $(".tree-button").hide();
      $(".tree-field").slideUp('slow');
+
+
+    // resize simulation demo, comment it out to make it stop
+    // quick_demo();
+ 
+    
+    
     $("#main").delay('850').slideDown('slow');
+
+    
 }
 
 //Draw Tree
@@ -450,6 +459,11 @@ function show_description(data){
              
         let $divRowButton = $("<div>", {"class": "row justify-content-md-center button-row"});
         let hasStep = data.has_step?"<button class='btn btn-success show-chart'>Show steps</button>":"";
+        if(data.has_step){
+          $("#chart").empty();
+          pipeline_load(data.seq_name);
+        }
+
         $divRowButton.append(hasStep);
 
         let $imgBox = $("<div>", {"class" : "row"});

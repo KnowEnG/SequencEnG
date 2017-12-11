@@ -9,6 +9,7 @@
 
 <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.css">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <link rel="stylesheet" href="./css/keen-dashboards.css">
 <link rel="stylesheet" href="./css/style.css">
@@ -16,9 +17,13 @@
    
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
+
+
 </head>
 
 <body class="application" >
+
+	
 
 
 <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
@@ -45,6 +50,8 @@
 </nav>
 
 <div class="container-fluid">
+
+
     <div class="main-title row justify-content-between">
         
             <div class="d-none d-md-block col-md-3 app-company">
@@ -89,8 +96,7 @@
 		</div>
 		
 	</div>
-    <div id="main" class="container-fluid">
-		
+    <div id="main" class="container-fluid">		
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="chart-wrapper">
@@ -101,7 +107,7 @@
 
 						<div class="container-fluid">
 							
-							<div class="row">
+							<div class="row justify-content-between">
 								<div class="col-md-4">
 									<button id="chart-button" type="button" class="btn btn-outline-success">Show Chart</button>
 
@@ -133,8 +139,22 @@
 							<div class="row justify-content-center">
 									
 										
-										<div id="chart" class="col-md-6">
+										<div class="col-md-8">
 
+										<div id="svgContainer">
+									    <svg id="svg1" width="0" height="0" >
+
+					
+									       
+									    </svg>
+									</div>
+
+
+											<div id="chart" class="container-fluid">
+												
+
+											</div>
+	
 										</div>
 									
 									
@@ -215,6 +235,7 @@
 
 <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js"></script>
 
+<script src="./js/svgPath.js"></script>
 <script src="./js/block.js"></script>
 <script src="./js/flowchart.js"></script>
 <script src="./js/tree.js"></script>
