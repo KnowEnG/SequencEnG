@@ -14,7 +14,7 @@ function drawPath(svg, path, startX, startY, endX, endY) {
     var arrowWidth = 10;
 
     // check if the svg is big enough to draw the path, if not, set heigh/width
-    if (svg.attr("height") <  endY)                 svg.attr("height", endY);
+    if (svg.attr("height") <  endY)                 svg.attr("height", endY + stroke + arrowWidth);
     if (svg.attr("width" ) < (startX + stroke) )    svg.attr("width", (startX + stroke + arrowWidth));
     if (svg.attr("width" ) < (endX   + stroke) )    svg.attr("width", (endX   + stroke + arrowWidth));
     

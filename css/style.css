@@ -35,6 +35,10 @@ div.dataTables_wrapper {
    position: relative;
 }
 
+.order-frame.lastFrame .block {
+  margin-bottom: 0;
+}
+
 .order-frame .block .block-button{
   
   background-color: white;
@@ -50,6 +54,21 @@ div.dataTables_wrapper {
   color:white;
 }
 
+.order-frame .block .hassub-button-selected {
+   background-color: blue;
+  color:white;
+}
+
+.order-frame .block .block-button.sub-button-selected{
+  background-color: #17a2b8;
+  color:white;
+}
+
+.order-frame .block .block-button.sub:hover{
+  background-color: #17a2b8;
+  color:white;
+}
+
 .order-frame .block .block-button .arrowTarget{
   content: '';
   position: absolute;
@@ -60,8 +79,6 @@ div.dataTables_wrapper {
   width: 0;
   height: 0;
   opacity: 0;
-
-  
 
 
   

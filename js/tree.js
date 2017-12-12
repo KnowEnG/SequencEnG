@@ -14,10 +14,6 @@ const TREE_HEIGHT = 1500;
 function show_chart(){
    $(".tree-button").hide();
      $(".tree-field").slideUp('slow');
-
-
-    // resize simulation demo, comment it out to make it stop
-    // quick_demo();
  
     
     
@@ -243,13 +239,13 @@ function draw_tree(){
 
   function expandAll(){
       expand(root); 
-      $("svg").height(TREE_HEIGHT);
+      $("#tree svg").height(TREE_HEIGHT);
       update(root);
   }
 
   function collapseAll(){
       root.children.forEach(collapse);
-      collapse(root);
+    
       update(root);
   }
 

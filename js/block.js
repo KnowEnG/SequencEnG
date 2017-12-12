@@ -20,11 +20,14 @@ function Block(name, order, parent, nextStep,nextStepCount, seq_name){
 	this.fields = [];
 
 
+
 	//order of step
-	this.order = seq_name + "-" + order.toString().replace(".", "\.");
+	this.orderNumber = order;
+
+	this.order = seq_name + "-" + order.toString();
 
 	//parent step 
-	this.parent = parent;
+	this.parent = parent.replace(/\s/g,'');
 
 	this.seq_name = seq_name;
 
@@ -51,15 +54,19 @@ Block.prototype.push_data = function(data, key) {
 
 Block.prototype.render = function(){
 
-	let isSub = this.parent!==""?"-sub":"";
-	let order = "#" + this.order + isSub;
-
+	let isSub = this.parent!==""?true:false;
+	let order = "div[id=\'" + this.order + "\']";
+	
 	let containerID = this.id + "-container";
 
 	if(!$(order).length){
 		
-		let orderFrame = "<div class=\'row justify-content-center order-frame\' id=\'" + this.order + isSub +  "\'></div>";
+		let orderFrame = "<div class=\'row justify-content-center order-frame\' id=\'" + this.order +  "\'></div>";
 		$("#chart").append(orderFrame);
+
+		if(this.nextStep === ""){
+			$(order).addClass('lastFrame');
+		}
 	}
 
 	else{
@@ -70,25 +77,28 @@ Block.prototype.render = function(){
 	this.frame = "<div class=\'col-md-4 block\'>"
 					+"<div id=\'"+containerID+"\' class=\'container-fluid\'>"
 						+"<div class=\'row justify-content-center \'>"
-							+"<Button class=\'block-button btn btn-outline-primary\' id=\'"+this.id+"\'>" + this.name + "</Button>"
+							+"<Button type=\'button\' class=\'block-button btn btn-outline-primary\' id=\'"+this.id+"\'>" + this.name + "</Button>"
 						+"</div>"
 					+"</div>"
 				+"</div>";
 
 
+	
 	$(order).append(this.frame);
+	
 
-	//not first step, getting arrow 
-	if(this.nextStep !== 2){
-		$("#" + containerID + " .row .block-button").append("<span class=\'arrowTarget\'></span>")
+	
+	$("#" + containerID + " .row .block-button").append("<span class=\'arrowTarget\'></span>")
 
-	}
+	
 
 
 	
 	
-	if(isSub !== ""){
+	if(isSub){
 		$(order).hide();
+		$("#" + containerID + " .row .block-button").removeClass('btn-outline-primary').addClass('btn-outline-info');
+
 	}
 	
 

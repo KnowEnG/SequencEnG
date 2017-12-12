@@ -10,7 +10,8 @@ var pipeline_load = function(seq_name){
       var Blocks = {};  
        
        for(let i= 0; i < data.length; i++){
-          let key = data[i].step;
+          let name = data[i].step;
+          let key = name.replace(/\s/g,'');
 
           if(Blocks.hasOwnProperty(key)){
             Blocks[key].push_data(data[i], data[i].software);
@@ -19,11 +20,15 @@ var pipeline_load = function(seq_name){
           else{
 
             //set a block key as step name
-            Blocks[key] = new Block(key, data[i].order, data[i].parent, data[i].nextStep, data[i].nextStepCount, seq_name);
+            Blocks[key] = new Block(name, data[i].order, data[i].parent, data[i].nextStep, data[i].nextStepCount, seq_name);
 
+
+            //subSteps 
             if(Blocks[key].parent !== ""){
                 let parent = Blocks[key].parent;
 
+
+                //count direct next sub steps 
                 if(Blocks[key].order.includes(".1")){
                   Blocks[parent].subStepCount++; 
                 }
@@ -48,44 +53,105 @@ var pipeline_load = function(seq_name){
 
 
           
-           (function(id){
+           (function(id, target){
             
           $("#" + id).click(function(){
-            $(".block-button").removeClass("block-button-selected");
-            $(".block-button").addClass("btn-outline-primary");
-          Blocks[key].makeTable();
-          $(".table-row").show();
-          $("#table").empty().append(Blocks[key].table);
 
-            $('#table tfoot th').each( function () {
-                var title = $(this).text();
-                $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-            } );
+             if(target.parent !== ""){
 
-          var table = $("#table").DataTable({
-             "destroy": true,
-             "paging": false,
-             "info": false,
-             "scrollX": true
-           });
-           $("#" + id).removeClass("block-button-selected");
-         $("#" + id).addClass("block-button-selected");
-        
-          table.columns().every( function () {
-             var that = this;
-     
+              }
+              else{
+
+                 $(".block-button").removeClass("block-button-selected");
+              $(".block-button").addClass("btn-outline-primary");
+               $("#" + id).addClass("block-button-selected");
+                
+              }
+            
+
+            if(target.subStepCount ===0){
+               
+              target.makeTable();
+              $(".table-row").show();
+              $("#table").empty().append(target.table);
+
+                $('#table tfoot th').each( function () {
+                    var title = $(this).text();
+                    $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+                } );
+
+              var table = $("#table").DataTable({
+                 "destroy": true,
+                 "paging": false,
+                 "info": false,
+                 "scrollX": true
+               });
+              
+            
+            
+              table.columns().every( function () {
+                 var that = this;
+         
             $( 'input', that.footer() ).on( 'keyup change', function () {
                 if ( that.search() !== this.value ) {
                     that
-                        .search( this.value )
-                        .draw();
-                }
-        } );
-    } );
+                                  .search( this.value )
+                                  .draw();
+                          }
+                  } );
+              } );
+
+            }
+
+            else{
+
+              
+                  if($("div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']").css('display') ==='none'){
+                    
+                    target.nextStep = target.orderNumber + "." + 1;
+                     target.nextStepCount =  target.subStepCount;
+
+                     if( target.nextStepCount > 2){
+                           $("div[id^=\'" + seq_name + "-" + target.orderNumber + "."  + "\']").css('margin-right', '150px');
+                     }
+
+
+                     //redraw flow chart
+                    $("div[id^=\'" + seq_name + "-" + target.orderNumber + "."  + "\']").slideDown('slow', function(){
+                             $("#" + id).addClass("hassub-button-selected");
+                            $("#svgContainer svg path").remove();
+                            resetSVGsize();
+                            connectAll(seq_name, Blocks);
+                    });
+                   
+                  }
+
+                  else{
+
+                    //get last substeps 
+                     let lastSubId = $("div#chart div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']:last .block button").attr('id');
+                  
+                    target.nextStep = Blocks[lastSubId].nextStep;
+                     target.nextStepCount = Blocks[lastSubId].nextStepCount;
+                    
+                     //redraw flow  chart 
+                    $("div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']").slideUp('slow', function(){
+                               $("#" + id).removeClass("hassub-button-selected");
+                              $("#svgContainer svg path").remove();
+                              resetSVGsize();
+                              connectAll(seq_name, Blocks);
+                    });
+                    
+                   
+                  }
+
+
+            }
+          
         
 
         });
-        })(Blocks[key].id);
+        })(key, Blocks[key]);
         
        }
 
@@ -128,6 +194,7 @@ var pipeline_load = function(seq_name){
              $(window).off();
                 $(window).resize(function(){
                      $("#svgContainer svg path").remove();
+
                     resetSVGsize();
                     connectAll(seq_name, Blocks);
                 });
@@ -150,15 +217,18 @@ function connectAll(seq_name, Blocks){
 
     let i = 1;
     for(let key in Blocks){
-     
-      if(Blocks[key].nextStep !== "" && Blocks[key].parent === ""){
-        let childBlock = $("#" + seq_name + "-" + Blocks[key].nextStep.toString() + " .block:first");
+
       
+
+      if(Blocks[key].nextStep !== "" && $("div[id=\'" + Blocks[key].order + "\']").css('display') !== 'none'){
+     
+        let nextBlock = $("div[id=\'" + seq_name + "-" + Blocks[key].nextStep.toString() + "\'] .block:first");
+     
         for(let j = 0; j < Blocks[key].nextStepCount; j++){
           $("#svgContainer svg").append("<path id=\'path" + i + "\'/>");
           $("#svgContainer").html($("#svgContainer").html());
-          connectElements($("#svg1"), $("#path" + i), $("#" + Blocks[key].id), childBlock.find(".arrowTarget") );
-          childBlock = childBlock.next();
+          connectElements($("#svg1"), $("#path" + i), $("#" +key), nextBlock.find(".arrowTarget") );
+          nextBlock = nextBlock.next();
           i++;
         }
         
@@ -180,7 +250,7 @@ $(document).ready(function() {
        $("#main").slideUp('slow');
       $("#chart").hide();
        $("#svgContainer").hide();
-    
+     $(".table-row").hide();
        $("#chart-button").text("show chart");
        $("#chart-button").removeClass("btn-success");
        $("#chart-button").addClass("btn-outline-success");

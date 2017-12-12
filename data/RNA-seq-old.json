@@ -1,5 +1,8 @@
 [
   {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 2,
     "parent": "",
     "step": "quality control of reads",
     "software": "",
@@ -13,6 +16,9 @@
     "platform requirement": ""
   },
   {
+    "order": 1.1,
+    "nextStep": 1.2,
+    "nextStepCount": 1,
     "parent": "quality control of reads",
     "step": "view read quality",
     "software": "FastQC",
@@ -26,10 +32,13 @@
     "platform requirement": "JAVA"
   },
   {
+    "order": 1.2,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "quality control of reads",
     "step": "trimming reads",
     "software": "FASTX-Toolkit",
-    "description": "%uFFFDa collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing",
+    "description": " a collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing",
     "strength": "multiple commands for processing fastq/fasta files",
     "limitation": "last update in 2010",
     "single or paired end": "",
@@ -39,6 +48,9 @@
     "platform requirement": ""
   },
   {
+    "order": 1.2,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "quality control of reads",
     "step": "trimming reads",
     "software": "Trimmomatic",
@@ -52,6 +64,9 @@
     "platform requirement": "JAVA"
   },
   {
+    "order": 1.2,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "quality control of reads",
     "step": "trimming reads",
     "software": "cutadapt",
@@ -65,6 +80,57 @@
     "platform requirement": "Python"
   },
   {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "read mapping",
+    "software": "",
+    "description": "",
+    "strength": "",
+    "limitation": "",
+    "single or paired end": "",
+    "format_input": "",
+    "format_output": "",
+    "compatible software": "",
+    "platform requirement": ""
+  },
+  {
+    "order": 2,
+    "nextStep": 5,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Mapping-free quantification",
+    "software": "kallisto",
+    "description": "quantifying abundances of transcripts from RNA-Seq data with no alignment",
+    "strength": "does not need read mapping",
+    "limitation": "",
+    "single or paired end": "both",
+    "format_input": "",
+    "format_output": "",
+    "compatible software": "",
+    "platform requirement": ""
+  },
+  {
+    "order": 2,
+    "nextStep": 5,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Mapping-free quantification",
+    "software": "Sailfish",
+    "description": "Rapid Alignment-free Quantification of Isoform Abundance",
+    "strength": "does not need read mapping; using k-mer count",
+    "limitation": "",
+    "single or paired end": "both",
+    "format_input": "",
+    "format_output": "",
+    "compatible software": "",
+    "platform requirement": ""
+  },
+  {
+    "order": 2.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "read mapping",
     "step": "mapping to genome",
     "software": "Tophat",
@@ -78,6 +144,9 @@
     "platform requirement": ""
   },
   {
+    "order": 2.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "read mapping",
     "step": "mapping to genome",
     "software": "HISAT2",
@@ -91,6 +160,9 @@
     "platform requirement": ""
   },
   {
+    "order": 2.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "read mapping",
     "step": "mapping to genome",
     "software": "STAR",
@@ -104,6 +176,9 @@
     "platform requirement": ""
   },
   {
+    "order": 2.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "read mapping",
     "step": "mapping to transcriptome",
     "software": "Bowtie",
@@ -117,6 +192,9 @@
     "platform requirement": ""
   },
   {
+    "order": 2.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "read mapping",
     "step": "assembly of transcriptome",
     "software": "stringtie",
@@ -130,6 +208,9 @@
     "platform requirement": ""
   },
   {
+    "order": 2.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "read mapping",
     "step": "assembly of transcriptome",
     "software": "Cufflinks",
@@ -143,8 +224,11 @@
     "platform requirement": ""
   },
   {
-    "parent": "quality control after mapping",
-    "step": "",
+    "order": 3,
+    "nextStep": 4,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "quality control after mapping",
     "software": "Picard",
     "description": "summarizes mapping statistics such as insert size, mapping score summary, and quality score summary",
     "strength": "",
@@ -156,8 +240,11 @@
     "platform requirement": "JAVA"
   },
   {
-    "parent": "quality control after mapping",
-    "step": "",
+    "order": 3,
+    "nextStep": 4,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "quality control after mapping",
     "software": "RNA-SeQC",
     "description": "can compare sequencing quality across samples; or quality control for individual samples.",
     "strength": "can be ran online trough GenePattern platform",
@@ -169,8 +256,11 @@
     "platform requirement": "JAVA"
   },
   {
-    "parent": "quality control after mapping",
-    "step": "",
+    "order": 3,
+    "nextStep": 4,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "quality control after mapping",
     "software": "RSeQC",
     "description": "an RNA-seq Quality Control Package",
     "strength": "metrics include sequence quality, nucleotide composition bias, PCR bias and GC bias, sequencing saturation, mapped reads distribution, coverage uniformity, strand specificity, transcript level RNA integrity etc.",
@@ -182,6 +272,25 @@
     "platform requirement": "Python"
   },
   {
+    "order": 4,
+    "nextStep": 5,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "quantification",
+    "software": "",
+    "description": "",
+    "strength": "",
+    "limitation": "",
+    "single or paired end": "",
+    "format_input": "",
+    "format_output": "",
+    "compatible software": "",
+    "platform requirement": ""
+  },
+  {
+    "order": 4.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "quantification",
     "step": "quantification using counts",
     "software": "featureCounts",
@@ -195,6 +304,9 @@
     "platform requirement": "R"
   },
   {
+    "order": 4.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "quantification",
     "step": "quantification using counts",
     "software": "HTSeq-count",
@@ -208,21 +320,11 @@
     "platform requirement": "Python"
   },
   {
-    "parent": "quality control of reads",
-    "step": "quantification using counts",
-    "software": "Sailfish",
-    "description": "Rapid Alignment-free Quantification of Isoform Abundance",
-    "strength": "does not need read mapping; using k-mer count",
-    "limitation": "",
-    "single or paired end": "both",
-    "format_input": "",
-    "format_output": "",
-    "compatible software": "",
-    "platform requirement": ""
-  },
-  {
+    "order": 4.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "quantification",
-    "step": "quantification using RPKM/FPKM/TPM",
+    "step": "quantification with normalization",
     "software": "Cufflinks",
     "description": "assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples",
     "strength": "",
@@ -234,10 +336,13 @@
     "platform requirement": ""
   },
   {
+    "order": 4.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "quantification",
-    "step": "quantification using RPKM/FPKM/TPM",
+    "step": "quantification with normalization",
     "software": "RSEM",
-    "description": "%uFFFDaccurate transcript quantification from RNA-Seq data with or without a reference genome",
+    "description": " accurate transcript quantification from RNA-Seq data with or without a reference genome",
     "strength": "using an EM algorithm for transcriptome quantification",
     "limitation": "",
     "single or paired end": "",
@@ -247,8 +352,11 @@
     "platform requirement": ""
   },
   {
+    "order": 4.1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "quantification",
-    "step": "quantification using RPKM/FPKM/TPM",
+    "step": "quantification with normalization",
     "software": "kallisto",
     "description": "quantifying abundances of transcripts from RNA-Seq data with no alignment",
     "strength": "no need to align",
@@ -260,9 +368,12 @@
     "platform requirement": ""
   },
   {
-    "parent": "quality control of replicates",
-    "step": "clustering",
-    "software": "",
+    "order": 5,
+    "nextStep": 6,
+    "nextStepCount": 3,
+    "parent": "",
+    "step": "quality control among samples",
+    "software": "clustering",
     "description": "",
     "strength": "",
     "limitation": "",
@@ -273,9 +384,12 @@
     "platform requirement": ""
   },
   {
-    "parent": "quality control of replicates",
-    "step": "computing correlation",
-    "software": "",
+    "order": 5,
+    "nextStep": 6,
+    "nextStepCount": 3,
+    "parent": "",
+    "step": "quality control among samples",
+    "software": "computing correlation",
     "description": "",
     "strength": "",
     "limitation": "",
@@ -286,7 +400,10 @@
     "platform requirement": ""
   },
   {
-    "parent": "downstream analysis",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
     "step": "differential expression analysis",
     "software": "Cufflinks",
     "description": "assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples",
@@ -299,11 +416,14 @@
     "platform requirement": ""
   },
   {
-    "parent": "downstream analysis",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
     "step": "differential expression analysis",
     "software": "edgeR",
     "description": "Empirical Analysis of Digital Gene Expression Data",
-    "strength": "Using raw count data;%uFFFDImplements a range of statistical methodology based on the negative binomial distributions, including empirical Bayes estimation, exact tests, generalized linear models and quasi-likelihood tests.%uFFFD",
+    "strength": "Using raw count data; Implements a range of statistical methodology based on the negative binomial distributions, including empirical Bayes estimation, exact tests, generalized linear models and quasi-likelihood tests. ",
     "limitation": "",
     "single or paired end": "",
     "format_input": "",
@@ -312,7 +432,10 @@
     "platform requirement": ""
   },
   {
-    "parent": "downstream analysis",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
     "step": "differential expression analysis",
     "software": "DESeq2",
     "description": "Differential gene expression analysis based on the negative binomial distribution",
@@ -325,7 +448,10 @@
     "platform requirement": ""
   },
   {
-    "parent": "downstream analysis",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
     "step": "differential splicing analysis",
     "software": "rSeqDiff",
     "description": "",
@@ -338,7 +464,10 @@
     "platform requirement": ""
   },
   {
-    "parent": "downstream analysis",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
     "step": "differential splicing analysis",
     "software": "DEXseq",
     "description": "",
@@ -351,7 +480,10 @@
     "platform requirement": ""
   },
   {
-    "parent": "downstream analysis",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
     "step": "differential splicing analysis",
     "software": "DSGSeq",
     "description": "",
@@ -364,7 +496,10 @@
     "platform requirement": ""
   },
   {
-    "parent": "downstream analysis",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
     "step": "differential splicing analysis",
     "software": "rMATS",
     "description": "",
@@ -377,7 +512,10 @@
     "platform requirement": ""
   },
   {
-    "parent": "downstream analysis",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
     "step": "differential splicing analysis",
     "software": "rDiff",
     "description": "",
@@ -390,7 +528,10 @@
     "platform requirement": ""
   },
   {
-    "parent": "downstream analysis",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
     "step": "differential splicing analysis",
     "software": "DiffSplice",
     "description": "",
@@ -403,8 +544,11 @@
     "platform requirement": ""
   },
   {
-    "parent": "annotation and interpretation",
-    "step": "annotation",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "functional analysis",
     "software": "Gene Ontology",
     "description": "functional analysis including molecular function, cellular component and biological process",
     "strength": "",
@@ -416,10 +560,13 @@
     "platform requirement": ""
   },
   {
-    "parent": "annotation and interpretation",
-    "step": "annotation",
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "functional analysis",
     "software": "DAVID",
-    "description": "The%uFFFDDatabase for%uFFFDAnnotation,%uFFFDVisualization andIntegrated%uFFFDDiscovery",
+    "description": "The Database for Annotation, Visualization andIntegrated Discovery",
     "strength": "",
     "limitation": "",
     "single or paired end": "",
