@@ -58,12 +58,16 @@ var pipeline_load = function(seq_name){
           $("#" + id).click(function(){
 
              if(target.parent !== ""){
+               $(".block-button").removeClass("block-button-selected");
+                $(".block-button").removeClass("sub-button-selected");
 
+                 $("#" + id).addClass("sub-button-selected");
               }
               else{
 
-                 $(".block-button").removeClass("block-button-selected");
-              $(".block-button").addClass("btn-outline-primary");
+               $(".block-button").removeClass("block-button-selected");
+                $(".block-button").removeClass("sub-button-selected");
+             
                $("#" + id).addClass("block-button-selected");
                 
               }
@@ -107,7 +111,7 @@ var pipeline_load = function(seq_name){
 
               
                   if($("div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']").css('display') ==='none'){
-                    
+                     $("#svgContainer svg path").remove();
                     target.nextStep = target.orderNumber + "." + 1;
                      target.nextStepCount =  target.subStepCount;
 
@@ -119,7 +123,7 @@ var pipeline_load = function(seq_name){
                      //redraw flow chart
                     $("div[id^=\'" + seq_name + "-" + target.orderNumber + "."  + "\']").slideDown('slow', function(){
                              $("#" + id).addClass("hassub-button-selected");
-                            $("#svgContainer svg path").remove();
+                           
                             resetSVGsize();
                             connectAll(seq_name, Blocks);
                     });
@@ -127,7 +131,7 @@ var pipeline_load = function(seq_name){
                   }
 
                   else{
-
+                         $("#svgContainer svg path").remove();
                     //get last substeps 
                      let lastSubId = $("div#chart div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']:last .block button").attr('id');
                   
@@ -136,8 +140,9 @@ var pipeline_load = function(seq_name){
                     
                      //redraw flow  chart 
                     $("div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']").slideUp('slow', function(){
+                                 $(".block-button").removeClass("block-button-selected");
                                $("#" + id).removeClass("hassub-button-selected");
-                              $("#svgContainer svg path").remove();
+                             
                               resetSVGsize();
                               connectAll(seq_name, Blocks);
                     });

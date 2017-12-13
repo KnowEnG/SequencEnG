@@ -97,7 +97,7 @@ Block.prototype.render = function(){
 	
 	if(isSub){
 		$(order).hide();
-		$("#" + containerID + " .row .block-button").removeClass('btn-outline-primary').addClass('btn-outline-info');
+		$("#" + containerID + " .row .block-button").removeClass('btn-outline-primary').addClass('btn-outline-info').addClass('sub');
 
 	}
 	
