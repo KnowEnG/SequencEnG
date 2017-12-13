@@ -20,6 +20,19 @@ h1 {
 
 
 /*FLOW CHART*/
+
+
+#flowchart{
+  min-width: 900px;
+
+}
+
+#flowchart-wrapper{
+  width: 100%;
+  overflow-x: auto;
+  overflow-y:hidden;
+}
+
 #table,table,thead,tbody,th,tr{
   text-align: center;
 }
@@ -43,6 +56,7 @@ div.dataTables_wrapper {
   
   background-color: white;
     position: relative;
+    
 }
 .order-frame .block .block-button:hover{
   background-color: blue;

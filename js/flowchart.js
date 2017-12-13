@@ -162,7 +162,7 @@ var pipeline_load = function(seq_name){
 
 
 
-        var show_chart_one = true;
+       
          $("#chart-button").off();
           $("#chart-button").click(function(e){
               e.stopPropagation();
@@ -175,12 +175,11 @@ var pipeline_load = function(seq_name){
             });
             $("#chart").toggle('slow',function(){
 
-              if(show_chart_one){
+              if($("#chart").css('display') !== 'none'){
                 $("#chart-button").text("hide chart");
                 $("#chart-button").removeClass("btn-outline-success");
                 $("#chart-button").addClass("btn-success");
                 
-                show_chart_one= false;
               }
               else{
                 $("#chart-button").text("show chart");
@@ -189,7 +188,7 @@ var pipeline_load = function(seq_name){
                   $(".block-button").removeClass("btn-primary");
                     $(".block-button").addClass("btn-outline-primary");
                  $(".table-row").hide();
-                show_chart_one = true;
+               
               }
 
             
@@ -232,7 +231,7 @@ function connectAll(seq_name, Blocks){
         for(let j = 0; j < Blocks[key].nextStepCount; j++){
           $("#svgContainer svg").append("<path id=\'path" + i + "\'/>");
           $("#svgContainer").html($("#svgContainer").html());
-          connectElements($("#svg1"), $("#path" + i), $("#" +key), nextBlock.find(".arrowTarget") );
+          connectElements($("#svg-pipe"), $("#path" + i), $("#" +key), nextBlock.find(".arrowTarget") );
           nextBlock = nextBlock.next();
           i++;
         }

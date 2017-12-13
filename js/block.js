@@ -74,7 +74,7 @@ Block.prototype.render = function(){
 		$(order).addClass('justify-content-between');
 	}
 
-	this.frame = "<div class=\'col-md-4 block\'>"
+	this.frame = "<div class=\'col-4 col-md-4 block\'>"
 					+"<div id=\'"+containerID+"\' class=\'container-fluid\'>"
 						+"<div class=\'row justify-content-center \'>"
 							+"<Button type=\'button\' class=\'block-button btn btn-outline-primary\' id=\'"+this.id+"\'>" + this.name + "</Button>"
