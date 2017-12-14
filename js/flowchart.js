@@ -13,8 +13,15 @@ var pipeline_load = function(seq_name){
           let name = data[i].step;
           let key = name.replace(/\s/g,'');
 
+          
+
+          //already has the step 
           if(Blocks.hasOwnProperty(key)){
             Blocks[key].push_data(data[i], data[i].software);
+            let parent = Blocks[key].parent;
+            if(parent !== ""){
+              Blocks[parent].push_data(data[i], data[i].software);
+            }
           }
 
           else{
@@ -22,16 +29,17 @@ var pipeline_load = function(seq_name){
             //set a block key as step name
             Blocks[key] = new Block(name, data[i].order, data[i].parent, data[i].nextStep, data[i].nextStepCount, seq_name);
 
-
+            let parent = Blocks[key].parent;
             //subSteps 
-            if(Blocks[key].parent !== ""){
-                let parent = Blocks[key].parent;
-
+            if(parent !== ""){
+                Blocks[parent].push_data(data[i], data[i].software);
 
                 //count direct next sub steps 
                 if(Blocks[key].order.includes(".1")){
                   Blocks[parent].subStepCount++; 
                 }
+
+
             }
 
             //get software info fields 
@@ -50,9 +58,10 @@ var pipeline_load = function(seq_name){
        for(let key in Blocks){
        
           Blocks[key].render();
+          Blocks[key].makeTable();
 
 
-          
+          //bind button event 
            (function(id, target){
             
           $("#" + id).click(function(){
@@ -70,12 +79,8 @@ var pipeline_load = function(seq_name){
              
                $("#" + id).addClass("block-button-selected");
                 
-              }
-            
-
-            if(target.subStepCount ===0){
-               
-              target.makeTable();
+              }       
+             
               $(".table-row").show();
               $("#table").empty().append(target.table);
 
@@ -99,15 +104,15 @@ var pipeline_load = function(seq_name){
             $( 'input', that.footer() ).on( 'keyup change', function () {
                 if ( that.search() !== this.value ) {
                     that
-                                  .search( this.value )
-                                  .draw();
+                    .search( this.value )
+                    .draw();
                           }
                   } );
               } );
 
-            }
+            
 
-            else{
+            if(target.subStepCount !== 0){
 
               
                   if($("div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']").css('display') ==='none'){
@@ -134,7 +139,6 @@ var pipeline_load = function(seq_name){
                          $("#svgContainer svg path").remove();
                     //get last substeps 
                      let lastSubId = $("div#chart div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']:last .block button").attr('id');
-                  
                     target.nextStep = Blocks[lastSubId].nextStep;
                      target.nextStepCount = Blocks[lastSubId].nextStepCount;
                     
@@ -142,7 +146,8 @@ var pipeline_load = function(seq_name){
                     $("div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']").slideUp('slow', function(){
                                  $(".block-button").removeClass("block-button-selected");
                                $("#" + id).removeClass("hassub-button-selected");
-                             
+                               
+                             $(".table-row").show();
                               resetSVGsize();
                               connectAll(seq_name, Blocks);
                     });

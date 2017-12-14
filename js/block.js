@@ -47,7 +47,11 @@ Block.prototype.set_fields = function(fields, index){
 };
 
 Block.prototype.push_data = function(data, key) {
+
+	if(key !== ""){
+
 		this.data[key] = data;
+	}
 
 };
 
@@ -101,6 +105,9 @@ Block.prototype.render = function(){
 
 	}
 	
+	if(this.subStepCount !== 0){
+		$("#" + containerID + " .row .block-button").addClass('hassub')
+	}
 
 
 
@@ -153,6 +160,8 @@ Block.prototype.makeTable = function(...args){
 	var table_body = "<tbody>" + body + "</tbody>";
 	var table_foot = "<tfoot>" + head + "</tfoot>";
 	this.table = table_head + table_body + table_foot;
+
+	return table_body;
 
 };
 
