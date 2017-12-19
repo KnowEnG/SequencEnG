@@ -11,18 +11,279 @@ const TREE_FIELD_WIDTH = screen.width * 0.8;
 const TREE_HEIGHT = 1500;
 
 
+//d3 Tree structure 
+let treeData = {
+  "name" : "Training",
+   "parent": "null",
+    "children": []
+
+}
+
+let selection_data = [];
+
+//=============== Common functions ================
+ function collapse(d) {
+    if(d.children) {
+      d._children = d.children
+      d._children.forEach(collapse)
+      d.children = null
+    }
+  }
+
+   function expand(d){   
+    var children = (d.children)?d.children:d._children;
+    if (d._children) {        
+        d.children = d._children;
+        d._children = null;       
+    }
+    if(children)
+      children.forEach(expand);
+  }
+
+
+
+function expandAll(root, update){
+      expand(root); 
+      if(!isMobile){
+         $("#tree svg").height(TREE_HEIGHT);
+      }
+      update(root);
+  }
+
+  function collapseAll(root, update){
+      root.children.forEach(collapse);
+
+      update(root);
+  }
+
+
+
+//find path in tree 
+function searchTree(data, search, path){
+
+
+
+
+    if(data && data.children){
+       for(let i =0; i < data.children.length;i++){
+
+
+          if(data.children[i].name === search){
+              path.push(search); // push leaf node
+              path.push(data.name); // push parent node 
+             
+              
+              return path;
+          }
+
+
+          else{
+            
+
+            //find path to leaf node 
+            let found = searchTree(data.children[i], search, path);
+            
+            if(found){
+              found.push(data.name); // push node that is part of paths
+               
+
+
+              //find all paths through tree
+              return found.concat(searchTree(data.children[i+1], search, []) || []);
+
+            }
+
+
+
+
+
+
+
+          }
+
+
+      }
+
+    }
+   
+
+
+
+}
+
+//expand after search 
+  function searchExpand(d, paths){
+    //part of paths 
+
+    $(".node").removeClass("found");
+    $(".link").removeClass("found");
+    if(paths.indexOf(d.data.name) !== -1){
+      d.class = "found";
+      if (d._children) {        
+        d.children = d._children;
+        d._children = null;       
+      }
+      let children = (d.children)?d.children:d._children;
+      if(children){
+        paths.splice(paths.indexOf(d.data.name),1);
+        children.forEach(node => searchExpand(node, paths));
+      }
+    }
+
+    //collapse otherwise 
+    else{
+      d.class = "";
+      let children = (d.children)?d.children:d._children;
+      if(children){
+         children.forEach(node => searchExpand(node, paths));
+      }
+     
+      collapse(d);
+    }
+
+  }
+
+
+  function clearAll(d, update){
+      searchExpand(d, []);
+      $('#search').val(null).trigger('change');
+
+      if (d.parent === null && d._children) {        
+        d.children = d._children;
+        d._children = null;       
+      }
+
+      update(d);
+  }
+
+
+
+//Get data 
+$.getJSON("./data/tree.json")
+    .done(function( data ) {
+
+      $(".modalclose").click(function(){
+          $("#modalbox").hide();
+      });
+
+      
+
+      //select2 data id 
+      let id = 1; 
+
+
+      //arry for removing duplicates 
+      let select_array =[];
+      
+
+      let dataObject = {};
+
+
+      for(let i= 0; i < data.length; i++){
+
+        //select2 data 
+        let select_model_mid_node = {};
+        let select_model_leaf_node = {};
+        if(select_array.indexOf(data[i].seq_goal_level2) === -1){
+            select_model_mid_node.id = id++;
+            select_model_mid_node.text = data[i].seq_goal_level2;
+            select_array.push(data[i].seq_goal_level2);
+            selection_data.push(select_model_mid_node);
+        }
+        if(select_array.indexOf(data[i].seq_name) === -1){
+           select_model_leaf_node.id = id++;
+            select_model_leaf_node.text = data[i].seq_name;
+            select_array.push(data[i].seq_name);
+            selection_data.push(select_model_leaf_node);
+
+        }
+
+        if(typeof dataObject[data[i].seq_goal_level1] !== 'undefined'){
+          let leafNode = data[i];
+          leafNode.name = data[i].seq_name;
+          if(typeof dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] !== "undefined"){
+            dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
+          }
+
+          else{
+            dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] = [];
+            dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
+          }
+
+        }
+        else{
+          dataObject[data[i].seq_goal_level1] = {};
+          dataObject[data[i].seq_goal_level1].child = {};
+
+          dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] = [];
+
+
+          let leafNode = data[i];
+          leafNode.name = data[i].seq_name;
+          dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
+
+
+        }
+
+
+      } //Organize data 
+
+      
+     
+      //Data to d3 tree structure 
+      for(let key in dataObject){
+        let child_node = {};
+        child_node.name = key; 
+        child_node.children = []; 
+
+        for(let childKey in dataObject[key].child){
+          let childObject = {};
+          childObject.name = childKey;
+          childObject.children = dataObject[key].child[childKey];
+          child_node.children.push(childObject);
+        }
+
+        treeData.children.push(child_node);
+
+      } //make tree structure 
+
+
+
+     
+
+
+//Desktop
+if(!isMobile){
+
+    
+  
+  draw_tree();
+
+}
+
+
+//tablet, mobile
+else{
+
+  draw_table();
+  
+
+}
+
+
+}); //json get 
+
+
+
+//show step chart 
 function show_chart(){
    $(".tree-button").hide();
      $(".tree-field").slideUp('slow');
- 
-    
-    
     $("#main").delay('850').slideDown('slow');
-
-    
+ 
 }
 
-//Draw Tree
+//===================Draw Tree(Desktop)=======================
 function draw_tree(){
   let margin = {top: 20, right: 90, bottom: 30, left: 90},
       width = (TREE_FIELD_WIDTH) - margin.left - margin.right,
@@ -50,8 +311,10 @@ function draw_tree(){
 
   $(".tree-field").width(tree_detail_box_width);
 
-  $("#expand-all").click(expandAll);
-  $("#collapse-all").click(collapseAll);
+  //tree option buttons 
+   $("#expand-all").click(() => expandAll(root, update));
+  $("#collapse-all").click(() => collapseAll(root, update));
+  $("#clear-all").click(() => clearAll(root, update));
 
   let tree = d3.tree().size([height, width]);
 
@@ -61,15 +324,32 @@ function draw_tree(){
 
   root.children.forEach(collapse);
 
+
+  //select2 init
+  let select = $("#search").select2({
+         placeholder: 'Select an Node',
+         data: selection_data
+      });
+
+ 
+
+ //select2 event 
+  select.on('select2:select', function (e) {
+     
+      let result = searchTree(treeData, e.params.data.text, []);
+
+      searchExpand(root, result);
+
+      update(root);
+        
+
+
+    });
+
+  
+
   update(root);
 
-  function collapse(d) {
-    if(d.children) {
-      d._children = d.children
-      d._children.forEach(collapse)
-      d.children = null
-    }
-  }
 
 
 
@@ -149,7 +429,16 @@ function draw_tree(){
       .style("fill", function(d) {
           return d._children ? "springgreen" : "#fff";
       })
-      .attr('cursor', 'pointer');
+      .attr('cursor', 'pointer')
+      .attr('class', function(d){
+          if(d.class === "found"){
+            return 'node found';
+          }
+          else{
+            return 'node';
+          }
+          
+        });
 
 
    
@@ -186,7 +475,16 @@ function draw_tree(){
     
     linkUpdate.transition()
         .duration(duration)
-        .attr('d', function(d){ return diagonal(d, d.parent) });
+        .attr('d', function(d){ return diagonal(d, d.parent) })
+        .attr('class', function(d){
+          if(d.class === "found"){
+            return 'link found';
+          }
+          else{
+            return 'link';
+          }
+          
+        });;
 
    
     let linkExit = link.exit().transition()  
@@ -214,7 +512,7 @@ function draw_tree(){
       return path
     }
 
-    
+    //click node event 
     function click(d) {
       if (d.children) {
           d._children = d.children;
@@ -227,30 +525,15 @@ function draw_tree(){
     }
   }
 
-   function expand(d){   
-    var children = (d.children)?d.children:d._children;
-    if (d._children) {        
-        d.children = d._children;
-        d._children = null;       
-    }
-    if(children)
-      children.forEach(expand);
-  }
 
-  function expandAll(){
-      expand(root); 
-      $("#tree svg").height(TREE_HEIGHT);
-      update(root);
-  }
+ 
 
-  function collapseAll(){
-      root.children.forEach(collapse);
     
-      update(root);
-  }
-
 
 }
+
+
+//===================Draw Tree(Mobile)=======================
 
 function draw_table(){
   let margin = {top: 30, right: 20, bottom: 30, left: 20},
@@ -270,23 +553,17 @@ function draw_table(){
     .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-  $("#expand-all").click(expandAll);
-  $("#collapse-all").click(collapseAll);
+  $("#expand-all").click(() => expandAll(root, update));
+  $("#collapse-all").click(() => collapseAll(root, update));
+
+
 
   root = d3.hierarchy(treeData) // Constructs a root node from the specified hierarchical data.
 
   let tree = d3.tree().nodeSize([0, 30]); //Invokes tree
 
   root.children.forEach(collapse);
-  // Collapse the node and all it's children
-  function collapse(d) {
-    if(d.children) {
-      d._children = d.children
-      d._children.forEach(collapse)
-      d.children = null
-    }
-  }
-
+  
 
   function update(source) {
 
@@ -405,26 +682,8 @@ function draw_table(){
   }
 
 
-  function expand(d){   
-    var children = (d.children)?d.children:d._children;
-    if (d._children) {        
-        d.children = d._children;
-        d._children = null;       
-    }
-    if(children)
-      children.forEach(expand);
-  }
-
-  function expandAll(){
-      expand(root); 
-      update(root);
-  }
-
-  function collapseAll(){
-      root.children.forEach(collapse);
-      collapse(root);
-      update(root);
-  }
+ 
+  
 
 
 }
@@ -486,101 +745,5 @@ function show_description(data){
 
 
 }
-
-
-let treeData = {
-	"name" : "Training",
-	 "parent": "null",
-    "children": []
-
-}
-
-
-$.getJSON("./data/tree.json")
-    .done(function( data ) {
-
-      $(".modalclose").click(function(){
-          $("#modalbox").hide();
-      });
-
-    	let dataObject = {};
-
-
-      //Data to tree structure 
-
-    	for(let i= 0; i < data.length; i++){
-    		if(typeof dataObject[data[i].seq_goal_level1] !== 'undefined'){
-    			let leafNode = data[i];
-    			leafNode.name = data[i].seq_name;
-    			if(typeof dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] !== "undefined"){
-    				dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
-    			}
-
-    			else{
-    				dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] = [];
-    				dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
-    			}
-
-    		}
-    		else{
-    			dataObject[data[i].seq_goal_level1] = {};
-    			dataObject[data[i].seq_goal_level1].child = {};
-
-    			dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] = [];
-
-
-    			let leafNode = data[i];
-    			leafNode.name = data[i].seq_name;
-    			dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
-
-
-    		}
-
-
-    	}
-
-    	
-
-    	for(let key in dataObject){
-    		let child_node = {};
-    		child_node.name = key; 
-    		child_node.children = []; 
-
-    		for(let childKey in dataObject[key].child){
-    			let childObject = {};
-    			childObject.name = childKey;
-    			childObject.children = dataObject[key].child[childKey];
-    			child_node.children.push(childObject);
-    		}
-
-    		treeData.children.push(child_node);
-
-    	}
-
-
-
-    	
-
-
-//Laege desktop
-if(!isMobile){
-
-    
-  
-  draw_tree();
-
-}
-
-
-//tablet, mobile
-else{
-
-  draw_table();
-  
-
-}
-
-
-    });
 
 

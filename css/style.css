@@ -129,15 +129,22 @@ div.dataTables_wrapper {
 
 
 /*DESKTOP NODE CIRCLE*/
-.node circle {
+circle.node {
  stroke: seagreen;
  stroke-width: 3px;
 }
 
-.link {
+path.link {
   fill: none;
   stroke: #ccc;
   stroke-width: 2px;
+}
+circle.node.found {
+    stroke: #a2e4a7;
+  }
+path.link.found{
+    stroke: #a2e4a7;
+    stroke-width: 4px;
 }
 
 

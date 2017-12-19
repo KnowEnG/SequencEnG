@@ -66,22 +66,20 @@ var pipeline_load = function(seq_name){
             
           $("#" + id).click(function(){
 
-             if(target.parent !== ""){
-               $(".block-button").removeClass("block-button-selected");
-                $(".block-button").removeClass("sub-button-selected");
 
-                 $("#" + id).addClass("sub-button-selected");
-              }
-              else{
 
-               $(".block-button").removeClass("block-button-selected");
-                $(".block-button").removeClass("sub-button-selected");
+            $(".table-row").show();
+            var table;
+
+            //destroy table
+            if($('#table thead').length !== 0){
+               table =  $('#table').DataTable();
+               table.destroy();
+
+            }
              
-               $("#" + id).addClass("block-button-selected");
-                
-              }       
-             
-              $(".table-row").show();
+
+             //build table 
               $("#table").empty().append(target.table);
 
                 $('#table tfoot th').each( function () {
@@ -89,7 +87,7 @@ var pipeline_load = function(seq_name){
                     $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
                 } );
 
-              var table = $("#table").DataTable({
+              table = $("#table").DataTable({
                  "destroy": true,
                  "paging": false,
                  "info": false,
@@ -109,9 +107,27 @@ var pipeline_load = function(seq_name){
                           }
                   } );
               } );
-
             
 
+
+              //button css
+               if(target.parent !== ""){
+               $(".block-button").removeClass("block-button-selected");
+                $(".block-button").removeClass("sub-button-selected");
+
+                 $("#" + id).addClass("sub-button-selected");
+              }
+              else{
+
+               $(".block-button").removeClass("block-button-selected");
+                $(".block-button").removeClass("sub-button-selected");
+             
+               $("#" + id).addClass("block-button-selected");
+                
+              }       
+             
+            
+            //Sub button shwoing event 
             if(target.subStepCount !== 0){
 
               
@@ -147,7 +163,7 @@ var pipeline_load = function(seq_name){
                                  $(".block-button").removeClass("block-button-selected");
                                $("#" + id).removeClass("hassub-button-selected");
                                
-                             $(".table-row").show();
+                             $(".table-row").hide();
                               resetSVGsize();
                               connectAll(seq_name, Blocks);
                     });
@@ -199,7 +215,7 @@ var pipeline_load = function(seq_name){
             
             
              
-
+              //window resize event 
              $(window).off();
                 $(window).resize(function(){
                      $("#svgContainer svg path").remove();
@@ -264,7 +280,7 @@ $(document).ready(function() {
        $("#chart-button").removeClass("btn-success");
        $("#chart-button").addClass("btn-outline-success");
       $(".tree-field").delay('850').slideDown('slow');
-       $(".tree-button").show();
+     
  });
 
 

@@ -166,13 +166,6 @@ Block.prototype.makeTable = function(...args){
 };
 
 
-Block.prototype.renderArrow = function(position, name){
-	var id = name.replace(/\s/g,''); 
-	$("#" + id+ position).append("<span>\&"+position+";</span>");
-
-
-
-}
 
 
 
