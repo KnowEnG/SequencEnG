@@ -183,17 +183,23 @@ var pipeline_load = function(seq_name){
 
 
 
-       
+             //window resize event
+             $(window).off();
+                $(window).resize(function(){
+                     $("#svgContainer svg path").remove();
+
+                    resetSVGsize();
+                    connectAll(seq_name, Blocks);
+                });
+
          $("#chart-button").off();
           $("#chart-button").click(function(e){
               e.stopPropagation();
+        
 
               $(".block-button").removeClass("block-button-selected");
-            $("#svgContainer").toggle('slow', function(){
-                  resetSVGsize();
-                  connectAll(seq_name, Blocks);
-
-            });
+            
+            //show chart
             $("#chart").toggle('slow',function(){
 
               if($("#chart").css('display') !== 'none'){
@@ -212,26 +218,21 @@ var pipeline_load = function(seq_name){
                
               }
 
-            
-            
-             
-              //window resize event 
-             $(window).off();
-                $(window).resize(function(){
-                     $("#svgContainer svg path").remove();
+            });
 
-                    resetSVGsize();
-                    connectAll(seq_name, Blocks);
-                });
-             
-            
+
+            //draw paths
+             $("#svgContainer").toggle('slow', function(){
+
+                  resetSVGsize();
+                  connectAll(seq_name, Blocks);
+
             });
 
            
             
           });
-               
-
+          
      
     });
 
@@ -239,6 +240,7 @@ var pipeline_load = function(seq_name){
 
   
 function connectAll(seq_name, Blocks){
+ 
 
     let i = 1;
     for(let key in Blocks){

@@ -104,12 +104,7 @@ function resetSVGsize(){
 }
 
 
-function connectAll() {
-    // connect all the paths you want!
-   connectElements($("#svg1"), $("#path1"), $("#qualitycontrolofreads"), $("#readmapping") );
 
-  
-}
 
 
 

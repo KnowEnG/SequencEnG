@@ -279,7 +279,10 @@ else{
 function show_chart(){
    $(".tree-button").hide();
      $(".tree-field").slideUp('slow');
-    $("#main").delay('850').slideDown('slow');
+    $("#main").delay('850').slideDown('slow',function(){
+        $("#chart-button").click();
+    });
+  
  
 }
 
@@ -701,7 +704,7 @@ function show_description(data){
         
         let $divRowNote = data.notes?
                           $("<div>", {"class": "row chart-notes"})
-                          .append("<div>Description : " + data.notes + "</div>"):"";
+                          .append("<div>Notes : " + data.notes + "</div>"):"";
         
         let $divRowYear = data.year?
                           $("<div>", {"class": "row chart-notes"})
@@ -722,22 +725,30 @@ function show_description(data){
         $divRowButton.append(hasStep);
 
         let $imgBox = $("<div>", {"class" : "row"});
-        
-        let $figure = $("<figure>",{"class" : "figure-box"});
-        let $descimg = $("<img>", {"id" : "descimg", "alt" : "Image of " + data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg", "title" : "Click for bigger image"});
-        $figure.append($descimg);
-        $imgBox.append($figure);
+
+        if(data.plot){
+          console.log(data.plot);
+
+          let $figure = $("<figure>",{"class" : "figure-box"});
+          let $descimg = $("<img>", {"id" : "descimg", "alt" : "Image of " + data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg", "title" : "Click for bigger image"});
+          $figure.append($descimg);
+          $imgBox.append($figure);
 
 
-        let $modal = $("#modalbox");
-        let $imgmodal = $("#img-modal");
+          let $modal = $("#modalbox");
+          let $imgmodal = $("#img-modal");
 
-        //modal event
-        $descimg.click(function(){
-            $modal.show();
-            $imgmodal.attr("src",  "./img/"+data.seq_name+".jpeg");
-            $("#caption").text(data.seq_fullname);
-        });
+          //modal event
+          $descimg.click(function(){
+              $modal.show();
+              $imgmodal.attr("src",  "./img/"+data.seq_name+".jpeg");
+              $("#caption").text(data.seq_fullname);
+          });
+
+        }
+
+     
+       
 
         $divContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper, $imgBox, $divRowButton);
 
