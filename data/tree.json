@@ -579,7 +579,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA",
-    "seq_name": "RNA-seq ",
+    "seq_name": "RNA-seq",
     "plot": "",
     "has_step": 1,
     "seq_fullname": "sequencing of messenger RNA",

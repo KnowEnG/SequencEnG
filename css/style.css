@@ -148,6 +148,39 @@ path.link.found{
 }
 
 
+.rcr{
+  position: relative;
+}
+.rcr-tooltip{
+  visibility: hidden;
+    width: 300px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    border: 1px solid black;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+   
+}
+.rcr:hover .rcr-tooltip{
+   visibility: visible;
+}
+
+.rcr-tooltip::after{
+  content: " ";
+   position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
 
 /*LARGE DESKTOP SCREEN SIZE > 768 px */
 @media only screen and (min-width: 768px) {
