@@ -281,6 +281,54 @@ path.link.found{
   opacity: 0.7;
 }
 
+.tooltipbox{
+  position : relative; 
+  background-color: lightblue;
+  font-size : 10px; 
+  display : inline-block;
+  width : auto; 
+  height : auto;
+  
+}
+
+.tooltipbox .tooltip-top{
+  position : absolute;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -40px;
+  z-index: 100;
+   width : auto; 
+  height : auto;
+}
+.tooltipbox .tooltip-top::after{
+  top:100%;
+  left:50%;
+  margin-left: -5px;
+  border-color: lightgreen transparent transparent transparent;
+
+}
+.tooltipbox div[class^="tooltip"]{
+    
+    display: none;
+   width: auto;
+ 
+  background-color : lightgreen;
+  border-radius : 2px;
+  border: 1px solid green;  
+}
+.tooltipbox div[class^="tooltip"]::after{
+   
+  border-width: 5px;
+  border-style: solid;
+ content: "";
+  position: absolute;
+}
+.tooltipbox:hover div[class^="tooltip"]{
+ display: block;
+
+}
+
+
 
 
 /*MODAL*/

@@ -1,3 +1,5 @@
+
+
 var pipeline_load = function(seq_name){
 
   // var step = ['quality control of reads','read mapping', 'quality control after mapping','differential binding', 'peak calling','peak annotation','motif analysis',  'gene ontology analysis']

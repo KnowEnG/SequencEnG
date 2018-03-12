@@ -199,7 +199,7 @@ function searchTree(data, search, path){
 
         let $imgBox = $("<div>", {"class" : "row"});
 
-        if(data.plot){
+        if(data.plot===1){
 
           let $figure = $("<figure>",{"class" : "figure-box"});
           let $descimg = $("<img>", {"id" : "descimg", "alt" : "Image of " + data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg", "title" : "Click for bigger image"});

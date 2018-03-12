@@ -129,7 +129,24 @@ Block.prototype.makeTable = function(...args){
 	head_fields = head_fields.concat(this.fields);
 
 	for(let i = 0; i < head_fields.length;i++){
-		head = head + "<th>" + head_fields[i] + "</th>";
+		let final = "";
+		let temp = head_fields[i];
+		while(temp.indexOf("{")!== -1){
+			let startIndex = temp.indexOf("{");
+			let closeIndex = temp.indexOf("}");
+
+			let tipbox = applyTooltip(temp.substring(startIndex, closeIndex+1));
+			let substringBefore = temp.substring(0, startIndex);
+			
+			//after
+			temp = temp.slice(closeIndex+1, temp.length);
+			
+			final = final + substringBefore + tipbox;
+		}
+
+		final = final + temp;
+
+		head = head + "<th>" + final + "</th>";
 	}
 
 	head = head + "</tr>";
@@ -166,7 +183,31 @@ Block.prototype.makeTable = function(...args){
 };
 
 
+function applyTooltip(info){
+	
+	//info = info.replace(/\'/g, "\"");
 
+	//info = "\'" + info + "\'";
+
+	//console.log(info);
+
+	let tipInfo = JSON.parse(info);
+  	
+  	
+
+    let value = tipInfo.value;
+    let text =tipInfo.text;
+
+    let tipbox = "<div class='tooltipbox'>" + 
+    			value + 
+    			"<div class='tooltip-top'>" + text + "</div></div>"
+
+   
+    return tipbox;
+
+
+
+}
 
 
 
