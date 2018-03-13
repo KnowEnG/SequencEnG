@@ -206,7 +206,7 @@
   {
     "order": 4.1,
     "nextStep": 4.2,
-    "nextStepCount": 2,
+    "nextStepCount": 1,
     "parent": "generate interaction matrix",
     "step": "bin and count mapped reads",
     "software": "",
@@ -239,7 +239,7 @@
   },
   {
     "order": 5,
-    "nextStep": 5.1,
+    "nextStep": 6,
     "nextStepCount": 1,
     "parent": "",
     "step": "detect chromatin interactions",
@@ -256,7 +256,7 @@
   },
   {
     "order": 5,
-    "nextStep": 5.1,
+    "nextStep": 6,
     "nextStepCount": 1,
     "parent": "",
     "step": "detect chromatin interactions",
@@ -273,7 +273,7 @@
   },
   {
     "order": 5,
-    "nextStep": 5.1,
+    "nextStep": 6,
     "nextStepCount": 1,
     "parent": "",
     "step": "detect chromatin interactions",
@@ -290,7 +290,7 @@
   },
   {
     "order": 5,
-    "nextStep": 5.1,
+    "nextStep": 6,
     "nextStepCount": 1,
     "parent": "",
     "step": "detect chromatin interactions",
@@ -307,7 +307,7 @@
   },
   {
     "order": 5,
-    "nextStep": 5.1,
+    "nextStep": 6,
     "nextStepCount": 1,
     "parent": "",
     "step": "detect chromatin interactions",
@@ -324,7 +324,7 @@
   },
   {
     "order": 5,
-    "nextStep": 5.1,
+    "nextStep": 6,
     "nextStepCount": 1,
     "parent": "",
     "step": "detect chromatin interactions",
@@ -341,7 +341,7 @@
   },
   {
     "order": 5,
-    "nextStep": 5.1,
+    "nextStep": 6,
     "nextStepCount": 1,
     "parent": "",
     "step": "detect TAD",

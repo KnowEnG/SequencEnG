@@ -117,7 +117,7 @@ div.dataTables_wrapper {
   stroke-dashoffset: 1000;
   animation: dash linear;
   animation-fill-mode: forwards;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
  
 }
  @keyframes dash {
