@@ -50,7 +50,7 @@
   {
     "seq_goal_level1": "DNA",
     "seq_goal_level2": "TF Binding",
-    "seq_name": "ULI-NChIP-seq ",
+    "seq_name": "ULI-NChIP-seq",
     "plot": 1,
     "seq_fullname": "ultra-low-input micrococcal nuclease-based native ChIP and sequencing",
     "year": 2015,
@@ -62,7 +62,7 @@
   {
     "seq_goal_level1": "DNA",
     "seq_goal_level2": "TF Binding",
-    "seq_name": "ReChIP-seq ",
+    "seq_name": "ReChIP-seq",
     "plot": 1,
     "seq_fullname": "reChIP-seq",
     "year": 2016,
@@ -110,7 +110,7 @@
   {
     "seq_goal_level1": "DNA",
     "seq_goal_level2": "Ribonucleotide incorporation",
-    "seq_name": "Ribose-seq ",
+    "seq_name": "Ribose-seq",
     "plot": 1,
     "seq_fullname": "Ribonucleotide sequencing",
     "year": 2015,
@@ -290,7 +290,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Open chromatin",
-    "seq_name": "ATAC-seq ",
+    "seq_name": "ATAC-seq",
     "plot": 1,
     "seq_fullname": "Assay for Transposase-Accessible Chromatin with high throughput sequencing",
     "year": 2013,
@@ -349,7 +349,7 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction ",
+    "seq_goal_level2": "Chromosome interaction",
     "seq_name": "3C ",
     "plot": 1,
     "seq_fullname": "Chromosome Conformation Capturing",
@@ -361,7 +361,7 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction ",
+    "seq_goal_level2": "Chromosome interaction",
     "seq_name": "4C ",
     "plot": 1,
     "seq_fullname": "circular 3C",
@@ -373,7 +373,7 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction ",
+    "seq_goal_level2": "Chromosome interaction",
     "seq_name": "5C ",
     "plot": 1,
     "seq_fullname": "Chromosome Conformation Capture Carbon Copy",
@@ -385,8 +385,8 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction ",
-    "seq_name": "Hi-C ",
+    "seq_goal_level2": "Chromosome interaction",
+    "seq_name": "Hi-C",
     "plot": 1,
     "seq_fullname": "High-throughput chromatin conformation capture",
     "year": 2009,
@@ -397,8 +397,8 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction ",
-    "seq_name": "ChIA-PET ",
+    "seq_goal_level2": "Chromosome interaction",
+    "seq_name": "ChIA-PET",
     "plot": 1,
     "seq_fullname": "Chromatin Interaction Analysis by Paired-End Tag Sequencing",
     "year": 2009,
@@ -409,7 +409,7 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction ",
+    "seq_goal_level2": "Chromosome interaction",
     "seq_name": "DNase Hi-C",
     "plot": 1,
     "seq_fullname": "in situ DNase Hi-C",
@@ -421,7 +421,7 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction ",
+    "seq_goal_level2": "Chromosome interaction",
     "seq_name": "RICC-seq",
     "plot": 1,
     "seq_fullname": "ionizing radiation-induced spatially correlated cleavage of DNA with sequencing",
@@ -433,7 +433,7 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction ",
+    "seq_goal_level2": "Chromosome interaction",
     "seq_name": "MicroC",
     "plot": 1,
     "seq_fullname": "MICROcoccal nuclease chromosome Conformation assay and sequencing",
@@ -445,7 +445,7 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Single-cell chromosome interaction ",
+    "seq_goal_level2": "Single-cell chromosome interaction",
     "seq_name": "sci-Hi-C",
     "plot": 1,
     "seq_fullname": "single-cell Hi-C",
@@ -482,7 +482,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Nucleosome positioning",
-    "seq_name": "MNase-seq ",
+    "seq_name": "MNase-seq",
     "plot": 1,
     "seq_fullname": "MNase-seq",
     "year": 2011,
@@ -566,7 +566,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA",
-    "seq_name": "RNA-seq ",
+    "seq_name": "RNA-seq",
     "plot": 1,
     "seq_fullname": "sequencing of messenger RNA",
     "year": 2009,
@@ -578,7 +578,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA isoform detection",
-    "seq_name": "TIF-seq ",
+    "seq_name": "TIF-seq",
     "plot": 1,
     "seq_fullname": "Transcript isoform sequencing",
     "year": 2013,
@@ -590,7 +590,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "Nascent RNA",
-    "seq_name": "NET-seq ",
+    "seq_name": "NET-seq",
     "plot": 1,
     "seq_fullname": "native elongating transcript sequencing",
     "year": 2011,
@@ -614,7 +614,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "Nascent RNA",
-    "seq_name": "GRO-seq ",
+    "seq_name": "GRO-seq",
     "plot": 1,
     "seq_fullname": "Global Run-On Sequencing",
     "year": 2008,
@@ -626,7 +626,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "Nascent RNA",
-    "seq_name": "PRO-seq ",
+    "seq_name": "PRO-seq",
     "plot": 1,
     "seq_fullname": "Precision nuclear run-on sequencing",
     "year": 2013,
@@ -662,7 +662,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA binding protein",
-    "seq_name": "RIP-seq ",
+    "seq_name": "RIP-seq",
     "plot": 1,
     "seq_fullname": "RNA immunoprecipitations and sequencing",
     "year": 2010,
@@ -674,7 +674,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA binding protein",
-    "seq_name": "CLIP-seq ",
+    "seq_name": "CLIP-seq",
     "plot": 1,
     "seq_fullname": "cross-linking immunoprecipitation and sequencing",
     "year": 2008,
@@ -686,7 +686,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA binding protein",
-    "seq_name": "PAR-CLIP ",
+    "seq_name": "PAR-CLIP",
     "plot": 1,
     "seq_fullname": "photoactivatable ribonucleoside enhanced cross-linking and immunoprecipitation",
     "year": 2010,
@@ -698,7 +698,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "Ribosome-profiling",
-    "seq_name": "Ribo-seq ",
+    "seq_name": "Ribo-seq",
     "plot": 1,
     "seq_fullname": "ribosome profiling with sequencing",
     "year": 2009,
@@ -710,7 +710,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA structure",
-    "seq_name": "PARS-seq ",
+    "seq_name": "PARS-seq",
     "plot": 1,
     "seq_fullname": "parallel analysis of RNA structure",
     "year": 2013,
@@ -722,7 +722,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA structure",
-    "seq_name": "SHAPE-seq ",
+    "seq_name": "SHAPE-seq",
     "plot": 1,
     "seq_fullname": "selective 2'-hydroxyl acylation analyzed by primer extension (SHAPE) with sequencing",
     "year": 2011,
@@ -734,7 +734,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA structure",
-    "seq_name": "Structure-seq ",
+    "seq_name": "Structure-seq",
     "plot": 1,
     "seq_fullname": "RNA structure sequencing",
     "year": 2014,
