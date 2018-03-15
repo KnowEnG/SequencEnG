@@ -129,24 +129,8 @@ Block.prototype.makeTable = function(...args){
 	head_fields = head_fields.concat(this.fields);
 
 	for(let i = 0; i < head_fields.length;i++){
-		let final = "";
-		let temp = head_fields[i];
-		while(temp.indexOf("{")!== -1){
-			let startIndex = temp.indexOf("{");
-			let closeIndex = temp.indexOf("}");
-
-			let tipbox = applyTooltip(temp.substring(startIndex, closeIndex+1));
-			let substringBefore = temp.substring(0, startIndex);
-			
-			//after
-			temp = temp.slice(closeIndex+1, temp.length);
-			
-			final = final + substringBefore + tipbox;
-		}
-
-		final = final + temp;
-
-		head = head + "<th>" + final + "</th>";
+		
+		head = head + "<th>" + analyzeValueInString(head_fields[i]) + "</th>";
 	}
 
 	head = head + "</tr>";
@@ -162,7 +146,9 @@ Block.prototype.makeTable = function(...args){
 				tr = tr + "<td>-</td>";
 			}
 			else{
-				tr = tr + "<td>" + this.data[key][head_fields[i]] + "</td>";
+				tr = tr + "<td>" + 
+				analyzeValueInString(this.data[key][head_fields[i]]);
+				 + "</td>";
 			}
 			
 		}
@@ -183,24 +169,46 @@ Block.prototype.makeTable = function(...args){
 };
 
 
+function analyzeValueInString(str){
+
+	let final ="";
+	while(str.indexOf("{")!== -1){
+			let startIndex = str.indexOf("{");
+			let closeIndex = str.indexOf("}");
+
+			let tipbox = applyTooltip(str.substring(startIndex, closeIndex+1));
+			let substringBefore = str.substring(0, startIndex);
+			
+			//after
+			str = str.slice(closeIndex+1, str.length);
+			
+			final = final + substringBefore + tipbox;
+		}
+
+	return final || str; 
+}
+
 function applyTooltip(info){
-	
-	//info = info.replace(/\'/g, "\"");
-
-	//info = "\'" + info + "\'";
-
-	//console.log(info);
 
 	let tipInfo = JSON.parse(info);
   	
-  	
+  	let tipbox = "";
 
     let value = tipInfo.value;
-    let text =tipInfo.text;
+    let text =tipInfo.text || "";
+    let link = tipInfo.link || "";
 
-    let tipbox = "<div class='tooltipbox'>" + 
-    			value + 
-    			"<div class='tooltip-top'>" + text + "</div></div>"
+   	if(text!==""){
+   		text = "<span data-tip='"+ text + "'>" + value;
+   	}
+
+   	else if(link!==""){
+   		link = "<a target='_blank' href='"+ link +"'>" + value + "</a>";
+   	}
+
+
+   	tipbox = text + link + "</span>";
+
 
    
     return tipbox;
