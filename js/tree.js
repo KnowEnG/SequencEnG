@@ -1,4 +1,18 @@
+/*
+Thanks for the opportunity.
 
+Could I change it to Thursday (04/05) or Friday (04/06) on first week of April?
+
+I have some works to do next week. 
+
+Also, How long could I expect for the interview ? 
+
+I need it for getting my time off. 
+
+Thank you. 
+
+
+*/
 
 var isMobile = false; //initiate as false
 // device detection
@@ -9,6 +23,13 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 const CURRENT_WINDOW_SIZE = screen.width;
 const TREE_FIELD_WIDTH = screen.width * 0.8;
 const TREE_HEIGHT = 1500;
+
+
+//intro
+const introTragetOne = "DNA";
+const introTragetTwp = "TF Binding";
+const introTargetThree = "ChIP-seq";
+const needIntro = !localStorage.getItem('intro_shown');
 
 
 //d3 Tree structure 
@@ -284,6 +305,15 @@ $.getJSON("./data/tree.json")
         if(typeof dataObject[data[i].seq_goal_level1] !== 'undefined'){
           let leafNode = data[i];
           leafNode.name = data[i].seq_name;
+
+          //set intro
+          if(leafNode.name === introTargetThree && needIntro){
+            let $introDesc =  show_description(data[i]);
+
+              $("#desc").html($introDesc);
+          }
+
+
           if(typeof dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] !== "undefined"){
             dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2].push(leafNode);
           }
@@ -342,6 +372,7 @@ if(!isMobile){
   
   draw_tree();
 
+  
 }
 
 
@@ -350,7 +381,7 @@ else{
 
   draw_table();
   
-
+   
 }
 
 
@@ -480,6 +511,9 @@ function draw_tree(){
         })
         .attr("font-weight",function(d){
           return d.children || d._children ? "normal" : "bold";
+        })
+        .attr("id", function(d){
+            return d.data.name;
         })
         .text(function(d) { return d.data.name; })
         .on("click", function(d){

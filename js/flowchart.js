@@ -1,4 +1,35 @@
 
+function showToolTip(e){
+  e.stopPropagation();
+
+  let target = e.target;
+  let position = $(target).offset();
+
+  let width = $(target).width();
+
+  let tooltipPositionX = position.left;
+  let tooltipPositionY = position.top;
+
+ 
+
+  $('#tooltip-box').empty().append($(target).attr('data-tip'));
+
+   $('#tooltip-box').css('top', tooltipPositionY-$('#tooltip-box').height()-5);
+  $('#tooltip-box').css('left', tooltipPositionX);
+
+  $('#tooltip-box').css('visibility', 'visible');
+   $('#tooltip-box').css('opacity', 1);
+
+
+
+}
+function hideTooltip(e){
+  e.stopPropagation();
+  $('#tooltip-box').css('visibility', 'hidden');
+   $('#tooltip-box').css('opacity', 0);
+
+
+}
 
 var pipeline_load = function(seq_name){
 
@@ -79,10 +110,14 @@ var pipeline_load = function(seq_name){
                table.destroy();
 
             }
+
+
              
 
              //build table 
               $("#table").empty().append(target.table);
+
+              $('#table th span, #table td span').hover(showToolTip, hideTooltip);
 
                 $('#table tfoot th').each( function () {
                     var title = $(this).text();

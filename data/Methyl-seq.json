@@ -1,0 +1,65 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "quality control of reads"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "read mapping"
+  },
+  {
+    "order": 3,
+    "nextStep": 4,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "quality control after mapping"
+  },
+  {
+    "order": 4,
+    "nextStep": 5,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "methylation calling"
+  },
+  {
+    "order": 4,
+    "nextStep": 6,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "methylation calling"
+  },
+  {
+    "order": 5,
+    "nextStep": 5.1,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Differentially"
+  },
+  {
+    "order": 5.1,
+    "nextStep": 6,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "DMC"
+  },
+  {
+    "order": 5.1,
+    "nextStep": 6,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "DMR"
+  },
+  {
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "visualization"
+  }
+]

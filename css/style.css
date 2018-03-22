@@ -37,6 +37,7 @@ h1 {
   text-align: center;
 }
 
+
 div.dataTables_wrapper {
         width: 100%;
 }
@@ -284,7 +285,27 @@ path.link.found{
 #tooltip-box{
   position: absolute;
   width: 150px;
-  
+  font-size: 14px;
+  visibility: hidden;
+  background-color: lightblue;
+  border: 1px solid green; 
+  border-radius: 2px; 
+  opacity: 0;
+  transition: opacity 0.8s ease;
+
+
+}
+
+#tooltip-box::after{
+  content:"";
+  position: absolute;
+  top:100%;
+  left: 50%;
+  margin-left: -5px;
+
+   border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
 }
 
 

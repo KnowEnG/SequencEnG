@@ -33,7 +33,7 @@
     "paper_title": "Genome-wide profiles of STAT1 DNA association using chromatin immunoprecipitation and massively parallel sequencing.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17558387",
     "notes": "Basic sequencing method for TF binding and histone modification profiles.",
-    "": ""
+    "has_step": 1
   },
   {
     "seq_goal_level1": "DNA",
@@ -134,7 +134,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Histone modification",
-    "seq_name": "ChIP-seq ",
+    "seq_name": "ChIP-seq",
     "plot": 1,
     "seq_fullname": "chromatin immunoprecipitation sequencing",
     "year": 2007,
@@ -146,7 +146,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "DNA methylation",
-    "seq_name": "WGBS ",
+    "seq_name": "WGBS",
     "plot": 1,
     "seq_fullname": "whole genome bisulfite sequencing",
     "year": "",
@@ -201,7 +201,7 @@
     "paper_title": "Distinct DNA methylation patterns characterize differentiated human embryonic stem cells and developing human fetal liver.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19273619",
     "notes": "Uses methyl-sensitive restriction enzymes",
-    "": ""
+    "has_step": 1
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -393,7 +393,7 @@
     "paper_title": "Comprehensive mapping of long-range interactions reveals folding principles of the human genome",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19815776",
     "notes": "Discoveres genome-wide interactions between any pairs of genomic regions.",
-    "": ""
+    "has_step": 1
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -573,7 +573,7 @@
     "paper_title": "RNA-Seq: a revolutionary tool for transcriptomics.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19015660",
     "notes": "Basic sequencing method for gene expression quantification.",
-    "": ""
+    "has_step": 1
   },
   {
     "seq_goal_level1": "RNA",

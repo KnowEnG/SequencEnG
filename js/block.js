@@ -170,9 +170,11 @@ Block.prototype.makeTable = function(...args){
 
 
 function analyzeValueInString(str){
-
 	let final ="";
-	while(str.indexOf("{")!== -1){
+
+	if(typeof str === 'string'){
+
+		while(str.indexOf("{")!== -1){
 			let startIndex = str.indexOf("{");
 			let closeIndex = str.indexOf("}");
 
@@ -185,11 +187,15 @@ function analyzeValueInString(str){
 			final = final + substringBefore + tipbox;
 		}
 
+	}
+	
+
 	return final || str; 
 }
 
 function applyTooltip(info){
 
+	console.log(info);
 	let tipInfo = JSON.parse(info);
   	
   	let tipbox = "";
@@ -199,7 +205,7 @@ function applyTooltip(info){
     let link = tipInfo.link || "";
 
    	if(text!==""){
-   		text = "<span data-tip='"+ text + "'>" + value;
+   		text = "<span style='color:forestgreen;' data-tip='"+ text + "'>" + value + "</span>";
    	}
 
    	else if(link!==""){
@@ -207,7 +213,7 @@ function applyTooltip(info){
    	}
 
 
-   	tipbox = text + link + "</span>";
+   	tipbox = text + link;
 
 
    
