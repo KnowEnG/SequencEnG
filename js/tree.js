@@ -1,19 +1,3 @@
-/*
-Thanks for the opportunity.
-
-Could I change it to Thursday (04/05) or Friday (04/06) on first week of April?
-
-I have some works to do next week. 
-
-Also, How long could I expect for the interview ? 
-
-I need it for getting my time off. 
-
-Thank you. 
-
-
-*/
-
 var isMobile = false; //initiate as false
 // device detection
 if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
@@ -27,7 +11,7 @@ const TREE_HEIGHT = 1500;
 
 //intro
 const introTragetOne = "DNA";
-const introTragetTwp = "TF Binding";
+const introTargetTwo = "TF Binding";
 const introTargetThree = "ChIP-seq";
 const needIntro = !localStorage.getItem('intro_shown');
 
@@ -182,7 +166,7 @@ function searchTree(data, search, path){
 
     
 
-      let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper"});
+      let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper", "data-step":"6", "data-intro":"This shows the description"});
     
       // notes, seq_fullname, year, paper_title paper_link
         let $divRowName = data.seq_fullname?
@@ -496,7 +480,23 @@ function draw_tree(){
         .attr('r', 1e-6)
         .style("fill", function(d) {
             return d._children ? "springgreen" : "#fff";
-        });
+        })
+        .on("click", function(d){
+          
+            //console.log(d);
+            if(typeof d.data.children === 'undefined'){
+                let $descText = show_description(d.data);
+                $descText.hide();
+
+                $("#desc").html($descText);
+               
+
+                
+                $descText.fadeIn('slow');
+                $("#desc").fadeIn('slow');
+            }
+        
+        });;
 
     nodeEnter.append('text')
         .attr("dy", ".35em")
@@ -512,8 +512,43 @@ function draw_tree(){
         .attr("font-weight",function(d){
           return d.children || d._children ? "normal" : "bold";
         })
-        .attr("id", function(d){
-            return d.data.name;
+        .attr("class", function(d){
+
+          if(d.data.name === introTragetOne || d.data.name === introTargetTwo || d.data.name === introTargetThree){
+
+            return 'tree-intro';
+          }
+        })
+        .attr("data-step", function(d){
+
+          if(d.data.name === introTragetOne){
+              return "3";
+          }
+          else if(d.data.name === introTargetTwo){
+            return "4";
+          }
+          else if(d.data.name === introTargetThree){
+            return "5";
+          }
+          else {
+            return '';
+          }
+
+        })
+        .attr("data-intro", function(d){
+           if(d.data.name === introTragetOne){
+              return "This node indicates First Step";
+          }
+          else if(d.data.name === introTargetTwo){
+              return "This node indicates Second Step";
+          }
+          else if(d.data.name === introTargetThree){
+              return "This node indicates Third Step";
+          } 
+          else {
+            return '';
+          }
+
         })
         .text(function(d) { return d.data.name; })
         .on("click", function(d){

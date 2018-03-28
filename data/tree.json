@@ -153,7 +153,7 @@
     "paper_title": "",
     "paper_link": "",
     "notes": "Basic sequencing method for DNA methylation quantification. See \"Methyl-seq\".",
-    "": ""
+    "has_step": 1
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -201,7 +201,7 @@
     "paper_title": "Distinct DNA methylation patterns characterize differentiated human embryonic stem cells and developing human fetal liver.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19273619",
     "notes": "Uses methyl-sensitive restriction enzymes",
-    "has_step": 1
+    "has_step": 0
   },
   {
     "seq_goal_level1": "Epigenetics",

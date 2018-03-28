@@ -23,21 +23,21 @@
   {
     "order": 4,
     "nextStep": 5,
-    "nextStepCount": 1,
+    "nextStepCount": 2,
     "parent": "",
     "step": "methylation calling"
   },
   {
-    "order": 4,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
-    "step": "methylation calling"
+    "step": "Visualization"
   },
   {
     "order": 5,
-    "nextStep": 5.1,
-    "nextStepCount": 2,
+    "nextStep": 6,
+    "nextStepCount": 1,
     "parent": "",
     "step": "Differentially"
   },
@@ -45,14 +45,14 @@
     "order": 5.1,
     "nextStep": 6,
     "nextStepCount": 1,
-    "parent": "",
+    "parent": "Differentially",
     "step": "DMC"
   },
   {
     "order": 5.1,
     "nextStep": 6,
     "nextStepCount": 1,
-    "parent": "",
+    "parent": "Differentially",
     "step": "DMR"
   },
   {
@@ -60,6 +60,6 @@
     "nextStep": "",
     "nextStepCount": 0,
     "parent": "",
-    "step": "visualization"
+    "step": "Visuization for DMC or DMR"
   }
 ]
