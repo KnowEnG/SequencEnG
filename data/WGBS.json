@@ -28,8 +28,8 @@
     "step": "methylation calling"
   },
   {
-    "order": 6,
-    "nextStep": "",
+    "order": 5,
+    "nextStep": "na",
     "nextStepCount": 0,
     "parent": "",
     "step": "Visualization"
@@ -37,26 +37,26 @@
   {
     "order": 5,
     "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStepCount": 2,
     "parent": "",
     "step": "Differentially"
   },
   {
-    "order": 5.1,
-    "nextStep": 6,
+    "order": 6,
+    "nextStep": 7,
     "nextStepCount": 1,
-    "parent": "Differentially",
+    "parent": "",
     "step": "DMC"
   },
   {
-    "order": 5.1,
-    "nextStep": 6,
+    "order": 6,
+    "nextStep": 7,
     "nextStepCount": 1,
-    "parent": "Differentially",
+    "parent": "",
     "step": "DMR"
   },
   {
-    "order": 6,
+    "order": 7,
     "nextStep": "",
     "nextStepCount": 0,
     "parent": "",
