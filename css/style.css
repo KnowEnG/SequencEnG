@@ -17,7 +17,21 @@ h1 {
 #main{
   display: none;
 }
+#intro-target-container{
+  position: absolute;
+  top:0;
+  left:0;
+  background: transparent;
+  opacity: 0;
+  z-index: 0;
+  height: 750px;
+  width: 100%;
+}
 
+.handle-events {
+    pointer-events: none;
+    cursor: default;
+}
 
 /*FLOW CHART*/
 
@@ -200,11 +214,12 @@ path.link.found{
   }
   
   #desc{
-      position: absolute;
+    /*  position: absolute;
     top:30%;
     right: 0;
     transform: translate(0,-30%);
-    margin-right: 100px;
+    margin-right: 100px;*/
+    margin-top: 150px;
   }
 
   .node text{

@@ -34,7 +34,7 @@ function hideTooltip(e){
 var pipeline_load = function(seq_name){
 
   // var step = ['quality control of reads','read mapping', 'quality control after mapping','differential binding', 'peak calling','peak annotation','motif analysis',  'gene ontology analysis']
-  console.log(seq_name);
+ 
   $.getJSON("./data/" + seq_name + ".json")
     .done(function( data ) {
 
@@ -224,7 +224,7 @@ var pipeline_load = function(seq_name){
              $(window).off();
                 $(window).resize(function(){
                      $("#svgContainer svg path").remove();
-
+                   
                     resetSVGsize();
                     connectAll(seq_name, Blocks);
                 });
@@ -243,7 +243,9 @@ var pipeline_load = function(seq_name){
                 $("#chart-button").text("hide chart");
                 $("#chart-button").removeClass("btn-outline-success");
                 $("#chart-button").addClass("btn-success");
-                
+
+
+                 
               }
               else{
                 $("#chart-button").text("show chart");
@@ -253,6 +255,9 @@ var pipeline_load = function(seq_name){
                     $(".block-button").addClass("btn-outline-primary");
                  $(".table-row").hide();
                
+               
+
+
               }
 
             });
@@ -266,8 +271,26 @@ var pipeline_load = function(seq_name){
 
             });
 
-           
-            
+             //intro
+             if(!localStorage.getItem('intro_shown')){
+              let offset = $(".introjs-showElement").offset();
+                  let introwidth = $(".introjs-showElement").width();
+                  let introheight = $(".introjs-showElement").height();
+                  $('.introjs-helperLayer').css('left', offset.left);
+                  $('.introjs-helperLayer').css('top', offset.top);
+                  $('.introjs-helperLayer').height(introheight+10);
+                  $('.introjs-helperLayer').width(introwidth+10);
+
+                  $('.introjs-tooltipReferenceLayer').css('left', offset.left);
+                  $('.introjs-tooltipReferenceLayer').css('top', offset.top);
+                  $('.introjs-tooltipReferenceLayer').height(introheight+10);
+                  $('.introjs-tooltipReferenceLayer').width(introwidth+10);
+
+                  $('.introjs-tooltip').css('bottom', introheight+10);
+                  $('.introjs-arrow').removeClass('left').addClass('bottom');
+             }
+              
+
           });
           
      
@@ -318,7 +341,28 @@ $(document).ready(function() {
        $("#chart-button").text("show chart");
        $("#chart-button").removeClass("btn-success");
        $("#chart-button").addClass("btn-outline-success");
-      $(".tree-field").delay('850').slideDown('slow');
+      $(".tree-field").delay('850').slideDown('slow',function(){
+
+        if(!localStorage.getItem('intro_shown')){
+          let offset = $(".introjs-showElement").offset();
+                  let introwidth = $(".introjs-showElement").width();
+                  let introheight = $(".introjs-showElement").height();
+                  $('.introjs-helperLayer').css('left', offset.left);
+                  $('.introjs-helperLayer').css('top', offset.top);
+                  $('.introjs-helperLayer').height(introheight+10);
+                  $('.introjs-helperLayer').width(introwidth+10);
+
+                  $('.introjs-tooltipReferenceLayer').css('left', offset.left);
+                  $('.introjs-tooltipReferenceLayer').css('top', offset.top);
+                  $('.introjs-tooltipReferenceLayer').height(introheight+10);
+                  $('.introjs-tooltipReferenceLayer').width(introwidth+10);
+
+                  $('.introjs-tooltip').css('bottom', introheight+10);
+                  $('.introjs-arrow').removeClass('left').addClass('bottom');
+
+        }
+                
+      });
      
  });
 

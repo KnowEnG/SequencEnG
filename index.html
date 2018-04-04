@@ -72,7 +72,7 @@
     </div>
 	<div class="container-fluid">
 		<div class="tree-field">
-			<div class="row tree-intro" data-step="1" data-intro="Tree controller buttons">
+			<div class="row tree-intro" data-step="1" data-intro= "&#8226; Expand the whole knowledge tree to view all current next-generation sequencing (NGS)technique up to date. <br> &#8226;  Collapse the tree to view major sequencing targets. <br> &#8226; Search and select an NGS technique to see the path. <br> &#8226; Clear search if you want to search for another NGS techniques.">
 
 			<div class="col-md-2 col-sm-4 col-4">
 				<button id="expand-all" class="btn btn-outline-success">
@@ -87,22 +87,22 @@
 			</div>
 
 
-			<div class="col-md-2 col-sm-4 col-4">
-				
-				<button id="clear-all" class="btn btn-outline-info">
-					Clear Search
-				</button>
-			</div>
+			
 			<div class="col-md-3 col-sm-4 col-4">
 				 <select id="search" >
 				 	  <option></option>
 				 </select>
 
 			</div>
-			
+			<div class="col-md-2 col-sm-4 col-4">
+				
+				<button id="clear-all" class="btn btn-outline-info">
+					Clear Search
+				</button>
+			</div>
 		</div>
 			<div class="row">
-				<div  class="tree-intro" id="tree" data-step="2" data-intro="Tree Field"></div>
+				<div  class="tree-intro" id="tree" data-step="2" data-intro="See the knowledge tree of all the current major NGS techniques grouped by different research goals."></div>
 				<div id="desc" >
 			
 			
@@ -114,7 +114,8 @@
 		</div>
 			
 	</div>
-    <div id="main" class="container-fluid" data-step="7" data-intro="Pipe-line view" >		
+	
+    <div id="main" class="container-fluid" data-step="9" data-intro="After clicking the button, the analysis flow chart and software table show here." >		
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="chart-wrapper">
@@ -159,7 +160,7 @@
 							<div class="row justify-content-center">
 									
 										
-										<div data-step="8" data-intro="Pipe-line" class="col-10 col-md-10" id="flowchart-wrapper">
+										<div data-step="10" data-intro="Click on the analysis step to view substeps and software/tools available." class="col-10 col-md-10" id="flowchart-wrapper">
 
 										<div id="svgContainer">
 									    <svg id="svg-pipe" width="0" height="0" >
@@ -205,7 +206,7 @@
 					</div>
 					<div class="chart-stage">	
 						<div class="container">
-							<div data-step="9" data-intro="Table" class="row justify-content-center table-row">
+							<div data-step="11" data-intro="Information and comparison of popular software/tools." class="row justify-content-center table-row">
 									
 										<table id="table" class="display cell-border hover" cellspacing="0" width="100%">
 
@@ -260,7 +261,7 @@
 <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.js" async></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js" integrity="sha256-hfmVcDB4v86G5tVgzUJ60031uvFWF+38pqVjkCxTkNs=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js" integrity="sha256-hfmVcDB4v86G5tVgzUJ60031uvFWF+38pqVjkCxTkNs=" crossorigin="anonymous" async></script>
 
 
 <script src="./js/svgPath.js" defer></script>
@@ -273,19 +274,48 @@
 			if (localStorage.getItem('intro_shown')) {
 				return;
 			}
-			localStorage.setItem('intro_shown', true);
+		
 			$("#expand-all").click();
-			introJs().setOption("showStepNumbers", false).onbeforechange(function(targetElement) {
-			 		if(targetElement.getAttribute('data-step') === '7'){
-			 			$(".show-chart").click()
-			 		}
-			 		else if(targetElement.getAttribute('data-step') === '9'){
-			 				$("#qualitycontrolofreads").click();
-			 		}
-			}).oncomplete(function(){
-				$("#tree-button").click();
+
+			setTimeout(function(){
+					let intro = introJs();
+				intro.setOption("showStepNumbers", false).onbeforechange(function(targetElement) {
+						if(this._currentStep === 10){
+				 				$("#qualitycontrolofreads").click();
+				 		}
+						
+				 		if(this._currentStep >= 8){
+
+				 			if($('#main').css('display')==='none'){
+				 				$(".show-chart").click();
+				 			}
+
+				 			
+				 			
+				 			
+				 		}
+				 		else if(this._currentStep <= 7){
+
+				 			if($(".tree-field").css('display') === 'none'){
+				 				$("#tree-button").click();
+
+				 				
+				 			}
+
+				 		}
+				 		
+				}).oncomplete(function(){
+					$("#tree-button").click();
+						localStorage.setItem('intro_shown', true);
+					
+				}).onexit(function() {
+					$("#tree-button").click();
+ 				localStorage.setItem('intro_shown', true);
 			}).start();;
 
+
+			}, 250);
+			
 		
 
 		}

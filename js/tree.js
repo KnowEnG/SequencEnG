@@ -166,9 +166,12 @@ function searchTree(data, search, path){
 
     
 
-      let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper", "data-step":"6", "data-intro":"This shows the description"});
+      let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper"});
     
       // notes, seq_fullname, year, paper_title paper_link
+      let $specContainer = $("<div>", {id: "spec-detail", "class": "container", "data-step":"6", "data-intro":"The study that introduced the NGS technique"});
+
+
         let $divRowName = data.seq_fullname?
                           $("<div>", {"class": "chart-title row justify-content-center"})
                           .append("<div>" + data.seq_fullname + "</div>"):"";
@@ -188,7 +191,7 @@ function searchTree(data, search, path){
 
              
         let $divRowButton = $("<div>", {"class": "row justify-content-md-center button-row"});
-        let hasStep = data.has_step?"<button class='btn btn-success show-chart'>Show steps</button>":"";
+        let hasStep = data.has_step?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four important NGS techiniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing), learn about the data analysis pipeline and  comparision of popular software/tools available.'>Show steps</button>":"";
         if(data.has_step){
           $("#chart").empty();
           pipeline_load(data.seq_name);
@@ -205,9 +208,9 @@ function searchTree(data, search, path){
         let $imgBox = $("<div>", {"class" : "row"});
 
         if(data.plot===1){
-          console.log(data.plot);
+         
 
-          let $figure = $("<figure>",{"class" : "figure-box"});
+          let $figure = $("<figure>",{id: "techiniques-figure", "class" : "figure-box", "data-step":"7", "data-intro":"Basic idea and steps of constructing sequencing library for the specific goal."});
           let $descimg = $("<img>", {"id" : "descimg", "alt" : "Image of " + data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg", "title" : "Click for bigger image"});
           $figure.append($descimg);
           $imgBox.append($figure);
@@ -228,8 +231,9 @@ function searchTree(data, search, path){
         
        
         $.ajax('https://icite.od.nih.gov/api/pubs?pmids=23456789').done(function(response){
-            console.log(response);
-            $divContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper,$rcr, $imgBox, $divRowButton);
+           
+            $specContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper,$rcr)
+            $divContainer.append($specContainer, $imgBox, $divRowButton);
             $(".show-chart").on('click', show_chart);
             
         });
@@ -379,6 +383,8 @@ function show_chart(){
      $(".tree-field").slideUp('slow');
     $("#main").delay('850').slideDown('slow',function(){
         $("#chart-button").click();
+
+
     });
   
  
@@ -483,7 +489,7 @@ function draw_tree(){
         })
         .on("click", function(d){
           
-            //console.log(d);
+            
             if(typeof d.data.children === 'undefined'){
                 let $descText = show_description(d.data);
                 $descText.hide();
@@ -537,13 +543,13 @@ function draw_tree(){
         })
         .attr("data-intro", function(d){
            if(d.data.name === introTragetOne){
-              return "This node indicates First Step";
+              return "The high-level category of sequencing goals, including DNA, epigenetics and RNA. ex)DNA";
           }
           else if(d.data.name === introTargetTwo){
-              return "This node indicates Second Step";
+              return  "The low-level category of sequencing goals in different research domains. ex)TF-Binding";
           }
           else if(d.data.name === introTargetThree){
-              return "This node indicates Third Step";
+              return "NGS techniques as leaves ex)ChIP-seq";
           } 
           else {
             return '';
