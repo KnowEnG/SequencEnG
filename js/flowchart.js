@@ -358,6 +358,7 @@ $(document).ready(function() {
                   $('.introjs-tooltipReferenceLayer').width(introwidth+10);
 
                   $('.introjs-tooltip').css('bottom', introheight+10);
+    
                   $('.introjs-arrow').removeClass('left').addClass('bottom');
 
         }

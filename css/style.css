@@ -33,6 +33,10 @@ h1 {
     cursor: default;
 }
 
+.chart-title div strong{
+  color: red;
+}
+
 /*FLOW CHART*/
 
 
