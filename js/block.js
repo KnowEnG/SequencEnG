@@ -195,7 +195,7 @@ function analyzeValueInString(str){
 
 function applyTooltip(info){
 
-	console.log(info);
+	
 	let tipInfo = JSON.parse(info);
   	
   	let tipbox = "";

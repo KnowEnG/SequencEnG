@@ -16,6 +16,7 @@ const introTargetThree = "ChIP-seq";
 const needIntro = !localStorage.getItem('intro_shown');
 
 
+
 //d3 Tree structure 
 let treeData = {
   "name" : "Training",
@@ -174,7 +175,7 @@ function searchTree(data, search, path){
 
         let $divRowName = data.seq_fullname?
                           $("<div>", {"class": "chart-title row justify-content-center"})
-                          .append("<div>" + data.seq_fullname + "</div>"):"";
+                          .append("<div>" + data.seq_fullname + (data.has_step?"*":"") + "</div>"):"";
 
         
         let $divRowNote = data.notes?
@@ -191,15 +192,15 @@ function searchTree(data, search, path){
 
              
         let $divRowButton = $("<div>", {"class": "row justify-content-md-center button-row"});
-        let hasStep = data.has_step?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four important NGS techiniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing), learn about the data analysis pipeline and  comparision of popular software/tools available.'>Show steps</button>":"";
+        let hasStep = data.has_step?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four important NGS techiniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing), learn about the data analysis pipeline and  comparision of popular software/tools available.'>Analysis Pipeline</button>":"";
         if(data.has_step){
           $("#chart").empty();
           pipeline_load(data.seq_name);
         }
 
         let $rcr = $("<div>", {"class": "row chart-notes rcr"});
-        let $rcr_tooltip = $("<span>", {"class": "rcr-tooltip"});
-        $rcr.append("RCR :");
+        let $rcr_tooltip = $("<div>", {"class": "rcr-tooltip"});
+     
         $rcr.append($rcr_tooltip);
         $rcr_tooltip.append("Relative Citation Ratio represents a citation-based measure of scientific influence of one or more articles. It is calculated as the cites/year of each paper, normalized to the citations per year received by NIH-funded papers in the same field and year. A paper with an RCR of 1.0 has received the same number of cites/year as the average NIH-funded paper in its field, while a paper with an RCR of 2.0 has received twice as many cites/year as the average NIH-funded paper in its field. The displayed values are the maximum, the mean, the standard error of the mean (SEM), and the median (MED) of the papers in the group.");
 
@@ -228,10 +229,16 @@ function searchTree(data, search, path){
 
         }
 
+        let links = data.paper_link.split('/');
+        let pmids = links[links.length - 1];
+
         
        
-        $.ajax('https://icite.od.nih.gov/api/pubs?pmids=23456789').done(function(response){
-           
+        $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
+            $rcr.append('<div class="col-md-12">RCR(Relative Citation Ratio) : ' + response.data[0].relative_citation_ratio + '</div>');
+            $rcr.append('<div class="col-md-12">Citation Counts : ' + response.data[0].citation_count + '</div>');
+            $rcr.append('<div class="col-md-12">Citations per year : ' + response.data[0].citations_per_year + '</div>');
+
             $specContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper,$rcr)
             $divContainer.append($specContainer, $imgBox, $divRowButton);
             $(".show-chart").on('click', show_chart);
@@ -360,6 +367,8 @@ if(!isMobile){
   
   draw_tree();
 
+  $(".analysis-pipeline .row div button").click(click_pipeline_button);
+
   
 }
 
@@ -389,6 +398,18 @@ function show_chart(){
   
  
 }
+
+//util function
+function click_pipeline_button(e){
+
+  let target = e.target; 
+  let name = target.getAttribute('data-seqname');
+  $("#chart").empty();
+  pipeline_load(name);
+  show_chart();
+      
+}
+
 
 //===================Draw Tree(Desktop)=======================
 function draw_tree(){
@@ -434,6 +455,7 @@ function draw_tree(){
 
   //select2 init
   let select = $("#search").select2({
+          width: '100%',
          placeholder: 'Select an Node',
          data: selection_data
       });
@@ -543,20 +565,20 @@ function draw_tree(){
         })
         .attr("data-intro", function(d){
            if(d.data.name === introTragetOne){
-              return "The high-level category of sequencing goals, including DNA, epigenetics and RNA. ex)DNA";
+              return "The high-level category of sequencing goals, including DNA, epigenetics and RNA. i.e)DNA";
           }
           else if(d.data.name === introTargetTwo){
-              return  "The low-level category of sequencing goals in different research domains. ex)TF-Binding";
+              return  "The low-level category of sequencing goals in different research domains. i.e)TF-Binding";
           }
           else if(d.data.name === introTargetThree){
-              return "NGS techniques as leaves ex)ChIP-seq";
+              return "NGS techniques as leaves. * means that it has steps to show i.e)ChIP-seq*";
           } 
           else {
             return '';
           }
 
         })
-        .text(function(d) { return d.data.name; })
+        .text(function(d) { return d.data.name + (d.data.has_step?"*":""); })
         .on("click", function(d){
           
             //console.log(d);

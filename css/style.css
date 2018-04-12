@@ -203,7 +203,14 @@ path.link.found{
 
 /*LARGE DESKTOP SCREEN SIZE > 768 px */
 @media only screen and (min-width: 768px) {
-
+  
+  .tree-intro .row{
+    margin-top: 25px;
+      margin-bottom: 25px;
+  }
+  .tree-intro .row > div{
+    text-align: center;
+  }
   #tree{
 
   }
