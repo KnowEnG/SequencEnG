@@ -76,6 +76,7 @@ Block.prototype.render = function(){
 	else{
 		$(order).removeClass("justify-content-center");
 		$(order).addClass('justify-content-between');
+
 	}
 
 	this.frame = "<div class=\'col-4 col-md-4 block\'>"
@@ -89,10 +90,18 @@ Block.prototype.render = function(){
 
 	
 	$(order).append(this.frame);
+
+
+	//order has more than 3 blocks 
+	if($(order + " > div").length > 3){
+
+		let blockSize = Math.floor(12/$(order + " > div").length);
+		$(order + " > div").removeClass("col-4 col-md-4").addClass("col-" + blockSize + " col-md-" + blockSize);
+	}
 	
 
-	
-	$("#" + containerID + " .row .block-button").append("<span class=\'arrowTarget\'></span>")
+	//arrow Target for drawing path, position absolute, it will be a little bit above top and center of block
+	$("#" + containerID + " .row .block-button").append("<span class=\'arrowTarget\'></span>");
 
 	
 
@@ -188,9 +197,11 @@ function analyzeValueInString(str){
 		}
 
 	}
+
+
 	
 
-	return final || str; 
+	return final || (str.includes('http'))?"<a target='_blank' href='" + str + "'>" + str + "</a>":str; 
 }
 
 function applyTooltip(info){

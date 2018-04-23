@@ -14,7 +14,9 @@
     "format_input": "",
     "format_output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": "",
+    "": ""
   },
   {
     "order": 1.1,
@@ -25,13 +27,15 @@
     "software": "FastQC",
     "description": "Quality control tool for high throughput raw sequence data",
     "features": "Contains quality reports and gives pass/fail results for the following checks: Per base sequence quality, Per sequence quality scores, Per base sequence content, Per base GC content, Per sequence GC content, Per base N content, Sequence Length Distribution, Sequence Duplication Levels, Overrepresented sequences, Kmer Contenthas a GUI",
-    "strength": "Easy to use; Provide visualization in the HTML report",
-    "limitation": "for Illumina reads",
+    "strength": "Easy to use; Provide visualization in the HTML report; Can be used on Illumina, PacBio, 454 reads.",
+    "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "single",
     "format_input": "BAM, SAM, FASTQ",
     "format_output": "HTML",
     "platform requirement": "JAVA",
-    "link": "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/"
+    "link": "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+    "paper": "NA",
+    "": ""
   },
   {
     "order": 1.2,
@@ -48,7 +52,9 @@
     "format_input": "FASTQ",
     "format_output": "FASTA/FASTQ",
     "platform requirement": "",
-    "link": "https://github.com/agordon/fastx_toolkit"
+    "link": "https://github.com/agordon/fastx_toolkit",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/21278185",
+    "": ""
   },
   {
     "order": 1.2,
@@ -65,7 +71,9 @@
     "format_input": "FASTQ",
     "format_output": "FASTQ",
     "platform requirement": "JAVA",
-    "link": "http://www.usadellab.org/cms/?page=trimmomatic"
+    "link": "http://www.usadellab.org/cms/?page=trimmomatic",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/24695404",
+    "": ""
   },
   {
     "order": 1.2,
@@ -74,15 +82,17 @@
     "parent": "quality control of reads",
     "step": "trimming reads",
     "software": "cutadapt",
-    "description": "Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.",
-    "features": "",
+    "description": "Cutadapt Removes Adapter Sequences From High-Throughput Sequencing Reads",
+    "features": "Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.",
     "strength": "trim adaptors; supports 454, Illumina and SOLiD (colour space) data.",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "both",
     "format_input": "FASTQ",
     "format_output": "FASTQ",
     "platform requirement": "Python",
-    "link": "https://cutadapt.readthedocs.io/en/stable/index.html"
+    "link": "https://cutadapt.readthedocs.io/en/stable/index.html",
+    "paper": "NA {\"value\":\"link\",\"link\":\"http://dx.doi.org/10.14806/ej.17.1.200\"}",
+    "": ""
   },
   {
     "order": 2,
@@ -99,7 +109,9 @@
     "format_input": "",
     "format_output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": "",
+    "": ""
   },
   {
     "order": 2,
@@ -108,15 +120,17 @@
     "parent": "",
     "step": "Mapping-free quantification",
     "software": "kallisto",
-    "description": "quantifying abundances of transcripts from RNA-Seq data with no alignment",
+    "description": "Quantifying abundances of transcripts from RNA-Seq data with no alignment",
     "features": "Based on pseudoalignment and does not need read mapping",
-    "strength": "Fast; Does not need large memory; \"pseudo\" can be used for single cell RNA-seq",
+    "strength": "Fast; Does not need large memory; the command pseudo can be used for single cell RNA-seq",
     "limitation": "Will not provide mapped reads.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "FASTQ",
     "format_output": "TXT (TPM); h5(can be read by sleuth)",
     "platform requirement": "",
-    "link": "https://pachterlab.github.io/kallisto/"
+    "link": "https://pachterlab.github.io/kallisto/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/27043002",
+    "": ""
   },
   {
     "order": 2,
@@ -126,14 +140,16 @@
     "step": "Mapping-free quantification",
     "software": "Salmon",
     "description": "quantifying the expression of transcripts using RNA-seq data",
-    "features": "Salmon uses new algorithms (specifically, coupling the concept of�quasi-mapping�with a two-phase inference procedure) to provide accurate expression estimates very quickly (i.e.�wicked-fast) and while using little memory.",
+    "features": "Salmon uses new algorithms (specifically, coupling the concept of quasi-mapping with a two-phase inference procedure) to provide accurate expression estimates very quickly and while using little memory.",
     "strength": "",
     "limitation": "Will not provide mapped reads.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "FASTQ",
     "format_output": "TXT",
     "platform requirement": "",
-    "link": "https://combine-lab.github.io/salmon/"
+    "link": "https://combine-lab.github.io/salmon/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/28263959",
+    "": ""
   },
   {
     "order": 2.1,
@@ -150,7 +166,9 @@
     "format_input": "FASTQ",
     "format_output": "TXT",
     "platform requirement": "",
-    "link": "http://www.cs.cmu.edu/~ckingsf/software/sailfish/"
+    "link": "http://www.cs.cmu.edu/~ckingsf/software/sailfish/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/24752080",
+    "": ""
   },
   {
     "order": 2.1,
@@ -159,15 +177,17 @@
     "parent": "read mapping",
     "step": "mapping to genome",
     "software": "Tophat2",
-    "description": "",
-    "features": "",
+    "description": "A spliced read mapper for RNA-Seq",
+    "features": "Accurate alignment of transcriptomes in the presence of insertions, deletions and gene fusions",
     "strength": "Tophat2 is under low maintenance and would be replaced by HISAT2.",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "FASTQ",
     "format_output": "BAM",
     "platform requirement": "",
-    "link": "https://ccb.jhu.edu/software/tophat/index.shtml"
+    "link": "https://ccb.jhu.edu/software/tophat/index.shtml",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/23618408",
+    "": ""
   },
   {
     "order": 2.1,
@@ -177,14 +197,16 @@
     "step": "mapping to genome",
     "software": "HISAT2",
     "description": "graph-based alignment of next generation sequencing reads to a population of genomes",
-    "features": "",
+    "features": "Based on a graph FM index (GFM)",
     "strength": "using a newer indexing scheme called Hierarchical Graph FM index",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "FASTQ",
     "format_output": "BAM",
     "platform requirement": "",
-    "link": "https://ccb.jhu.edu/software/hisat2/manual.shtml"
+    "link": "https://ccb.jhu.edu/software/hisat2/manual.shtml",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/25751142",
+    "": ""
   },
   {
     "order": 2.1,
@@ -193,15 +215,17 @@
     "parent": "read mapping",
     "step": "mapping to genome",
     "software": "STAR",
-    "description": "Ultrafast universal RNA-seq aligner",
-    "features": "",
+    "description": "Spliced Transcripts Alignment to a Reference (STAR)�",
+    "features": "Ultrafast universal RNA-seq aligner",
     "strength": "Fast. Can also be used in differential splicing analysis if ran in 2-pass mode [add ref]. STAR is recommended by ENCODE project.",
-    "limitation": "requires large memory (~30Gb). If STAR was used for alignment, flags need to be set to use in Cufflinks.",
+    "limitation": "Requires large memory (~30Gb). If STAR was used for alignment, flags need to be set to use in Cufflinks.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "format_input": "FASTQ",
+    "format_input": "FASTQ, FASTA, Raw sequence per line",
     "format_output": "BAM",
     "platform requirement": "",
-    "link": "https://github.com/alexdobin/STAR"
+    "link": "https://github.com/alexdobin/STAR",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/23104886",
+    "": ""
   },
   {
     "order": 2.1,
@@ -212,13 +236,53 @@
     "software": "Bowtie",
     "description": "An ultrafast memory-efficient short read aligner",
     "features": "It aligns short DNA sequences (reads) to the human genome at a rate of over 25 million 35-bp reads per hour. Bowtie indexes the genome with a Burrows-Wheeler index to keep its memory footprint small: typically about 2.2 GB for the human genome (2.9 GB for paired-end). {\"value\":\"link\", \"link\":\"http://bowtie-bio.sourceforge.net/index.shtml\"}",
-    "strength": "",
-    "limitation": "does not allow gapped mapping",
+    "strength": "It aligns short DNA sequences (reads) to the human genome at a rate of over 25 million 35-bp reads per hour. Bowtie indexes the genome with a Burrows-Wheeler index to keep its memory footprint small: typically about 2.2 GB for the human genome (2.9 GB for paired-end). {\"value\":\"link\", \"link\":\"http://bowtie-bio.sourceforge.net/index.shtml\"} For relatively short reads (e.g. less than 50 bp) Bowtie 1 is sometimes faster and/or more sensitive than Bowtie 2. {\"value\":\"link\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/faq.shtml\"}",
+    "limitation": "Note that this is a non-splice aware aligner. Does not allow gapped mapping.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "format_input": "FASTQ",
-    "format_output": "BAM",
+    "format_input": "FASTQ, QSEQ, FASTA, Raw sequence per line",
+    "format_output": "Bowtie output (one alignment per line), SAM/BAM",
     "platform requirement": "",
-    "link": "http://bowtie-bio.sourceforge.net/index.shtml"
+    "link": "http://bowtie-bio.sourceforge.net/index.shtml",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/19451168",
+    "": ""
+  },
+  {
+    "order": 2.1,
+    "nextStep": 3,
+    "nextStepCount": 1,
+    "parent": "read mapping",
+    "step": "mapping to transcriptome",
+    "software": "Bowtie2",
+    "description": "Bowtie 2�is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.",
+    "features": "It is particularly good at aligning reads of about 50 up to 100s or 1,000s of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes. Bowtie 2 supports gapped, local, and paired-end alignment modes. {\"value\":\"link\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}",
+    "strength": "Supports gapped alignment. For reads longer than about 50 bp Bowtie 2 is generally faster, more sensitive, and uses less memory than Bowtie 1.  Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome, its memory footprint is typically around 3.2 GB.   {\"value\":\"link\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}",
+    "limitation": "Note that this is a non-splice aware aligner.",
+    "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
+    "format_input": "FASTQ, QSEQ, FASTA, Raw sequence per line",
+    "format_output": "Bowtie output (one alignment per line), SAM/BAM",
+    "platform requirement": "",
+    "link": "http://bowtie-bio.sourceforge.net/bowtie2/index.shtml",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/22388286",
+    "": ""
+  },
+  {
+    "order": 2.1,
+    "nextStep": 3,
+    "nextStepCount": 1,
+    "parent": "read mapping",
+    "step": "mapping to transcriptome",
+    "software": "BWA",
+    "description": "BWA is a software package for mapping low-divergent sequences against a large reference genome.",
+    "features": "Uses a Burrows-Wheeler transform to create an index of the genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to 1Mbp. {\"value\":\"link\",\"link\":\"http://bio-bwa.sourceforge.net/bwa.shtml\"}",
+    "strength": "Allows indels in alignment.",
+    "limitation": "Note that this is a non-splice aware aligner.",
+    "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
+    "format_input": "FASTQ, FASTA, BAM",
+    "format_output": "SAM/BAM",
+    "platform requirement": "",
+    "link": "http://bio-bwa.sourceforge.net/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/19261174",
+    "": ""
   },
   {
     "order": 2.1,
@@ -228,14 +292,16 @@
     "step": "assembly of transcriptome",
     "software": "stringtie",
     "description": "A fast and highly efficient assembler of RNA-Seq alignments into potential transcripts",
-    "features": "",
-    "strength": "de novo assembly as well as quantification",
+    "features": "Performs de novo assembly as well as quantification.",
+    "strength": "Output can be processed by Ballgown, Cuffdiff, DESeq2, edgeR, etc..",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "SAM,BAM,GTF",
     "format_output": "GTF,TSV",
     "platform requirement": "",
-    "link": "https://ccb.jhu.edu/software/stringtie/"
+    "link": "https://ccb.jhu.edu/software/stringtie/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/25690850",
+    "": ""
   },
   {
     "order": 3,
@@ -252,7 +318,9 @@
     "format_input": "SAM,BAM",
     "format_output": "GTF",
     "platform requirement": "",
-    "link": "http://cole-trapnell-lab.github.io/cufflinks/"
+    "link": "http://cole-trapnell-lab.github.io/cufflinks/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/22383036",
+    "": ""
   },
   {
     "order": 3,
@@ -261,15 +329,17 @@
     "parent": "",
     "step": "quality control after mapping",
     "software": "Picard",
-    "description": "summarizes mapping statistics such as insert size, mapping score summary, and quality score summary",
-    "features": "",
+    "description": "Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.",
+    "features": "Summarizes mapping statistics such as insert size, mapping score summary, and quality score summary. In particular, the subcommand Picard-MarkDuplicates can be used to remove duplicates.",
     "strength": "",
-    "limitation": "",
+    "limitation": "MarkDuplicates uses coordinate information but not read sequence information.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "SAM,BAM",
     "format_output": "GTF",
     "platform requirement": "JAVA",
-    "link": "https://broadinstitute.github.io/picard/"
+    "link": "https://broadinstitute.github.io/picard/",
+    "paper": "NA",
+    "": ""
   },
   {
     "order": 3,
@@ -278,15 +348,17 @@
     "parent": "",
     "step": "quality control after mapping",
     "software": "RNA-SeQC",
-    "description": "can compare sequencing quality across samples; or quality control for individual samples.",
-    "features": "",
-    "strength": "can be ran online trough GenePattern platform",
+    "description": "RNA-seq metrics for quality control and process optimization",
+    "features": "Can compare sequencing quality across samples; or quality control for individual samples.",
+    "strength": "Can be ran online trough GenePattern platform",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "BAM",
     "format_output": "GTF",
     "platform requirement": "JAVA",
-    "link": "http://archive.broadinstitute.org/cancer/cga/rna-seqc"
+    "link": "http://archive.broadinstitute.org/cancer/cga/rna-seqc",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/22539670",
+    "": ""
   },
   {
     "order": 3,
@@ -295,15 +367,17 @@
     "parent": "",
     "step": "quality control after mapping",
     "software": "RSeQC",
-    "description": "an RNA-seq Quality Control Package",
-    "features": "",
-    "strength": "metrics include sequence quality, nucleotide composition bias, PCR bias and GC bias, sequencing saturation, mapped reads distribution, coverage uniformity, strand specificity, transcript level RNA integrity etc.",
-    "limitation": "must provide gene annotation bed files",
+    "description": "An RNA-seq Quality Control Package",
+    "features": "metrics include sequence quality, nucleotide composition bias, PCR bias and GC bias, sequencing saturation, mapped reads distribution, coverage uniformity, strand specificity, transcript level RNA integrity etc.",
+    "strength": "",
+    "limitation": "Must provide gene annotation bed files.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "FASTA,SAM,BAM,BED",
     "format_output": "",
     "platform requirement": "Python",
-    "link": "http://dldcc-web.brc.bcm.edu/lilab/liguow/CGI/rseqc/_build/html/"
+    "link": "http://dldcc-web.brc.bcm.edu/lilab/liguow/CGI/rseqc/_build/html/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/22539670",
+    "": ""
   },
   {
     "order": 4,
@@ -320,7 +394,9 @@
     "format_input": "",
     "format_output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": "",
+    "": ""
   },
   {
     "order": 4.1,
@@ -329,15 +405,17 @@
     "parent": "quantification",
     "step": "quantification using counts",
     "software": "featureCounts",
-    "description": "counts mapped reads for genomic features.",
-    "features": "",
+    "description": "An efficient general purpose program for assigning sequence reads to genomic features.",
+    "features": "Counts mapped reads for genomic features.",
     "strength": "",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "SAM,BAM,GTF",
     "format_output": "TXT",
     "platform requirement": "R",
-    "link": "http://bioinf.wehi.edu.au/featureCounts/"
+    "link": "http://bioinf.wehi.edu.au/featureCounts/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/24227677",
+    "": ""
   },
   {
     "order": 4.1,
@@ -346,15 +424,17 @@
     "parent": "quantification",
     "step": "quantification using counts",
     "software": "HTSeq-count",
-    "description": "counts mapped reads for genomic features.",
-    "features": "",
+    "description": "Counts mapped reads for genomic features.",
+    "features": "Counts reads in features such that it can be used not only in RNA-seq.",
     "strength": "",
     "limitation": "generates less counts than featureCounts because of exclusion of the right-most position in GFF file (GFF modification needed.)",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "SAM,GFF",
     "format_output": "TXT",
     "platform requirement": "Python",
-    "link": "https://htseq.readthedocs.io/en/release_0.9.1/"
+    "link": "https://htseq.readthedocs.io/en/release_0.9.1/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/25260700",
+    "": ""
   },
   {
     "order": 4.1,
@@ -363,15 +443,17 @@
     "parent": "quantification",
     "step": "quantification with normalization",
     "software": "Cufflinks",
-    "description": "assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples",
-    "features": "",
-    "strength": "",
+    "description": "Transcriptome assembly and differential expression analysis for RNA-Seq.",
+    "features": "Assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples",
+    "strength": "Has multiple downstream analysis tools such as cuffdiff, cuffmerge, cuffnorm, etc..",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "SAM,BAM",
     "format_output": "TXT",
     "platform requirement": "C++",
-    "link": "http://cole-trapnell-lab.github.io/cufflinks/"
+    "link": "http://cole-trapnell-lab.github.io/cufflinks/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/20436464",
+    "": ""
   },
   {
     "order": 4.1,
@@ -388,7 +470,9 @@
     "format_input": "SAM,BAM,CRAM",
     "format_output": "TXT",
     "platform requirement": "C",
-    "link": "http://deweylab.github.io/RSEM/"
+    "link": "http://deweylab.github.io/RSEM/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/21816040",
+    "": ""
   },
   {
     "order": 5,
@@ -397,15 +481,17 @@
     "parent": "quantification",
     "step": "quantification with normalization",
     "software": "kallisto",
-    "description": "Quantifying abundances of transcripts from RNA-Seq data with no alignment",
-    "features": "",
-    "strength": "No need to align",
-    "limitation": "",
+    "description": "Quantifying abundances of transcripts from RNA-Seq data with no alignment.",
+    "features": "Based on pseudoalignment and does not need read mapping",
+    "strength": "Fast; Does not need large memory; the command pseudo can be used for single cell RNA-seq",
+    "limitation": "Will not provide mapped reads.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "FASTQ/FASTA",
     "format_output": "TXT",
     "platform requirement": "C",
-    "link": "https://pachterlab.github.io/kallisto/"
+    "link": "https://pachterlab.github.io/kallisto/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/27043002",
+    "": ""
   },
   {
     "order": 5,
@@ -414,15 +500,17 @@
     "parent": "",
     "step": "quality control among samples",
     "software": "clustering",
-    "description": "An algorithm for grouping similar data points, e.g., \"hclust\" in R and \"clustermap\" in the Python package \"seaborn\". To learn more about clustering algorithms, you can go to {\"value\": \"ClusterEnG\", \"link\":\"education.knoweng.org/clustereng\" } and play with different clustering algorithms.",
+    "description": "Algorithms for grouping similar data points, e.g., \"hclust\" in R and \"clustermap\" in the Python package \"seaborn\". To learn more about clustering algorithms, you can go to {\"value\": \"ClusterEnG\", \"link\":\"education.knoweng.org/clustereng\" } and play with different clustering algorithms.",
     "features": "",
     "strength": "",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "format_input": "",
-    "format_output": "",
-    "platform requirement": "",
-    "link": ""
+    "format_input": "Expression values",
+    "format_output": "Similarity and grouping of samples",
+    "platform requirement": "Python, R, or others",
+    "link": "",
+    "paper": "NA",
+    "": ""
   },
   {
     "order": 6,
@@ -436,10 +524,12 @@
     "strength": "",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "format_input": "",
-    "format_output": "",
-    "platform requirement": "",
-    "link": ""
+    "format_input": "Expression values",
+    "format_output": "Similarity between samples",
+    "platform requirement": "Python, R, or others",
+    "link": "",
+    "paper": "NA",
+    "": ""
   },
   {
     "order": 6,
@@ -448,15 +538,17 @@
     "parent": "",
     "step": "differential expression analysis",
     "software": "CuffDiff2",
-    "description": "assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples",
-    "features": "",
+    "description": "Differential analysis of gene regulation at transcript resolution with RNA-seq",
+    "features": "assembles transcripts, estimates their abundances, and tests for differential expression and regulation in RNA-Seq samples",
     "strength": "",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "format_input": "",
-    "format_output": "",
-    "platform requirement": "",
-    "link": "http://cole-trapnell-lab.github.io/cufflinks/cuffdiff/"
+    "format_input": "TXT (transcript abundance)",
+    "format_output": "TXT (differential expression)",
+    "platform requirement": "C++",
+    "link": "http://cole-trapnell-lab.github.io/cufflinks/cuffdiff/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/23222703",
+    "": ""
   },
   {
     "order": 6,
@@ -470,10 +562,12 @@
     "strength": "Using raw count data;_Implements a range of statistical methodology based on the negative binomial distributions, including empirical Bayes estimation, exact tests, generalized linear models and quasi-likelihood tests._",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "format_input": "",
-    "format_output": "",
+    "format_input": "TXT (counts)",
+    "format_output": "TXT (differential expression)",
     "platform requirement": "R",
-    "link": "http://bioconductor.org/packages/release/bioc/html/edgeR.html"
+    "link": "http://bioconductor.org/packages/release/bioc/html/edgeR.html",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/19910308",
+    "": ""
   },
   {
     "order": 6,
@@ -487,10 +581,12 @@
     "strength": "Using normalized count data",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "format_input": "TXT (read count)",
-    "format_output": "TXT (gene difference)",
+    "format_input": "TXT (counts)",
+    "format_output": "TXT (differential expression)",
     "platform requirement": "R",
-    "link": "https://bioconductor.org/packages/release/bioc/html/DESeq2.html"
+    "link": "https://bioconductor.org/packages/release/bioc/html/DESeq2.html",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/25516281",
+    "": ""
   },
   {
     "order": 6,
@@ -505,9 +601,11 @@
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "TXT (read count)",
-    "format_output": "TXT (gene difference)",
+    "format_output": "TXT (differential expression)",
     "platform requirement": "R",
-    "link": "https://bioconductor.org/packages/release/bioc/html/limma.html"
+    "link": "https://bioconductor.org/packages/release/bioc/html/limma.html",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/25605792",
+    "": ""
   },
   {
     "order": 6,
@@ -522,9 +620,11 @@
     "limitation": "Designed for kallisto",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "both",
     "format_input": "kallisto output",
-    "format_output": "TXT (gene difference)",
+    "format_output": "TXT (differential expression)",
     "platform requirement": "R",
-    "link": "https://pachterlab.github.io/sleuth/about"
+    "link": "https://pachterlab.github.io/sleuth/about",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/28581496",
+    "": ""
   },
   {
     "order": 6,
@@ -541,7 +641,9 @@
     "format_input": "TXT (read count)",
     "format_output": "TXT (isoform difference)",
     "platform requirement": "R",
-    "link": "http://www-personal.umich.edu/~jianghui/rseqdiff/"
+    "link": "http://www-personal.umich.edu/~jianghui/rseqdiff/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/24260225",
+    "": ""
   },
   {
     "order": 6,
@@ -558,7 +660,9 @@
     "format_input": "TXT (read count)",
     "format_output": "TXT (exon difference)",
     "platform requirement": "R",
-    "link": "https://bioconductor.org/packages/release/bioc/html/DEXSeq.html"
+    "link": "https://bioconductor.org/packages/release/bioc/html/DEXSeq.html",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/22722343",
+    "": ""
   },
   {
     "order": 6,
@@ -575,7 +679,9 @@
     "format_input": "TXT (read count)",
     "format_output": "TXT (isoform difference)",
     "platform requirement": "R",
-    "link": "http://bioinfo.au.tsinghua.edu.cn/software/DSGseq/"
+    "link": "http://bioinfo.au.tsinghua.edu.cn/software/DSGseq/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/23228854",
+    "": ""
   },
   {
     "order": 6,
@@ -585,14 +691,16 @@
     "step": "differential splicing analysis",
     "software": "rMATS",
     "description": "Multivariate Analysis of Transcript Splicing (MATS)",
-    "features": "Input is FASTQ/BAM.",
+    "features": "",
     "strength": "",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "FASTQ, BAM",
     "format_output": "TXT (isoform difference)",
     "platform requirement": "Python",
-    "link": "http://rnaseq-mats.sourceforge.net/"
+    "link": "http://rnaseq-mats.sourceforge.net/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/25480548",
+    "": ""
   },
   {
     "order": 6,
@@ -609,7 +717,9 @@
     "format_input": "BAM",
     "format_output": "TXT (isoform difference)",
     "platform requirement": "Octave, Python",
-    "link": "https://public.bmi.inf.ethz.ch/user/drewe/rdiff/"
+    "link": "https://public.bmi.inf.ethz.ch/user/drewe/rdiff/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/23585274",
+    "": ""
   },
   {
     "order": 6,
@@ -626,7 +736,9 @@
     "format_input": "BAM",
     "format_output": "TXT (isoform abundance)",
     "platform requirement": "",
-    "link": "http://www.netlab.uky.edu/p/bioinfo/DiffSplice"
+    "link": "http://www.netlab.uky.edu/p/bioinfo/DiffSplice",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/23155066",
+    "": ""
   },
   {
     "order": 6,
@@ -634,16 +746,18 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "functional analysis",
-    "software": "Gene Ontology",
-    "description": "functional analysis including molecular function, cellular component and biological process",
-    "features": "",
+    "software": "GO",
+    "description": "Gene Ontology enrichment analysis",
+    "features": "Performs enrichment analysis on gene sets; Functional analysis including molecular function, cellular component and biological process",
     "strength": "Interactive web server.",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "TXT (gene list)",
     "format_output": "TXT",
-    "platform requirement": "",
-    "link": "http://geneontology.org/page/go-enrichment-analysis"
+    "platform requirement": "webtool",
+    "link": "http://geneontology.org/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/27899567",
+    "": ""
   },
   {
     "order": 6,
@@ -659,7 +773,9 @@
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "TXT (gene list)",
     "format_output": "TXT",
-    "platform requirement": "",
-    "link": "https://david.ncifcrf.gov/"
+    "platform requirement": "webtool",
+    "link": "https://david.ncifcrf.gov/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/19131956",
+    "": ""
   }
 ]

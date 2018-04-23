@@ -14,7 +14,8 @@
     "input": "",
     "output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": ""
   },
   {
     "order": 1.1,
@@ -25,13 +26,14 @@
     "software": "FastQC",
     "description": "Quality control tool for high throughput raw sequence data",
     "features": "Contains quality reports and gives pass/fail results for the following checks:  Per base sequence quality,  Per sequence quality scores,  Per base sequence content,  Per base GC content,  Per sequence GC content,  Per base N content,  Sequence Length Distribution,  Sequence Duplication Levels,  Overrepresented sequences,  Kmer Content has a GUI",
-    "strength": "Easy to use; Provide visualization in the HTML report",
-    "limitation": "for Illumina reads",
+    "strength": "Easy to use; Provide visualization in the HTML report; Can be used on Illumina, PacBio, 454 reads.",
+    "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "single",
     "input": "BAM, SAM, FASTQ",
     "output": "HTML",
     "platform requirement": "JAVA",
-    "link": "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/"
+    "link": "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+    "paper": "NA"
   },
   {
     "order": 1.2,
@@ -48,7 +50,8 @@
     "input": "",
     "output": "FASTA/FASTQ",
     "platform requirement": "",
-    "link": "https://github.com/agordon/fastx_toolkit"
+    "link": "https://github.com/agordon/fastx_toolkit",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/21278185"
   },
   {
     "order": 1.2,
@@ -65,7 +68,8 @@
     "input": "FASTQ",
     "output": "FASTQ",
     "platform requirement": "JAVA",
-    "link": "http://www.usadellab.org/cms/?page=trimmomatic"
+    "link": "http://www.usadellab.org/cms/?page=trimmomatic",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/24695404"
   },
   {
     "order": 1.2,
@@ -74,15 +78,16 @@
     "parent": "quality control of reads",
     "step": "trimming reads",
     "software": "cutadapt",
-    "description": "Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.",
-    "features": "",
+    "description": "Cutadapt Removes Adapter Sequences From High-Throughput Sequencing Reads",
+    "features": "Cutadapt finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.",
     "strength": "trim adaptors; supports 454, Illumina and SOLiD (colour space) data.",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "both",
     "input": "FASTQ",
-    "output": "",
+    "output": "FASTQ",
     "platform requirement": "Python",
-    "link": "https://cutadapt.readthedocs.io/en/stable/index.html"
+    "link": "https://cutadapt.readthedocs.io/en/stable/index.html",
+    "paper": "NA {\"value\":\"link\",\"link\":\"http://dx.doi.org/10.14806/ej.17.1.200\"}"
   },
   {
     "order": 2,
@@ -99,7 +104,8 @@
     "input": "",
     "output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": ""
   },
   {
     "order": 2,
@@ -111,12 +117,13 @@
     "description": "An ultrafast memory-efficient short read aligner.",
     "features": "It aligns short DNA sequences (reads) to the human genome at a rate of over 25 million 35-bp reads per hour. Bowtie indexes the genome with a Burrows-Wheeler index to keep its memory footprint small: typically about 2.2 GB for the human genome (2.9 GB for paired-end). {\"value\":\"link\", \"link\":\"http://bowtie-bio.sourceforge.net/index.shtml\"}",
     "strength": "",
-    "limitation": "Not recommended for HiC alignment because of low er alignment rate when compared with chimeric aligning methods {\"value\":\"Forcato et al., Nat.Met. 2017\", \"link\":\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5493985/\"}",
+    "limitation": "Not recommended for HiC alignment because of low er alignment rate when compared with chimeric aligning methods {\"value\":\"Forcato et al., Nat.Met. 2017\", \"link\":\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5493985/\"};  Does not support gapped alignments; Upper limit on read length (1024 bp).",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "input": "FASTQ",
-    "output": "BAM",
+    "input": "FASTQ, FASTA, Raw sequence per line",
+    "output": "Bowtie output (one alignment per line), SAM/BAM",
     "platform requirement": "",
-    "link": "http://bowtie-bio.sourceforge.net/index.shtml"
+    "link": "http://bowtie-bio.sourceforge.net/index.shtml",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/19261174"
   },
   {
     "order": 2,
@@ -125,15 +132,16 @@
     "parent": "",
     "step": "read mapping",
     "software": "Bowtie2 {\"recommended\":\"True\"} (used in diffHic)",
-    "description": "Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.",
-    "features": "It is particularly good at aligning reads of about 50 up to 100s or 1,000s of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes. Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome, its memory footprint is typically around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes. {\"value\":\"link\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}",
-    "strength": "",
-    "limitation": "",
+    "description": "Bowtie 2�is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.",
+    "features": "It is particularly good at aligning reads of about 50 up to 100s or 1,000s of characters, and particularly good at aligning to relatively long (e.g. mammalian) genomes. Bowtie 2 supports gapped, local, and paired-end alignment modes. {\"value\":\"link\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}",
+    "strength": "Supports gapped alignment. For reads longer than about 50 bp Bowtie 2 is generally faster, more sensitive, and uses less memory than Bowtie 1.  Bowtie 2 indexes the genome with an FM Index to keep its memory footprint small: for the human genome, its memory footprint is typically around 3.2 GB.   {\"value\":\"link\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}",
+    "limitation": "For relatively short reads (e.g. less than 50 bp) Bowtie 1 is sometimes faster and/or more sensitive than Bowtie 2. {\"value\":\"link\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/faq.shtml\"}",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "input": "FASTQ",
-    "output": "BAM",
+    "input": "FASTQ, QSEQ, FASTA, Raw sequence per line",
+    "output": "Bowtie output (one alignment per line), SAM/BAM",
     "platform requirement": "",
-    "link": "http://bowtie-bio.sourceforge.net/bowtie2/index.shtml"
+    "link": "http://bowtie-bio.sourceforge.net/bowtie2/index.shtml",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/22388286"
   },
   {
     "order": 2,
@@ -143,14 +151,15 @@
     "step": "read mapping",
     "software": "STAR (Also used by HIPPIE)",
     "description": "Ultrafast universal aligner.",
-    "features": "Fast; Requires large memory.",
+    "features": "Fast",
     "strength": "Fast",
-    "limitation": "Requires large memory.",
+    "limitation": "Requires large memory (~30Gb). If STAR was used for alignment, flags need to be set to use in Cufflinks.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "input": "FASTQ",
-    "output": "BAM",
+    "output": "SAM/BAM",
     "platform requirement": "",
-    "link": "https://github.com/alexdobin/STAR"
+    "link": "https://github.com/alexdobin/STAR",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/23104886"
   },
   {
     "order": 2,
@@ -160,14 +169,15 @@
     "step": "read mapping",
     "software": "BWA",
     "description": "BWA is a software package for mapping low-divergent sequences against a large reference genome.",
-    "features": "",
-    "strength": "",
-    "limitation": "",
+    "features": "Uses a Burrows-Wheeler transform to create an index of the genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to 1Mbp. {\"value\":\"link\",\"link\":\"http://bio-bwa.sourceforge.net/bwa.shtml\"}",
+    "strength": "Allows indels in alignment.",
+    "limitation": "It's a bit slower than bowtie (but can map gapped reads compared to bowtie1)",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "input": "FASTQ",
-    "output": "BAM",
+    "input": "FASTQ, FASTA, BAM",
+    "output": "SAM/BAM",
     "platform requirement": "",
-    "link": "http://bio-bwa.sourceforge.net/"
+    "link": "http://bio-bwa.sourceforge.net/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/19451168"
   },
   {
     "order": 2,
@@ -182,9 +192,10 @@
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "input": "FASTQ",
-    "output": "BAM",
+    "output": "SAM/BAM",
     "platform requirement": "",
-    "link": "http://algorithms.cnag.cat/wiki/The_GEM_library"
+    "link": "http://gemtools.github.io/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/23103880"
   },
   {
     "order": 3,
@@ -201,7 +212,8 @@
     "input": "",
     "output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": ""
   },
   {
     "order": 3.1,
@@ -209,16 +221,17 @@
     "nextStepCount": 1,
     "parent": "quality control after mapping",
     "step": "view mapping statistics",
-    "software": "",
-    "description": "",
-    "features": "",
+    "software": "SAMtools-flagstats",
+    "description": "SAMtools: Utilities for the Sequence Alignment/Map (SAM) format.",
+    "features": "A must-have for processing SAM/BAM files.",
     "strength": "",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "input": "",
-    "output": "",
+    "input": "SAM/BAM",
+    "output": "SAM/BAM",
     "platform requirement": "",
-    "link": ""
+    "link": "http://www.htslib.org/doc/samtools.html",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/19505943"
   },
   {
     "order": 3.2,
@@ -230,12 +243,13 @@
     "description": "Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) data and formats such as SAM/BAM/CRAM and VCF.",
     "features": "",
     "strength": "",
-    "limitation": "Marking duplicates using coordinate information but not read sequence information.",
+    "limitation": "MarkDuplicates uses coordinate information but not read sequence information.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "input": "BAM",
-    "output": "BAM",
+    "input": "SAM/BAM",
+    "output": "SAM/BAM",
     "platform requirement": "JAVA",
-    "link": "https://broadinstitute.github.io/picard/"
+    "link": "https://broadinstitute.github.io/picard/",
+    "paper": "NA"
   },
   {
     "order": 4,
@@ -252,7 +266,8 @@
     "input": "",
     "output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": ""
   },
   {
     "order": 4.1,
@@ -260,7 +275,7 @@
     "nextStepCount": 1,
     "parent": "generate interaction matrix",
     "step": "bin and count mapped reads",
-    "software": "",
+    "software": "Example of tools: HT-seq, SAMtools",
     "description": "",
     "features": "",
     "strength": "",
@@ -269,7 +284,8 @@
     "input": "",
     "output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": ""
   },
   {
     "order": 4.2,
@@ -283,10 +299,11 @@
     "strength": "",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "input": "BAM",
+    "input": "SAM/BAM",
     "output": "TXT",
     "platform requirement": "R",
-    "link": "https://github.com/bxlab/HiFive_Paper/tree/master/Scripts/HiCPipe"
+    "link": "https://github.com/bxlab/HiFive_Paper/tree/master/Scripts/HiCPipe",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/22001755"
   },
   {
     "order": 5,
@@ -303,7 +320,8 @@
     "input": ".{\"value\": \"hic\",\"link\": \"https://github.com/theaidenlab/juicer/wiki/Data\"}",
     "output": "TXT",
     "platform requirement": "JAVA",
-    "link": "https://github.com/theaidenlab/juicer/wiki/HiCCUPS"
+    "link": "https://github.com/theaidenlab/juicer/wiki/HiCCUPS",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/26835000"
   },
   {
     "order": 5,
@@ -320,7 +338,8 @@
     "input": "BAM, Bowtie",
     "output": "TXT",
     "platform requirement": "R",
-    "link": "http://www.bioconductor.org/packages/release/bioc/html/GOTHiC.html"
+    "link": "http://www.bioconductor.org/packages/release/bioc/html/GOTHiC.html",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/28379994"
   },
   {
     "order": 5,
@@ -330,14 +349,15 @@
     "step": "detect chromatin interactions",
     "software": "HOMER {\"recommended\":\"True\"}",
     "description": "HOMER has several specialized programs for Hi-C analysis.",
-    "features": "",
+    "features": "Quality control; Creating background models; Generate interaction matrices; Normalize interaction counts; Sub-compartment analysis; Calls significant interactions; Annotation; Visualization",
     "strength": "HOMER generally recovers more true validated interactions based on same number of cis interactions. {\"value\":\"Supp. Fig. 7c, Forcato et al., Nat.Met. 2017\",\"link\":\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5493985/\"}",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "input": "",
-    "output": "",
-    "platform requirement": "R",
-    "link": "http://homer.ucsd.edu/homer/interactions/"
+    "input": "BAM",
+    "output": "TXT",
+    "platform requirement": "Perl",
+    "link": "http://homer.ucsd.edu/homer/interactions/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/20513432"
   },
   {
     "order": 5,
@@ -347,14 +367,15 @@
     "step": "detect chromatin interactions",
     "software": "Fit-Hi-C",
     "description": "Fit-Hi-C is a tool for assigning statistical confidence estimates to intra-chromosomal contact maps produced by genome-wide genome architecture assays such as Hi-C.",
-    "features": "",
+    "features": "Calls significant interactions based on HiC contact count matrices; Compatible with HiC-Pro.",
     "strength": "Fit-Hi-C recovers true validated interactions comparable to GOTHiC. {\"value\":\"Forcato et al., Nat.Met. 2017\",\"link\":\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5493985/\"}",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "input": "TXT( {\"value\":\"fragments and contact counts\",\"link\":\"https://noble.gs.washington.edu/proj/fit-hi-c/software/README-latest.txt\" } )",
     "output": "TXT",
     "platform requirement": "R, Python",
-    "link": "https://noble.gs.washington.edu/proj/fit-hi-c/"
+    "link": "https://noble.gs.washington.edu/proj/fit-hi-c/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/24501021"
   },
   {
     "order": 5,
@@ -368,10 +389,11 @@
     "strength": "Visualization options are available.",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "input": "BAM",
+    "input": "SAM/BAM",
     "output": "TXT",
     "platform requirement": "R, C++",
-    "link": "https://bioconductor.org/packages/release/bioc/html/diffHic.html"
+    "link": "https://bioconductor.org/packages/release/bioc/html/diffHic.html",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/26283514"
   },
   {
     "order": 5,
@@ -380,15 +402,16 @@
     "parent": "",
     "step": "detect chromatin interactions",
     "software": "HIPPIE",
-    "description": "HIPPIE is the workflow for analyzing batches of Hi-C paired-end reads in FASTQ format and predict enhancer–target gene interactions.",
-    "features": "HIPPIE streamlines the entire processing phase including reads mapping, quality control and enhancer–target gene prediction as well as characterizing the interactions.",
+    "description": "HIPPIE is the workflow for analyzing batches of Hi-C paired-end reads in FASTQ format and predict enhancer�target gene interactions.",
+    "features": "HIPPIE streamlines the entire processing phase including reads mapping, quality control and enhancer�target gene prediction as well as characterizing the interactions.",
     "strength": "Has a function to detect enhancer-target gene interaction.",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "input": "FASTQ",
     "output": "TXT",
     "platform requirement": "R, perl",
-    "link": "http://wanglab.pcbi.upenn.edu/hippie/"
+    "link": "http://wanglab.pcbi.upenn.edu/hippie/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/25480377"
   },
   {
     "order": 5,
@@ -405,7 +428,8 @@
     "input": "TXT (contact counts)",
     "output": "TXT",
     "platform requirement": "Python",
-    "link": "http://compbio.cs.brown.edu/projects/tadtree/"
+    "link": "http://compbio.cs.brown.edu/projects/tadtree/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/26315910"
   },
   {
     "order": 5,
@@ -422,7 +446,8 @@
     "input": ".{\"value\": \"hic\",\"link\": \"https://github.com/theaidenlab/juicer/wiki/Data\"}",
     "output": "TXT (contact domains)",
     "platform requirement": "JAVA",
-    "link": "https://github.com/theaidenlab/juicer/wiki/Arrowhead"
+    "link": "https://github.com/theaidenlab/juicer/wiki/Arrowhead",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/25497547"
   },
   {
     "order": 5,
@@ -432,14 +457,15 @@
     "step": "detect TAD",
     "software": "HiCseg",
     "description": "Detection of domains in HiC data by rephrasing this problem as a twodimensional segmentation issue.",
-    "features": "calls continuous set of TADs; tends to call large TADs",
+    "features": "calls continuous set of TADs; tends to call large TADs; Uses maximum likelihood segmentation algorithm.",
     "strength": "high reproducibility of TADs among replicates {\"value\":\"Forcato et al., Nat.Met. 2017\",\"link\":\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5493985/\"}",
     "limitation": "It tends to call large TADs and may be affected by noise.  {\"value\":\"Forcato et al., Nat.Met. 2017\",\"link\":\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5493985/\"}",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "input": "TXT (contact counts)",
     "output": "TXT",
     "platform requirement": "R, C",
-    "link": "https://cran.r-project.org/web/packages/HiCseg/index.html"
+    "link": "https://cran.r-project.org/web/packages/HiCseg/index.html",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/25161224"
   },
   {
     "order": 5,
@@ -456,7 +482,8 @@
     "input": "FASTQ",
     "output": "TXT",
     "platform requirement": "Python",
-    "link": "http://3dgenomes.github.io/TADbit/index.html"
+    "link": "https://github.com/3DGenomes/tadbit/",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/28723903"
   },
   {
     "order": 5,
@@ -473,7 +500,8 @@
     "input": "TXT",
     "output": "TXT",
     "platform requirement": "perl",
-    "link": "https://github.com/dekkerlab/crane-nature-2015"
+    "link": "https://github.com/dekkerlab/crane-nature-2015",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/26030525"
   },
   {
     "order": 5,
@@ -483,14 +511,15 @@
     "step": "detect TAD",
     "software": "{\"value\":\"Armatus\", \"text\":\"recommended\"},{\"recommended\":\"True\"}",
     "description": "Multiresolution domain calling software for chromosome conformation capture interaction matrices.",
-    "features": "allows gaps between TADs; can detect nested TADs",
+    "features": "allows gaps between TADs; can detect nested TADs; Uses dynamic programming algorithm.",
     "strength": "",
     "limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "input": "TXT",
     "output": "TXT",
     "platform requirement": "C++",
-    "link": "https://github.com/kingsfordgroup/armatus"
+    "link": "https://github.com/kingsfordgroup/armatus",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/24868242"
   },
   {
     "order": 5,
@@ -500,14 +529,15 @@
     "step": "detect TAD",
     "software": "DomainCaller",
     "description": "",
-    "features": "",
+    "features": "a Hidden Markov model (HMM) based on the directionality index ({\"value\":\"Dixon et al. , 2012\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/22495300\"}).",
     "strength": "",
     "limitation": "MATLAB is not freely available.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "input": "TXT",
     "output": "TXT",
     "platform requirement": "perl, MATLAB",
-    "link": "http://chromosome.sdsc.edu/mouse/hi-c/download.html"
+    "link": "http://chromosome.sdsc.edu/mouse/hi-c/download.html",
+    "paper": "https://www.ncbi.nlm.nih.gov/pubmed/22495300"
   },
   {
     "order": 6,
@@ -524,7 +554,8 @@
     "input": "",
     "output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": ""
   },
   {
     "order": 6,
@@ -532,7 +563,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "view interaction statistics",
-    "software": "Distribution of interacting distance",
+    "software": "Calculating distribution of interacting distance",
     "description": "The strategy is to obtain the genomic interactions called by previous steps, compute the pairwise distance and plot the distribution.",
     "features": "",
     "strength": "",
@@ -541,7 +572,8 @@
     "input": "",
     "output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": "NA"
   },
   {
     "order": 6,
@@ -549,7 +581,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "view interaction statistics",
-    "software": "Reproducibility between replicates",
+    "software": "Calculating reproducibility between replicates",
     "description": "One way to compare the TAD domains between different sames is to compute the {\"value\":\"Jaccard Index\", \"link\":\"https://en.wikipedia.org/wiki/Jaccard_index\"}",
     "features": "",
     "strength": "",
@@ -558,6 +590,7 @@
     "input": "",
     "output": "",
     "platform requirement": "",
-    "link": ""
+    "link": "",
+    "paper": "NA"
   }
 ]

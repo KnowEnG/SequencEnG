@@ -164,15 +164,16 @@ var pipeline_load = function(seq_name){
               }       
              
             
-            //Sub button shwoing event 
+            //Sub button showing event 
             if(target.subStepCount !== 0){
 
-              
+                  //show subSteps
                   if($("div[id^=\'" + seq_name + "-" + target.orderNumber + "." + "\']").css('display') ==='none'){
                      $("#svgContainer svg path").remove();
                     target.nextStep = target.orderNumber + "." + 1;
                      target.nextStepCount =  target.subStepCount;
 
+                     //margin substeps that has more than two 
                      if( target.nextStepCount > 2){
                            $("div[id^=\'" + seq_name + "-" + target.orderNumber + "."  + "\']").css('margin-right', '150px');
                      }
@@ -188,6 +189,7 @@ var pipeline_load = function(seq_name){
                    
                   }
 
+                  //hide subSteps
                   else{
                          $("#svgContainer svg path").remove();
                     //get last substeps 
@@ -302,7 +304,7 @@ var pipeline_load = function(seq_name){
 function connectAll(seq_name, Blocks){
  
 
-    let i = 1;
+    let i = 1; //unique id for path 
     for(let key in Blocks){
 
       
@@ -310,13 +312,23 @@ function connectAll(seq_name, Blocks){
       if(Blocks[key].nextStep !== "" && $("div[id=\'" + Blocks[key].order + "\']").css('display') !== 'none'){
      
         let nextBlock = $("div[id=\'" + seq_name + "-" + Blocks[key].nextStep.toString() + "\'] .block:first");
-     
+      
+
+        //connect each top blocks to bottom blocks 
         for(let j = 0; j < Blocks[key].nextStepCount; j++){
+          //append path
           $("#svgContainer svg").append("<path id=\'path" + i + "\'/>");
+
+          //reset svg container
           $("#svgContainer").html($("#svgContainer").html());
+         
+          //connect
           connectElements($("#svg-pipe"), $("#path" + i), $("#" +key), nextBlock.find(".arrowTarget") );
-          nextBlock = nextBlock.next();
-          i++;
+          
+
+          nextBlock = nextBlock.next(); //find next target block 
+          
+          i++; // path id 
         }
         
       }
