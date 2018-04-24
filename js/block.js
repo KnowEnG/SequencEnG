@@ -42,8 +42,13 @@ function Block(name, order, parent, nextStep,nextStepCount, seq_name){
 }
 
 
-Block.prototype.set_fields = function(fields, index){
+Block.prototype.set_fields = function(fields, index, ...args){
 	this.fields = fields.slice(index,fields.length);
+	if(args.lenght!==0){
+		for(let i = 0; i < args.length;i++){
+			this.fields.push(args[i]);
+		}
+	}
 };
 
 Block.prototype.push_data = function(data, key) {
@@ -51,7 +56,26 @@ Block.prototype.push_data = function(data, key) {
 	if(key !== ""){
 
 		this.data[key] = data;
+
+		if(!this.data[key]['paper'].includes('NA')){
+			let links = this.data[key]['paper'].split('/');
+			let pmids = links[links.length - 1];
+			let self = this; 
+			 $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
+			 	// console.log(self);
+			 	// console.log(response.data[0]);
+	            self.data[key]['RCR'] = response.data[0].relative_citation_ratio;
+
+
+	        });
+
+		}
+		else{
+			this.data[key]['RCR'] = 0;
+		}
 	}
+
+	
 
 };
 
@@ -122,20 +146,19 @@ Block.prototype.render = function(){
 
 };
 
-Block.prototype.makeTable = function(...args){
+Block.prototype.makeTable = function(){
 
 	var head_fields = [];
 	var col = [];
 
-	if(args.lenght!==0){
-		for(let i = 0; i < args.length;i++){
-			head_fields.push(args[i]);
-		}
-	}
+	
 	var head = "<tr>";
+	
 
-
+	//set table head 
 	head_fields = head_fields.concat(this.fields);
+
+	
 
 	for(let i = 0; i < head_fields.length;i++){
 		
@@ -145,17 +168,26 @@ Block.prototype.makeTable = function(...args){
 	head = head + "</tr>";
 
 
+
+	//set table body
 	var body = "";
 
 	for(let key in this.data){
 		var tr = "<tr>";
-
+		
 		for(var i= 0; i < head_fields.length;i++){
-			if(this.data[key][head_fields[i]] ===""){
-				tr = tr + "<td>-</td>";
+			let dataOrderInit = "";
+
+			//set initial order using RCr
+			if(head_fields[i] === "RCR"){
+				dataOrderInit = "data-order='"+ this.data[key][head_fields[i]] + "'";
+			}
+
+			if(this.data[key][head_fields[i]] ==="" || this.data[key][head_fields[i]]===0){
+				tr = tr + "<td "+ dataOrderInit + ">-</td>";
 			}
 			else{
-				tr = tr + "<td>" + 
+				tr = tr + "<td "+ dataOrderInit + ">" + 
 				analyzeValueInString(this.data[key][head_fields[i]]);
 				 + "</td>";
 			}
@@ -183,6 +215,7 @@ function analyzeValueInString(str){
 
 	if(typeof str === 'string'){
 
+		//it has sub part for tooltip
 		while(str.indexOf("{")!== -1){
 			let startIndex = str.indexOf("{");
 			let closeIndex = str.indexOf("}");
@@ -199,9 +232,11 @@ function analyzeValueInString(str){
 	}
 
 
+
+
 	
 
-	return final || (str.includes('http'))?"<a target='_blank' href='" + str + "'>" + str + "</a>":str; 
+	return final || ((isNaN(str) && str.includes('http'))?"<a target='_blank' href='" + str + "'>" + str + "</a>":str); 
 }
 
 function applyTooltip(info){

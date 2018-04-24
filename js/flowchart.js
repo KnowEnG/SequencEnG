@@ -44,11 +44,11 @@ var pipeline_load = function(seq_name){
        
        for(let i= 0; i < data.length; i++){
           let name = data[i].step;
-          let key = name.replace(/\s/g,'');
+          let key = name.replace(/\s/g,''); // steps 
 
           
 
-          //already has the step 
+          //already has the step, save datas to blcok {key : software, data : current data }
           if(Blocks.hasOwnProperty(key)){
             Blocks[key].push_data(data[i], data[i].software);
             let parent = Blocks[key].parent;
@@ -76,7 +76,7 @@ var pipeline_load = function(seq_name){
             }
 
             //get software info fields 
-            Blocks[key].set_fields(Object.keys(data[i]), 5);
+            Blocks[key].set_fields(Object.keys(data[i]), 5, 'RCR');
 
             //push software data relate to step
             Blocks[key].push_data(data[i], data[i].software);
@@ -91,7 +91,7 @@ var pipeline_load = function(seq_name){
        for(let key in Blocks){
        
           Blocks[key].render();
-          Blocks[key].makeTable();
+          // Blocks[key].makeTable('RCR');
 
 
           //bind button event 
@@ -99,6 +99,8 @@ var pipeline_load = function(seq_name){
             
           $("#" + id).click(function(){
 
+              //extra table head as argument
+              target.makeTable('RCR');
 
 
             $(".table-row").show();
@@ -128,10 +130,11 @@ var pipeline_load = function(seq_name){
                  "destroy": true,
                  "paging": false,
                  "info": false,
-                 "scrollX": true
+                 "scrollX": true,
+                  "order": [[ target.fields.length-1, "desc" ]]
                });
+             
               
-            
             
               table.columns().every( function () {
                  var that = this;
@@ -144,7 +147,8 @@ var pipeline_load = function(seq_name){
                           }
                   } );
               } );
-            
+              
+
 
 
               //button css
