@@ -217,7 +217,7 @@
     "software": "STAR",
     "description": "Spliced Transcripts Alignment to a Reference (STAR)�",
     "features": "Ultrafast universal RNA-seq aligner",
-    "strength": "Fast. Can also be used in differential splicing analysis if ran in 2-pass mode [add ref]. STAR is recommended by ENCODE project.",
+    "strength": "Fast. Can also be used in differential splicing analysis if ran in 2-pass mode. STAR is recommended by ENCODE project, and used by {\"value\":\"GATK\",\"link\":\"https://software.broadinstitute.org/gatk/\"} best practice.",
     "limitation": "Requires large memory (~30Gb). If STAR was used for alignment, flags need to be set to use in Cufflinks.",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "format_input": "FASTQ, FASTA, Raw sequence per line",

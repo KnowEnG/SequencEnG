@@ -62,9 +62,8 @@ Block.prototype.push_data = function(data, key) {
 			let pmids = links[links.length - 1];
 			let self = this; 
 			 $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
-			 	// console.log(self);
-			 	// console.log(response.data[0]);
-	            self.data[key]['RCR'] = response.data[0].relative_citation_ratio;
+			
+	            self.data[key]['RCR'] = response.data[0].relative_citation_ratio || 0;
 
 
 	        });
@@ -180,7 +179,7 @@ Block.prototype.makeTable = function(){
 
 			//set initial order using RCr
 			if(head_fields[i] === "RCR"){
-				dataOrderInit = "data-order='"+ this.data[key][head_fields[i]] + "'";
+				dataOrderInit = "data-order='"+ (this.data[key]['software'].includes('recommended')?99999:this.data[key][head_fields[i]]) + "'";
 			}
 
 			if(this.data[key][head_fields[i]] ==="" || this.data[key][head_fields[i]]===0){
@@ -233,7 +232,7 @@ function analyzeValueInString(str){
 
 
 
-
+	
 	
 
 	return final || ((isNaN(str) && str.includes('http'))?"<a target='_blank' href='" + str + "'>" + str + "</a>":str); 

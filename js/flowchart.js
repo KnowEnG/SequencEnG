@@ -126,12 +126,17 @@ var pipeline_load = function(seq_name){
                     $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
                 } );
 
+
+                //["software","description","features",
+                //"strength","limitation","format_input",
+                //"format_output","platform requirement","link","paper","RCR"]
               table = $("#table").DataTable({
                  "destroy": true,
                  "paging": false,
                  "info": false,
                  "scrollX": true,
-                  "order": [[ target.fields.length-1, "desc" ]]
+                  "order": [[ target.fields.length-1, "desc" ]],
+                  
                });
              
               

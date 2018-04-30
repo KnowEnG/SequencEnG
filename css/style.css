@@ -318,6 +318,7 @@ path.link.found{
   border-radius: 2px; 
   opacity: 0;
   transition: opacity 0.8s ease;
+  text-align: center;
 
 
 }
