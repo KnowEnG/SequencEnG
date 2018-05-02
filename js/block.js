@@ -233,6 +233,8 @@ function analyzeValueInString(str){
 			final = final + substringBefore + tipbox;
 		}
 
+		final = final + str;
+
 	}
 
 
