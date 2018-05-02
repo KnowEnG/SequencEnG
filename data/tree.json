@@ -158,7 +158,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "DNA methylation",
-    "seq_name": "WGBS*",
+    "seq_name": "WGBS",
     "plot": 1,
     "seq_fullname": "<strong>W</strong>hole <strong>G</strong>enome <strong>B</strong>isulfite <strong>S</strong>equencing",
     "seq_fullname_old": "whole genome bisulfite sequencing",
