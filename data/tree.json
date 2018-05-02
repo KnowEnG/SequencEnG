@@ -1,7 +1,7 @@
 [
   {
     "seq_goal_level1": "DNA",
-    "seq_goal_level2": "Whole genome",
+    "seq_goal_level2": "Whole genome ",
     "seq_name": "WGS",
     "plot": 1,
     "seq_fullname": "<strong>W</strong>hole <strong>G</strong>enome <strong>S</strong>equencing",
@@ -14,7 +14,7 @@
   },
   {
     "seq_goal_level1": "DNA",
-    "seq_goal_level2": "Exome",
+    "seq_goal_level2": "Exome ",
     "seq_name": "WES",
     "plot": 1,
     "seq_fullname": "<strong>W</strong>hole <strong>E</strong>xome <strong>S</strong>equencing",
@@ -36,7 +36,7 @@
     "paper_title": "Genome-wide profiles of STAT1 DNA association using chromatin immunoprecipitation and massively parallel sequencing.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17558387",
     "notes": "Basic sequencing method for TF binding and histone modification profiles.",
-    "has_step": 1
+    "": ""
   },
   {
     "seq_goal_level1": "DNA",
@@ -98,7 +98,7 @@
     "seq_fullname": "<strong>S</strong>elective <strong>MI</strong>crofluidics-based <strong>L</strong>igand <strong>E</strong>nrichment followed by <strong>seq</strong>uencing",
     "seq_fullname_old": "selective microfluidics-based ligand enrichment followed by sequencing",
     "year": 2017,
-    "paper_title": "SMiLE-seq identifies binding motifs of single and dimeric transcription factors.",
+    "paper_title": "SMiLE-seq identifies binding motifs of single and dimeric transcription factors.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28092692",
     "notes": "Uses a semiautomated microfluidic platform to characterize transcription factor binding.",
     "": ""
@@ -108,10 +108,10 @@
     "seq_goal_level2": "TF Binding",
     "seq_name": "ChEC-seq",
     "plot": 1,
-    "seq_fullname": "<strong>Ch</strong>romatin <strong>E</strong>ndogenous <strong>C</strong>leavage <strong>seq</strong>uencing",
-    "seq_fullname_old": "Chromatin endogenous cleavage sequencing",
+    "seq_fullname": "<strong>Ch</strong>romatin <strong>E</strong>ndogenous <strong>C</strong>leavage <strong>seq</strong>uencing",
+    "seq_fullname_old": "Chromatin endogenous cleavage sequencing",
     "year": 2015,
-    "paper_title": "ChEC-seq kinetics discriminates transcription factor binding sites by DNA sequence and shape in vivo",
+    "paper_title": "ChEC-seq kinetics discriminates transcription factor binding sites by DNA sequence and shape in vivo",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26669278",
     "notes": "Fuses MNase with the protein of interest and use calcium to control binding and measure dynamics.",
     "": ""
@@ -153,12 +153,12 @@
     "paper_title": "Genome-wide profiles of STAT1 DNA association using chromatin immunoprecipitation and massively parallel sequencing.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17558387",
     "notes": "Basic sequencing method for TF binding and histone modification profiles.",
-    "has_step": 1
+    "": ""
   },
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "DNA methylation",
-    "seq_name": "WGBS",
+    "seq_name": "WGBS ",
     "plot": 1,
     "seq_fullname": "<strong>W</strong>hole <strong>G</strong>enome <strong>B</strong>isulfite <strong>S</strong>equencing",
     "seq_fullname_old": "whole genome bisulfite sequencing",
@@ -166,18 +166,18 @@
     "paper_title": "",
     "paper_link": "",
     "notes": "Basic sequencing method for DNA methylation quantification. See \"Methyl-seq\".",
-    "has_step": 1
+    "": ""
   },
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "DNA methylation",
-    "seq_name": "RRBS",
+    "seq_name": "RRBS ",
     "plot": 1,
-    "seq_fullname": "<strong>R</strong>educed <strong>R</strong>epresentation <strong>B</strong>isulfite <strong>S</strong>uencing",
-    "seq_fullname_old": "Reduced representation bisulfite sequencing",
+    "seq_fullname": "<strong>R</strong>educed <strong>R</strong>epresentation <strong>B</strong>isulfite <strong>S</strong>uencing ",
+    "seq_fullname_old": "Reduced representation bisulfite sequencing ",
     "year": 2005,
     "paper_title": "Reduced representation bisulfite sequencing for comparative high-resolution DNA methylation analysis",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/16224102",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1258174/",
     "notes": "Enriches methylation fragments followed by bisulfite sequencing, reducing the cost.",
     "": ""
   },
@@ -190,8 +190,8 @@
     "seq_fullname_old": "Methylated DNA immunoprecipitation and sequencing",
     "year": 2008,
     "paper_title": "A Bayesian deconvolution strategy for immunoprecipitation-based DNA methylome analysis",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18612301",
-    "notes": "100–300 base pair resolution {'link','https://www.nature.com/nature/journal/v466/n7303/full/nature09165.html'}.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2644410/",
+    "notes": "100 300_base pair resolution {'link','https://www.nature.com/nature/journal/v466/n7303/full/nature09165.html'}.",
     "": ""
   },
   {
@@ -276,7 +276,7 @@
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "DNA methylation",
     "seq_name": "Tn5mC-seq",
-    "plot": 0,
+    "plot": 1,
     "seq_fullname": "Tagmentation-based whole-genome bisulfite sequencing <strong>Tn5mC-seq</strong>",
     "seq_fullname_old": "Tagmentation-based whole-genome bisulfite sequencing",
     "year": 2012,
@@ -316,8 +316,8 @@
     "seq_goal_level2": "Open chromatin",
     "seq_name": "ATAC-seq",
     "plot": 1,
-    "seq_fullname": "<strong>A</strong>ssay for <strong>T</strong>ransposase-<strong>A</strong>ccessible <strong>C</strong>hromatin with high throughput <strong>seq</strong>uencing",
-    "seq_fullname_old": "Assay for Transposase-Accessible Chromatin with high throughput sequencing",
+    "seq_fullname": "<strong>A</strong>ssay for <strong>T</strong>ransposase-<strong>A</strong>ccessible <strong>C</strong>hromatin with high throughput <strong>seq</strong>uencing",
+    "seq_fullname_old": "Assay for Transposase-Accessible Chromatin with high throughput sequencing",
     "year": 2013,
     "paper_title": "Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/24097267",
@@ -378,8 +378,8 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction",
-    "seq_name": "3C",
+    "seq_goal_level2": "Chromosome interaction ",
+    "seq_name": "3C ",
     "plot": 1,
     "seq_fullname": "Chromosome Conformation Capturing (<strong>3C</strong>)",
     "seq_fullname_old": "Chromosome Conformation Capturing",
@@ -391,8 +391,8 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction",
-    "seq_name": "4C",
+    "seq_goal_level2": "Chromosome interaction ",
+    "seq_name": "4C ",
     "plot": 1,
     "seq_fullname": "circular 3C (<strong>4C</strong>)",
     "seq_fullname_old": "circular 3C",
@@ -404,8 +404,8 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction",
-    "seq_name": "5C",
+    "seq_goal_level2": "Chromosome interaction ",
+    "seq_name": "5C ",
     "plot": 1,
     "seq_fullname": "Chromosome Conformation Capture Carbon Copy (<strong>5C</strong>)",
     "seq_fullname_old": "Chromosome Conformation Capture Carbon Copy",
@@ -417,8 +417,8 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction",
-    "seq_name": "Hi-C",
+    "seq_goal_level2": "Chromosome interaction ",
+    "seq_name": "Hi-C ",
     "plot": 1,
     "seq_fullname": "High-throughput chromatin conformation capture (<strong>Hi-C</strong>)",
     "seq_fullname_old": "High-throughput chromatin conformation capture",
@@ -426,12 +426,12 @@
     "paper_title": "Comprehensive mapping of long-range interactions reveals folding principles of the human genome",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19815776",
     "notes": "Discoveres genome-wide interactions between any pairs of genomic regions.",
-    "has_step": 1
+    "": ""
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction",
-    "seq_name": "ChIA-PET",
+    "seq_goal_level2": "Chromosome interaction ",
+    "seq_name": "ChIA-PET ",
     "plot": 1,
     "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>nteraction <strong>A</strong>nalysis by <strong>P</strong>aired-<strong>E</strong>nd <strong>T</strong>ag Sequencing",
     "seq_fullname_old": "Chromatin Interaction Analysis by Paired-End Tag Sequencing",
@@ -443,37 +443,37 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction",
+    "seq_goal_level2": "Chromosome interaction ",
     "seq_name": "DNase Hi-C",
     "plot": 1,
     "seq_fullname": "in situ <strong>DNase Hi-C</strong>",
     "seq_fullname_old": "in situ DNase Hi-C",
     "year": 2016,
     "paper_title": "Mapping 3D genome architecture through in situ DNase Hi-C",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/7685100",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27685100",
     "notes": "Can reach a higher effective resolution than traditional Hi-C",
     "": ""
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction",
+    "seq_goal_level2": "Chromosome interaction ",
     "seq_name": "RICC-seq",
     "plot": 1,
     "seq_fullname": "ionizing <strong>R</strong>adiation-<strong>I</strong>nduced spatially <strong>C</strong>orrelated <strong>C</strong>leavage of DNA with <strong>seq</strong>uencing",
     "seq_fullname_old": "ionizing radiation-induced spatially correlated cleavage of DNA with sequencing",
     "year": 2017,
-    "paper_title": "Variable chromatin structure revealed by in situspatially correlated DNA cleavage mapping",
+    "paper_title": "Variable chromatin structure revealed by in situspatially correlated DNA cleavage mapping",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28024297",
-    "notes": "Utilizes ionizing radiation to break DNA and sequencing the chomatin conformation; chromatin conformation structure at 50–500 bp scale",
+    "notes": "Utilizes ionizing radiation to break DNA and sequencing the chomatin conformation; chromatin conformation structure at 50 500 bp scale",
     "": ""
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome interaction",
+    "seq_goal_level2": "Chromosome interaction ",
     "seq_name": "MicroC",
     "plot": 1,
-    "seq_fullname": "<strong>MICRO</strong>coccal nuclease chromosome Conformation assay and <strong>seq</strong>uencing",
-    "seq_fullname_old": "MICROcoccal nuclease chromosome Conformation assay and sequencing",
+    "seq_fullname": "<strong>MICRO</strong>coccal nuclease chromosome Conformation assay and <strong>seq</strong>uencing",
+    "seq_fullname_old": "MICROcoccal nuclease chromosome Conformation assay and sequencing",
     "year": 2015,
     "paper_title": "Mapping Nucleosome Resolution Chromosome Folding in Yeast by Micro-C",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26119342",
@@ -482,7 +482,7 @@
   },
   {
     "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Single-cell chromosome interaction",
+    "seq_goal_level2": "Single-cell chromosome interaction ",
     "seq_name": "sci-Hi-C",
     "plot": 1,
     "seq_fullname": "<strong>single-cell Hi-C</strong>",
@@ -491,19 +491,6 @@
     "paper_title": "Massively multiplex single-cell Hi-C",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28135255",
     "notes": "Use combinatorial cellular indexing technique.",
-    "": ""
-  },
-  {
-    "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Chromosome rearrangement",
-    "seq_name": "TC-seq",
-    "plot": 0,
-    "seq_fullname": "<strong>T</strong>ranslocation <strong>C</strong>apture <strong>seq</strong>uencing",
-    "seq_fullname_old": "Translocation capture sequencing",
-    "year": 2012,
-    "paper_title": "Translocation capture sequencing: a method for high throughput mapping of chromosomal rearrangements.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22033343",
-    "notes": "Measures genome-wide chromosomal rearrangements; Can discover recombination hotspots",
     "": ""
   },
   {
@@ -527,7 +514,7 @@
     "seq_fullname": "<strong>MNase-seq</strong>",
     "seq_fullname_old": "MNase-seq",
     "year": 2011,
-    "paper_title": "High-resolution genome-wide mapping of the primary structure of chromatin.",
+    "paper_title": "High-resolution genome-wide mapping of the primary structure of chromatin. ",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21241889",
     "notes": "Basic sequencing method to map nucleosome locations. Utilizes micrococcal nuclease combined with ChIP-seq to map nucleosomes; Known to have GC-bias.",
     "": ""
@@ -562,7 +549,7 @@
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Nucleosome positioning, DNA methylation",
     "seq_name": "NOMe-seq",
-    "plot": 0,
+    "plot": 1,
     "seq_fullname": "<strong>N</strong>ucleosome <strong>O</strong>ccupancy and <strong>Me</strong>thylome <strong>seq</strong>uencing",
     "seq_fullname_old": "nucleosome occupancy and methylome sequencing",
     "year": 2012,
@@ -575,7 +562,7 @@
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "DNA Okazaki fragments",
     "seq_name": "OK-seq",
-    "plot": 0,
+    "plot": 1,
     "seq_fullname": "<strong>OK</strong>azaki fragments <strong>seq</strong>uencing",
     "seq_fullname_old": "Okazaki fragments sequencing",
     "year": 2016,
@@ -588,11 +575,11 @@
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "DNA double-strand breaks",
     "seq_name": "GUIDE-seq",
-    "plot": 0,
-    "seq_fullname": "<strong>G</strong>enome-wide, <strong>U</strong>nbiased <strong>I</strong>dentification of <strong>D</strong>ouble strand breaks <strong>E</strong>nabled by <strong>seq</strong>uencing",
-    "seq_fullname_old": "genome-wide, unbiased identification of DSBs enabled by sequencing",
+    "plot": 1,
+    "seq_fullname": "<strong>G</strong>enome-wide, <strong>U</strong>nbiased <strong>I</strong>dentification of <strong>D</strong>ouble strand breaks <strong>E</strong>nabled by <strong>seq</strong>uencing ",
+    "seq_fullname_old": "genome-wide, unbiased identification of DSBs enabled by sequencing ",
     "year": 2015,
-    "paper_title": "GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases.",
+    "paper_title": "GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25513782",
     "notes": "Useful to profile CRISPR off-target events",
     "": ""
@@ -600,7 +587,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Micro-scale histone modification",
-    "seq_name": "uChIP–seq",
+    "seq_name": "uChIP-seq",
     "plot": 1,
     "seq_fullname": "micro-scale (<strong>u</strong>) <strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation and <strong>seq</strong>uencing",
     "seq_fullname_old": "micro-scale chromatin immunoprecipitation and sequencing",
@@ -621,7 +608,7 @@
     "paper_title": "RNA-Seq: a revolutionary tool for transcriptomics.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19015660",
     "notes": "Basic sequencing method for gene expression quantification.",
-    "has_step": 1
+    "": ""
   },
   {
     "seq_goal_level1": "RNA",
@@ -644,9 +631,9 @@
     "seq_fullname": "<strong>N</strong>ative <strong>E</strong>longating <strong>T</strong>ranscript <strong>seq</strong>uencing",
     "seq_fullname_old": "native elongating transcript sequencing",
     "year": 2011,
-    "paper_title": "Nascent transcript sequencing visualizes transcription at nucleotide resolution.",
+    "paper_title": "Nascent transcript sequencing visualizes transcription at nucleotide resolution.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21248844",
-    "notes": "Sequencing 3′ ends of nascent transcripts associated with RNA polymerase; Used engineered RNAPII elongating complex in yeast.",
+    "notes": "Sequencing 3_ ends of nascent transcripts associated with RNA polymerase; Used engineered RNAPII elongating complex in yeast.",
     "": ""
   },
   {
@@ -657,7 +644,7 @@
     "seq_fullname": "<strong>C</strong>ap <strong>A</strong>nalysis <strong>G</strong>ene <strong>E</strong>xpression with <strong>seq</strong>uencing",
     "seq_fullname_old": "Cap analysis gene expression with sequencing",
     "year": 2012,
-    "paper_title": "5' end-centered expression profiling using cap-analysis gene expression and next-generation sequencing.",
+    "paper_title": "5' end-centered expression profiling using cap-analysis gene expression and next-generation sequencing.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22362160",
     "notes": "Tags 5' end of mRNA to profile transcriptional start points; Also for promoter usage analysis",
     "": ""
@@ -685,7 +672,7 @@
     "year": 2013,
     "paper_title": "Precise maps of RNA polymerase reveal how promoters direct initiation and pausing.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/23430654",
-    "notes": "Maps genome-wide distribution of transcriptionally engaged Pol II at base pair resolution; Utilizes the fact that Pol II accumulates immediately downstream of promoters.",
+    "notes": "Maps genome-wide distribution of transcriptionally engaged Pol II at base pair resolution; Utilizes the fact that Pol II accumulates immediately downstream of promoters.",
     "": ""
   },
   {
@@ -693,8 +680,8 @@
     "seq_goal_level2": "RNA-chromatin interaction",
     "seq_name": "ChIRP",
     "plot": 1,
-    "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>solation by <strong>R</strong>NA <strong>P</strong>urification and sequencing",
-    "seq_fullname_old": "Chromatin Isolation by RNA Purification and sequencing",
+    "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>solation by <strong>R</strong>NA <strong>P</strong>urification and sequencing",
+    "seq_fullname_old": "Chromatin Isolation by RNA Purification and sequencing",
     "year": 2011,
     "paper_title": "Genomic maps of lincRNA occupancy reveal principles of RNA-chromatin interactions",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21963238",
@@ -706,8 +693,8 @@
     "seq_goal_level2": "RNA modification",
     "seq_name": "m6A-seq",
     "plot": 1,
-    "seq_fullname": "methylated RNA immunoprecipitation (<strong>m6A-seq</strong>)",
-    "seq_fullname_old": "methylated RNA immunoprecipitation",
+    "seq_fullname": "methylated RNA immunoprecipitation (<strong>m6A-seq</strong>)",
+    "seq_fullname_old": "methylated RNA immunoprecipitation",
     "year": 2012,
     "paper_title": "Topology of the human and mouse m6A RNA methylomes revealed by m6A-seq.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22575960",
@@ -743,12 +730,12 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA binding protein",
-    "seq_name": "PAR-CLIP",
+    "seq_name": "PAR-CLIP ",
     "plot": 1,
-    "seq_fullname": "<strong>P</strong>hoto<strong>A</strong>ctivatable <strong>R</strong>ibonucleoside–enhanced <strong>C</strong>ross-<strong>L</strong>inking and <strong>I</strong>mmuno<strong>P</strong>recipitation",
-    "seq_fullname_old": "photoactivatable ribonucleoside–enhanced cross-linking and immunoprecipitation",
+    "seq_fullname": "<strong>P</strong>hoto<strong>A</strong>ctivatable <strong>R</strong>ibonucleoside enhanced <strong>C</strong>ross-<strong>L</strong>inking and <strong>I</strong>mmuno<strong>P</strong>recipitation",
+    "seq_fullname_old": "photoactivatable ribonucleoside enhanced cross-linking and immunoprecipitation",
     "year": 2010,
-    "paper_title": "Transcriptome-wide identification of RNA-binding protein and microRNA target sites by PAR-CLIP.",
+    "paper_title": "Transcriptome-wide identification of RNA-binding protein and microRNA target sites by PAR-CLIP.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20371350",
     "notes": "Maps protein-RNA binding sites and microRNA-binding proteins.",
     "": ""
@@ -774,8 +761,8 @@
     "seq_fullname": "<strong>P</strong>arallel <strong>A</strong>nalysis of <strong>R</strong>NA <strong>S</strong>tructure",
     "seq_fullname_old": "parallel analysis of RNA structure",
     "year": 2013,
-    "paper_title": "Genome-wide mapping of RNA structure using nuclease digestion and high-throughput sequencing.",
-    "paper_link": "http://www.ncbi.nlm.nih.gov/pubmed/23558785",
+    "paper_title": "Genome-wide mapping of RNA structure using nuclease digestion and high-throughput sequencing.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/23558785",
     "notes": "Profile RNA structures utilizing enzymes that are single-stranded RNA or double-strand RNA specific",
     "": ""
   },
@@ -800,7 +787,7 @@
     "seq_fullname": "RNA <strong>structure</strong> <strong>seq</strong>uencing",
     "seq_fullname_old": "RNA structure sequencing",
     "year": 2014,
-    "paper_title": "In vivo genome-wide profiling of RNA secondary structure reveals novel regulatory features.",
+    "paper_title": "In vivo genome-wide profiling of RNA secondary structure reveals novel regulatory features.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/24270811",
     "notes": "Uses the chemical dimethyl sulphate (DMS) to measure the difference of base-pairing caused by RNA secondary structure.",
     "": ""
