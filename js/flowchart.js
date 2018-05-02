@@ -34,7 +34,8 @@ function hideTooltip(e){
 var pipeline_load = function(seq_name){
 
   // var step = ['quality control of reads','read mapping', 'quality control after mapping','differential binding', 'peak calling','peak annotation','motif analysis',  'gene ontology analysis']
- 
+  var tableHeaders = ["Software","Description","Features","Strength","Limitation","Format_input","Format_output","Platform requirement","Link","Paper","RCR"];
+
   $.getJSON("./data/" + seq_name + ".json")
     .done(function( data ) {
 
@@ -50,10 +51,10 @@ var pipeline_load = function(seq_name){
 
           //already has the step, save datas to blcok {key : software, data : current data }
           if(Blocks.hasOwnProperty(key)){
-            Blocks[key].push_data(data[i], data[i].software);
+            Blocks[key].push_data(data[i], data[i].Software);
             let parent = Blocks[key].parent;
             if(parent !== ""){
-              Blocks[parent].push_data(data[i], data[i].software);
+              Blocks[parent].push_data(data[i], data[i].Software);
             }
           }
 
@@ -65,7 +66,7 @@ var pipeline_load = function(seq_name){
             let parent = Blocks[key].parent;
             //subSteps 
             if(parent !== ""){
-                Blocks[parent].push_data(data[i], data[i].software);
+                Blocks[parent].push_data(data[i], data[i].Software);
 
                 //count direct next sub steps 
                 if(Blocks[key].order.includes(".1")){
@@ -79,7 +80,7 @@ var pipeline_load = function(seq_name){
             Blocks[key].set_fields(Object.keys(data[i]), 5, 'RCR');
 
             //push software data relate to step
-            Blocks[key].push_data(data[i], data[i].software);
+            Blocks[key].push_data(data[i], data[i].Software);
           }
 
 
@@ -127,6 +128,41 @@ var pipeline_load = function(seq_name){
                 } );
 
 
+                //remove empty columns
+                let empty_check = [];
+
+                $("#table tr:first th").each(function(index, value){
+                  if(tableHeaders.indexOf($(value).text()) === -1){
+                      empty_check.push(index+1);
+                  }
+                  
+                });
+
+               
+                let removed = [];
+                for(let c = 0; c < empty_check.length;c++){
+                    let should_remove = true; 
+                    $("#table tbody tr td:nth-child(" + empty_check[c] + ")").each(function(index,value){
+                            if($(value).text() !== "-"){
+                              console.log($(value).text());
+                                should_remove = false;
+                            }
+                    });
+                    console.log(should_remove);
+                    removed.push(should_remove);
+                }
+
+                let removeCount = 0;
+                for(let r = 0; r < removed.length;r++){
+
+                    if(removed[r]){
+                        $('table tr').find('td:nth-child('+(empty_check[r]-removeCount)+ ')'+',th:nth-child('+(empty_check[r]-removeCount)+')').remove();
+                        target.remove_field(empty_check[r]-removeCount);
+                        removeCount++;
+                    }
+                }
+
+
                 //["software","description","features",
                 //"strength","limitation","format_input",
                 //"format_output","platform requirement","link","paper","RCR"]
@@ -135,8 +171,8 @@ var pipeline_load = function(seq_name){
                  "paging": false,
                  "info": false,
                  "scrollX": true,
-                  "order": [[ target.fields.length-1, "desc" ]],
-                  
+                   "order": [[ target.fields.length-1, "desc" ]],
+
                });
              
               
@@ -251,7 +287,7 @@ var pipeline_load = function(seq_name){
             $("#chart").toggle('slow',function(){
 
               if($("#chart").css('display') !== 'none'){
-                $("#chart-button").text("hide chart");
+                $("#chart-button").text("Hide analysis flow chart");
                 $("#chart-button").removeClass("btn-outline-success");
                 $("#chart-button").addClass("btn-success");
 
@@ -259,7 +295,7 @@ var pipeline_load = function(seq_name){
                  
               }
               else{
-                $("#chart-button").text("show chart");
+                $("#chart-button").text("Show analysis flow chart");
                 $("#chart-button").removeClass("btn-success");
                 $("#chart-button").addClass("btn-outline-success");
                   $(".block-button").removeClass("btn-primary");

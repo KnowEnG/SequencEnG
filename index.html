@@ -26,9 +26,11 @@
 <body class="application" onload="show_intro()">
 
 	
+<div id="header">	
 
+</div>
 
-<nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+<!-- <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -49,32 +51,17 @@
       
     </ul>
   </div>
-</nav>
+</nav> -->
 
 <div class="container-fluid">
 
 
-    <div class="main-title row justify-content-between">
-        
-            <div class="d-none d-md-block col-md-3 app-company">
-                    <a href="http://www.knoweng.org" target="_blank"><!-- <img src="http://education.knoweng.org/clustereng/img/knoweng_logo.png"> -->
-                    </a>
-            </div>
-            <div class="d-md-block col-md-3 app-name" >
-                    <h1>SequencEnG</h1>
-               
-            </div>
-            <div class="d-none d-md-block col-md-3 app-fund">
-                    <a href="http://datascience.nih.gov/bd2k" target="_blank"><!-- <img src="http://education.knoweng.org/clustereng/img/NIH_BD2K.png" width='100' height='100'> -->
-                    </a>
-            </div>
-       
-    </div>
+ 
 	<div class="container-fluid">
 		<div class="tree-field">
 			<div class="row tree-intro">
 			
-			<div class="col-md-5" data-step="1" data-intro= "&#8226; Expand the whole knowledge tree to view all current next-generation sequencing (NGS)technique up to date. <br> &#8226;  Collapse the tree to view major sequencing targets. <br> &#8226; Search and select an NGS technique to see the path. <br> &#8226; Clear search if you want to search for another NGS techniques.">
+			<div class="col-md-5" data-step="1" data-intro= "&#8226; Expand the whole knowledge tree to view all current next-generation sequencing (NGS) techniques up to date. <br> &#8226;  Collapse the tree to view sequencing categories. <br> &#8226; Search and select an NGS technique.  <br> &#8226; Clear search if you want to search for another NGS technique.">
 				<div class="container">
 					<div class="chart-wrapper">
 						<div class="chart-title">
@@ -114,7 +101,7 @@
 				</div>			
 	
 			</div>
-			<div class="col-md-5" data-step="12" data-intro="Click the button for displaying the pipeline of the sequencing">
+			<div class="col-md-5" data-step="12" data-intro="If you want to access the pipelines directly, click one of the buttons. ">
 
 				<div class="container">
 					<div class="chart-wrapper  analysis-pipeline">
@@ -146,7 +133,7 @@
 
 		</div>
 			<div class="row">
-				<div  class="tree-intro" id="tree" data-step="2" data-intro="See the knowledge tree of all the current major NGS techniques grouped by different research goals."></div>
+				<div  class="tree-intro" id="tree" data-step="2" data-intro="The SequencEnG knowledge tree of all the current major NGS techniques grouped by general and detailed categories."></div>
 				<div id="desc" >
 			
 			
@@ -159,7 +146,7 @@
 			
 	</div>
 	
-    <div id="main" class="container-fluid" data-step="9" data-intro="After clicking the button, the analysis flow chart and software table show here." >		
+    <div id="main" class="container-fluid" data-step="9" data-intro='After clicking the "Analysis pipeline" button, the NGS data analysis flow chart shows here.' >		
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="chart-wrapper">
@@ -172,12 +159,12 @@
 							
 							<div class="row">
 								<div class="col-md-4">
-									<button id="chart-button" type="button" class="btn btn-outline-success">Show Chart</button>
+									<button id="chart-button" type="button" class="btn btn-outline-success">Show analysis flow chart</button>
 
 								</div>
 								<div class="col-md-4">
 									
-									<button id="tree-button" type="button" class="btn btn-outline-success">Show Tree</button>
+									<button id="tree-button" type="button" class="btn btn-outline-success">Go to SequencEnG Tree</button>
 								</div>
 								
 							</div>
@@ -204,7 +191,7 @@
 							<div class="row justify-content-center">
 									
 										
-										<div data-step="10" data-intro="Click on the analysis step to view substeps and software/tools available." class="col-10 col-md-10" id="flowchart-wrapper">
+										<div data-step="10" data-intro="Click on the analysis steps to view sub-steps and software/tools available." class="col-10 col-md-10" id="flowchart-wrapper">
 
 										<div id="svgContainer">
 									    <svg id="svg-pipe" width="0" height="0" >
@@ -250,7 +237,13 @@
 					</div>
 					<div class="chart-stage">	
 						<div class="container">
-							<div data-step="11" data-intro="Information and comparison of popular software/tools." class="row justify-content-center table-row">
+							<div data-step="11" data-intro="IEach row is a popular software/tool for the current analysis step; Features and comparison among tools are shown. Scroll right to see more columns to see more features and links." class="row justify-content-center table-row">
+									<div class="container table-info-text">
+										<ul>
+											<li>Scroll right to see more features for the tools.</li>
+											<li>A “*” before the tool name implicates the tool is recommended by a benchmarking paper.</li>
+										</ul>
+									</div>
 									
 										<table id="table" class="display cell-border hover" cellspacing="0" width="100%">
 
@@ -305,15 +298,16 @@
 <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" async></script>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js" integrity="sha256-hfmVcDB4v86G5tVgzUJ60031uvFWF+38pqVjkCxTkNs=" crossorigin="anonymous" async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js" integrity="sha256-hfmVcDB4v86G5tVgzUJ60031uvFWF+38pqVjkCxTkNs=" crossorigin="anonymous"></script>
 
-<script type="./dataTables.hideEmptyColumns.min.js"></script>
 <script src="./js/svgPath.js" defer></script>
 <script src="./js/block.js" defer></script>
 <script src="./js/flowchart.js" defer></script>
 <script src="./js/tree.js" defer></script>
 
 <script>
+	var intro = introJs();
+	$("#header").load("./docs/header.html");
 		function show_intro() {
 			if (localStorage.getItem('intro_shown')) {
 				return;
@@ -322,9 +316,13 @@
 			$("#expand-all").click();
 
 			setTimeout(function(){
-					let intro = introJs();
+					
 				intro.setOption("showStepNumbers", false).onbeforechange(function(targetElement) {
 					console.log(this._currentStep);
+						
+						if(this._currentStep > 0 && this._currentStep < 5 ){
+							$("#expand-all").click();
+						}
 						if(this._currentStep === 10){
 				 				$("#qualitycontrolofreads").click();
 				 		}
@@ -347,7 +345,10 @@
 				 				
 				 			}
 
+				 			
+
 				 		}
+				 		
 				 		
 				}).oncomplete(function(){
 					$("#tree-button").click();

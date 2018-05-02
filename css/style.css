@@ -1,10 +1,21 @@
 
+#header a{
+  font-size: 14px;
+}
+
+#header .navbar{
+  background-color: #3d4a57;
+}
 
 /*TITLE*/
 h1 {
     margin-top: 0;
     color: coral;
     font-size: 50px;
+}
+.main-title{
+  margin-top: 35px;
+  margin-bottom: 35px
 }
 .main-title .app-name{
   text-align: center;
@@ -136,7 +147,7 @@ div.dataTables_wrapper {
   stroke-dashoffset: 1000;
   animation: dash linear;
   animation-fill-mode: forwards;
-  animation-duration: 1.5s;
+  animation-duration: 1.0s;
  
 }
  @keyframes dash {
@@ -211,8 +222,8 @@ path.link.found{
   .tree-intro .row > div{
     text-align: center;
   }
-  #tree{
-
+  #tree svg{
+    /*  padding-left: 100px;*/
   }
   .tree-field{
     position : relative;
@@ -231,6 +242,7 @@ path.link.found{
     transform: translate(0,-30%);
     margin-right: 100px;*/
     margin-top: 150px;
+    margin-left: 100px;
   }
 
   .node text{
@@ -323,19 +335,9 @@ path.link.found{
 
 }
 
-/*#tooltip-box::after{
-  content:"";
-  position: absolute;
-  top:100%;
-  left: 5%;
-  margin-left: -5px;
-
-   border-width: 5px;
-    border-style: solid;
-    border-color: black transparent transparent transparent;
-}*/
-
-
+.table-info-text{
+  font-size: 14px;
+}
 
 /*MODAL*/
 .modal{

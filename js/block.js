@@ -51,14 +51,18 @@ Block.prototype.set_fields = function(fields, index, ...args){
 	}
 };
 
+Block.prototype.remove_field = function(index){
+	this.fields.splice(index, 1);
+}
+
 Block.prototype.push_data = function(data, key) {
 
 	if(key !== ""){
 
 		this.data[key] = data;
 
-		if(!this.data[key]['paper'].includes('NA')){
-			let links = this.data[key]['paper'].split('/');
+		if(!this.data[key]['Paper'].includes('NA')){
+			let links = this.data[key]['Paper'].split('/');
 			let pmids = links[links.length - 1];
 			let self = this; 
 			 $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
@@ -157,6 +161,7 @@ Block.prototype.makeTable = function(){
 	//set table head 
 	head_fields = head_fields.concat(this.fields);
 
+
 	
 
 	for(let i = 0; i < head_fields.length;i++){
@@ -170,7 +175,7 @@ Block.prototype.makeTable = function(){
 
 	//set table body
 	var body = "";
-
+	console.log(this.data);
 	for(let key in this.data){
 		var tr = "<tr>";
 		
@@ -179,7 +184,7 @@ Block.prototype.makeTable = function(){
 
 			//set initial order using RCr
 			if(head_fields[i] === "RCR"){
-				dataOrderInit = "data-order='"+ (this.data[key]['software'].includes('recommended')?99999:this.data[key][head_fields[i]]) + "'";
+				dataOrderInit = "data-order='"+ (this.data[key]['Software'].includes('recommended')?99999:this.data[key][head_fields[i]]) + "'";
 			}
 
 			if(this.data[key][head_fields[i]] ==="" || this.data[key][head_fields[i]]===0){
@@ -232,7 +237,7 @@ function analyzeValueInString(str){
 
 
 
-	
+
 	
 
 	return final || ((isNaN(str) && str.includes('http'))?"<a target='_blank' href='" + str + "'>" + str + "</a>":str); 

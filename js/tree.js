@@ -5,7 +5,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
 //Size Control
 const CURRENT_WINDOW_SIZE = screen.width;
-const TREE_FIELD_WIDTH = screen.width * 0.8;
+const TREE_FIELD_WIDTH = screen.width * 0.92;
 const TREE_HEIGHT = 1500;
 
 
@@ -19,7 +19,7 @@ const needIntro = !localStorage.getItem('intro_shown');
 
 //d3 Tree structure 
 let treeData = {
-  "name" : "Training",
+  "name" : "Sequencing techniques",
    "parent": "null",
     "children": []
 
@@ -165,12 +165,10 @@ function searchTree(data, search, path){
 
   function show_description(data){
 
-    
-
       let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper"});
     
       // notes, seq_fullname, year, paper_title paper_link
-      let $specContainer = $("<div>", {id: "spec-detail", "class": "container", "data-step":"6", "data-intro":"The study that introduced the NGS technique"});
+      let $specContainer = $("<div>", {id: "spec-detail", "class": "container", "data-step":"6", "data-intro":"Information for the current NGS technique, and the reference of original study."});
 
 
         let $divRowName = data.seq_fullname?
@@ -192,7 +190,7 @@ function searchTree(data, search, path){
 
              
         let $divRowButton = $("<div>", {"class": "row justify-content-md-center button-row"});
-        let hasStep = data.has_step?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four important NGS techiniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing), learn about the data analysis pipeline and  comparision of popular software/tools available.'>Analysis Pipeline</button>":"";
+        let hasStep = data.has_step?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four NGS techniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing) with distinct analysis strategies, interactive data analysis pipelines are available, along with comparison of popular software/tools.'>Analysis Pipeline</button>":"";
         if(data.has_step){
           $("#chart").empty();
           pipeline_load(data.seq_name);
@@ -211,7 +209,7 @@ function searchTree(data, search, path){
         if(data.plot===1){
          
 
-          let $figure = $("<figure>",{id: "techiniques-figure", "class" : "figure-box", "data-step":"7", "data-intro":"Basic idea and steps of constructing sequencing library for the specific goal."});
+          let $figure = $("<figure>",{id: "techiniques-figure", "class" : "figure-box", "data-step":"7", "data-intro":"Basic idea and steps of the NGS experiments."});
           let $descimg = $("<img>", {"id" : "descimg", "alt" : "Image of " + data.seq_fullname, "src" : "./img/"+data.seq_name+".jpeg", "title" : "Click for bigger image"});
           $figure.append($descimg);
           $imgBox.append($figure);
@@ -224,7 +222,7 @@ function searchTree(data, search, path){
           $descimg.click(function(){
               $modal.show();
               $imgmodal.attr("src",  "./img/"+data.seq_name+".jpeg");
-              $("#caption").text(data.seq_fullname);
+              $("#caption").html(data.seq_fullname);
           });
 
         }
@@ -235,14 +233,20 @@ function searchTree(data, search, path){
         
        
         $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
-            $rcr.append('<div class="col-md-12">RCR(Relative Citation Ratio) : ' + response.data[0].relative_citation_ratio + '</div>');
+          if(response.data[0]){
+             $rcr.append('<div class="col-md-12">RCR(Relative Citation Ratio) : ' + response.data[0].relative_citation_ratio + '</div>');
             $rcr.append('<div class="col-md-12">Citation Counts : ' + response.data[0].citation_count + '</div>');
             $rcr.append('<div class="col-md-12">Citations per year : ' + response.data[0].citations_per_year + '</div>');
 
+          }
+
+          else{
+            $rcr.append('<div class="col-md-12">Relative Citation Ratios are available for articles published between 1995 and 2017.</div>')
+          }
+           
             $specContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper,$rcr)
             $divContainer.append($specContainer, $imgBox, $divRowButton);
             $(".show-chart").on('click', show_chart);
-            console.log(response);
         });
        
 
@@ -414,7 +418,7 @@ function click_pipeline_button(e){
 
 //===================Draw Tree(Desktop)=======================
 function draw_tree(){
-  let margin = {top: 20, right: 90, bottom: 30, left: 90},
+  let margin = {top: 20, right: 90, bottom: 30, left: 190},
       width = (TREE_FIELD_WIDTH) - margin.left - margin.right,
       height = TREE_HEIGHT - margin.top - margin.bottom;
 
@@ -556,7 +560,7 @@ function draw_tree(){
           else if(d.data.name === introTargetTwo){
             return "4";
           }
-          else if(d.data.name === introTargetThree){
+          else if(d.data.name === introTargetThree && d.parent.data.name === introTargetTwo){
             return "5";
           }
           else {
@@ -566,13 +570,13 @@ function draw_tree(){
         })
         .attr("data-intro", function(d){
            if(d.data.name === introTragetOne){
-              return "The high-level category of sequencing goals, including DNA, epigenetics and RNA. i.e)DNA";
+              return "The general sequencing category, including DNA, epigenetics and RNA. i.e. DNA";
           }
           else if(d.data.name === introTargetTwo){
-              return  "The low-level category of sequencing goals in different research domains. i.e)TF-Binding";
+              return  "The detailed sequencing category, i.e. transcription factor (TF) Binding";
           }
-          else if(d.data.name === introTargetThree){
-              return "NGS techniques as leaves. * means that it has steps to show i.e)ChIP-seq*";
+          else if(d.data.name === introTargetThree && d.parent.data.name === introTargetTwo){
+              return "NGS techniques as leaves. * Interactive analysis pipelines are available.";
           } 
           else {
             return '';
