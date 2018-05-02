@@ -16,6 +16,8 @@ const introTargetThree = "ChIP-seq";
 const needIntro = !localStorage.getItem('intro_shown');
 
 
+const has_step = ["ChIP-seq", "Hi-C", "RNA-seq", "WGBS"];
+
 
 //d3 Tree structure 
 let treeData = {
@@ -165,6 +167,8 @@ function searchTree(data, search, path){
 
   function show_description(data){
 
+      let checkStep = has_step.indexOf(data.seq_name)!==-1?true:false;
+
       let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper"});
     
       // notes, seq_fullname, year, paper_title paper_link
@@ -173,7 +177,7 @@ function searchTree(data, search, path){
 
         let $divRowName = data.seq_fullname?
                           $("<div>", {"class": "chart-title row justify-content-center"})
-                          .append("<div>" + data.seq_fullname + (data.has_step?"*":"") + "</div>"):"";
+                          .append("<div>" + data.seq_fullname + (checkStep?"*":"") + "</div>"):"";
 
         
         let $divRowNote = data.notes?
@@ -190,8 +194,8 @@ function searchTree(data, search, path){
 
              
         let $divRowButton = $("<div>", {"class": "row justify-content-md-center button-row"});
-        let hasStep = data.has_step?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four NGS techniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing) with distinct analysis strategies, interactive data analysis pipelines are available, along with comparison of popular software/tools.'>Analysis Pipeline</button>":"";
-        if(data.has_step){
+        let hasStep = checkStep?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four NGS techniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing) with distinct analysis strategies, interactive data analysis pipelines are available, along with comparison of popular software/tools.'>Analysis Pipeline</button>":"";
+        if(checkStep){
           $("#chart").empty();
           pipeline_load(data.seq_name);
         }
@@ -583,7 +587,8 @@ function draw_tree(){
           }
 
         })
-        .text(function(d) { return d.data.name + (d.data.has_step?"*":""); })
+        .text(function(d) { 
+          return d.data.name + (has_step.indexOf(d.data.name)!==-1?"*":""); })
         .on("click", function(d){
           
             //console.log(d);

@@ -158,7 +158,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "DNA methylation",
-    "seq_name": "WGBS ",
+    "seq_name": "WGBS",
     "plot": 1,
     "seq_fullname": "<strong>W</strong>hole <strong>G</strong>enome <strong>B</strong>isulfite <strong>S</strong>equencing",
     "seq_fullname_old": "whole genome bisulfite sequencing",
@@ -171,7 +171,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "DNA methylation",
-    "seq_name": "RRBS ",
+    "seq_name": "RRBS",
     "plot": 1,
     "seq_fullname": "<strong>R</strong>educed <strong>R</strong>epresentation <strong>B</strong>isulfite <strong>S</strong>uencing ",
     "seq_fullname_old": "Reduced representation bisulfite sequencing ",
@@ -379,7 +379,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Chromosome interaction ",
-    "seq_name": "3C ",
+    "seq_name": "3C",
     "plot": 1,
     "seq_fullname": "Chromosome Conformation Capturing (<strong>3C</strong>)",
     "seq_fullname_old": "Chromosome Conformation Capturing",
@@ -392,7 +392,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Chromosome interaction ",
-    "seq_name": "4C ",
+    "seq_name": "4C",
     "plot": 1,
     "seq_fullname": "circular 3C (<strong>4C</strong>)",
     "seq_fullname_old": "circular 3C",
@@ -405,7 +405,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Chromosome interaction ",
-    "seq_name": "5C ",
+    "seq_name": "5C",
     "plot": 1,
     "seq_fullname": "Chromosome Conformation Capture Carbon Copy (<strong>5C</strong>)",
     "seq_fullname_old": "Chromosome Conformation Capture Carbon Copy",
@@ -418,7 +418,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Chromosome interaction ",
-    "seq_name": "Hi-C ",
+    "seq_name": "Hi-C",
     "plot": 1,
     "seq_fullname": "High-throughput chromatin conformation capture (<strong>Hi-C</strong>)",
     "seq_fullname_old": "High-throughput chromatin conformation capture",
@@ -431,7 +431,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Chromosome interaction ",
-    "seq_name": "ChIA-PET ",
+    "seq_name": "ChIA-PET",
     "plot": 1,
     "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>nteraction <strong>A</strong>nalysis by <strong>P</strong>aired-<strong>E</strong>nd <strong>T</strong>ag Sequencing",
     "seq_fullname_old": "Chromatin Interaction Analysis by Paired-End Tag Sequencing",
@@ -730,7 +730,7 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA binding protein",
-    "seq_name": "PAR-CLIP ",
+    "seq_name": "PAR-CLIP",
     "plot": 1,
     "seq_fullname": "<strong>P</strong>hoto<strong>A</strong>ctivatable <strong>R</strong>ibonucleoside enhanced <strong>C</strong>ross-<strong>L</strong>inking and <strong>I</strong>mmuno<strong>P</strong>recipitation",
     "seq_fullname_old": "photoactivatable ribonucleoside enhanced cross-linking and immunoprecipitation",
