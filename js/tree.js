@@ -243,10 +243,13 @@ function searchTree(data, search, path){
         let links = data.paper_link.split('/');
         let pmids = links[links.length - 1];
 
-        
+        console.log(pmids);
+
+
        
         $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
-          if(response.data[0]){
+         
+          if(response.data[0] && pmids){
              $rcr.append('<div class="col-md-12">RCR(Relative Citation Ratio) : ' + response.data[0].relative_citation_ratio + '</div>');
             $rcr.append('<div class="col-md-12">Citation Counts : ' + response.data[0].citation_count + '</div>');
             $rcr.append('<div class="col-md-12">Citations per year : ' + response.data[0].citations_per_year + '</div>');
