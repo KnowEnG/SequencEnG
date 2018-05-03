@@ -1,4 +1,6 @@
-
+body{
+  width: 100%;
+}
 #header a{
   font-size: 14px;
   text-decoration: none;
@@ -226,6 +228,8 @@ path.link.found{
     border-color: black transparent transparent transparent;
 }
 
+
+
 /*LARGE DESKTOP SCREEN SIZE > 768 px */
 @media only screen and (min-width: 768px) {
   
@@ -238,8 +242,7 @@ path.link.found{
   }
   #tree{
     /*  padding-left: 100px;*/
-
-    max-width: 1200px;
+   /* max-width: 1200px;*/
   }
   .tree-field{
     position : relative;
@@ -248,21 +251,23 @@ path.link.found{
   
   
   #desc-detail{
-   
+   width: 100%;
+   height: 100%;
   }
   
+
   #desc{
-    /*  position: absolute;
-    top:30%;
-    right: 0;
-    transform: translate(0,-30%);
-    margin-right: 100px;*/
-    /*margin-top: 150px;
-    margin-left: 100px;*/
+   
+    max-width: 650px;
+    max-height: 1150px;
   }
 
   .node text{
     cursor: pointer;
+  }
+
+  .tree-field-buttons{
+    max-width: 1600px;
   }
 }
 @media only screen and (max-width: 768px){
@@ -299,11 +304,21 @@ path.link.found{
 }
 
 }
+@media only screen and (min-width: 1600px) {
+#desc{
+   
+    max-height: 1300px;
+  }
 
+}
 
 
 
 /*COMMON*/
+.tree-info{
+  padding-left: 50px;
+}
+
 .desc-text{
   display: none;
  
@@ -324,7 +339,7 @@ path.link.found{
 
 #descimg { 
   width:100%;
-  
+  height: 100%;
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;

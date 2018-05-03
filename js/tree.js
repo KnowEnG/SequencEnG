@@ -19,10 +19,13 @@ const needIntro = !localStorage.getItem('intro_shown');
 const has_step = ["ChIP-seq", "Hi-C", "RNA-seq", "WGBS"];
 
 
-let nodeDepth = 220;
-
-if(TREE_FIELD_WIDTH < 1440){
-    nodeDepth = 180;
+let nodeDepthOne = 150;
+let nodeDepthTwo = 220;
+let nodeDepthThree = 170;
+if(CURRENT_WINDOW_SIZE > 1600){
+    nodeDepthOne = 200;
+    nodeDepthTwo = 300;
+    nodeDepthThree = 250;
 }
 
 //d3 Tree structure 
@@ -428,7 +431,7 @@ function click_pipeline_button(e){
 
 //===================Draw Tree(Desktop)=======================
 function draw_tree(){
-  let margin = {top: 20, right: 90, bottom: 30, left: 170},
+  let margin = {top: 20, right: 90, bottom: 30, left: 190},
       width = (TREE_FIELD_WIDTH),
       height = TREE_HEIGHT - margin.top - margin.bottom;
 
@@ -494,7 +497,7 @@ function draw_tree(){
 
   update(root);
 
-
+  $("#expand-all").click();
 
 
   function update(source) {
@@ -505,8 +508,20 @@ function draw_tree(){
         links = tData.descendants().slice(1);
 
     // Normalize for fixed-depth.
-    nodes.forEach(function(d){ 
-      d.y = d.depth * nodeDepth});
+    nodes.forEach(function(d){
+
+      if(d.depth === 1){
+        d.y = d.depth* nodeDepthOne;
+      }
+      else if(d.depth=== 2){
+       
+         d.y = d.depth * nodeDepthTwo;
+      }
+      else{
+         d.y = d.depth * nodeDepthThree;
+      }
+     
+    });
 
     let node = svg.selectAll('g.node')
         .data(nodes, function(d) {return d.id || (d.id = ++i); });
@@ -550,10 +565,10 @@ function draw_tree(){
             return d.children || d._children ? "end" : "start";
         })
         .attr("font-size", function(d){
-          return d.children || d._children ? "14" : "16";
+          return "14";
         })
         .attr("font-weight",function(d){
-          return d.children || d._children ? "normal" : "bold";
+          return "bold";
         })
         .attr("class", function(d){
 
