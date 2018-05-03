@@ -5,7 +5,7 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
 //Size Control
 const CURRENT_WINDOW_SIZE = screen.width;
-const TREE_FIELD_WIDTH = screen.width * 0.92;
+const TREE_FIELD_WIDTH = $("#tree").width();
 const TREE_HEIGHT = 1500;
 
 
@@ -18,6 +18,12 @@ const needIntro = !localStorage.getItem('intro_shown');
 
 const has_step = ["ChIP-seq", "Hi-C", "RNA-seq", "WGBS"];
 
+
+let nodeDepth = 220;
+
+if(TREE_FIELD_WIDTH < 1440){
+    nodeDepth = 180;
+}
 
 //d3 Tree structure 
 let treeData = {
@@ -422,8 +428,8 @@ function click_pipeline_button(e){
 
 //===================Draw Tree(Desktop)=======================
 function draw_tree(){
-  let margin = {top: 20, right: 90, bottom: 30, left: 190},
-      width = (TREE_FIELD_WIDTH) - margin.left - margin.right,
+  let margin = {top: 20, right: 90, bottom: 30, left: 170},
+      width = (TREE_FIELD_WIDTH),
       height = TREE_HEIGHT - margin.top - margin.bottom;
 
   let svg = d3.select("#tree").append("svg")
@@ -436,17 +442,17 @@ function draw_tree(){
   let svg_width = $("svg").width();
 
 
-  let box_size =  (CURRENT_WINDOW_SIZE - svg_width);
+  // let box_size =  (CURRENT_WINDOW_SIZE - svg_width);
          
-  $("#desc").css("width", box_size);
+  // $("#desc").css("width", box_size);
  
   let i = 0,
       duration = 750,
       root;
 
-  let tree_detail_box_width = box_size + TREE_FIELD_WIDTH;
+  // let tree_detail_box_width = box_size + TREE_FIELD_WIDTH;
 
-  $(".tree-field").width(tree_detail_box_width);
+  // $(".tree-field").width(tree_detail_box_width);
 
   //tree option buttons 
    $("#expand-all").click(() => expandAll(root, update));
@@ -500,7 +506,7 @@ function draw_tree(){
 
     // Normalize for fixed-depth.
     nodes.forEach(function(d){ 
-      d.y = d.depth * 220});
+      d.y = d.depth * nodeDepth});
 
     let node = svg.selectAll('g.node')
         .data(nodes, function(d) {return d.id || (d.id = ++i); });
@@ -756,6 +762,29 @@ function draw_table(){
   let tree = d3.tree().nodeSize([0, 30]); //Invokes tree
 
   root.children.forEach(collapse);
+
+  //select2 init
+  let select = $("#search").select2({
+          width: '100%',
+         placeholder: 'Select an Node',
+         data: selection_data
+      });
+
+ 
+
+ //select2 event 
+  select.on('select2:select', function (e) {
+     
+      let result = searchTree(treeData, e.params.data.text, []);
+
+      searchExpand(root, result);
+
+      update(root);
+        
+
+
+    });
+
   
 
   function update(source) {

@@ -8,16 +8,7 @@
   background-color: #3d4a57;
 }
 
-/*#header .app-name > div{
-  width: 750px;
-  
-}
 
-#sub-title{
-  width: 100%;
-  text-align: center;
- 
-}*/
 
 /*TITLE*/
 h1 {
@@ -36,6 +27,17 @@ h1 {
   text-align: right;
 }
 
+/*Buttons*/
+.analysis-pipeline, .util-buttons {
+  max-width: 600px;
+}
+.analysis-pipeline .row, .util-buttons .row{
+  padding: 0 10px;
+}
+.analysis-pipeline button,.util-buttons button{
+  width:100%;
+
+}
 
 #main{
   display: none;
@@ -234,8 +236,10 @@ path.link.found{
   .tree-intro .row > div{
     text-align: center;
   }
-  #tree svg{
+  #tree{
     /*  padding-left: 100px;*/
+
+    max-width: 1200px;
   }
   .tree-field{
     position : relative;
@@ -253,8 +257,8 @@ path.link.found{
     right: 0;
     transform: translate(0,-30%);
     margin-right: 100px;*/
-    margin-top: 150px;
-    margin-left: 100px;
+    /*margin-top: 150px;
+    margin-left: 100px;*/
   }
 
   .node text{
