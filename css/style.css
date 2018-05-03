@@ -67,7 +67,7 @@ h1 {
 /*FLOW CHART*/
 
 .chart-row{
-  overflow-x: auto;
+  overflow-x: scroll;
   overflow-y:hidden;
 }
 

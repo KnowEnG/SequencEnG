@@ -400,6 +400,8 @@ else{
   
   $(".analysis-pipeline .row div button").click(click_pipeline_button);
 
+  $(".chart-row").removeClass("justify-content-center");
+
 }
 
 
