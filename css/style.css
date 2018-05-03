@@ -67,13 +67,10 @@ h1 {
 /*FLOW CHART*/
 
 
-#flowchart{
-  min-width: 900px;
-
-}
 
 #flowchart-wrapper{
-  width: 100%;
+  min-width: 900px;
+  /*width: 100%;*/
   overflow-x: auto;
   overflow-y:hidden;
 }
