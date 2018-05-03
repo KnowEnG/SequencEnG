@@ -66,13 +66,16 @@ h1 {
 
 /*FLOW CHART*/
 
-
+.chart-row{
+  overflow-x: auto;
+  overflow-y:hidden;
+}
 
 #flowchart-wrapper{
   min-width: 900px;
   /*width: 100%;*/
-  overflow-x: auto;
-  overflow-y:hidden;
+ /* overflow-x: auto;
+  overflow-y:hidden;*/
 }
 
 #table,table,thead,tbody,th,tr{
