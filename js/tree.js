@@ -28,9 +28,14 @@ if($(window).width() > 1600){
     nodeDepthThree = 250;
 }
 
+if($(window).width() < 1200){
+  $("#desc").removeClass('col-md-4');
+  $("#desc").addClass('col-md-3');
+}
+
 //d3 Tree structure 
 var treeData = {
-  "name" : "Sequencing techniques",
+  "name" : "SEQUENCING TECHNIQUES",
    "parent": "null",
     "children": []
 
@@ -215,14 +220,7 @@ function searchTree(data, search, path){
           $("#chart").empty();
           pipeline_load(data.seq_name);
         }
-
-        let $rcr = $("<div>", {"class": "row chart-notes rcr"});
-        let $rcr_tooltip = $("<div>", {"class": "rcr-tooltip"});
-     
-        $rcr.append($rcr_tooltip);
-        $rcr_tooltip.append("Relative Citation Ratio represents a citation-based measure of scientific influence of one or more articles. It is calculated as the cites/year of each paper, normalized to the citations per year received by NIH-funded papers in the same field and year. A paper with an RCR of 1.0 has received the same number of cites/year as the average NIH-funded paper in its field, while a paper with an RCR of 2.0 has received twice as many cites/year as the average NIH-funded paper in its field. The displayed values are the maximum, the mean, the standard error of the mean (SEM), and the median (MED) of the papers in the group.");
-
-        $divRowButton.append(hasStep);
+   $divRowButton.append(hasStep);
 
         let $imgBox = $("<div>", {"class" : "row"});
 
@@ -250,8 +248,19 @@ function searchTree(data, search, path){
         let links = data.paper_link.split('/');
         let pmids = links[links.length - 1];
 
-      
+        let $rcr = "";
 
+        if(pmids !== ""){
+
+        $rcr = $("<div>", {"class": "row chart-notes rcr"});
+        let $rcr_tooltip = $("<div>", {"class": "rcr-tooltip"});
+     
+        $rcr.append($rcr_tooltip);
+        $rcr_tooltip.append("Relative Citation Ratio represents a citation-based measure of scientific influence of one or more articles. It is calculated as the cites/year of each paper, normalized to the citations per year received by NIH-funded papers in the same field and year. A paper with an RCR of 1.0 has received the same number of cites/year as the average NIH-funded paper in its field, while a paper with an RCR of 2.0 has received twice as many cites/year as the average NIH-funded paper in its field. The displayed values are the maximum, the mean, the standard error of the mean (SEM), and the median (MED) of the papers in the group.");
+
+     
+        }
+        
 
        
         $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
@@ -263,8 +272,10 @@ function searchTree(data, search, path){
 
           }
 
-          else{
+         
+          else if(response.data[0]===null){
             $rcr.append('<div class="col-md-12">Relative Citation Ratios are available for articles published between 1995 and 2017.</div>')
+
           }
            
             $specContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper,$rcr)
@@ -284,7 +295,7 @@ function searchTree(data, search, path){
     $(window).off();
    $(window).resize(function(){
       //  let wid =  $("#tree").width();
-      $("#clear-all").click();
+      
         $("#tree").empty();
         if($(window).width() > 600){
           if($(window).width() > 1600){
@@ -293,6 +304,14 @@ function searchTree(data, search, path){
               nodeDepthThree = 250;
           }
           else{
+            if($(window).width() < 1200){
+              $("#desc").removeClass('col-md-4');
+              $("#desc").addClass('col-md-3');
+            }
+            else{
+              $("#desc").addClass('col-md-4');
+              $("#desc").removeClass('col-md-3');
+            }
             nodeDepthOne = 150;
             nodeDepthTwo = 220;
             nodeDepthThree = 170;
@@ -660,8 +679,8 @@ function draw_tree(){
 
         })
         .attr("transform", function(d) {
-              if(d.data.name === 'Sequencing techniques'){
-                return "translate(" + -30 + ", " + -90 + " )rotate(270)";
+              if(d.data.name === "SEQUENCING TECHNIQUES"){
+                return "translate(" + -30 + ", " + -110 + " )rotate(270)";
               }
               else{
                 return '';

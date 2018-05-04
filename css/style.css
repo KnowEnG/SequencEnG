@@ -243,7 +243,7 @@ path.link.found{
   #tree{
     /*  padding-left: 100px;*/
     max-width: 1200px;
-   min-width: 900px;
+   min-width: 780px;
   }
   .tree-field{
     position : relative;

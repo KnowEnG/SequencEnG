@@ -433,7 +433,7 @@ $(document).ready(function() {
 
        if(CURRENT_WINDOW_SIZE !== $(window).width()){
          $("#tree").empty();
-         selection_data = [];
+        
          if($(window).width() > 600 && !isMobile){
           if($(window).width() > 1600){
               nodeDepthOne = 200;
@@ -470,6 +470,14 @@ $(document).ready(function() {
               nodeDepthThree = 250;
           }
           else{
+             if($(window).width() < 1200){
+              $("#desc").removeClass('col-md-4');
+              $("#desc").removeClass('col-md-3');
+            }
+            else{
+              $("#desc").addClass('col-md-4');
+              $("#desc").removeClass('col-md-3');
+            }
             nodeDepthOne = 150;
             nodeDepthTwo = 220;
             nodeDepthThree = 170;
