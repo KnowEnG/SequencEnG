@@ -9,7 +9,7 @@
     "year": "",
     "paper_title": "",
     "paper_link": "",
-    "notes": "Basic sequencing method to obtain whole-genome DNA sequences.",
+    "notes": "A basic sequencing method to obtain whole-genome DNA sequences.",
     "": ""
   },
   {
@@ -22,7 +22,7 @@
     "year": "",
     "paper_title": "",
     "paper_link": "",
-    "notes": "Basic sequencing method to obtain exon sequences; Effective in detection of exonic mutation and study of Mendelian disease",
+    "notes": "A basic sequencing method to obtain exon sequences; Can be used to detect exonic mutation and study Mendelian disease.",
     "": ""
   },
   {
@@ -35,7 +35,7 @@
     "year": 2007,
     "paper_title": "Genome-wide mapping of in vivo protein-DNA interactions.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17540862",
-    "notes": "Basic sequencing method for TF binding and histone modification profiles.",
+    "notes": "A basic sequencing method to map locations of DNA-binding components, such as transcription factor (TF) and histones with epigenetic modifications.",
     "": ""
   },
   {
@@ -87,7 +87,7 @@
     "year": 2015,
     "paper_title": "CETCh-seq: CRISPR epitope tagging ChIP-seq of DNA-binding proteins",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26355004",
-    "notes": "Uses CRISPR to engineer transcription factors lacking good antibodies, followed by ChIP-seq.",
+    "notes": "Uses CRISPR to engineer transcription factors (especially those lacking good antibodies), followed by ChIP-seq.",
     "": ""
   },
   {
@@ -113,7 +113,7 @@
     "year": 2015,
     "paper_title": "ChEC-seq kinetics discriminates transcription factor binding sites by DNA sequence and shape in vivo",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26669278",
-    "notes": "Fuses MNase with the protein of interest and use calcium to control binding and measure dynamics.",
+    "notes": "A method to measure protein-DNA binding dynamics; Fuses MNase with the protein of interest and uses calcium to control binding affinity and then measure dynamics.",
     "": ""
   },
   {
@@ -139,7 +139,7 @@
     "year": 2015,
     "paper_title": "Genome-wide analysis of human global and transcription-coupled excision repair of UV damage at single-nucleotide resolution",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25934506",
-    "notes": "Maps location of incisions caused by DNA repair.",
+    "notes": "Maps location of excisions caused by DNA repair.",
     "": ""
   },
   {
@@ -152,7 +152,7 @@
     "year": 2007,
     "paper_title": "Genome-wide mapping of in vivo protein-DNA interactions.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17540862",
-    "notes": "Basic sequencing method for TF binding and histone modification profiles.",
+    "notes": "A basic sequencing method to map locations of DNA-binding components, such as transcription factor (TF) and histones with epigenetic modifications.",
     "": ""
   },
   {
@@ -165,7 +165,7 @@
     "year": "",
     "paper_title": "",
     "paper_link": "",
-    "notes": "Basic sequencing method for DNA methylation quantification. See \"Methyl-seq\".",
+    "notes": "A basic sequencing method for DNA methylation quantification. See \"Methyl-seq\".",
     "": ""
   },
   {
@@ -177,8 +177,8 @@
     "seq_fullname_old": "Reduced representation bisulfite sequencing ",
     "year": 2005,
     "paper_title": "Reduced representation bisulfite sequencing for comparative high-resolution DNA methylation analysis",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1258174/",
-    "notes": "Enriches methylation fragments followed by bisulfite sequencing, reducing the cost.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/16224102",
+    "notes": "A method to sequence methylated DNA. Enriches methylation fragments followed by bisulfite sequencing, which costs less than whole-genome bisulfite sequencing.",
     "": ""
   },
   {
@@ -190,8 +190,8 @@
     "seq_fullname_old": "Methylated DNA immunoprecipitation and sequencing",
     "year": 2008,
     "paper_title": "A Bayesian deconvolution strategy for immunoprecipitation-based DNA methylome analysis",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2644410/",
-    "notes": "100 300_base pair resolution {'link','https://www.nature.com/nature/journal/v466/n7303/full/nature09165.html'}.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18612301",
+    "notes": "Can reach 100 300_base pair resolution ('https://www.nature.com/nature/journal/v466/n7303/full/nature09165.html')",
     "": ""
   },
   {
@@ -217,7 +217,7 @@
     "year": 2009,
     "paper_title": "Distinct DNA methylation patterns characterize differentiated human embryonic stem cells and developing human fetal liver.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19273619",
-    "notes": "Uses methyl-sensitive restriction enzymes",
+    "notes": "Uses methyl-sensitive restriction enzymes.",
     "": ""
   },
   {
@@ -230,7 +230,7 @@
     "year": 2010,
     "paper_title": "Conserved role of intragenic DNA methylation in regulating alternative promoters.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20613842",
-    "notes": "Can reach single CpG site resolution",
+    "notes": "Can reach single CpG site resolution.",
     "": ""
   },
   {
@@ -243,7 +243,7 @@
     "year": 2013,
     "paper_title": "Oxidative bisulfite sequencing of 5-methylcytosine and 5-hydroxymethylcytosine.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/24008380",
-    "notes": "Can discriminate between 5mC and 5hmC",
+    "notes": "Can discriminate between 5mC and 5hmC.",
     "": ""
   },
   {
@@ -256,7 +256,7 @@
     "year": 2009,
     "paper_title": "Targeted and genome-scale strategies reveal gene-body methylation signatures in human cells.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19329998",
-    "notes": "Utilizes HpaII sites",
+    "notes": "Utilizes HpaII sites.",
     "": ""
   },
   {
@@ -308,7 +308,7 @@
     "year": 2008,
     "paper_title": "High-resolution mapping and characterization of open chromatin across the genome.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18243105",
-    "notes": "Basic sequencing method for open chromatin profiling.",
+    "notes": "A basic sequencing method for open chromatin profiling.",
     "": ""
   },
   {
@@ -321,7 +321,7 @@
     "year": 2013,
     "paper_title": "Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin, DNA-binding proteins and nucleosome position",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/24097267",
-    "notes": "Less cells required ; paired-end",
+    "notes": "Less cells required than DNase-seq.",
     "": ""
   },
   {
@@ -360,7 +360,7 @@
     "year": 2009,
     "paper_title": "Mapping accessible chromatin regions using Sono-Seq",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19706456",
-    "notes": "Simple to perform along with ChIP-seq; notice that the DNA breakage pattern is different from DNase-seq.",
+    "notes": "The method is simple to be performed along with ChIP-seq; Notice that the DNA breakage pattern is different from DNase-seq (see the original study).",
     "": ""
   },
   {
@@ -373,7 +373,7 @@
     "year": 2015,
     "paper_title": "Multiplex single cell profiling of chromatin accessibility by combinatorial cellular indexing.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25953818",
-    "notes": "Use combinatorial barcoding techniques to mark open chromatin from different single cells.",
+    "notes": "Uses combinatorial barcoding techniques to mark open chromatin from different single cells.",
     "": ""
   },
   {
@@ -386,7 +386,7 @@
     "year": 2002,
     "paper_title": "Capturing chromosome conformation.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/11847345",
-    "notes": "Discovers interaction between two genomic regions",
+    "notes": "It proifles \"one-to-one\" interaction between two genomic regions.",
     "": ""
   },
   {
@@ -399,7 +399,7 @@
     "year": 2006,
     "paper_title": "Circular chromosome conformation capture (4C) uncovers extensive networks of epigenetically regulated intra- and interchromosomal interactions.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17033624",
-    "notes": "Discovers interactions between a set of genomic regions with a fixed genomic region of interest.",
+    "notes": "It profiles \"one-to-many\" interactions between a set of genomic regions with a fixed genomic region of interest.",
     "": ""
   },
   {
@@ -412,7 +412,7 @@
     "year": 2006,
     "paper_title": "Chromosome Conformation Capture Carbon Copy (5C): a massively parallel solution for mapping interactions between genomic elements.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19706456",
-    "notes": "Discovers interactions between a set of genomic regions with many genomic regions of interest (\"many-to-many\").",
+    "notes": "It profiles \"many-to-many\" interactions between a set of genomic regions with many genomic regions of interest.",
     "": ""
   },
   {
@@ -425,7 +425,7 @@
     "year": 2009,
     "paper_title": "Comprehensive mapping of long-range interactions reveals folding principles of the human genome",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19815776",
-    "notes": "Discoveres genome-wide interactions between any pairs of genomic regions.",
+    "notes": "It profiles \"all-vs-all\" genome-wide interactions between any pairs of genomic regions.",
     "": ""
   },
   {
@@ -438,7 +438,7 @@
     "year": 2009,
     "paper_title": "An oestrogen-receptor-alpha-bound human chromatin interactome.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19890323",
-    "notes": "Discoveres genome-wide interactions between any pairs of genomic regions, mediated by some protein.",
+    "notes": "It profiles genome-wide interactions between any pairs of genomic regions, mediated by some protein.",
     "": ""
   },
   {
@@ -451,7 +451,7 @@
     "year": 2016,
     "paper_title": "Mapping 3D genome architecture through in situ DNase Hi-C",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27685100",
-    "notes": "Can reach a higher effective resolution than traditional Hi-C",
+    "notes": "Can reach a higher effective resolution than traditional Hi-C (see the original study).",
     "": ""
   },
   {
@@ -464,7 +464,7 @@
     "year": 2017,
     "paper_title": "Variable chromatin structure revealed by in situspatially correlated DNA cleavage mapping",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28024297",
-    "notes": "Utilizes ionizing radiation to break DNA and sequencing the chomatin conformation; chromatin conformation structure at 50 500 bp scale",
+    "notes": "Utilizes ionizing radiation to break DNA and sequencing the chomatin conformation; It can obtain chromatin conformation structure at 50 500 bp scale.",
     "": ""
   },
   {
@@ -477,7 +477,7 @@
     "year": 2015,
     "paper_title": "Mapping Nucleosome Resolution Chromosome Folding in Yeast by Micro-C",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26119342",
-    "notes": "Nucleosome-resolution analysis of chromosome folding; Micrococcal nuclease is used instead of restriction enzymes to fragment chromatin; 1-200bp resolution",
+    "notes": "Nucleosome-resolution analysis of chromosome folding; Micrococcal nuclease is used instead of restriction enzymes to fragment chromatin; Reaches 1-200bp resolution.",
     "": ""
   },
   {
@@ -490,7 +490,7 @@
     "year": 2017,
     "paper_title": "Massively multiplex single-cell Hi-C",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28135255",
-    "notes": "Use combinatorial cellular indexing technique.",
+    "notes": "Uses combinatorial cellular indexing technique.",
     "": ""
   },
   {
@@ -503,7 +503,7 @@
     "year": 2012,
     "paper_title": "R-loop formation is a distinctive characteristic of unmethylated human CpG island promoters.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22387027",
-    "notes": "Maps location of DNA-RNA hybrid (R-loops)",
+    "notes": "Maps location of DNA-RNA hybrid (R-loops).",
     "": ""
   },
   {
@@ -516,7 +516,7 @@
     "year": 2011,
     "paper_title": "High-resolution genome-wide mapping of the primary structure of chromatin. ",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21241889",
-    "notes": "Basic sequencing method to map nucleosome locations. Utilizes micrococcal nuclease combined with ChIP-seq to map nucleosomes; Known to have GC-bias.",
+    "notes": "Maps nucleosome locations; Utilizes micrococcal nuclease combined with ChIP-seq to map nucleosomes; Known to have GC-bias.",
     "": ""
   },
   {
@@ -529,7 +529,7 @@
     "year": 2012,
     "paper_title": "A base pair resolution map of nucleosome positions in yeast",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22722846",
-    "notes": "Mapping nucleosome centers by site-specific chemical cleavage; Can reach base pair resolution of nucleosome locations; the histone H4 was introduced an amino acid mutation.",
+    "notes": "Mapping nucleosome centers by site-specific chemical cleavage; Can reach base pair resolution of nucleosome locations; The histone H4 was introduced an amino acid mutation in the original study.",
     "": ""
   },
   {
@@ -568,7 +568,7 @@
     "year": 2016,
     "paper_title": "Replication landscape of the human genome.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26751768",
-    "notes": "Sequences purified Okazaki fragments at replication forks",
+    "notes": "It sequences purified Okazaki fragments at replication forks.",
     "": ""
   },
   {
@@ -581,7 +581,7 @@
     "year": 2015,
     "paper_title": "GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25513782",
-    "notes": "Useful to profile CRISPR off-target events",
+    "notes": "Useful to profile CRISPR off-target events.",
     "": ""
   },
   {
@@ -594,7 +594,7 @@
     "year": 2016,
     "paper_title": "Broad histone H3K4me3 domains in mouse oocytes modulate maternal-to-zygotic transition",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27626377",
-    "notes": "Recovers 85% of ENCODE peaks as few as 500 cells.",
+    "notes": "Uses low DNA input; Recovers 85% of ENCODE peaks using as few as 500 cells.",
     "": ""
   },
   {
@@ -607,7 +607,7 @@
     "year": 2009,
     "paper_title": "RNA-Seq: a revolutionary tool for transcriptomics.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19015660",
-    "notes": "Basic sequencing method for gene expression quantification.",
+    "notes": "A basic sequencing method to quantify gene or transcript expression.",
     "": ""
   },
   {
@@ -620,7 +620,7 @@
     "year": 2013,
     "paper_title": "Extensive transcriptional heterogeneity revealed by isoform profiling",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/23615609",
-    "notes": "Circularizing the beginning and end of transcripts for sequencing.",
+    "notes": "The method circularizes two ends of transcripts for sequencing isoforms.",
     "": ""
   },
   {
@@ -633,7 +633,7 @@
     "year": 2011,
     "paper_title": "Nascent transcript sequencing visualizes transcription at nucleotide resolution.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21248844",
-    "notes": "Sequencing 3_ ends of nascent transcripts associated with RNA polymerase; Used engineered RNAPII elongating complex in yeast.",
+    "notes": "The method sequences 3_ ends of nascent transcripts associated with RNA polymerase; Uses engineered RNAPII elongating complex in yeast.",
     "": ""
   },
   {
@@ -646,7 +646,7 @@
     "year": 2012,
     "paper_title": "5' end-centered expression profiling using cap-analysis gene expression and next-generation sequencing.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22362160",
-    "notes": "Tags 5' end of mRNA to profile transcriptional start points; Also for promoter usage analysis",
+    "notes": "Tags 5' end of mRNA to profile transcriptional start points; Useful for promoter usage analysis.",
     "": ""
   },
   {
@@ -659,7 +659,7 @@
     "year": 2008,
     "paper_title": "Nascent RNA sequencing reveals widespread pausing and divergent initiation at human promoters.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19056941",
-    "notes": "Sequences newly-synthesized RNA; resolution ~50bp",
+    "notes": "Sequences newly-synthesized RNA; Has resolution ~50bp.",
     "": ""
   },
   {
@@ -685,7 +685,7 @@
     "year": 2011,
     "paper_title": "Genomic maps of lincRNA occupancy reveal principles of RNA-chromatin interactions",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21963238",
-    "notes": "Maps interaction between non-coding RNA and chromatin; must design probes for specific lincRNAs",
+    "notes": "Maps interactions between non-coding RNA and chromatin; Must design probes for specific lincRNAs.",
     "": ""
   },
   {
@@ -698,7 +698,7 @@
     "year": 2012,
     "paper_title": "Topology of the human and mouse m6A RNA methylomes revealed by m6A-seq.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22575960",
-    "notes": "Also called MeRIPseq; Maps the m6A modification of RNA",
+    "notes": "Also called MeRIPseq; Maps the m6A modification of RNA.",
     "": ""
   },
   {
@@ -724,7 +724,7 @@
     "year": 2008,
     "paper_title": "HITS-CLIP: panoramic views of protein-RNA regulation in living cells.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18978773",
-    "notes": "HITS-CLIP, aka CLIP-seq; Maps protein-RNA binding sites, e.g., splicing factors;",
+    "notes": "HITS-CLIP, also known as CLIP-seq; Maps protein-RNA binding sites, for example, splicing factor binding sites.",
     "": ""
   },
   {
@@ -763,7 +763,7 @@
     "year": 2013,
     "paper_title": "Genome-wide mapping of RNA structure using nuclease digestion and high-throughput sequencing.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/23558785",
-    "notes": "Profile RNA structures utilizing enzymes that are single-stranded RNA or double-strand RNA specific",
+    "notes": "Profiles RNA structures utilizing enzymes that are single-stranded RNA or double-strand RNA specific.",
     "": ""
   },
   {
@@ -789,7 +789,7 @@
     "year": 2014,
     "paper_title": "In vivo genome-wide profiling of RNA secondary structure reveals novel regulatory features.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/24270811",
-    "notes": "Uses the chemical dimethyl sulphate (DMS) to measure the difference of base-pairing caused by RNA secondary structure.",
+    "notes": "Uses the chemical dimethyl sulphate (DMS) to measure the difference of base-pairing caused by different RNA secondary structure.",
     "": ""
   },
   {
@@ -802,7 +802,7 @@
     "year": 2017,
     "paper_title": "Comprehensive single-cell transcriptional profiling of a multicellular organism.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28818938",
-    "notes": "Use two-stage barcoding technique to mark RNA from different single cells",
+    "notes": "Uses two-stage barcoding technique to mark RNA from different single cells.",
     "": ""
   }
 ]
