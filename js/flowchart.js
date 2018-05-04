@@ -395,7 +395,7 @@ $(document).ready(function() {
       $("#chart").hide();
        $("#svgContainer").hide();
      $(".table-row").hide();
-       $("#chart-button").text("show chart");
+      
        $("#chart-button").removeClass("btn-success");
        $("#chart-button").addClass("btn-outline-success");
       $(".tree-field").delay('850').slideDown('slow',function(){
