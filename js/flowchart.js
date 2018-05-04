@@ -274,6 +274,14 @@ var pipeline_load = function(seq_name){
                    
                     resetSVGsize();
                     connectAll(seq_name, Blocks);
+
+                    if($(window).width() < 900){
+                       $(".chart-row").removeClass("justify-content-center");
+
+                    }
+                    else{
+                        $(".chart-row").addClass("justify-content-center");
+                    }
                 });
 
          $("#chart-button").off();
@@ -336,6 +344,8 @@ var pipeline_load = function(seq_name){
                   $('.introjs-tooltip').css('bottom', introheight+10);
                   $('.introjs-arrow').removeClass('left').addClass('bottom');
              }
+
+
               
 
           });
@@ -398,6 +408,7 @@ $(document).ready(function() {
       
        $("#chart-button").removeClass("btn-success");
        $("#chart-button").addClass("btn-outline-success");
+
       $(".tree-field").delay('850').slideDown('slow',function(){
 
         if(!localStorage.getItem('intro_shown')){
@@ -419,6 +430,64 @@ $(document).ready(function() {
                   $('.introjs-arrow').removeClass('left').addClass('bottom');
 
         }
+
+       if(CURRENT_WINDOW_SIZE !== $(window).width()){
+         $("#tree").empty();
+         selection_data = [];
+         if($(window).width() > 600 && !isMobile){
+          if($(window).width() > 1600){
+              nodeDepthOne = 200;
+              nodeDepthTwo = 300;
+              nodeDepthThree = 250;
+          }
+          else{
+            nodeDepthOne = 150;
+            nodeDepthTwo = 220;
+            nodeDepthThree = 170;
+
+          }
+             
+            draw_tree();
+
+          }
+          else{
+
+              draw_table();
+
+
+          }
+       }
+       
+
+         $(window).off();
+   $(window).resize(function(){
+        $("#clear-all").click();
+        $("#tree").empty();
+        if($(window).width() > 600 && !isMobile){
+           if($(window).width() > 1600){
+              nodeDepthOne = 200;
+              nodeDepthTwo = 300;
+              nodeDepthThree = 250;
+          }
+          else{
+            nodeDepthOne = 150;
+            nodeDepthTwo = 220;
+            nodeDepthThree = 170;
+
+          }
+
+            draw_tree();
+              $(".chart-row").addClass("justify-content-center");
+        }
+        else{
+
+            draw_table();
+              $(".chart-row").removeClass("justify-content-center");
+
+        }
+    
+
+   });
                 
       });
      
