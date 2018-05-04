@@ -318,6 +318,7 @@
 	$("#header").load("./docs/header.html");
 		function show_intro() {
 			if (localStorage.getItem('intro_shown') || isMobile) {
+				localStorage.setItem('intro_shown', true);
 				return;
 			}
 		
