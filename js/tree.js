@@ -69,6 +69,9 @@ function expandAll(root, update){
 
   function collapseAll(root, update){
       root.children.forEach(collapse);
+       if(!isMobile){
+         $("#tree svg").height(TREE_HEIGHT);
+      }
 
       update(root);
   }
