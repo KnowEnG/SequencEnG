@@ -75,6 +75,7 @@ function expandAll(root, update){
 
 
 
+
 //find path in tree 
 function searchTree(data, search, path){
 
@@ -447,7 +448,7 @@ function draw_tree(){
       .attr("transform", "translate("
             + margin.left + "," + margin.top + ")");
 
-  let svg_width = $("svg").width();
+  //let svg_width = $("svg").width();
 
 
   // let box_size =  (CURRENT_WINDOW_SIZE - svg_width);
@@ -497,6 +498,24 @@ function draw_tree(){
 
 
     });
+
+
+  //window resize, change svg layout 
+    $(window).off();
+   $(window).resize(function(){
+        let wid =  $("#tree").width();
+         let margin = {top: 20, right: 90, bottom: 30, left: 190},
+      width = (wid),
+      height = TREE_HEIGHT - margin.top - margin.bottom;
+
+  d3.select("#tree svg")
+      .attr("width", width)
+      .attr("height", height)
+    .append("g")
+      .attr("transform", "translate("
+            + margin.left + "," + margin.top + ")");
+
+   });
 
   
 
@@ -625,7 +644,7 @@ function draw_tree(){
           return d.data.name + (has_step.indexOf(d.data.name)!==-1?"*":""); })
         .on("click", function(d){
           
-            //console.log(d);
+        
             if(typeof d.data.children === 'undefined'){
                 let $descText = show_description(d.data);
                 $descText.hide();
