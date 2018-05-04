@@ -317,14 +317,11 @@
 	var intro = introJs();
 	$("#header").load("./docs/header.html");
 		function show_intro() {
-			if (localStorage.getItem('intro_shown')) {
+			if (localStorage.getItem('intro_shown') || isMobile) {
 				return;
 			}
-			
-			if(isMobile){
-				$("#expand-all").click();
-			}
-			
+		
+			//$("#expand-all").click();
 
 			setTimeout(function(){
 					
