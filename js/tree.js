@@ -437,7 +437,7 @@ function click_pipeline_button(e){
 
 //===================Draw Tree(Desktop)=======================
 function draw_tree(){
-  let margin = {top: 20, right: 90, bottom: 30, left: 190},
+  let margin = {top: 20, right: 90, bottom: 30, left: 35},
       width = (TREE_FIELD_WIDTH),
       height = TREE_HEIGHT - margin.top - margin.bottom;
 
@@ -504,7 +504,7 @@ function draw_tree(){
     $(window).off();
    $(window).resize(function(){
         let wid =  $("#tree").width();
-         let margin = {top: 20, right: 90, bottom: 30, left: 190},
+         let margin = {top: 20, right: 90, bottom: 30, left: 30},
       width = (wid),
       height = TREE_HEIGHT - margin.top - margin.bottom;
 
@@ -632,14 +632,14 @@ function draw_tree(){
           }
 
         })
-        // .attr("transform", function(d) {
-        //       if(d.data.name === 'Sequencing techniques'){
-        //         return "translate(" + -20 + ", " + 100 + " )rotate(90)";
-        //       }
-        //       else{
-        //         return '';
-        //       }
-        //  })
+        .attr("transform", function(d) {
+              if(d.data.name === 'Sequencing techniques'){
+                return "translate(" + -30 + ", " + -80 + " )rotate(270)";
+              }
+              else{
+                return '';
+              }
+         })
         .text(function(d) { 
           return d.data.name + (has_step.indexOf(d.data.name)!==-1?"*":""); })
         .on("click", function(d){
