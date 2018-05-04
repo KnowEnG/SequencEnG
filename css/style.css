@@ -242,7 +242,7 @@ path.link.found{
   }
   #tree{
     /*  padding-left: 100px;*/
-   /* max-width: 1200px;*/
+    max-width: 1200px;
    min-width: 900px;
   }
   .tree-field{

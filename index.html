@@ -317,7 +317,7 @@
 	var intro = introJs();
 	$("#header").load("./docs/header.html");
 		function show_intro() {
-			if (localStorage.getItem('intro_shown') || isMobile) {
+			if (localStorage.getItem('intro_shown')) {
 				return;
 			}
 		
