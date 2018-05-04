@@ -487,7 +487,7 @@ $(document).ready(function() {
             draw_tree();
               $(".chart-row").addClass("justify-content-center");
         }
-        else{
+        else if(!isMobile){
 
             draw_table();
               $(".chart-row").removeClass("justify-content-center");

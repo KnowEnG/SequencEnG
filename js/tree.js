@@ -323,7 +323,7 @@ function searchTree(data, search, path){
               $(".chart-row").addClass("justify-content-center");
 
         }
-        else{
+        else if(!isMobile){
 
             draw_table();
               $(".chart-row").removeClass("justify-content-center");
