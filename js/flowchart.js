@@ -431,71 +431,71 @@ $(document).ready(function() {
 
         }
 
-       if(CURRENT_WINDOW_SIZE !== $(window).width()){
-         $("#tree").empty();
+   //     if(!isMobile && CURRENT_WINDOW_SIZE !== $(window).width()){
+   //       $("#tree").empty();
         
-         if($(window).width() > 600 && !isMobile){
-          if($(window).width() > 1600){
-              nodeDepthOne = 200;
-              nodeDepthTwo = 300;
-              nodeDepthThree = 250;
-          }
-          else{
-            nodeDepthOne = 150;
-            nodeDepthTwo = 220;
-            nodeDepthThree = 170;
+   //       if($(window).width() > 600){
+   //        if($(window).width() > 1600){
+   //            nodeDepthOne = 200;
+   //            nodeDepthTwo = 300;
+   //            nodeDepthThree = 250;
+   //        }
+   //        else{
+   //          nodeDepthOne = 150;
+   //          nodeDepthTwo = 220;
+   //          nodeDepthThree = 170;
 
-          }
+   //        }
              
-            draw_tree();
+   //          draw_tree();
 
-          }
-          else{
+   //        }
+   //        else{
 
-              draw_table();
+   //            draw_table();
 
 
-          }
-       }
+   //        }
+   //     }
        
 
-         $(window).off();
-   $(window).resize(function(){
-        $("#clear-all").click();
-        $("#tree").empty();
-        if($(window).width() > 600 && !isMobile){
-           if($(window).width() > 1600){
-              nodeDepthOne = 200;
-              nodeDepthTwo = 300;
-              nodeDepthThree = 250;
-          }
-          else{
-             if($(window).width() < 1200){
-              $("#desc").removeClass('col-md-4');
-              $("#desc").removeClass('col-md-3');
-            }
-            else{
-              $("#desc").addClass('col-md-4');
-              $("#desc").removeClass('col-md-3');
-            }
-            nodeDepthOne = 150;
-            nodeDepthTwo = 220;
-            nodeDepthThree = 170;
+   //       $(window).off();
+   // $(window).resize(function(){
+   //      $("#clear-all").click();
+   //      $("#tree").empty();
+   //      if($(window).width() > 600 && !isMobile){
+   //         if($(window).width() > 1600){
+   //            nodeDepthOne = 200;
+   //            nodeDepthTwo = 300;
+   //            nodeDepthThree = 250;
+   //        }
+   //        else{
+   //           if($(window).width() < 1200){
+   //            $("#desc").removeClass('col-md-4');
+   //            $("#desc").removeClass('col-md-3');
+   //          }
+   //          else{
+   //            $("#desc").addClass('col-md-4');
+   //            $("#desc").removeClass('col-md-3');
+   //          }
+   //          nodeDepthOne = 150;
+   //          nodeDepthTwo = 220;
+   //          nodeDepthThree = 170;
 
-          }
+   //        }
 
-            draw_tree();
-              $(".chart-row").addClass("justify-content-center");
-        }
-        else if(!isMobile){
+   //          draw_tree();
+   //            $(".chart-row").addClass("justify-content-center");
+   //      }
+   //      else if(!isMobile){
 
-            draw_table();
-              $(".chart-row").removeClass("justify-content-center");
+   //          draw_table();
+   //            $(".chart-row").removeClass("justify-content-center");
 
-        }
+   //      }
     
 
-   });
+   // });
                 
       });
      

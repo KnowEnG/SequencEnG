@@ -24,14 +24,10 @@ var nodeDepthTwo = 220;
 var nodeDepthThree = 170;
 if($(window).width() > 1600){
     nodeDepthOne = 200;
-    nodeDepthTwo = 300;
-    nodeDepthThree = 250;
+    nodeDepthTwo = 270;
+    nodeDepthThree = 220;
 }
 
-if($(window).width() < 1200){
-  $("#desc").removeClass('col-md-4');
-  $("#desc").addClass('col-md-3');
-}
 
 //d3 Tree structure 
 var treeData = {
@@ -292,47 +288,52 @@ function searchTree(data, search, path){
 
 
 //window resize, change svg layout 
-    $(window).off();
-   $(window).resize(function(){
-      //  let wid =  $("#tree").width();
+   //  $(window).off();
+
+   //  if(!isMobile){
+   //     $(window).resize(function(){
+   //    //  let wid =  $("#tree").width();
       
-        $("#tree").empty();
-        if($(window).width() > 600){
-          if($(window).width() > 1600){
-              nodeDepthOne = 200;
-              nodeDepthTwo = 300;
-              nodeDepthThree = 250;
-          }
-          else{
-            if($(window).width() < 1200){
-              $("#desc").removeClass('col-md-4');
-              $("#desc").addClass('col-md-3');
-            }
-            else{
-              $("#desc").addClass('col-md-4');
-              $("#desc").removeClass('col-md-3');
-            }
-            nodeDepthOne = 150;
-            nodeDepthTwo = 220;
-            nodeDepthThree = 170;
+   //      $("#tree").empty();
+   //      if($(window).width() > 600){
+   //        if($(window).width() > 1600){
+   //            nodeDepthOne = 200;
+   //            nodeDepthTwo = 300;
+   //            nodeDepthThree = 250;
+   //        }
+   //        else{
+   //          if($(window).width() < 1200){
+   //            $("#desc").removeClass('col-md-4');
+   //            $("#desc").addClass('col-md-3');
+   //          }
+   //          else{
+   //            $("#desc").addClass('col-md-4');
+   //            $("#desc").removeClass('col-md-3');
+   //          }
+   //          nodeDepthOne = 150;
+   //          nodeDepthTwo = 220;
+   //          nodeDepthThree = 170;
 
-          }
-
-
-            draw_tree();
-              $(".chart-row").addClass("justify-content-center");
-
-        }
-        else if(!isMobile){
-
-            draw_table();
-              $(".chart-row").removeClass("justify-content-center");
+   //        }
 
 
-        }
+   //          draw_tree();
+   //            $(".chart-row").addClass("justify-content-center");
+
+   //      }
+   //      else if(!isMobile){
+
+   //          draw_table();
+   //            $(".chart-row").removeClass("justify-content-center");
+
+
+   //      }
     
 
-   });
+   // });
+
+   //  }
+  
 
 
 
@@ -441,7 +442,7 @@ $.getJSON("./data/tree.json")
 
 
 //Desktop
-if(!isMobile && $(window).width() > 600){
+if(!isMobile){
 
     
   

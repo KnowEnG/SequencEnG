@@ -231,7 +231,7 @@ path.link.found{
 
 
 /*Tablet, DESKTOP SCREEN SIZE > 600 px */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 480px) {
   
   .tree-intro .row{
     margin-top: 25px;
@@ -240,6 +240,12 @@ path.link.found{
   .tree-intro .row > div{
     text-align: center;
   }
+
+  .tree-container {
+    min-width: 1400px;
+    overflow: auto;
+  }
+
   #tree{
     /*  padding-left: 100px;*/
     max-width: 1200px;
@@ -260,7 +266,7 @@ path.link.found{
   #desc{
    
     max-width: 650px;
-    max-height: 1150px;
+   height: 100%;
   }
 
   .node text{
@@ -271,7 +277,7 @@ path.link.found{
     max-width: 1600px;
   }
 }
-@media only screen and (max-width: 600px){
+@media and (min-device-width: 320px) and (max-device-width: 480px){
     .node rect {
     cursor: pointer;
     fill: #fff;
@@ -305,14 +311,6 @@ path.link.found{
 }
 
 }
-@media only screen and (min-width: 1600px) {
-#desc{
-   
-    max-height: 1300px;
-  }
-
-}
-
 
 
 /*COMMON*/
