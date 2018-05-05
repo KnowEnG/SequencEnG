@@ -230,8 +230,44 @@ path.link.found{
 
 
 
-/*Tablet, DESKTOP SCREEN SIZE > 600 px */
-@media only screen and (min-width: 480px) {
+
+@media only screen and (min-width: 480px) and (max-width:768px){
+    .node rect {
+    cursor: pointer;
+    fill: #fff;
+    fill-opacity: .5;
+    stroke: #3182bd;
+    stroke-width: 1px;
+  }
+
+  .node text {
+  
+    pointer-events: none;
+   transform: perspective(1px) scale(1.1) translate3d(0,0,0);
+  }
+
+  #tree{
+  
+
+
+  }
+  #tree svg{
+       -webkit-transition: height 0.4s;
+    transition: height 0.4s;
+  
+
+  }
+
+  /*MOBILE TABLET */
+.mobile-selected rect{
+  stroke: #4c8c4c;
+  stroke-width: 3; 
+}
+
+}
+
+/*Tablet, DESKTOP SCREEN SIZE > 768 px */
+@media only screen and (min-width: 768px) {
   
   .tree-intro .row{
     margin-top: 25px;
@@ -276,40 +312,6 @@ path.link.found{
   .tree-field-buttons{
     max-width: 1600px;
   }
-}
-@media and (min-device-width: 320px) and (max-device-width: 480px){
-    .node rect {
-    cursor: pointer;
-    fill: #fff;
-    fill-opacity: .5;
-    stroke: #3182bd;
-    stroke-width: 1px;
-  }
-
-  .node text {
-  
-    pointer-events: none;
-   transform: perspective(1px) scale(1.1) translate3d(0,0,0);
-  }
-
-  #tree{
-  
-
-
-  }
-  #tree svg{
-       -webkit-transition: height 0.4s;
-    transition: height 0.4s;
-  
-
-  }
-
-  /*MOBILE TABLET */
-.mobile-selected rect{
-  stroke: #4c8c4c;
-  stroke-width: 3; 
-}
-
 }
 
 
