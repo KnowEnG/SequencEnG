@@ -247,7 +247,8 @@ path.link.found{
   }
 
   #tree{
-    width: 100%;
+    min-width: 450px;
+    overflow: scroll;
 
 
   }
