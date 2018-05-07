@@ -35,8 +35,12 @@ var pipeline_load = function(seq_name){
 
   // var step = ['quality control of reads','read mapping', 'quality control after mapping','differential binding', 'peak calling','peak annotation','motif analysis',  'gene ontology analysis']
   var tableHeaders = ["Software","Description","Features","Strength","Limitation","Format_input","Format_output","Platform requirement","Link","Paper","RCR"];
-
-  $(".pipeline-title").text("Flowchart for " + seq_name);
+  let name = seq_name;
+  if(name==='WGBS'){
+    name = "Bisulfite Sequencing";
+  }
+ 
+  $(".pipeline-title").text('').append("Flowchart for <span style='color:coral;'>" + name + "</span>");
 
   $.getJSON("./data/" + seq_name + ".json")
     .done(function( data ) {
@@ -146,11 +150,11 @@ var pipeline_load = function(seq_name){
                     let should_remove = true; 
                     $("#table tbody tr td:nth-child(" + empty_check[c] + ")").each(function(index,value){
                             if($(value).text() !== "-"){
-                              console.log($(value).text());
+                             
                                 should_remove = false;
                             }
                     });
-                    console.log(should_remove);
+                   
                     removed.push(should_remove);
                 }
 

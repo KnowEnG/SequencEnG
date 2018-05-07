@@ -194,30 +194,52 @@ function searchTree(data, search, path){
 
         let $divRowName = data.seq_fullname?
                           $("<div>", {"class": "chart-title container seq-title-container"})
-                          .append("<div class = 'row  justify-content-center '>" + data.seq_fullname + (checkStep?"*":"") + "</div>"
+                          .append("<div class = 'row  justify-content-center '><span>" + data.seq_fullname + (checkStep?"*":"") + "</span></div>"
                            +  "<div class='row justify-content-center '>(" + data.name + (checkStep?"*":"") + ")</div>"):"";
 
         
         let $divRowNote = data.notes?
                           $("<div>", {"class": "row chart-notes"})
-                          .append("<div>Notes : " + data.notes + "</div>"):"";
+                          .append("<div>Technique : " + data.notes + "</div>"):"";
         
         let $divRowYear = data.year?
                           $("<div>", {"class": "row chart-notes"})
                          .append("<div>Year : " + data.year + "</div>"):""; 
         
-        let $divRowPaper = data.paper_link?
-                          $("<div>", {"class": "row chart-notes"})
-                          .append("Paper :  <a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a>"):"";
+
+
+        let $divRowPaper =   $("<div>", {"class": "row chart-notes"});
+          if(data.paper_link){
+            if(data.paper_title.indexOf(',') !== -1){
+                let papertitles = data.paper_title.split(',');
+                let paperLinks = data.paper_link.split(',');
+              
+                $divRowPaper.append("<ol>Papers</ol>");
+                let list =  $divRowPaper.children('ol');
+                for(let i = 0; i < papertitles.length;i++){
+                 
+                    list.append("<li><a target='_blank' href='"+ paperLinks[i] + "'>" + papertitles[i] + "</a></li>");  
+
+                }
+
+            }
+            else{
+              $divRowPaper.append("Paper :  <a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a>");
+
+            }
+
+          }
+            
+                        
 
              
         let $divRowButton = $("<div>", {"class": "row justify-content-center button-row"});
-        let hasStep = checkStep?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four NGS techniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing) with distinct analysis strategies, interactive data analysis pipelines are available, along with comparison of popular software/tools.'>Analysis Pipeline</button>":"";
+        let $has_Step = checkStep?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four NGS techniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing) with distinct analysis strategies, interactive data analysis pipelines are available, along with comparison of popular software/tools.'>Analysis Pipeline</button>":"";
         if(checkStep){
           $("#chart").empty();
-          pipeline_load(data.seq_name);
+        
         }
-   $divRowButton.append(hasStep);
+   $divRowButton.append($has_Step);
 
         let $imgBox = $("<div>", {"class" : "row"});
 
@@ -247,7 +269,7 @@ function searchTree(data, search, path){
 
         let $rcr = "";
 
-        if(pmids !== ""){
+        if(pmids !== "" && data.showRCR){
 
         $rcr = $("<div>", {"class": "row chart-notes rcr"});
         let $rcr_tooltip = $("<div>", {"class": "rcr-tooltip"});
@@ -262,7 +284,7 @@ function searchTree(data, search, path){
        
         $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
          
-          if(response.data[0] && pmids){
+          if(response.data[0] && pmids && data.showRCR){
              $rcr.append('<div class="col-md-12">RCR(Relative Citation Ratio) : ' + response.data[0].relative_citation_ratio + '</div>');
             $rcr.append('<div class="col-md-12">Citation Counts : ' + response.data[0].citation_count + '</div>');
             $rcr.append('<div class="col-md-12">Citations per year : ' + response.data[0].citations_per_year + '</div>');
@@ -270,7 +292,7 @@ function searchTree(data, search, path){
           }
 
          
-          else if(response.data[0]===null){
+          else if(response.data[0]===null && data.showRCR){
             $rcr.append('<div class="col-md-12">Relative Citation Ratios are available for articles published between 1995 and 2017.</div>')
 
           }
@@ -492,7 +514,7 @@ function draw_tree(){
   //select2 init
   let select = $("#search").select2({
           width: '100%',
-         placeholder: 'Select an Node',
+         placeholder: 'Select a node',
          data: selection_data
       });
 
@@ -581,11 +603,15 @@ function draw_tree(){
                 
                 $("#desc").html($descText);
                
+
               
 
                 
                 $descText.fadeIn('slow');
                 $("#desc").fadeIn('slow');
+
+                  $(".show_chart").off();
+                   $(".show_chart").click(()=>pipeline_load(data.seq_name));
             }
         
         });;
@@ -673,6 +699,11 @@ function draw_tree(){
                 
                 $descText.fadeIn('slow');
                 $("#desc").fadeIn('slow');
+
+                  if(has_step.indexOf(d.data.name)!==-1){
+                      pipeline_load(d.data.name);
+                  }
+                
             }
         
         });
