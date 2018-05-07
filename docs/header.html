@@ -6,17 +6,17 @@
   <div class="collapse navbar-collapse" id="navbarToggler">
    
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link active">Home </a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="./index.html">About</a>
+          <a class="nav-link" >About</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="./index.html">Github</a>
+          <a class="nav-link" >Github</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="./index.html">Contact</a>
+          <a class="nav-link" >Contact</a>
       </li>
      
       
@@ -46,3 +46,23 @@
        
     </div>
 </div>
+
+<script type="text/javascript">
+  let other = ['About','Contact'];
+  $(".nav-link").on('click',function(e){
+    $('.nav-link').removeClass('active');
+    $(this).addClass('active');
+    let text = $(this).text();
+  
+    if(other.indexOf(text)!==-1){
+        $(".main-home").hide();
+        $("#other").load("./docs/" + text + ".html");
+    }
+    else{
+        $("#other").text('');
+       $(".main-home").show();
+    }
+  
+   
+  });
+</script>

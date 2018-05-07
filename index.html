@@ -29,8 +29,10 @@
 <div id="header">	
 
 </div>
-
-<div class="container-fluid">
+<div id="other">
+	
+</div>
+<div class="main-home container-fluid">
 
 
  
@@ -260,6 +262,8 @@
     </div>
 </div>
 
+<div id="footer"></div>
+
 
 	<!-- The Modal -->
 	<div id="modalbox" class="modal">
@@ -293,6 +297,10 @@
 <script defer>
 	var intro = introJs();
 	$("#header").load("./docs/header.html");
+	$("#footer").load("./docs/footer.html");
+	
+
+
 		function show_intro() {
 			if (localStorage.getItem('intro_shown') || isMobile) {
 				localStorage.setItem('intro_shown', true);

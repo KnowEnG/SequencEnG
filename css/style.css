@@ -381,6 +381,21 @@ path.link.found{
   font-size: 14px;
 }
 
+footer{
+  height: 330px;
+  background-color: #3d4a57;
+  color: #c6c7c9;
+  text-align: center;
+  padding: 50px 0;
+}
+
+footer .img-box {
+  margin: 30px 30px;
+}
+footer .img-box img{
+  height: 40px;
+}
+
 /*MODAL*/
 .modal{
    display: none; /* Hidden by default */
