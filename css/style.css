@@ -380,6 +380,9 @@ path.link.found{
 .table-info-text{
   font-size: 14px;
 }
+.nav-link {
+  cursor: pointer;
+}
 
 footer{
   height: 330px;
