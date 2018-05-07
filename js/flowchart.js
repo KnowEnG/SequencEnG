@@ -36,6 +36,8 @@ var pipeline_load = function(seq_name){
   // var step = ['quality control of reads','read mapping', 'quality control after mapping','differential binding', 'peak calling','peak annotation','motif analysis',  'gene ontology analysis']
   var tableHeaders = ["Software","Description","Features","Strength","Limitation","Format_input","Format_output","Platform requirement","Link","Paper","RCR"];
 
+  $(".pipeline-title").text("Flowchart for " + seq_name);
+
   $.getJSON("./data/" + seq_name + ".json")
     .done(function( data ) {
 
@@ -431,71 +433,7 @@ $(document).ready(function() {
 
         }
 
-   //     if(!isMobile && CURRENT_WINDOW_SIZE !== $(window).width()){
-   //       $("#tree").empty();
-        
-   //       if($(window).width() > 600){
-   //        if($(window).width() > 1600){
-   //            nodeDepthOne = 200;
-   //            nodeDepthTwo = 300;
-   //            nodeDepthThree = 250;
-   //        }
-   //        else{
-   //          nodeDepthOne = 150;
-   //          nodeDepthTwo = 220;
-   //          nodeDepthThree = 170;
-
-   //        }
-             
-   //          draw_tree();
-
-   //        }
-   //        else{
-
-   //            draw_table();
-
-
-   //        }
-   //     }
-       
-
-   //       $(window).off();
-   // $(window).resize(function(){
-   //      $("#clear-all").click();
-   //      $("#tree").empty();
-   //      if($(window).width() > 600 && !isMobile){
-   //         if($(window).width() > 1600){
-   //            nodeDepthOne = 200;
-   //            nodeDepthTwo = 300;
-   //            nodeDepthThree = 250;
-   //        }
-   //        else{
-   //           if($(window).width() < 1200){
-   //            $("#desc").removeClass('col-md-4');
-   //            $("#desc").removeClass('col-md-3');
-   //          }
-   //          else{
-   //            $("#desc").addClass('col-md-4');
-   //            $("#desc").removeClass('col-md-3');
-   //          }
-   //          nodeDepthOne = 150;
-   //          nodeDepthTwo = 220;
-   //          nodeDepthThree = 170;
-
-   //        }
-
-   //          draw_tree();
-   //            $(".chart-row").addClass("justify-content-center");
-   //      }
-   //      else if(!isMobile){
-
-   //          draw_table();
-   //            $(".chart-row").removeClass("justify-content-center");
-
-   //      }
-    
-
-   // });
+   
                 
       });
      

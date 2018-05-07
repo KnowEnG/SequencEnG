@@ -321,6 +321,15 @@ path.link.found{
   padding-left: 50px;
 }
 
+#desc-detail .seq-title-container{
+  margin-bottom: 30px;
+}
+#desc-detail .seq-title-container > .row{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
 .desc-text{
   display: none;
  

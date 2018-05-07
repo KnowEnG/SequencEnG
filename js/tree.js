@@ -193,8 +193,9 @@ function searchTree(data, search, path){
 
 
         let $divRowName = data.seq_fullname?
-                          $("<div>", {"class": "chart-title row justify-content-center"})
-                          .append("<div>" + data.seq_fullname + (checkStep?"*":"") + "</div>"):"";
+                          $("<div>", {"class": "chart-title container seq-title-container"})
+                          .append("<div class = 'row  justify-content-center '>" + data.seq_fullname + (checkStep?"*":"") + "</div>"
+                           +  "<div class='row justify-content-center '>(" + data.name + (checkStep?"*":"") + ")</div>"):"";
 
         
         let $divRowNote = data.notes?
@@ -286,56 +287,7 @@ function searchTree(data, search, path){
 
 }
 
-
-//window resize, change svg layout 
-   //  $(window).off();
-
-   //  if(!isMobile){
-   //     $(window).resize(function(){
-   //    //  let wid =  $("#tree").width();
-      
-   //      $("#tree").empty();
-   //      if($(window).width() > 600){
-   //        if($(window).width() > 1600){
-   //            nodeDepthOne = 200;
-   //            nodeDepthTwo = 300;
-   //            nodeDepthThree = 250;
-   //        }
-   //        else{
-   //          if($(window).width() < 1200){
-   //            $("#desc").removeClass('col-md-4');
-   //            $("#desc").addClass('col-md-3');
-   //          }
-   //          else{
-   //            $("#desc").addClass('col-md-4');
-   //            $("#desc").removeClass('col-md-3');
-   //          }
-   //          nodeDepthOne = 150;
-   //          nodeDepthTwo = 220;
-   //          nodeDepthThree = 170;
-
-   //        }
-
-
-   //          draw_tree();
-   //            $(".chart-row").addClass("justify-content-center");
-
-   //      }
-   //      else if(!isMobile){
-
-   //          draw_table();
-   //            $(".chart-row").removeClass("justify-content-center");
-
-
-   //      }
-    
-
-   // });
-
-   //  }
   
-
-
 
 //=================TREE DATA========================
 //Get data 
@@ -614,11 +566,22 @@ function draw_tree(){
           
             
             if(typeof d.data.children === 'undefined'){
+
+                //remove selected
+                d3.selectAll('circle').each(function(c, i) {
+                      c.class = "";
+                   });
+                //add selected
+                 d.class = 'selected';
+
                 let $descText = show_description(d.data);
                 $descText.hide();
 
+
+                
                 $("#desc").html($descText);
                
+              
 
                 
                 $descText.fadeIn('slow');
@@ -691,14 +654,22 @@ function draw_tree(){
           return d.data.name + (has_step.indexOf(d.data.name)!==-1?"*":""); })
         .on("click", function(d){
           
-        
+          
             if(typeof d.data.children === 'undefined'){
+
+                d3.selectAll('circle').each(function(c, i) {
+                      c.class = "";
+                   });
+
+                  d.class = 'selected';
+
+
                 let $descText = show_description(d.data);
                 $descText.hide();
 
                 $("#desc").html($descText);
                
-
+              
                 
                 $descText.fadeIn('slow');
                 $("#desc").fadeIn('slow');
@@ -720,6 +691,11 @@ function draw_tree(){
     nodeUpdate.select('circle.node')
       .attr('r', 15)
       .style("fill", function(d) {
+
+          if(d.class === "selected"){
+         
+            return '#FFC107';
+          }
           return d._children ? "springgreen" : "#fff";
       })
       .attr('cursor', 'pointer')
@@ -728,6 +704,7 @@ function draw_tree(){
             return 'node found';
           }
           else{
+
             return 'node';
           }
           
@@ -861,7 +838,7 @@ function draw_table(){
   //select2 init
   let select = $("#search").select2({
           width: '100%',
-         placeholder: 'Select an Node',
+         placeholder: 'Select a node',
          data: selection_data
       });
 
