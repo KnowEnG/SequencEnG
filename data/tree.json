@@ -514,9 +514,9 @@
     "seq_fullname": "<strong>MNase-seq</strong>",
     "seq_fullname_old": "MNase-seq",
     "year": 2011,
-    "paper_title": "High-resolution genome-wide mapping of the primary structure of chromatin. ",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21241889",
-    "notes": "Maps nucleosome locations; Utilizes micrococcal nuclease combined with ChIP-seq to map nucleosomes; Known to have GC-bias.",
+    "paper_title": "Epigenome characterization at single base-pair resolution",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22025700",
+    "notes": "Maps nucleosome locations; Utilizes micrococcal nuclease to cut DNA; Known to have GC-bias.",
     "": ""
   },
   {
@@ -678,9 +678,9 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA-chromatin interaction",
-    "seq_name": "ChIRP",
+    "seq_name": "ChIRP-seq",
     "plot": 1,
-    "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>solation by <strong>R</strong>NA <strong>P</strong>urification and sequencing",
+    "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>solation by <strong>R</strong>NA <strong>P</strong>urification and <strong>seq</strong>uencing",
     "seq_fullname_old": "Chromatin Isolation by RNA Purification and sequencing",
     "year": 2011,
     "paper_title": "Genomic maps of lincRNA occupancy reveal principles of RNA-chromatin interactions",
