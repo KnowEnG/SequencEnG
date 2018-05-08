@@ -328,7 +328,7 @@ path.link.found{
 #desc-detail .seq-title-container{
   margin-bottom: 30px;
 }
-#desc-detail .seq-title-container > .row{
+#desc-detail .seq-title-container > .container > .row{
   margin-top: 10px;
   margin-bottom: 10px;
 }
