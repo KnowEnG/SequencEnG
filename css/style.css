@@ -265,6 +265,10 @@ path.link.found{
   stroke-width: 3; 
 }
 
+#footer footer div{
+  font-size: 12px;
+}
+
 }
 
 /*Tablet, DESKTOP SCREEN SIZE > 768 px */

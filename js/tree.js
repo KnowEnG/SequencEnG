@@ -300,6 +300,12 @@ function searchTree(data, search, path){
             $specContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper,$rcr)
             $divContainer.append($specContainer, $imgBox, $divRowButton);
             $(".show-chart").on('click', show_chart);
+
+            if(needIntro){
+              //global
+              pipeline_load(data.seq_name);
+              show_intro();
+            }
         });
        
 
@@ -361,6 +367,8 @@ $.getJSON("./data/tree.json")
             let $introDesc =  show_description(data[i]);
 
               $("#desc").html($introDesc);
+
+
           }
 
 
