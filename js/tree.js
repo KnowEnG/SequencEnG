@@ -77,7 +77,19 @@ function expandAll(root, update){
       update(root);
   }
 
+function deselect(d){
 
+  
+  if(d._children || d.children){
+    let len = (d._children || d.children).length;
+    for(let i=0;i<len;i++){
+        (d._children || d.children)[i].selected = "";
+        deselect((d._children || d.children)[i]);
+    }
+  }
+
+  
+}
 
 
 //find path in tree 
@@ -209,13 +221,14 @@ function searchTree(data, search, path){
 
 
         let $divRowPaper =   $("<div>", {"class": "row chart-notes"});
+        let rcrTarget = data.paper_link;
           if(data.paper_link){
             if(data.paper_title.indexOf(',') !== -1){
                 let papertitles = data.paper_title.split(',');
                 let paperLinks = data.paper_link.split(',');
-              
-                $divRowPaper.append("<ol>Papers</ol>");
-                let list =  $divRowPaper.children('ol');
+                rcrTarget = paperLinks[0];
+                $divRowPaper.append("<ul>Papers</ul>");
+                let list =  $divRowPaper.children('ul');
                 for(let i = 0; i < papertitles.length;i++){
                  
                     list.append("<li><a target='_blank' href='"+ paperLinks[i] + "'>" + papertitles[i] + "</a></li>");  
@@ -224,7 +237,7 @@ function searchTree(data, search, path){
 
             }
             else{
-              $divRowPaper.append("Paper :  <a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a>");
+              $divRowPaper.append("<ul>Paper<li><a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a></li><ul>");
 
             }
 
@@ -264,7 +277,7 @@ function searchTree(data, search, path){
 
         }
 
-        let links = data.paper_link.split('/');
+        let links = rcrTarget.split('/');
         let pmids = links[links.length - 1];
 
         let $rcr = "";
@@ -599,10 +612,11 @@ function draw_tree(){
 
                 //remove selected
                 d3.selectAll('circle').each(function(c, i) {
-                      c.selected = "";
+
+                       deselect(c);
                    });
                 //add selected
-                 d.selected = 'selected';
+                 d.selected = "selected";
 
                 let $descText = show_description(d.data);
                 $descText.hide();
@@ -654,6 +668,10 @@ function draw_tree(){
             return "4";
           }
           else if(d.data.name === introTargetThree && d.parent.data.name === introTargetTwo){
+            if(needIntro){
+
+             d.selected = 'selected';
+            }
             return "5";
           }
           else {
@@ -692,7 +710,7 @@ function draw_tree(){
             if(typeof d.data.children === 'undefined'){
 
                 d3.selectAll('circle').each(function(c, i) {
-                      c.selected = "";
+                     deselect(c);
                    });
 
                   d.selected = 'selected';

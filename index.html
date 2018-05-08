@@ -313,12 +313,14 @@
 					
 				intro.setOption("showStepNumbers", false).onbeforechange(function(targetElement) {
 
-						
+						if(this._currentStep === 9){
+							$("#peakcalling").click();
+						}
 				 		if(this._currentStep >= 8 && this._currentStep !== 11){
 
 				 			if($('#main').css('display')==='none'){
 				 				$(".show-chart").click();
-				 				$("#peakcalling").click();
+				 				
 				 			}
 
 				 			
