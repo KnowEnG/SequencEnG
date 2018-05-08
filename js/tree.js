@@ -599,10 +599,10 @@ function draw_tree(){
 
                 //remove selected
                 d3.selectAll('circle').each(function(c, i) {
-                      c.class = "";
+                      c.selected = "";
                    });
                 //add selected
-                 d.class = 'selected';
+                 d.selected = 'selected';
 
                 let $descText = show_description(d.data);
                 $descText.hide();
@@ -692,10 +692,10 @@ function draw_tree(){
             if(typeof d.data.children === 'undefined'){
 
                 d3.selectAll('circle').each(function(c, i) {
-                      c.class = "";
+                      c.selected = "";
                    });
 
-                  d.class = 'selected';
+                  d.selected = 'selected';
 
 
                 let $descText = show_description(d.data);
@@ -731,7 +731,7 @@ function draw_tree(){
       .attr('r', 15)
       .style("fill", function(d) {
 
-          if(d.class === "selected"){
+          if(d.selected === "selected"){
          
             return '#FFC107';
           }

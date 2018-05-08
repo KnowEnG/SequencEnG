@@ -207,7 +207,7 @@ path.link.found{
     border-radius: 6px;
     border: 1px solid black;
  
-    /* Position the tooltip text - see examples below! */
+    /* Position the tooltip text at top*/
     position: absolute;
     z-index: 1;
     bottom: 100%;
