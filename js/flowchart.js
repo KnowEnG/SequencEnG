@@ -33,6 +33,7 @@ function hideTooltip(e){
 
 var pipeline_load = function(seq_name){
 
+   $("#chart").empty();
   // var step = ['quality control of reads','read mapping', 'quality control after mapping','differential binding', 'peak calling','peak annotation','motif analysis',  'gene ontology analysis']
   var tableHeaders = ["Software","Description","Features","Strength","Limitation","Format_input","Format_output","Platform requirement","Link","Paper","RCR"];
   let name = seq_name;
