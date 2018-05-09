@@ -1029,6 +1029,10 @@ function draw_table(){
   }
 
   function color(d) {
+    if(d.class==='found'){
+        return '#FFC107';
+    }
+
     return d._children ? "seagreen" : d.children ? "mediumseagreen" : "lightgreen";
   }
 
