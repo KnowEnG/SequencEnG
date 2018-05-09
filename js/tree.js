@@ -1014,6 +1014,10 @@ function draw_table(){
 
                 $descText.fadeIn('slow');
                 $("#desc").fadeIn('slow');
+
+                  if(has_step.indexOf(d.data.name)!==-1){
+                      pipeline_load(d.data.name);
+                  }
             }
 
     if (d.children) {
