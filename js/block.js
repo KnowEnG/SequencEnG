@@ -175,7 +175,7 @@ Block.prototype.makeTable = function(){
 
 	//set table body
 	var body = "";
-	console.log(this.data);
+	
 	for(let key in this.data){
 		var tr = "<tr>";
 		
