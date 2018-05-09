@@ -227,7 +227,7 @@ function searchTree(data, search, path){
                 let papertitles = data.paper_title.split(',');
                 let paperLinks = data.paper_link.split(',');
                 rcrTarget = paperLinks[0];
-                $divRowPaper.append("<ul>Papers</ul>");
+                $divRowPaper.append("<ul>Reference</ul>");
                 let list =  $divRowPaper.children('ul');
                 for(let i = 0; i < papertitles.length;i++){
                  
@@ -237,7 +237,7 @@ function searchTree(data, search, path){
 
             }
             else{
-              $divRowPaper.append("<ul>Paper<li><a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a></li><ul>");
+              $divRowPaper.append("<ul>Reference<li><a target='_blank' href='"+ data.paper_link + "'>" + data.paper_title + "</a></li><ul>");
 
             }
 

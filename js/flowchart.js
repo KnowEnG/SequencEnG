@@ -109,7 +109,7 @@ var pipeline_load = function(seq_name){
 
               //extra table head as argument
               target.makeTable('RCR');
-
+              $(".table-info-text").empty().append("<ul><li>Scroll to the right to see more columns.</li></ul>");
 
             $(".table-row").show();
             var table;
@@ -406,6 +406,7 @@ $(document).ready(function() {
     
 	 $("#chart").hide();
    $("#svgContainer").hide();
+
   $("#tree-button").click(function(){
 
        $("#main").slideUp('slow');
