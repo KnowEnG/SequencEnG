@@ -554,7 +554,6 @@ function draw_tree(){
       update(root);
         
 
-
     });
 
 
@@ -624,16 +623,16 @@ function draw_tree(){
 
                 
                 $("#desc").html($descText);
-               
 
               
 
                 
                 $descText.fadeIn('slow');
                 $("#desc").fadeIn('slow');
-
-                  $(".show_chart").off();
-                   $(".show_chart").click(()=>pipeline_load(data.seq_name));
+                if(has_step.indexOf(d.data.name)!==-1){
+                      pipeline_load(d.data.name);
+                  }
+                
             }
         
         });;
@@ -747,25 +746,55 @@ function draw_tree(){
    
     nodeUpdate.select('circle.node')
       .attr('r', 15)
-      .style("fill", function(d) {
+      .attr('cursor', 'pointer')
+      .attr('class', function(d){
+          if(d.class === "found"){
+               if(typeof d.data.children === 'undefined' && !d.foundShow){
+
+                //remove selected
+                d3.selectAll('circle').each(function(c, i) {
+
+                       deselect(c);
+                   });
+                //add selected
+                 d.selected = "selected";
+
+                let $descText = show_description(d.data);
+                $descText.hide();
+
+
+                
+                $("#desc").html($descText);
+
+              
+
+                
+                $descText.fadeIn('slow');
+                $("#desc").fadeIn('slow');
+                if(has_step.indexOf(d.data.name)!==-1){
+                      pipeline_load(d.data.name);
+                  }
+                d.foundShow = true;
+            }
+
+            return 'node found';
+          }
+          else{
+            if(typeof d.data.children === 'undefined' && d.foundShow){
+               d.foundShow = false;
+            }
+            return 'node';
+          }
+          
+        })
+       .style("fill", function(d) {
 
           if(d.selected === "selected"){
          
             return '#FFC107';
           }
           return d._children ? "springgreen" : "#fff";
-      })
-      .attr('cursor', 'pointer')
-      .attr('class', function(d){
-          if(d.class === "found"){
-            return 'node found';
-          }
-          else{
-
-            return 'node';
-          }
-          
-        });
+      });
 
 
    
