@@ -173,6 +173,7 @@ var pipeline_load = function(seq_name){
                 //["software","description","features",
                 //"strength","limitation","format_input",
                 //"format_output","platform requirement","link","paper","RCR"]
+                //console.log(target);
               table = $("#table").DataTable({
                  "destroy": true,
                  "paging": false,

@@ -217,7 +217,7 @@ Block.prototype.makeTable = function(){
 function analyzeValueInString(str){
 	let final ="";
 
-	if(typeof str === 'string'){
+	if(typeof str === 'string' && str.indexOf("{")!== -1){
 
 		//it has sub part for tooltip
 		while(str.indexOf("{")!== -1){
@@ -247,7 +247,6 @@ function analyzeValueInString(str){
 
 function applyTooltip(info){
 
-	
 	let tipInfo = JSON.parse(info);
   	
   	let tipbox = "";

@@ -16,8 +16,7 @@
     "Format_output": "",
     "Platform requirement": "",
     "Link": "",
-    "Paper": "",
-    "": ""
+    "Paper": ""
   },
   {
     "order": 1.1,
@@ -36,8 +35,7 @@
     "Format_output": "HTML, Text",
     "Platform requirement": "JAVA",
     "Link": "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
-    "Paper": "NA",
-    "": ""
+    "Paper": "NA"
   },
   {
     "order": 1.2,
@@ -56,8 +54,7 @@
     "Format_output": "FASTA/FASTQ",
     "Platform requirement": "",
     "Link": "https://github.com/agordon/fastx_toolkit",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21278185",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21278185"
   },
   {
     "order": 1.2,
@@ -76,8 +73,7 @@
     "Format_output": "FASTQ",
     "Platform requirement": "JAVA",
     "Link": "http://www.usadellab.org/cms/?page=trimmomatic",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24695404",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24695404"
   },
   {
     "order": 1.2,
@@ -96,8 +92,7 @@
     "Format_output": "FASTA/FASTQ",
     "Platform requirement": "Python",
     "Link": "https://cutadapt.readthedocs.io/en/stable/index.html",
-    "Paper": "NA",
-    "": ""
+    "Paper": "NA"
   },
   {
     "order": 2,
@@ -116,8 +111,7 @@
     "Format_output": "BED",
     "Platform requirement": "64-bit machine, GCC >= 4.1",
     "Link": "http://smithlabresearch.org/software/rmap/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19736251",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19736251"
   },
   {
     "order": 2,
@@ -136,8 +130,7 @@
     "Format_output": "",
     "Platform requirement": "Python >= 2.5.2, Bowtie >= 0.10.0",
     "Link": "http://pellegrini-legacy.mcdb.ucla.edu/bs_seeker/BS_Seeker.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/20416082",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/20416082"
   },
   {
     "order": 2,
@@ -156,8 +149,7 @@
     "Format_output": "SAM/BAM",
     "Platform requirement": "Perl, Bowtie or Bowtie 2, recommended machine: at least 5 cores + >16GB RAM",
     "Link": "http://www.bioinformatics.babraham.ac.uk/projects/bismark/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21493656",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21493656"
   },
   {
     "order": 2,
@@ -176,8 +168,7 @@
     "Format_output": "SAM, Text",
     "Platform requirement": "",
     "Link": "https://code.google.com/archive/p/bsmap/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22155871",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22155871"
   },
   {
     "order": 2,
@@ -196,8 +187,7 @@
     "Format_output": "",
     "Platform requirement": "",
     "Link": "https://code.google.com/archive/p/batmeth/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034162",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034162"
   },
   {
     "order": 2,
@@ -216,8 +206,7 @@
     "Format_output": "SAM/BAM",
     "Platform requirement": "",
     "Link": "http://pass.cribi.unipd.it",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23162053",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23162053"
   },
   {
     "order": 2,
@@ -236,8 +225,7 @@
     "Format_output": "",
     "Platform requirement": "R",
     "Link": "https://bioconductor.org/packages/release/bioc/html/bsseq.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034175",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034175"
   },
   {
     "order": 3,
@@ -256,8 +244,7 @@
     "Format_output": "",
     "Platform requirement": "R",
     "Link": "https://bioconductor.org/packages/release/bioc/html/bsseq.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034175",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034175"
   },
   {
     "order": 3,
@@ -276,8 +263,7 @@
     "Format_output": "",
     "Platform requirement": "R",
     "Link": "https://www.bioconductor.org/packages/release/bioc/html/BiSeq.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23658421",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23658421"
   },
   {
     "order": 4,
@@ -296,8 +282,7 @@
     "Format_output": "",
     "Platform requirement": "",
     "Link": "http://bioinformaticstools.mayo.edu/research/saap-rrbs/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22689387",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22689387"
   },
   {
     "order": 4,
@@ -316,8 +301,7 @@
     "Format_output": "SAM/BAM",
     "Platform requirement": "Perl, Bowtie or Bowtie 2, recommended machine: at least 5 cores + >16GB RAM",
     "Link": "http://www.bioinformatics.babraham.ac.uk/projects/bismark/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21493656",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21493656"
   },
   {
     "order": 5,
@@ -336,8 +320,7 @@
     "Format_output": "",
     "Platform requirement": "Java",
     "Link": "http://www.broadinstitute.org/igv",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21221095",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21221095"
   },
   {
     "order": 5,
@@ -356,8 +339,7 @@
     "Format_output": "",
     "Platform requirement": "R",
     "Link": "http://methvisual.molgen.mpg.de/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21159174",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21159174"
   },
   {
     "order": 5,
@@ -376,8 +358,7 @@
     "Format_output": "",
     "Platform requirement": "R",
     "Link": "https://github.com/al2na/methylKit",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034086",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034086"
   },
   {
     "order": 5,
@@ -396,8 +377,7 @@
     "Format_output": "",
     "Platform requirement": "R",
     "Link": "https://bioconductor.org/packages/release/bioc/html/bsseq.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034175",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034175"
   },
   {
     "order": 5,
@@ -416,8 +396,7 @@
     "Format_output": "BED",
     "Platform requirement": "R",
     "Link": "https://www.bioconductor.org/packages/release/bioc/html/BiSeq.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23658421",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23658421"
   },
   {
     "order": 5,
@@ -436,8 +415,7 @@
     "Format_output": "Text",
     "Platform requirement": "C",
     "Link": "https://www.otago.ac.nz/biochemistry/research/otago652955.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24608764",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24608764"
   },
   {
     "order": 5,
@@ -456,7 +434,6 @@
     "Format_output": "",
     "Platform requirement": "R",
     "Link": "https://github.com/al2na/methylKit",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034086",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23034086"
   }
 ]

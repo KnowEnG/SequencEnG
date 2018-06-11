@@ -16,8 +16,7 @@
     "Format_output": "",
     "Platform requirement": "",
     "Link": "",
-    "Paper": "",
-    "": ""
+    "Paper": ""
   },
   {
     "order": 1.1,
@@ -36,8 +35,7 @@
     "Format_output": "HTML, Text",
     "Platform requirement": "JAVA",
     "Link": "https://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
-    "Paper": "NA",
-    "": ""
+    "Paper": "NA"
   },
   {
     "order": 1.2,
@@ -56,8 +54,7 @@
     "Format_output": "FASTA/FASTQ",
     "Platform requirement": "",
     "Link": "https://github.com/agordon/fastx_toolkit",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21278185",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21278185"
   },
   {
     "order": 1.2,
@@ -76,8 +73,7 @@
     "Format_output": "FASTQ",
     "Platform requirement": "JAVA",
     "Link": "http://www.usadellab.org/cms/?page=trimmomatic",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24695404",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24695404"
   },
   {
     "order": 1.2,
@@ -96,8 +92,7 @@
     "Format_output": "FASTA/FASTQ",
     "Platform requirement": "Python",
     "Link": "https://cutadapt.readthedocs.io/en/stable/index.html",
-    "Paper": "NA {\"value\":\"link\",\"link\":\"http://dx.doi.org/10.14806/ej.17.1.200\"}",
-    "": ""
+    "Paper": "NA {\"value\":\"link\",\"link\":\"http://dx.doi.org/10.14806/ej.17.1.200\"}"
   },
   {
     "order": 2,
@@ -116,8 +111,7 @@
     "Format_output": "",
     "Platform requirement": "",
     "Link": "",
-    "Paper": "",
-    "": ""
+    "Paper": ""
   },
   {
     "order": 2,
@@ -136,8 +130,7 @@
     "Format_output": "Text (TPM); h5(can be read by sleuth)",
     "Platform requirement": "",
     "Link": "https://pachterlab.github.io/kallisto/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/27043002",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/27043002"
   },
   {
     "order": 2,
@@ -156,8 +149,7 @@
     "Format_output": "Text (TPM)",
     "Platform requirement": "",
     "Link": "https://combine-lab.github.io/salmon/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/28263959",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/28263959"
   },
   {
     "order": 2.1,
@@ -176,8 +168,7 @@
     "Format_output": "Text",
     "Platform requirement": "",
     "Link": "http://www.cs.cmu.edu/~ckingsf/software/sailfish/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24752080",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24752080"
   },
   {
     "order": 2.1,
@@ -196,8 +187,7 @@
     "Format_output": "SAM/BAM",
     "Platform requirement": "",
     "Link": "https://ccb.jhu.edu/software/tophat/index.shtml",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23618408",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23618408"
   },
   {
     "order": 2.1,
@@ -216,8 +206,7 @@
     "Format_output": "SAM/BAM",
     "Platform requirement": "",
     "Link": "https://ccb.jhu.edu/software/hisat2/manual.shtml",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25751142",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25751142"
   },
   {
     "order": 2.1,
@@ -236,8 +225,7 @@
     "Format_output": "SAM/BAM",
     "Platform requirement": "",
     "Link": "https://github.com/alexdobin/STAR",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23104886",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23104886"
   },
   {
     "order": 2.1,
@@ -256,8 +244,7 @@
     "Format_output": "Bowtie output (one alignment per line), SAM/BAM",
     "Platform requirement": "",
     "Link": "http://bowtie-bio.sourceforge.net/index.shtml",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19451168",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19451168"
   },
   {
     "order": 2.1,
@@ -276,8 +263,7 @@
     "Format_output": "Bowtie output (one alignment per line), SAM/BAM",
     "Platform requirement": "",
     "Link": "http://bowtie-bio.sourceforge.net/bowtie2/index.shtml",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22388286",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22388286"
   },
   {
     "order": 2.1,
@@ -296,8 +282,7 @@
     "Format_output": "SAM/BAM",
     "Platform requirement": "",
     "Link": "http://bio-bwa.sourceforge.net/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19261174",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19261174"
   },
   {
     "order": 2.1,
@@ -316,8 +301,7 @@
     "Format_output": "GTF,TSV",
     "Platform requirement": "",
     "Link": "https://ccb.jhu.edu/software/stringtie/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25690850",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25690850"
   },
   {
     "order": 3,
@@ -336,8 +320,7 @@
     "Format_output": "GTF",
     "Platform requirement": "",
     "Link": "http://cole-trapnell-lab.github.io/cufflinks/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22383036",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22383036"
   },
   {
     "order": 3,
@@ -356,8 +339,7 @@
     "Format_output": "SAM/BAM",
     "Platform requirement": "",
     "Link": "http://www.htslib.org/doc/samtools.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19505943",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19505943"
   },
   {
     "order": 3,
@@ -376,8 +358,7 @@
     "Format_output": "SAM/BAM",
     "Platform requirement": "JAVA",
     "Link": "https://broadinstitute.github.io/picard/",
-    "Paper": "NA",
-    "": ""
+    "Paper": "NA"
   },
   {
     "order": 3,
@@ -396,8 +377,7 @@
     "Format_output": "Text",
     "Platform requirement": "JAVA",
     "Link": "http://archive.broadinstitute.org/cancer/cga/rna-seqc",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22539670",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22539670"
   },
   {
     "order": 3,
@@ -416,8 +396,7 @@
     "Format_output": "Text",
     "Platform requirement": "Python",
     "Link": "http://dldcc-web.brc.bcm.edu/lilab/liguow/CGI/rseqc/_build/html/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22539670",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22539670"
   },
   {
     "order": 4,
@@ -436,8 +415,7 @@
     "Format_output": "",
     "Platform requirement": "",
     "Link": "",
-    "Paper": "",
-    "": ""
+    "Paper": ""
   },
   {
     "order": 4.1,
@@ -456,8 +434,7 @@
     "Format_output": "Text",
     "Platform requirement": "R",
     "Link": "http://bioinf.wehi.edu.au/featureCounts/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24227677",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24227677"
   },
   {
     "order": 4.1,
@@ -476,8 +453,7 @@
     "Format_output": "Text",
     "Platform requirement": "Python",
     "Link": "https://htseq.readthedocs.io/en/release_0.9.1/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25260700",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25260700"
   },
   {
     "order": 4.1,
@@ -496,8 +472,7 @@
     "Format_output": "Text",
     "Platform requirement": "C++",
     "Link": "http://cole-trapnell-lab.github.io/cufflinks/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/20436464",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/20436464"
   },
   {
     "order": 4.1,
@@ -516,8 +491,7 @@
     "Format_output": "Text",
     "Platform requirement": "C",
     "Link": "http://deweylab.github.io/RSEM/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21816040",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21816040"
   },
   {
     "order": 5,
@@ -536,8 +510,7 @@
     "Format_output": "Similarity and grouping of samples",
     "Platform requirement": "Python, R, or others",
     "Link": "",
-    "Paper": "NA",
-    "": ""
+    "Paper": "NA"
   },
   {
     "order": 6,
@@ -556,8 +529,7 @@
     "Format_output": "Similarity between samples",
     "Platform requirement": "Python, R, or others",
     "Link": "",
-    "Paper": "NA",
-    "": ""
+    "Paper": "NA"
   },
   {
     "order": 6,
@@ -567,7 +539,7 @@
     "step": "differential expression analysis",
     "Software": "CuffDiff2",
     "Description": "Differential analysis of gene regulation at transcript resolution with RNA-seq.",
-    "Features": "An algorithm that estimates expression at transcript-level resolution and controls for variability evident across replicate libraries ({\"value\":\"see paper\",\"link\",\"https://www.nature.com/articles/nbt.2450\"}).",
+    "Features": "An algorithm that estimates expression at transcript-level resolution and controls for variability evident across replicate libraries ({\"value\":\"see paper\",\"link\":\"https://www.nature.com/articles/nbt.2450\"}).",
     "Strength": "",
     "Limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
@@ -576,8 +548,7 @@
     "Format_output": "Text (differential expression)",
     "Platform requirement": "C++",
     "Link": "http://cole-trapnell-lab.github.io/cufflinks/cuffdiff/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23222703",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23222703"
   },
   {
     "order": 6,
@@ -596,8 +567,7 @@
     "Format_output": "Text (differential expression)",
     "Platform requirement": "R",
     "Link": "http://bioconductor.org/packages/release/bioc/html/edgeR.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19910308",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19910308"
   },
   {
     "order": 6,
@@ -616,8 +586,7 @@
     "Format_output": "Text (differential expression)",
     "Platform requirement": "R",
     "Link": "https://bioconductor.org/packages/release/bioc/html/DESeq2.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25516281",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25516281"
   },
   {
     "order": 6,
@@ -636,8 +605,7 @@
     "Format_output": "Text (differential expression)",
     "Platform requirement": "R",
     "Link": "https://bioconductor.org/packages/release/bioc/html/limma.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25605792",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25605792"
   },
   {
     "order": 6,
@@ -656,8 +624,7 @@
     "Format_output": "Text (differential expression)",
     "Platform requirement": "R",
     "Link": "https://pachterlab.github.io/sleuth/about",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/28581496",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/28581496"
   },
   {
     "order": 6,
@@ -676,8 +643,7 @@
     "Format_output": "Text (isoform difference)",
     "Platform requirement": "R",
     "Link": "http://www-personal.umich.edu/~jianghui/rseqdiff/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24260225",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/24260225"
   },
   {
     "order": 6,
@@ -696,8 +662,7 @@
     "Format_output": "Text (exon difference)",
     "Platform requirement": "R",
     "Link": "https://bioconductor.org/packages/release/bioc/html/DEXSeq.html",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22722343",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22722343"
   },
   {
     "order": 6,
@@ -716,8 +681,7 @@
     "Format_output": "Text (isoform difference)",
     "Platform requirement": "R",
     "Link": "http://bioinfo.au.tsinghua.edu.cn/software/DSGseq/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23228854",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23228854"
   },
   {
     "order": 6,
@@ -736,8 +700,7 @@
     "Format_output": "Text (isoform difference)",
     "Platform requirement": "Python",
     "Link": "http://rnaseq-mats.sourceforge.net/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25480548",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/25480548"
   },
   {
     "order": 6,
@@ -756,8 +719,7 @@
     "Format_output": "Text (isoform difference)",
     "Platform requirement": "Octave, Python",
     "Link": "https://public.bmi.inf.ethz.ch/user/drewe/rdiff/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23585274",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23585274"
   },
   {
     "order": 6,
@@ -776,8 +738,7 @@
     "Format_output": "Text (isoform abundance)",
     "Platform requirement": "",
     "Link": "http://www.netlab.uky.edu/p/bioinfo/DiffSplice",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23155066",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23155066"
   },
   {
     "order": 6,
@@ -796,8 +757,7 @@
     "Format_output": "Text",
     "Platform requirement": "webtool",
     "Link": "http://geneontology.org/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/27899567",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/27899567"
   },
   {
     "order": 6,
@@ -816,7 +776,6 @@
     "Format_output": "Text",
     "Platform requirement": "webtool",
     "Link": "https://david.ncifcrf.gov/",
-    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19131956",
-    "": ""
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19131956"
   }
 ]
