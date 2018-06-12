@@ -7,13 +7,17 @@ function showToolTip(e){
 
   let width = $(target).width();
 
+
+  //find tooltip position 
   let tooltipPositionX = position.left;
   let tooltipPositionY = position.top;
 
  
-
+  //get tip info 
   $('#tooltip-box').empty().append($(target).attr('data-tip'));
 
+
+  //set tooltip position 
    $('#tooltip-box').css('top', tooltipPositionY-$('#tooltip-box').height()-5);
   $('#tooltip-box').css('left', tooltipPositionX);
 
@@ -99,7 +103,7 @@ var pipeline_load = function(seq_name){
        for(let key in Blocks){
        
           Blocks[key].render();
-          // Blocks[key].makeTable('RCR');
+        
 
 
           //bind button event 
@@ -107,8 +111,7 @@ var pipeline_load = function(seq_name){
             
           $("#" + id).click(function(){
 
-              //extra table head as argument
-              target.makeTable('RCR');
+              target.makeTable();
               $(".table-info-text").empty().append("<ul><li>Scroll to the right to see more columns.</li></ul>");
 
             $(".table-row").show();
@@ -138,6 +141,8 @@ var pipeline_load = function(seq_name){
                 //remove empty columns
                 let empty_check = [];
 
+
+                //check that it is not required field
                 $("#table tr:first th").each(function(index, value){
                   if(tableHeaders.indexOf($(value).text()) === -1){
                       empty_check.push(index+1);
@@ -146,6 +151,7 @@ var pipeline_load = function(seq_name){
                 });
 
                
+               //check that it need to be removed
                 let removed = [];
                 for(let c = 0; c < empty_check.length;c++){
                     let should_remove = true; 
@@ -159,6 +165,8 @@ var pipeline_load = function(seq_name){
                     removed.push(should_remove);
                 }
 
+
+                //remove that column
                 let removeCount = 0;
                 for(let r = 0; r < removed.length;r++){
 
