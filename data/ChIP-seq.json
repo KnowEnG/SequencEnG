@@ -701,5 +701,24 @@
     "Platform requirement": "webtool",
     "Link": "https://david.ncifcrf.gov/",
     "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19131956"
+  },
+{
+    "order": 5,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Visulization",
+    "Software": "Factorbook",
+    "Description": "A website organizing the analysis results of ENCODE TF ChIP-seq data.",
+    "Features": "Features include expressed transcripts and genomic regions bound by transcription factors (TFs), occupied by nucleosomes, occupied by nucleosomes with modified histones, or hypersensitive to DNase I cleavage, etc.",
+    "Strength": "Contains graphical presentations of TF function, histone profiles, motif enrichment, histone heatmaps, TF heatmaps, nucleosome profiles.",
+    "Limitation": "Note that the motif enrichment analysis was done using top 500 peaks.",
+    "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
+    "Good for ChIP target: {\"value\":\"TF\",\"text\":\"Transcription Factor, has narrow signal\"} or {\"value\":\"histone\",\"text\":\"Histone modification, has broad signal. Besides, PolII ChIP-seq signal is between the narrow signal as TF has, and the broad signal as histone modification has.\"}": "",
+    "Format_input": "",
+    "Format_output": "",
+    "Platform requirement": "webtool",
+    "Link": "http://www.factorbook.org/human/chipseq/tf/",
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23203885"
   }
 ]

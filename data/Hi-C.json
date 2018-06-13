@@ -625,5 +625,24 @@
     "Platform requirement": "",
     "Link": "",
     "Paper": "NA"
+  },
+{
+    "order": 6,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Visualization",
+    "Software": "Juicebox",
+    "Description": "Visualization and analysis software for Hi-C data.",
+    "Features": "Juicebox allows users to zoom in and out of Hi-C maps interactively.",
+    "Strength": "Besides interaction map, it can show TADs. Also, there are public Hi-C datasets available to import in the software. It can also be used to view 5C and ChIA-PET data. Data can also be exported into matrix etc.",
+    "Limitation": "",
+    "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
+    "Good for ChIP target: {\"value\":\"TF\",\"text\":\"Transcription Factor, has narrow signal\"} or {\"value\":\"histone\",\"text\":\"Histone modification, has broad signal. Besides, PolII ChIP-seq signal is between the narrow signal as TF has, and the broad signal as histone modification has.\"}": "",
+    "Format_input": "{\"value\": \".hic\", \"link\" :\"https://github.com/theaidenlab/juicer/wiki/Data\"}",
+    "Format_output": "Text, images",
+    "Platform requirement": "JAVA",
+    "Link": "https://www.aidenlab.org/juicebox/",
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/27467250"
   }
 ]
