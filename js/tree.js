@@ -13,8 +13,6 @@ const TREE_HEIGHT = 1500;
 const introTragetOne = "DNA";
 const introTargetTwo = "TF Binding";
 const introTargetThree = "ChIP-seq";
-const needIntro = !localStorage.getItem('intro_shown');
-
 
 const has_step = ["ChIP-seq", "Hi-C", "RNA-seq", "WGBS"];
 
@@ -314,7 +312,7 @@ function searchTree(data, search, path){
             $divContainer.append($specContainer, $imgBox, $divRowButton);
             $(".show-chart").on('click', show_chart);
 
-            if(needIntro){
+            if(!localStorage.getItem('intro_shown')){
               //global
               pipeline_load(data.seq_name);
               show_intro();
@@ -376,7 +374,7 @@ $.getJSON("./data/tree.json")
           leafNode.name = data[i].seq_name;
 
           //set intro
-          if(leafNode.name === introTargetThree && needIntro){
+          if(leafNode.name === introTargetThree && !localStorage.getItem('intro_shown')){
             let $introDesc =  show_description(data[i]);
 
               $("#desc").html($introDesc);
@@ -667,7 +665,7 @@ function draw_tree(){
             return "4";
           }
           else if(d.data.name === introTargetThree && d.parent.data.name === introTargetTwo){
-            if(needIntro){
+            if(!localStorage.getItem('intro_shown')){
 
              d.selected = 'selected';
             }
