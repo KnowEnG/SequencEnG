@@ -123,7 +123,9 @@ Block.prototype.render = function(){
 	if($(order + " > div").length > 3){
 
 		let blockSize = Math.floor(12/$(order + " > div").length);
-		$(order + " > div").removeClass("col-4 col-md-4").addClass("col-" + blockSize + " col-md-" + blockSize);
+		$(order + " > div").removeClass("col-4 col-md-4")
+						   .removeClass("col-"+ (blockSize+1) + " col-md-" + (blockSize+1))
+						   .addClass("col-" + blockSize + " col-md-" + blockSize);
 	}
 	
 
