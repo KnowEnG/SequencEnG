@@ -27,6 +27,58 @@ if($(window).width() > 1600){
 }
 
 
+/*set Intro js */
+var intro = introJs();
+
+ intro.setOption("showStepNumbers", false).onbeforechange(function(targetElement) {
+
+            if(this._currentStep === 9){
+              $("#peakcalling").click();
+            }
+            if(this._currentStep >= 8 && this._currentStep !== 11){
+
+              if($('#main').css('display')==='none'){
+                $(".show-chart").click();
+                
+              }
+
+              
+              
+              
+            }
+            else if(this._currentStep <= 7 || this._currentStep === 11){
+
+              if($(".tree-field").css('display') === 'none'){
+                $("#tree-button").click();
+
+                
+              }
+
+              
+
+            }
+            
+            
+        }).oncomplete(function(){
+          $("#tree-button").click();
+            localStorage.setItem('intro_shown', true);
+          
+        }).onexit(function() {
+          $("#tree-button").click();
+          localStorage.setItem('intro_shown', true);
+  });
+
+  function show_intro() {
+      if (localStorage.getItem('intro_shown') || isMobile) {
+        localStorage.setItem('intro_shown', true);
+        return;
+      }
+    
+      else{
+        intro.start();
+      }
+    }
+
 //d3 Tree structure 
 var treeData = {
   "name" : "SEQUENCING TECHNIQUES",
