@@ -112,7 +112,7 @@ var pipeline_load = function(seq_name){
           $("#" + id).click(function(){
 
               target.makeTable();
-              $(".table-info-text").empty().append("<ul><li>Scroll to the right to see more columns.</li></ul>");
+              $(".table-info-text").empty().append("<ul><li>Scroll to the right to see more columns.</li><li>Packages for current analysis step are ranked based on <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/\">Relative Citation Ratio (RCR)</a>.</li> <li>More evaluations are summarized in the Features, Strength, and Limitation columns, based on review articles and methods comparison papers. </li></ul>");
 
             $(".table-row").show();
             var table;
