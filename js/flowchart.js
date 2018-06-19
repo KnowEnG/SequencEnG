@@ -44,7 +44,7 @@ var pipeline_load = function(seq_name){
   if(name==='WGBS'){
     name = "Bisulfite Sequencing";
   }
- 
+  name = name.replace('_', " ");
   $(".pipeline-title").text('').append("Flowchart for <span style='color:coral;'>" + name + "</span>");
 
   $.getJSON("./data/" + seq_name + ".json")
@@ -88,7 +88,7 @@ var pipeline_load = function(seq_name){
             }
 
             //get software info fields 
-            Blocks[key].set_fields(Object.keys(data[i]), 5, 'RCR');
+            Blocks[key].set_fields(Object.keys(data[i]), 5);
 
             //push software data relate to step
             Blocks[key].push_data(data[i], data[i].Software);
@@ -183,11 +183,16 @@ var pipeline_load = function(seq_name){
                 //"format_output","platform requirement","link","paper","RCR"]
                 //console.log(target);
               table = $("#table").DataTable({
-                 "destroy": true,
+                 
+                  "destroy": true,
                  "paging": false,
                  "info": false,
                  "scrollX": true,
-                   "order": [[ target.fields.length-1, "desc" ]],
+                   "order": [[ 4, "desc" ]],
+
+                  //  "columnDefs": [
+                  //   { "width": "50px", "targets": 0 }
+                  // ],
 
                });
              

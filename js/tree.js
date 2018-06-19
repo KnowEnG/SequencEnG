@@ -248,6 +248,8 @@ function searchTree(data, search, path){
 
       let checkStep = has_step.indexOf(data.seq_name)!==-1?true:false;
 
+      let name = data.name.replace("_", " ");
+
       let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper"});
     
       // notes, seq_fullname, year, paper_title paper_link
@@ -257,7 +259,7 @@ function searchTree(data, search, path){
         let $divRowName = data.seq_fullname?
                           $("<div>", {"class": "chart-title row seq-title-container"})
                           .append("<div class='container'><div class = 'row  justify-content-center '><span>" + data.seq_fullname + (checkStep?"*":"") + "</span></div>"
-                           +  "<div class='row justify-content-center '>(" + data.name + (checkStep?"*":"") + ")</div></div>"):"";
+                           +  "<div class='row justify-content-center '>(" + name + (checkStep?"*":"") + ")</div></div>"):"";
 
         
         let $divRowNote = data.notes?
@@ -752,7 +754,12 @@ function draw_tree(){
               }
          })
         .text(function(d) { 
-          return d.data.name + (has_step.indexOf(d.data.name)!==-1?"*":""); })
+          let name = d.data.name; 
+          if(name.indexOf('_') !== -1){
+              name = name.replace("_", " ");
+          }
+
+          return name + (has_step.indexOf(name)!==-1?"*":""); })
         .on("click", function(d){
           
           
