@@ -332,7 +332,7 @@
     "RCR": "",
     "Limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
-    "Good for ChIP target: {\"value\":\"TF\",\"text\":\"Transcription Factor, has narrow signal\"} or {\"value\":\"histone\",\"text\":\"Histone modification, has broad signal. Besides, PolII ChIP-seq signal is between the narrow signal as TF has, and the broad signal as histone modification has.\"}": "histone ({\"value\":\"Thomas et al., (2016) Briefings in Bioinformatics\",\"link\":\"https://academic.oup.com/bib/article/18/3/441/2453291\"}). )",
+    "Good for ChIP target: {\"value\":\"TF\",\"text\":\"Transcription Factor, has narrow signal\"} or {\"value\":\"histone\",\"text\":\"Histone modification, has broad signal. Besides, PolII ChIP-seq signal is between the narrow signal as TF has, and the broad signal as histone modification has.\"}": "histone ({\"value\":\"Thomas et al., (2016) Briefings in Bioinformatics\",\"link\":\"https://academic.oup.com/bib/article/18/3/441/2453291\"})",
     "Format_input": "SAM/BAM",
     "Format_output": "Text",
     "Platform requirement": "C++",
