@@ -268,7 +268,7 @@
   {
     "order": 4,
     "nextStep": 5,
-    "nextStepCount": 2,
+    "nextStepCount": 4,
     "parent": "",
     "step": "generate interaction matrix",
     "Software": "",
@@ -324,8 +324,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect chromatin interactions",
     "Software": "HiCCUPS",
@@ -343,8 +343,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect chromatin interactions",
     "Software": "GOTHiC",
@@ -362,8 +362,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect chromatin interactions",
     "Software": "HOMER",
@@ -381,8 +381,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect chromatin interactions",
     "Software": "Fit-Hi-C",
@@ -400,8 +400,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect chromatin interactions",
     "Software": "diffHic",
@@ -419,8 +419,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect chromatin interactions",
     "Software": "HIPPIE",
@@ -438,8 +438,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect TAD",
     "Software": "TADtree",
@@ -457,8 +457,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect TAD",
     "Software": "Arrowhead",
@@ -476,8 +476,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect TAD",
     "Software": "HiCseg",
@@ -495,8 +495,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect TAD",
     "Software": "TADbit",
@@ -514,8 +514,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect TAD",
     "Software": "matrix2insulation (insulationScore)",
@@ -533,8 +533,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect TAD",
     "Software": "Armatus",
@@ -552,8 +552,8 @@
   },
   {
     "order": 5,
-    "nextStep": 6,
-    "nextStepCount": 1,
+    "nextStep": "",
+    "nextStepCount": 0,
     "parent": "",
     "step": "detect TAD",
     "Software": "DomainCaller",
@@ -570,7 +570,7 @@
     "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/22495300"
   },
   {
-    "order": 6,
+    "order": 5,
     "nextStep": "",
     "nextStepCount": 0,
     "parent": "",
@@ -589,7 +589,7 @@
     "Paper": ""
   },
   {
-    "order": 6,
+    "order": 5,
     "nextStep": "",
     "nextStepCount": 0,
     "parent": "",
@@ -608,7 +608,7 @@
     "Paper": "NA"
   },
   {
-    "order": 6,
+    "order": 5,
     "nextStep": "",
     "nextStepCount": 0,
     "parent": "",
@@ -627,7 +627,7 @@
     "Paper": "NA"
   },
 {
-    "order": 6,
+    "order": 5,
     "nextStep": "",
     "nextStepCount": 0,
     "parent": "",
