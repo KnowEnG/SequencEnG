@@ -299,7 +299,7 @@ function searchTree(data, search, path){
 
              
         let $divRowButton = $("<div>", {"class": "row justify-content-center button-row"});
-        let $has_Step = checkStep?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the four NGS techniques (ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing) with distinct analysis strategies, interactive data analysis pipelines are available, along with comparison of popular software/tools.'>Analysis Pipeline</button>":"";
+        let $has_Step = checkStep?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the five NGS techniques (TF ChIP-seq, Histone ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing) with distinct analysis strategies, interactive data analysis pipelines are available, along with comparison of popular software/tools.'>Analysis Pipeline</button>":"";
         if(checkStep){
           $("#chart").empty();
         
