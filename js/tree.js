@@ -12,9 +12,9 @@ const TREE_HEIGHT = 1500;
 //intro
 const introTragetOne = "DNA";
 const introTargetTwo = "TF Binding";
-const introTargetThree = "ChIP-seq";
+const introTargetThree = "TF_ChIP-seq";
 
-const has_step = ["ChIP-seq", "Hi-C", "RNA-seq", "WGBS"];
+const has_step = ["TF_ChIP-seq","Histone_ChIP-seq", "Hi-C", "RNA-seq", "WGBS"];
 
 
 var nodeDepthOne = 150;

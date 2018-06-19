@@ -30,7 +30,7 @@
   {
     "seq_goal_level1": "DNA",
     "seq_goal_level2": "TF Binding",
-    "seq_name": "ChIP-seq",
+    "seq_name": "TF_ChIP-seq",
     "plot": 1,
     "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation <strong>seq</strong>uencing",
     "seq_fullname_old": "chromatin immunoprecipitation sequencing",
@@ -156,7 +156,7 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Histone modification",
-    "seq_name": "ChIP-seq",
+    "seq_name": "Histone_ChIP-seq",
     "plot": 1,
     "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation <strong>seq</strong>uencing",
     "seq_fullname_old": "chromatin immunoprecipitation sequencing",
