@@ -759,7 +759,7 @@ function draw_tree(){
               name = name.replace("_", " ");
           }
 
-          return name + (has_step.indexOf(name)!==-1?"*":""); })
+          return name + (has_step.indexOf(d.data.name)!==-1?"*":""); })
         .on("click", function(d){
           
           
