@@ -322,7 +322,7 @@
   {
     "order": 4.2,
     "nextStep": 5,
-    "nextStepCount": 2,
+    "nextStepCount": 4,
     "parent": "generate interaction matrix",
     "step": "normalization of contact matrix",
     "Software": "hicpipe",
