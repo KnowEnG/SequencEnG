@@ -179,8 +179,8 @@ var pipeline_load = function(seq_name){
 
 
                 //["software","description","features",
-                //"strength","limitation","format_input",
-                //"format_output","platform requirement","link","paper","RCR"]
+                //"strength","RCR", "limitation","format_input",
+                //"format_output","platform requirement","link","paper"]
                 //console.log(target);
               table = $("#table").DataTable({
                  
@@ -188,11 +188,13 @@ var pipeline_load = function(seq_name){
                  "paging": false,
                  "info": false,
                  "scrollX": true,
+                 scrollCollapse: true,
+                  columnDefs: [
+                      { width: 100, targets: 4 }
+                  ],
+                  fixedColumns: true,
                    "order": [[ 4, "desc" ]],
 
-                  //  "columnDefs": [
-                  //   { "width": "50px", "targets": 0 }
-                  // ],
 
                });
              

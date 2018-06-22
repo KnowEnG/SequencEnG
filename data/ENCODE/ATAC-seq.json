@@ -1,0 +1,29 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Read mapping and filtering",
+    "Software": "Bowtie 2, Preseq",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Peak calling and filtering",
+    "Software": "MACS",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Signal generation",
+    "Software": "BEDTools, MACS",
+    "Position": "right"
+  }
+]

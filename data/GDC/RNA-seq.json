@@ -1,0 +1,38 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Quality control of reads",
+    "Software": "FastQC",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Read mapping",
+    "Software": "STAR 2",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": 4,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Quality control after mapping",
+    "Software": "RNA-seQC, Samtools",
+    "Position": "right"
+  },
+  {
+    "order": 4,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Quantification",
+    "Software": "HT-Seq",
+    "Position": "right"
+  }
+]

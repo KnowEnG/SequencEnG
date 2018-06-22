@@ -67,7 +67,7 @@ Block.prototype.push_data = function(data, key) {
 			let self = this; 
 			 $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
 			
-	            self.data[key]['RCR'] = response.data[0].relative_citation_ratio || 0;
+	            self.data[key]['RCR'] = parseFloat(response.data[0].relative_citation_ratio).toFixed(2) || 0;
 
 
 	        });
@@ -95,9 +95,9 @@ Block.prototype.render = function(){
 		let orderFrame = "<div class=\'row justify-content-center order-frame\' id=\'" + this.order +  "\'></div>";
 		$("#chart").append(orderFrame);
 
-		if(this.nextStep === ""){
-			$(order).addClass('lastFrame');
-		}
+		// if(this.nextStep === ""){
+		// 	$(order).addClass('lastFrame');
+		// }
 	}
 
 	else{

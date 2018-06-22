@@ -1,0 +1,38 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Quality control of reads",
+    "Software": "FastQC",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Read mapping",
+    "Software": "BWA mem, BWA aln",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": 4,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Quality control after mapping",
+    "Software": "Picard tools, GATK",
+    "Position": "right"
+  },
+  {
+    "order": 4,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Variant calling",
+    "Software": "Mutect2, VarScan2, MUSE, SomaticSniper",
+    "Position": "right"
+  }
+]

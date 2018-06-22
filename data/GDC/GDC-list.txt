@@ -1,0 +1,2 @@
+DNA-seq variant calling, RNA-seq
+https://docs.gdc.cancer.gov/Data/BioinformaAcs_Pipelines/DNA_Seq_Variant_Calling_Pipeline/, https://docs.gdc.cancer.gov/Data/BioinformaAcs_Pipelines/Expression_mRNA_Pipeline/       

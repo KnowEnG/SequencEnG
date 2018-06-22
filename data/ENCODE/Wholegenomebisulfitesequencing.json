@@ -1,0 +1,39 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Read mapping and filtering",
+    "Software": "Trim Galore, cutadapt, Samtools, Bismark, Bowtie 2",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Signal generation",
+    "Software": "STAR",
+    "Position": "left"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Quantification",
+    "Software": "",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Quality control",
+    "Software": "BEDTools",
+    "Position": "right",
+    "Shift" : "end"
+  }
+]

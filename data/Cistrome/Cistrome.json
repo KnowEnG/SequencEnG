@@ -1,0 +1,47 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Data preprocessing",
+    "Software": "",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 3,
+    "parent": "",
+    "step": "Peak calling",
+    "Software": "MAT for Affy, MA2C for NimbleGen, MACS for ChIP-seq, MM-ChIP",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Correlation",
+    "Software": "Venn Diagram",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "DNA motif",
+    "Software": "SeqPos, Screen Motif",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Association",
+    "Software": "SitePro, CEAS, GCA, peak2gene",
+    "Position": "right"
+  }
+]

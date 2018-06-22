@@ -1,0 +1,38 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Read mapping",
+    "Software": "BWA",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Quality control and filtering",
+    "Software": "Samtools, Picard, BEDTools, Phantompeakqualtools, SPP",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Signal generation",
+    "Software": "BEDTools",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Peak calling",
+    "Software": "MACS",
+    "Position": "right"
+  }
+]

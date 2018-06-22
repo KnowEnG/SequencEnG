@@ -1,0 +1,48 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Read mapping",
+    "Software": "BWA",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Quality control and filtering",
+    "Software": "Samtools, Picard, cutadapt, edwBamStats, SamPipes, Pysam",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Quality control of filtered alignments",
+    "Software": "Hotspot, edwBamFilter, Samtools, caTools, snow, SPP, Phantompeakqualtools, BedTools, edwBamStats",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": 4,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Peak calling and hotspots",
+    "Software": "Hotspot2, BEDOPS, modwt, Samtools",
+    "Position": "right"
+  },
+  {
+    "order": 4,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Signal generation",
+    "Software": "BEDOPS, Samtools",
+    "Position": "right",
+    "Shift" : "end"
+  }
+]

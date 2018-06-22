@@ -1,0 +1,2 @@
+RNA-seq (more than 200bp),RNA-seq (less than 200bp),miRNA-seq,Histone ChIP-seq,Transcription factor ChIP-seq,DNase-seq,ATAC-seq,Whole genome bisulfite sequencing
+https://www.encodeproject.org/pipelines/ENCPL002LPE/,https://www.encodeproject.org/ENCPL337CSA/,https://www.encodeproject.org/pipelines/ENCPL444CYA/,https://www.encodeproject.org/pipelines/ENCPL841HGV/,https://www.encodeproject.org/pipelines/ENCPL493SGC/,https://www.encodeproject.org/pipelines/ENCPL201DNS/,https://www.encodeproject.org/atac-­seq/,https://www.encodeproject.org/pipelines/ENCPL985BLO/ 
