@@ -44,6 +44,9 @@ var pipeline_load = function(seq_name){
   if(name==='WGBS'){
     name = "Bisulfite Sequencing";
   }
+  if(name==='WGS'){
+    name = "WGS (Variant Discovery)";
+  }
   name = name.replace('_', " ");
   $(".pipeline-title").text('').append("Flowchart for <span style='color:coral;'>" + name + "</span>");
 
