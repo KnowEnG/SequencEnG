@@ -5,7 +5,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Read mapping",
-    "Software": "BWA",
+    "Software": "{\"value\": \"BWA\", \"link\":\"http://bio-bwa.sourceforge.net/\"}",
     "Position": "right"
   },
   {
@@ -14,7 +14,7 @@
     "nextStepCount": 2,
     "parent": "",
     "step": "Quality control and filtering",
-    "Software": "Samtools, Picard, cutadapt, edwBamStats, SamPipes, Pysam",
+    "Software": "{\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}, {\"value\":\"Picard\",\"link\":\"https://broadinstitute.github.io/picard/\"}, {\"value\":\"cutadapt\", \"link\":\"https://cutadapt.readthedocs.io/en/stable/index.html\"}, {\"value\":\"edwBamStats\",\"link\":\"https://github.com/ENCODE-DCC/kentUtils\"}, SamPipes, {\"value\":\"Pysam\" , \"link\":\"http://pysam.readthedocs.io/en/latest/api.html\"}",
     "Position": "right"
   },
   {
@@ -23,7 +23,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Quality control of filtered alignments",
-    "Software": "Hotspot, edwBamFilter, Samtools, caTools, snow, SPP, Phantompeakqualtools, BedTools, edwBamStats",
+    "Software": "{\"value\":\"Hotspot\",\"link\":\"http://www.uwencode.org/software/hotspot\"}, {\"value\":\"edwBamFilter\",\"link\":\"https://github.com/ENCODE-DCC/kentUtils/tree/master/src/hg/encode3/encodeDataWarehouse/utils/edwBamFilter\"}, {\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}, {\"value\":\"caTools\",\"link\":\"https://www.encodeproject.org/software/caTools/\"}, {\"value\":\"snow\",\"link\":\"https://www.encodeproject.org/software/snow/\"}, {\"value\":\"SPP\",\"link\":\"https://www.encodeproject.org/software/spp/\"}, {\"value\":\"Phantompeakqualtools\",\"link\":\"https://github.com/kundajelab/phantompeakqualtools\"}, {\"value\":\"BedTools\",\"link\":\"https://www.encodeproject.org/software/bedtools/\"}, {\"value\":\"edwBamStats\",\"link\":\"https://github.com/ENCODE-DCC/kentUtils\"} ",
     "Position": "right"
   },
   {
@@ -32,7 +32,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Peak calling and hotspots",
-    "Software": "Hotspot2, BEDOPS, modwt, Samtools",
+    "Software": " {\"value\":\"Hotspot2\",\"link\":\"https://www.encodeproject.org/software/hotspot2/\"}, {\"value\":\"BEDOPS\",\"link\":\"https://www.encodeproject.org/software/bedops/\"}, {\"value\":\"modwt\",\"link\":\"https://www.encodeproject.org/software/modwt/\"}, {\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}",
     "Position": "right"
   },
   {
@@ -41,7 +41,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Signal generation",
-    "Software": "BEDOPS, Samtools",
+    "Software": "{\"value\":\"BEDOPS\",\"link\":\"https://www.encodeproject.org/software/bedops/\"}, {\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}",
     "Position": "right",
     "Shift" : "end"
   }

@@ -5,7 +5,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Read mapping",
-    "Software": "BWA",
+    "Software": "{\"value\":\"BWA\",\"link\":\"http://bio-bwa.sourceforge.net/\"}",
     "Position": "right"
   },
   {
@@ -14,7 +14,7 @@
     "nextStepCount": 2,
     "parent": "",
     "step": "Quality control and filtering",
-    "Software": "Samtools, Picard, BEDTools, Phantompeakqualtools, SPP",
+    "Software": "{\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}, {\"value\":\"Picard\",\"link\":\"https://broadinstitute.github.io/picard/\"}, {\"value\":\"BEDTools\",\"link\":\"https://www.encodeproject.org/software/bedtools/\"}, {\"value\":\"Phantompeakqualtools\",\"link\":\"https://github.com/kundajelab/phantompeakqualtools\"}, {\"value\":\"SPP\",\"link\":\"https://www.encodeproject.org/software/spp/\"}",
     "Position": "right"
   },
   {
@@ -23,7 +23,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Signal generation",
-    "Software": "MACS",
+    "Software": "{\"value\":\"MACS\",\"link\":\"http://liulab.dfci.harvard.edu/MACS/\"}",
     "Position": "right"
   },
   {
@@ -32,7 +32,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Peak calling",
-    "Software": "Phantompeakqualtools, SPP",
+    "Software": "{\"value\":\"Phantompeakqualtools\",\"link\":\"https://github.com/kundajelab/phantompeakqualtools\"}, {\"value\":\"SPP\",\"link\":\"https://www.encodeproject.org/software/spp/\"}",
     "Position": "right"
   }
 ]

@@ -5,7 +5,7 @@
     "nextStepCount": 2,
     "parent": "",
     "step": "Read mapping",
-    "Software": "TopHat, {\"value\":\"Bowtie 2\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}, STAR",
+    "Software": "{\"value\":\"TopHat\",\"link\":\"https://ccb.jhu.edu/software/tophat/index.shtml\"}, {\"value\":\"Bowtie 2\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}, {\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
     "Position": "right"
   },
   {
@@ -14,7 +14,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Signal generation",
-    "Software": "STAR",
+    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
     "Position": "left"
   },
   {
@@ -23,7 +23,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Quantification",
-    "Software": "RSEM",
+    "Software": "{\"value\":\"RSEM\",\"link\":\"https://deweylab.github.io/RSEM/\"}",
     "Position": "right"
   },
   {

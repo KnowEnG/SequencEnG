@@ -5,7 +5,7 @@
     "nextStepCount": 2,
     "parent": "",
     "step": "Read mapping and filtering",
-    "Software": "Trim Galore, cutadapt, Samtools, Bismark, Bowtie 2",
+    "Software": "{\"value\":\"TrimGalore\",\"link\":\"https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/\"}, {\"value\":\"cutadapt\",\"link\":\"https://cutadapt.readthedocs.io/en/stable/index.html\"}, {\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}, {\"value\":\"Bismark\",\"link\":\"https://www.bioinformatics.babraham.ac.uk/projects/bismark/\"}, {\"value\":\"Bowtie2\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}",
     "Position": "right"
   },
   {
@@ -14,7 +14,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Signal generation",
-    "Software": "STAR",
+    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
     "Position": "left"
   },
   {
@@ -32,7 +32,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Quality control",
-    "Software": "BEDTools",
+    "Software": "{\"value\":\"BEDTools\",\"link\":\"https://www.encodeproject.org/software/bedtools/\"}",
     "Position": "right",
     "Shift" : "end"
   }

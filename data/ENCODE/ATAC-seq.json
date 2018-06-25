@@ -5,7 +5,7 @@
     "nextStepCount": 2,
     "parent": "",
     "step": "Read mapping and filtering",
-    "Software": "Bowtie 2, Preseq",
+    "Software": "{\"value\":\"Bowtie2\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}, {\"value\":\"Preseq\",\"link\":\"http://smithlabresearch.org/software/preseq/\"}",
     "Position": "right"
   },
   {
@@ -14,7 +14,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Peak calling and filtering",
-    "Software": "MACS",
+    "Software": "{\"value\":\"MACS\",\"link\":\"http://liulab.dfci.harvard.edu/MACS/\"}",
     "Position": "right"
   },
   {
@@ -23,7 +23,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Signal generation",
-    "Software": "BEDTools, MACS",
+    "Software": "{\"value\":\"BEDTools\",\"link\":\"https://www.encodeproject.org/software/bedtools/\"}, {\"value\":\"MACS\",\"link\":\"http://liulab.dfci.harvard.edu/MACS/\"}",
     "Position": "right"
   }
 ]

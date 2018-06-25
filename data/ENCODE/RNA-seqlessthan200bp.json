@@ -5,7 +5,7 @@
     "nextStepCount": 2,
     "parent": "",
     "step": "Read mapping",
-    "Software": "STAR",
+    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
     "Position": "right"
   },
   {
@@ -14,7 +14,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Signal generation",
-    "Software": "STAR",
+    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
     "Position": "left"
   },
   {

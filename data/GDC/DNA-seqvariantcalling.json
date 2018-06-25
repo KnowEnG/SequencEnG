@@ -5,7 +5,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Quality control of reads",
-    "Software": "FastQC",
+    "Software": "{\"value\":\"FastQC\",\"link\":\"https://www.bioinformatics.babraham.ac.uk/projects/fastqc/\"}",
     "Position": "right"
   },
   {
@@ -14,7 +14,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Read mapping",
-    "Software": "BWA mem, BWA aln",
+    "Software": "{\"value\":\"BWA mem, BWA aln\",\"link\":\"http://bio-bwa.sourceforge.net/\"}",
     "Position": "right"
   },
   {
@@ -23,7 +23,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Quality control after mapping",
-    "Software": "Picard tools, GATK",
+    "Software": "{\"value\":\"Picard tools\",\"link\":\"https://broadinstitute.github.io/picard/\"}, {\"value\":\"GATK\",\"link\":\"https://software.broadinstitute.org/gatk/\"}",
     "Position": "right"
   },
   {
@@ -32,7 +32,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Variant calling",
-    "Software": "Mutect2, VarScan2, MUSE, SomaticSniper",
+    "Software": "{\"value\":\"Mutect2\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/2339601\"}, {\"value\":\"VarScan2\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/22300766\"}, {\"value\":\"MUSE\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/27557938\"}, {\"value\":\"SomaticSniper\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/22155872\"}",
     "Position": "right"
   }
 ]
