@@ -5,7 +5,7 @@ $('.pipeline-systems button').click(function(){
 	$("#chart").empty();
 	$("#svgContainer svg path").remove();
 	$(".pipelines-selection").show();
-	
+	$(".curr-pipeline").text("");
 
 	let systemName = $(this).text();
 	let a = ['A','E','I','O', 'U'].indexOf(systemName.charAt(0))!==-1?'an':'a';
