@@ -32,7 +32,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Peak calling",
-    "Software": "{\"value\":\"MACS\",\"link\":\"http://liulab.dfci.harvard.edu/MACS/\"}",
+    "Software": "{\"value\":\"MACS2\",\"link\":\"https://github.com/taoliu/MACS\"}",
     "Position": "right"
   }
 ]

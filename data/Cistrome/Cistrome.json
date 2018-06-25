@@ -14,7 +14,7 @@
     "nextStepCount": 3,
     "parent": "",
     "step": "Peak calling",
-    "Software": "{\"value\":\"MAT\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/16895995\"} for Affymetrix, {\"value\": \"MA2C\", \"link\": \"https://www.ncbi.nlm.nih.gov/pubmed/17237761\"} for NimbleGen, {\"value\":\"MACS\",\"link\":\"http://liulab.dfci.harvard.edu/MACS/\"} for ChIP-seq, {\"value\":\"MM-ChIP\",\"link\":\"https://genomebiology.biomedcentral.com/articles/10.1186/gb-2011-12-2-r11\"}",
+    "Software": "{\"value\":\"MAT\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/16895995\"} for Affymetrix, {\"value\": \"MA2C\", \"link\": \"https://www.ncbi.nlm.nih.gov/pubmed/17237761\"} for NimbleGen, {\"value\":\"MACS2\",\"link\":\"https://github.com/taoliu/MACS\"} for ChIP-seq, {\"value\":\"MM-ChIP\",\"link\":\"https://genomebiology.biomedcentral.com/articles/10.1186/gb-2011-12-2-r11\"}",
     "Position": "right"
   },
   {
