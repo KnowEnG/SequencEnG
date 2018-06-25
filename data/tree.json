@@ -7,9 +7,9 @@
     "seq_fullname": "<strong>W</strong>hole <strong>G</strong>enome <strong>S</strong>equencing",
     "seq_fullname_old": "whole-genome sequencing",
     "year": "",
-    "paper_title": "Whole genome sequencing, Coming of age: ten years of next-generation sequencing technologies",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20238084, https://www.ncbi.nlm.nih.gov/pubmed/27184599",
-    "notes": "A sequencing method for obtaining whole-genome DNA sequences; typically uses short reads and relies on having a reference genome.",
+    "paper_title": "Whole genome sequencing, Coming of age: ten years of next-generation sequencing technologies, GATK website, McKenna et al. 2010 Genome Research (GATK framework paper), DePristo et al. 2011 Nature Genetics (GATK best practices 1.x and 2.x paper), Van der Auwera et al. 2013 Current Protocols In Bioinformatics (GATK Best Practices for Variant Discovery v2.x)",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20238084, https://www.ncbi.nlm.nih.gov/pubmed/27184599, https://software.broadinstitute.org/gatk/, http://www.ncbi.nlm.nih.gov/pubmed?term=20644199, http://www.ncbi.nlm.nih.gov/pubmed?term=21478889, http://www.ncbi.nlm.nih.gov/pubmed/?term=25431634",
+    "notes": "A sequencing method for obtaining whole-genome DNA sequences; typically uses short reads and relies on having a reference genome. Different sequencing methods include chain termination sequencing (sanger), sequencing by synthesis, sequencing by ligation, single-molecule real-time sequencing, and Nanopore sequencing, etc.. The figure below shows the steps of sequencing by synthesis.",
     "showRCR": 0,
     "": ""
   },

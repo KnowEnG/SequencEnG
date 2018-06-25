@@ -45,7 +45,7 @@ var pipeline_load = function(seq_name){
     name = "Bisulfite Sequencing";
   }
   if(name==='WGS'){
-    name = "WGS (Variant Discovery)";
+    name = "WGS (<a href='https://software.broadinstitute.org/gatk/best-practices/workflow?id=11145'>GATK best practices for calling germline SNPs + Indels</a>) ";
   }
   name = name.replace('_', " ");
   $(".pipeline-title").text('').append("Flowchart for <span style='color:coral;'>" + name + "</span>");
