@@ -1,8 +1,15 @@
 //pipeline system buttons
 $('.pipeline-systems button').click(function(){
 
+
+	$("#chart").empty();
+	$("#svgContainer svg path").remove();
+	$(".pipelines-selection").show();
+	
+
 	let systemName = $(this).text();
-	$(".pipeline-title").empty().append("Select <span style='color:coral;'>" + systemName + "</span> pipeline")
+	let a = ['A','E','I','O', 'U'].indexOf(systemName.charAt(0))!==-1?'an':'a';
+	$(".pipeline-title").empty().append("Select " + a + " <span style='color:coral;'> " + systemName + "</span> pipeline")
 	$.get('./data/'+ systemName + '/' + systemName + '-list.txt').done(function(data){
 			
 			let target = $('#select-resource-pipelines');
@@ -21,11 +28,24 @@ $('.pipeline-systems button').click(function(){
 					let name  = lists[i];
 					let id = name.replace(/[^a-zA-Z0-9\-]/g,'');
 
-					target.append("<div class = 'col-3 col-md-3'><button class='btn btn-outline-success' id = "
+					if(name.includes('200bp')){
+						if(name.includes("longer")){
+							name = "RNA-seq (transcripts &gt; 200bp)"
+						}
+						if(name.includes("shorter")){
+							name = "RNA-seq (transcripts &le; 200bp)"
+						}
+					}
+
+					target.append("<div class = 'col-12 col-md-3'><button class='btn btn-outline-success' id = "
 									+ id + ">" + name + "</button></div>");
 
 
 				}
+				if(systemName==='Cistrome'){
+					$(".pipelines-selection").hide();
+				}
+				
 
 			}).slideDown('slow', function(){
 
@@ -128,6 +148,10 @@ $('.pipeline-systems button').click(function(){
 						});
 					});
 
+					if(systemName==="Cistrome"){
+						$("#" + seq_id).click();
+
+					}
 
 
 				}
