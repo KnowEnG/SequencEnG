@@ -31,7 +31,7 @@
     "nextStep": 4,
     "nextStepCount": 1,
     "parent": "",
-    "step": "Peak calling and hotspots",
+    "step": "Calling peaks and hotspots",
     "Software": " {\"value\":\"Hotspot2\",\"link\":\"https://www.encodeproject.org/software/hotspot2/\"}, {\"value\":\"BEDOPS\",\"link\":\"https://www.encodeproject.org/software/bedops/\"}, {\"value\":\"modwt\",\"link\":\"https://www.encodeproject.org/software/modwt/\"}, {\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}",
     "Position": "right"
   },

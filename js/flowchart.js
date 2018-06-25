@@ -45,7 +45,7 @@ var pipeline_load = function(seq_name){
     name = "Bisulfite Sequencing";
   }
   if(name==='WGS'){
-    name = "WGS (Variant Discovery)";
+    name = "WGS (Variant Discovery from <a href='https://software.broadinstitute.org/gatk/'> GATK</a>) ";
   }
   name = name.replace('_', " ");
   $(".pipeline-title").text('').append("Flowchart for <span style='color:coral;'>" + name + "</span>");
