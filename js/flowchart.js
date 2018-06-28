@@ -112,7 +112,7 @@ var pipeline_load = function(seq_name){
           //bind button event 
            (function(id, target){
             
-          $("#" + id).click(function(){
+          $("#main #" + id).click(function(){
 
               target.makeTable();
               $(".table-info-text").empty().append("<ul><li>Scroll to the right to see more columns.</li><li>Packages for current analysis step are ranked based on <a href=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5012559/\">Relative Citation Ratio (RCR)</a>.</li> <li>More evaluations are summarized in the Features, Strength, and Limitation columns, based on review articles and methods comparison papers. </li></ul>");
@@ -254,8 +254,8 @@ var pipeline_load = function(seq_name){
                     $("div[id^=\'" + seq_name + "-" + target.orderNumber + "."  + "\']").slideDown('slow', function(){
                              $("#" + id).addClass("hassub-button-selected");
                            
-                            resetSVGsize();
-                            connectAll(seq_name, Blocks);
+                            resetSVGsize("#main");
+                            connectAll(seq_name, Blocks, "#main");
                     });
                    
                   }
@@ -274,8 +274,8 @@ var pipeline_load = function(seq_name){
                                $("#" + id).removeClass("hassub-button-selected");
                                
                              $(".table-row").hide();
-                              resetSVGsize();
-                              connectAll(seq_name, Blocks);
+                              resetSVGsize("#main");
+                              connectAll(seq_name, Blocks, "#main");
                     });
                     
                    
@@ -296,17 +296,17 @@ var pipeline_load = function(seq_name){
              //window resize event
              $(window).off();
                 $(window).resize(function(){
-                     $("#svgContainer svg path").remove();
+                     $("#main #svgContainer svg path").remove();
                    
-                    resetSVGsize();
-                    connectAll(seq_name, Blocks);
+                    resetSVGsize("#main");
+                    connectAll(seq_name, Blocks, "#main");
 
                     if($(window).width() < 900){
-                       $(".chart-row").removeClass("justify-content-center");
+                       $("#main .chart-row").removeClass("justify-content-center");
 
                     }
                     else{
-                        $(".chart-row").addClass("justify-content-center");
+                        $("#main .chart-row").addClass("justify-content-center");
                     }
                 });
 
@@ -347,8 +347,8 @@ var pipeline_load = function(seq_name){
             //draw paths
              $("#svgContainer").toggle('slow', function(){
 
-                  resetSVGsize();
-                  connectAll(seq_name, Blocks);
+                  resetSVGsize("#main");
+                  connectAll(seq_name, Blocks, "#main");
 
             });
 
@@ -382,29 +382,33 @@ var pipeline_load = function(seq_name){
 };
 
   
-function connectAll(seq_name, Blocks){
+function connectAll(seq_name, Blocks, layout){
  
+    let currentLayout = $(layout);
+  // console.log(currentLayout.height());
 
-    let i = 1; //unique id for path 
+   if(typeof currentLayout.height() !== 'undefined' && currentLayout.height() !== 0){
+
+     let i = 1; //unique id for path 
     for(let key in Blocks){
 
       
 
       if(Blocks[key].nextStep !== "" && $("div[id=\'" + Blocks[key].order + "\']").css('display') !== 'none'){
      
-        let nextBlock = $("div[id=\'" + seq_name + "-" + Blocks[key].nextStep.toString() + "\'] .block:first");
+        let nextBlock = $(layout + " div[id=\'" + seq_name + "-" + Blocks[key].nextStep.toString() + "\'] .block:first");
       
 
         //connect each top blocks to bottom blocks 
         for(let j = 0; j < Blocks[key].nextStepCount; j++){
           //append path
-          $("#svgContainer svg").append("<path id=\'path" + i + "\'/>");
+          $(layout + " #svgContainer svg").append("<path id=\'path" + i + "\'/>");
 
           //reset svg container
-          $("#svgContainer").html($("#svgContainer").html());
+          $(layout + " #svgContainer").html($("#svgContainer").html());
          
           //connect
-          connectElements($("#svg-pipe"), $("#path" + i), $("#" +key), nextBlock.find(".arrowTarget") );
+          connectElements($(layout + " #svg-pipe"), $(layout + " #path" + i), $(layout + " #" +key), nextBlock.find(".arrowTarget") , layout);
           
 
           nextBlock = nextBlock.next(); //find next target block 
@@ -415,6 +419,9 @@ function connectAll(seq_name, Blocks){
       }
             
   }
+
+   }
+   
 
 
 
