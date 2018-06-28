@@ -68,15 +68,8 @@ function drawPath(svg, path, startX, startY, endX, endY) {
    
 }
 
-function connectElements(svg, path, startElem, endElem) {
-    var svgContainer= $("#svgContainer");
-
-    // if first element is lower than the second, swap!
-    if(startElem.offset().top > endElem.offset().top){
-        var temp = startElem;
-        startElem = endElem;
-        endElem = temp;
-    }
+function connectElements(svg, path, startElem, endElem, layout) {
+    var svgContainer= $(layout + " #svgContainer");
 
     // get (top, left) corner coordinates of the svg container   
     var svgTop  = svgContainer.offset().top;
@@ -86,21 +79,27 @@ function connectElements(svg, path, startElem, endElem) {
     var startCoord = startElem.offset();
     var endCoord   = endElem.offset();
 
-    // calculate path's start (x,y)  coords
-    // we want the x coordinate to visually result in the element's mid point
-    var startX = startCoord.left + 0.5*startElem.outerWidth() - svgLeft;    // x = left offset + 0.5*width - svg's left offset
-    var startY = startCoord.top  + startElem.outerHeight() - svgTop;        // y = top offset + height - svg's top offset
+    if(typeof startCoord !== 'undefined' && typeof endCoord !== 'undefined'){
 
-        // calculate path's end (x,y) coords
-    var endX = endCoord.left + 0.5*endElem.outerWidth() - svgLeft;
-    var endY = endCoord.top  - svgTop;
+          // calculate path's start (x,y)  coords
+        // we want the x coordinate to visually result in the element's mid point
+        var startX = startCoord.left + 0.5*startElem.outerWidth() - svgLeft;    // x = left offset + 0.5*width - svg's left offset
+        var startY = startCoord.top  + startElem.outerHeight() - svgTop;        // y = top offset + height - svg's top offset
 
-    // call function for drawing the path
-    drawPath(svg, path, startX, startY, endX, endY);
+            // calculate path's end (x,y) coords
+        var endX = endCoord.left + 0.5*endElem.outerWidth() - svgLeft;
+        var endY = endCoord.top  - svgTop;
+
+        // call function for drawing the path
+        drawPath(svg, path, startX, startY, endX, endY);
+
+    }
+
+  
 }
-function resetSVGsize(){
-  $("#svg1").attr("height", "0");
-  $("#svg1").attr("width", "0"); 
+function resetSVGsize(layout){
+  $(layout+ " #svg-pipe").attr("height", "0");
+  $(layout + "#svg-pipe").attr("width", "0"); 
 }
 
 

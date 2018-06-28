@@ -2,14 +2,14 @@
 $('.pipeline-systems button').click(function(){
 
 
-	$("#chart").empty();
-	$("#svgContainer svg path").remove();
+	$("#resources #chart").empty();
+	$("#resources  #svgContainer svg path").remove();
 	$(".pipelines-selection").show();
 	$(".curr-pipeline").text("");
 
 	let systemName = $(this).text();
 	let a = ['A','E','I','O', 'U'].indexOf(systemName.charAt(0))!==-1?'an':'a';
-	$(".pipeline-title").empty().append("Select " + a + " <span style='color:coral;'> " + systemName + "</span> pipeline")
+	$("#resources  .pipeline-title").empty().append("Select " + a + " <span style='color:coral;'> " + systemName + "</span> pipeline")
 	$.get('./data/'+ systemName + '/' + systemName + '-list.txt').done(function(data){
 			
 			let target = $('#select-resource-pipelines');
@@ -55,11 +55,11 @@ $('.pipeline-systems button').click(function(){
 					let seq_name  = lists[i];
 					let link = links[i];
 					let seq_id = seq_name.replace(/[^a-zA-Z0-9\-]/g,'');
-					$("#" + seq_id).click(function(){
+					$("#resources  #" + seq_id).click(function(){
 
-						$(".curr-pipeline").text(seq_name);
-						$("#chart").empty();
-						$("#svgContainer svg path").remove();
+						$("#resources .curr-pipeline").text(seq_name);
+						$("#resources #chart").empty();
+						$("#resources #svgContainer svg path").remove();
 					
 						$.get('./data/'+ systemName + '/' + seq_id +'.json').done(function(data){
 								
@@ -82,10 +82,11 @@ $('.pipeline-systems button').click(function(){
 
 									
 
-										$("#" + stepName).click(function(){
+										$("#resources #" + stepName).click(function(){
+											
 
-											let container = $("#" + stepName + "-container .row");
-											let clicked = $("#" + stepName + "-container .row > .resource-tooltip");
+											let container = $("#resources #" + stepName + "-container .row");
+											let clicked = $("#resources #" + stepName + "-container .row > .resource-tooltip");
 											let tooltipPostion = "right";
 											
 											if(!clicked.length && softwares !== ""){
@@ -136,11 +137,26 @@ $('.pipeline-systems button').click(function(){
 
 
 								//connect Blocks 
-								resetSVGsize();
-                  				connectAll(seq_id, Blocks);
+								resetSVGsize("#resources");
+                  				connectAll(seq_id, Blocks, "#resources");
 
+                  			//	$(window).off();
+				                $(window).resize(function(){
+				                     $("#resources #svgContainer svg path").remove();
+				                   
+				                    resetSVGsize("#resources");
+				                    connectAll(seq_name, Blocks, "#resources");
 
-                  				$("#chart").append("<div class='row justify-content-center'><a target='_blank' href='" + link + "'>"+ link + "</a></div>")
+				                    if($(window).width() < 900){
+				                       $("#resources .chart-row").removeClass("justify-content-center");
+
+				                    }
+				                    else{
+				                        $("#resources .chart-row").addClass("justify-content-center");
+				                    }
+				                });
+
+                  				$("#resources #chart").append("<div class='row justify-content-center'><a target='_blank' href='" + link + "'>"+ link + "</a></div>")
 
 
 						}).fail(function(err){
