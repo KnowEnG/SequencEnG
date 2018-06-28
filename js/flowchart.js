@@ -47,6 +47,9 @@ var pipeline_load = function(seq_name){
   if(name==='WGS'){
     name = "WGS (<a href='https://software.broadinstitute.org/gatk/best-practices/workflow?id=11145'>GATK best practices for calling germline SNPs + Indels</a>) ";
   }
+  if(name==='WES'){
+    name = "WES (<a href='https://software.broadinstitute.org/gatk/best-practices/workflow?id=11146'>GATK best practices for calling somatic SNVs + Indels</a>) ";
+  }
   name = name.replace('_', " ");
   $(".pipeline-title").text('').append("Flowchart for <span style='color:coral;'>" + name + "</span>");
 

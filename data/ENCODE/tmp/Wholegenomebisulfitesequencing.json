@@ -1,0 +1,39 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Read mapping and filtering",
+    "Software": "{\"value\": \"TrimGalore\", \"link\": \"https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/\"}, {\"value\": \"cutadapt\", \"link\": \"https://cutadapt.readthedocs.io/en/stable/index.html\"}, {\"value\": \"Samtools\", \"link\": \"http://www.htslib.org/doc/samtools.html\"}, {\"value\": \"Bismark\", \"link\": \"https://www.bioinformatics.babraham.ac.uk/projects/bismark/\"}, {\"value\": \"Bowtie2\", \"link\": \"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Signal generation",
+    "Software": "{\"value\": \"Bismark\", \"link\": \"https://www.bioinformatics.babraham.ac.uk/projects/bismark/\"}, {\"value\": \"dme-bg-to-signal\", \"link\": \"https://www.encodeproject.org/software/dme-bg-to-signal/?version=1.0\" }",
+    "Position": "left"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Quantification",
+    "Software": "{\"value\": \"Bismark\", \"link\": \"https://www.bioinformatics.babraham.ac.uk/projects/bismark/\"}, {\"value\": \"cxrepo-bed.py\" , \"link\":\"https://www.encodeproject.org/software/cxrepo-bed.py/?version=0.2\"}, {\"value\": \"dme-extract-pe\", \"link\":\"https://github.com/ENCODE-DCC/dna-me-pipeline/blob/v2.0.1/dnanexus/dme-extract-pe/resources/usr/bin/dname_extract_pe.sh\"}",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Quality control",
+    "Software": "{\"value\": \"BEDTools\", \"link\": \"https://www.encodeproject.org/software/bedtools/\"}, {\"value\": \"CpG methylation correlation\", \"link\": \"https://github.com/ENCODE-DCC/dna-me-pipeline/blob/master/dnanexus/dme-rep-corr/resources/usr/bin/bedmethyl_corr.py\"}, {\"value\":\"dme-rep-corr\",\"link\":\"https://github.com/ENCODE-DCC/dna-me-pipeline/blob/v2.1.0/dnanexus/dme-rep-corr/resources/usr/bin/dname_bed_corr.sh\"}",
+    "Position": "right",
+    "Shift" : "end"
+  }
+]

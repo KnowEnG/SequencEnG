@@ -14,7 +14,7 @@ const introTragetOne = "DNA";
 const introTargetTwo = "TF Binding";
 const introTargetThree = "TF_ChIP-seq";
 
-const has_step = ["TF_ChIP-seq","Histone_ChIP-seq", "Hi-C", "RNA-seq", "WGBS","WGS"];
+const has_step = ["WGS","WES","TF_ChIP-seq","Histone_ChIP-seq", "RNA-seq","Hi-C","ChIA-PET", "WGBS"];
 
 
 var nodeDepthOne = 150;

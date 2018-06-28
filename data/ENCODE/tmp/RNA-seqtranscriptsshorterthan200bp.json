@@ -5,7 +5,7 @@
     "nextStepCount": 2,
     "parent": "",
     "step": "Read mapping",
-    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
+    "Software": "{\"value\" : \"STAR\", \"link\" : \"https://github.com/alexdobin/STAR\"}",
     "Position": "right"
   },
   {
@@ -14,7 +14,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Signal generation",
-    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
+    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}, {\"value\": \"bedGraphToBigWig\", \"link\": \"http://hgdownload.soe.ucsc.edu/admin/exe/\"}",
     "Position": "left"
   },
   {
@@ -23,7 +23,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Quantification",
-    "Software": "",
+    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
     "Position": "right"
   },
   {
@@ -31,8 +31,8 @@
     "nextStep": "",
     "nextStepCount": 0,
     "parent": "",
-    "step": "Trimming reads",
-    "Software": "Median Absolute Deviation",
+    "step": "Reproducibility evaluation",
+    "Software": "{\"value\": \"Median Absolute Deviation\", \"link\": \"https://www.encodeproject.org/data-standards/mad-qc/\"}",
     "Position": "right",
     "Shift" : "end"
   }

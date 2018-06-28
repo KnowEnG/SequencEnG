@@ -13,7 +13,7 @@
     "nextStep": 3,
     "nextStepCount": 2,
     "parent": "",
-    "step": "Quality control",
+    "step": "Read trimming",
     "Software": "{\"value\":\"Cutadapt\",\"link\":\"https://cutadapt.readthedocs.io/en/stable/index.html\"}",
     "Position": "right"
   },
@@ -23,7 +23,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Signal generation",
-    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
+    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}, {\"value\": \"bedGraphToBigWig\", \"link\": \"http://hgdownload.soe.ucsc.edu/admin/exe/\"}",
     "Position": "right"
   },
   {
@@ -32,7 +32,7 @@
     "nextStepCount": 0,
     "parent": "",
     "step": "Quantification",
-    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}",
+    "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"} ",
     "Position": "right"
   }
 ]

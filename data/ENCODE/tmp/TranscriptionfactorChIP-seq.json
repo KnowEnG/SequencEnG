@@ -1,0 +1,38 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Read mapping",
+    "Software": "{ \"value\" : \"BWA\", \"link\" : \"http://bio-bwa.sourceforge.net/\"}",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Quality control and filtering",
+    "Software": "{\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}, {\"value\":\"Picard\",\"link\":\"https://broadinstitute.github.io/picard/\"}, {\"value\":\"BEDTools\",\"link\":\"https://www.encodeproject.org/software/bedtools/\"}, {\"value\":\"Phantompeakqualtools\",\"link\":\"https://github.com/kundajelab/phantompeakqualtools\"} ",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Signal generation",
+    "Software": "{\"value\":\"MACS2\",\"link\":\"https://github.com/taoliu/MACS\" }",
+    "Position": "right"
+  },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Peak calling",
+    "Software": "{\"value\":\"SPP\",\"link\":\"https://www.encodeproject.org/software/spp/\"} ",
+    "Position": "right"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "order": 1,
+    "nextStep": 2,
+    "nextStepCount": 1,
+    "parent": "",
+    "step": "Read mapping",
+    "Software": "{\"value\": \"BWA\", \"link\":\"http://bio-bwa.sourceforge.net/\"}",
+    "Position": "right"
+  },
+  {
+    "order": 2,
+    "nextStep": 3,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Quality control and filtering",
+    "Software": "{\"value\":\"dnase_qc_bam.sh\", \"link\": \"https://github.com/ENCODE-DCC/dnase_pipeline/blob/v2.0/dnanexus/dnase-qc-bam/resources/usr/bin/dnase_qc_bam.sh\"}, {\"value\" : \"Hotspot\" , \"link\" : \"http://www.uwencode.org/software/hotspot\"},  {\"value\":\"SPP\", \"link\":\"http://compbio.med.harvard.edu/Supplements/ChIP-seq/\"}, {\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}, {\"value\":\"Picard\",\"link\":\"https://broadinstitute.github.io/picard/\"}, {\"value\":\"edwBamStats\",\"link\":\"https://github.com/ENCODE-DCC/kentUtils\"}, {\"value\":\"edwBamFilter\",\"link\":\"https://github.com/ENCODE-DCC/kentUtils/tree/master/src/hg/encode3/encodeDataWarehouse/utils/edwBamFilter\"}, {\"value\":\"Phantompeakqualtools\",\"link\":\"https://github.com/kundajelab/phantompeakqualtools\"}",
+    "Position": "right"
+  },
+  {
+	"order": 3,
+	"nextStep": "",
+	"nextStepCount" : 0,
+	"parent": "",
+	"step": "Nomalization and signal generation",
+	"Software": "{\"value\":\"dnase-density(ENCODE)\", \"link\":\"https://www.encodeproject.org/software/dnase-density/?version=1.0\" }, {\"value\": \"bedgraphtobigwig\", \"link\": \"http://hgdownload.soe.ucsc.edu/admin/exe/\" }, {\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\" }, {\"value\":\"BEDOPS\",\"link\":\"https://www.encodeproject.org/software/bedops/\"}",
+	"Position": "left"
+ },
+  {
+    "order": 3,
+    "nextStep": "",
+    "nextStepCount": 0,
+    "parent": "",
+    "step": "Calling peaks and hotspots",
+    "Software": " {\"value\":\"Hotspot2\",\"link\":\"https://www.encodeproject.org/software/hotspot2/\"}, {\"value\":\"BEDOPS\",\"link\":\"https://www.encodeproject.org/software/bedops/\"}, {\"value\":\"modwt\",\"link\":\"https://www.encodeproject.org/software/modwt/\"}, {\"value\":\"Samtools\",\"link\":\"http://www.htslib.org/doc/samtools.html\"}",
+    "Position": "right"
+  }
+]
