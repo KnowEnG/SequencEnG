@@ -15,7 +15,7 @@
     "parent": "",
     "step": "Signal generation",
     "Software": "{\"value\": \"Bismark\", \"link\": \"https://www.bioinformatics.babraham.ac.uk/projects/bismark/\"}, {\"value\": \"dme-bg-to-signal\", \"link\": \"https://www.encodeproject.org/software/dme-bg-to-signal/?version=1.0\" }",
-    "Position": "left"
+    "Position": "right"
   },
   {
     "order": 2,

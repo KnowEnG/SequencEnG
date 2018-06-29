@@ -31,7 +31,7 @@ h1 {
 
 /*Buttons*/
 .analysis-pipeline, .util-buttons {
-  max-width: 600px;
+  
 }
 .analysis-pipeline .row, .util-buttons .row{
   padding: 0 10px;
@@ -420,10 +420,12 @@ footer .img-box img{
   position: absolute;
   border : 1px solid black;
   border-radius: 5px;
-  min-width: 150px;
   text-align: center;
   display: none;
   background-color: white;
+  width: 250px;
+  z-index: 2;
+
 }
 
 .resource-tooltip-left{

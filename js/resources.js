@@ -1,4 +1,13 @@
 //pipeline system buttons
+
+if($(window).width() < 900){
+   $("#resources .chart-row").removeClass("justify-content-center");
+
+}
+else{
+    $("#resources .chart-row").addClass("justify-content-center");
+}
+
 $('.pipeline-systems button').click(function(){
 
 
@@ -145,7 +154,8 @@ $('.pipeline-systems button').click(function(){
 				                     $("#resources #svgContainer svg path").remove();
 				                   
 				                    resetSVGsize("#resources");
-				                    connectAll(seq_name, Blocks, "#resources");
+				                    connectAll(seq_id, Blocks, "#resources");
+				                    $(".resource-tooltip").hide();
 
 				                    if($(window).width() < 900){
 				                       $("#resources .chart-row").removeClass("justify-content-center");

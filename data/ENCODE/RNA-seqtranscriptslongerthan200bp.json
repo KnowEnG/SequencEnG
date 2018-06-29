@@ -15,7 +15,7 @@
     "parent": "",
     "step": "Signal generation",
     "Software": "{\"value\":\"STAR\",\"link\":\"https://github.com/alexdobin/STAR\"}, {\"value\": \"bedGraphToBigWig\", \"link\": \"http://hgdownload.soe.ucsc.edu/admin/exe/\"}",
-    "Position": "left"
+    "Position": "right"
   },
   {
     "order": 2,

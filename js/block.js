@@ -3,7 +3,7 @@ function Block(name, order, parent, nextStep,nextStepCount, seq_name){
 	//step name
 	this.name = name;
 
-	this.id = this.name.replace(/\s/g,''); 
+	this.id = name.replace(/[^a-zA-Z0-9]/g,''); 
 
 	//software datas
 	this.data = {};

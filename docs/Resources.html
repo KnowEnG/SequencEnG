@@ -1,4 +1,29 @@
-   <div id='resources' >		
+   <div id='resources' >	
+
+   <div class="row">
+			<div class="col-sm-12">
+				<div class="chart-wrapper">
+					<div class="chart-title">
+						How to use this page
+					</div>
+					<div class="chart-stage">
+
+						<div class="container-fluid">
+							
+							On this page, we provide pipelines from major consortia such as <a href="https://www.encodeproject.org/pipelines/">ENCODE</a>, <a href="https://www.ncbi.nlm.nih.gov/pubmed/21859476">Cistrome</a> and <a href="https://docs.gdc.cancer.gov/Data/Introduction/">Genomic Data Commons (GDC)</a>. The pipelines are provided as simplified versions of the original pipelines which are accessible via the website or paper cited for each pipeline. The simplification is just to keep the style consistent with our pipelines. A list of pipelines is shown upon clicking on a consortium button. We have provided only one pipeline for Cistrome, therefore the pipeline is directly provided upon selecting Cistrome. For other consortia, the user can select one of several pipelines to visualize an interactive pipeline in a flowchart style. Upon clicking each step in a pipeline, various software are listed with hyperlinks to their websites.
+						</div>
+						
+							
+					</div>
+					<div class="chart-notes">
+						
+					</div>
+				</div>
+			</div>
+			
+		
+		</div>
+
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="chart-wrapper">
@@ -70,7 +95,7 @@
 						<div class="container-fluid">
 
 								
-							<div class="row justify-content-center chart-row">
+							<div class="row chart-row justify-content-center">
 										
 										<div class="col-10 col-md-10" id="flowchart-wrapper">
 
@@ -115,4 +140,7 @@
 		
     </div>
 
-    <script type="text/javascript" src="./js/resources.js"></script>
+    <script>
+	var url = "./js/resources.js";
+	$.getScript(url);
+	</script>

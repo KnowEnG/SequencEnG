@@ -62,7 +62,7 @@ var pipeline_load = function(seq_name){
        
        for(let i= 0; i < data.length; i++){
           let name = data[i].step;
-          let key = name.replace(/\s/g,''); // steps 
+          let key = name.replace(/[^a-zA-Z0-9]/g,''); // steps 
 
           
 
