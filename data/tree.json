@@ -30,12 +30,12 @@
     "seq_goal_level2": "Whole genome",
     "seq_name": "Nextera: DNA library prep",
     "plot": 0,
-    "seq_fullname": "<strong>Nextera</strong>: DNA library preparation kit",
+    "seq_fullname": "<strong>Nextera</strong>: DNA library preparation kit, from Illumina",
     "seq_fullname_old": "DNA-library prep",
     "year": "",
-    "paper_title": "Illumina's Nextera DNA library preparation kit",
-    "paper_link": "https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-dna-flex.html",
-    "notes": "A DNA library preparation kit.",
+    "paper_title": "Illumina Nextera DNA kit for WGS (Enzymatic fragmentation), Illumina Nextera DNA Flex for WGS (Bead-linked fragmentation), Nextera DNA Exome for WES",
+    "paper_link": "https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-dna.html,https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-dna-flex.html,https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/truseq-rapid-exome.html",
+    "notes": "A DNA library preparation kit from whole-genome sequencing from Illumina. Transposomes are linked to beads, where DNA tagmentation and primer addition are done, followed by PCR amplicfication and sequencing.",
     "showRCR": 0
   },
   {
@@ -639,14 +639,14 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA",
-    "seq_name": "TrueSeq: DNA/RNA library prep",
+    "seq_name": "TruSeq: DNA/RNA library prep",
     "plot": 0,
-    "seq_fullname": "<strong>TrueSeq</strong>: an RNA and DNA library preparation kit",
+    "seq_fullname": "<strong>TruSeq</strong>: an RNA and DNA library preparation kit, from Illumina",
     "seq_fullname_old": "RNA-seq library prep",
     "year": "",
-    "paper_title": "TruSeq data sheet",
-    "paper_link": "https://www.illumina.com/content/dam/illumina-marketing/documents/products/datasheets/datasheet_truseq_sample_prep_kits.pdf",
-    "notes": "A library preparation kit that can be used for genomic DNA fragments, or double-stranded cDNA converted from RNA.",
+    "paper_title": "TruSeq RNA library preparation v2, A list of libary preparation kits from Illumina.",
+    "paper_link": "https://www.illumina.com/content/illumina-marketing/amr/en_US/products/by-type/sequencing-kits/library-prep-kits/truseq-rna-v2.html, https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits.html",
+    "notes": "A library preparation kit that can be used for genomic DNA fragments, or double-stranded cDNA converted from RNA. Thus, it is not only for RNA-seq, but also suitable for exome sequencing, DNA methylation sequencing, or whole-genome sequencing.",
     "showRCR": 0
   },
   {
