@@ -247,8 +247,8 @@ var pipeline_load = function(seq_name){
                     target.nextStep = target.orderNumber + "." + 1;
                      target.nextStepCount =  target.subStepCount;
 
-                     //margin substeps that has more than two 
-                     if( target.nextStepCount > 2){
+                     //margin substeps that has more than one
+                     if( target.nextStepCount > 1){
                            $("div[id^=\'" + seq_name + "-" + target.orderNumber + "."  + "\']").css('margin-right', '150px');
                      }
 
