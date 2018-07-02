@@ -11,7 +11,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20238084, https://www.ncbi.nlm.nih.gov/pubmed/27184599, https://software.broadinstitute.org/gatk/, http://www.ncbi.nlm.nih.gov/pubmed?term=20644199, http://www.ncbi.nlm.nih.gov/pubmed?term=21478889, http://www.ncbi.nlm.nih.gov/pubmed/?term=25431634",
     "notes": "A sequencing method for obtaining whole-genome DNA sequences; typically uses short reads and relies on having a reference genome. Different sequencing methods include chain termination sequencing (sanger), sequencing by synthesis, sequencing by ligation, single-molecule real-time sequencing, and Nanopore sequencing, etc.. The figure below shows the steps of sequencing by synthesis.",
     "showRCR": 0,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -25,7 +25,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25327137,https://www.ncbi.nlm.nih.gov/pubmed/25326703,https://www.ncbi.nlm.nih.gov/pubmed/25948246",
     "notes": "An experimental approach for genome-wide haplotyping based on contiguity-preserving transposition (CPT-seq) and combinatorial indexing.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -39,7 +39,7 @@
     "paper_link": "https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-dna-flex.html",
     "notes": "A DNA library preparation kit.",
     "showRCR": 0,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -53,7 +53,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19684571, https://www.ncbi.nlm.nih.gov/pubmed/26139844",
     "notes": "A targeted sequencing method for obtaining exonic sequences; can be used to detect exonic mutations; especially suitable for studying Mendelian diseases.",
     "showRCR": 0,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -67,7 +67,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17540862",
     "notes": "A sequencing method for mapping the locations of chosen DNA-binding proteins, such as transcription factors (TFs) and histones with epigenetic modifications.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -81,7 +81,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22153082",
     "notes": "A variation of ChIP-seq, using an exonuclease to increase the resolution of protein binding site identification; can reach single basepair accuracy.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -95,7 +95,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25607992",
     "notes": "A variation of ChIP-seq requiring as few as ~1000 cells to measure transcription binding sites.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -109,7 +109,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27530917",
     "notes": "A method for detecting the co-localization of two proteins or patterns, such as transcription facors or epigenetic modifications. The original paper measured the co-localization of H3K4me3 and H3K27me3 in bivalently modified nucleosomes.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -123,7 +123,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26355004",
     "notes": "Uses CRISPR/cas9 to engineer transcription factors (especially those lacking good antibodies), followed by ChIP-seq.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -137,7 +137,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28092692",
     "notes": "Uses a semiautomated microfluidic platform to characterize transcription factor binding affinities.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -151,7 +151,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26669278",
     "notes": "A method for measuring protein-DNA binding dynamics; fuses MNase with the protein of interest and uses calcium to control binding affinity and study binding dynamics.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -165,7 +165,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25622106",
     "notes": "Maps the genome-wide locations of ribonucleotides that can be incorporated into DNA during eukaryotic DNA replication.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "DNA",
@@ -179,7 +179,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25934506",
     "notes": "Maps the locations of DNA excision caused by DNA repair.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -193,7 +193,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17540862",
     "notes": "A widely used sequencing method for mapping the locations of DNA-binding components, such as transcription factors (TFs) and histones with epigenetic modifications.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -207,7 +207,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22986265",
     "notes": "A genome-wide sequencing method for DNA methylation quantification.",
     "showRCR": 0,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -221,7 +221,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/16224102",
     "notes": "A restricted method for sequencing methylated DNA in high-CpG genomic DNA; a variation of bisulfite sequencing that costs less than the whole-genome bisulfite sequencing.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -235,7 +235,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18612301, https://www.nature.com/nature/journal/v466/n7303/full/nature09165.html",
     "notes": "An antibody-based method for pulling down and sequencing methylated DNA; can reach 100-300 base pair resolution.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -249,7 +249,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20542119",
     "notes": "A sequencing method based on capturing methylated DNA using the MBD domain of MeCP2; uses a salt gradient to get DNA with different methylated CpG densities.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -263,7 +263,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19273619",
     "notes": "Uses methyl-sensitive restriction enzymes.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -277,7 +277,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20613842",
     "notes": "Unlike bisulfite sequencing, this method interogates unmethylated CpG sites; can reach single CpG site resolution.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -291,7 +291,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/24008380",
     "notes": "A method for discriminating between 5mC and 5hmC.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -305,7 +305,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19329998",
     "notes": "A method that first treats DNA with bisulfite, and then isolates selected locations for methylation profiling; uses designed probes of length ~100bp.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -319,7 +319,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22608086",
     "notes": "A sequencing method for mapping the locations of 5hmC in the genome.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -333,7 +333,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22466172",
     "notes": "A DNA methylation profiling method that needs only ~10 ng of input DNA,  which is  100-fold less than required by the conventional WGBS; also called t-WGBS (tagmentation based whole genome bisulfite sequencing).",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -347,7 +347,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22466171",
     "notes": "Detects DNA methylation mediated through histones by direct bisulfite sequencing of Polycomb H3K27me3-enriched DNA",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -361,7 +361,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18243105",
     "notes": "A high-throughput sequencing method for mapping genome-wide open chromatin regions.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -375,7 +375,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/24097267",
     "notes": "A method for mapping genome-wide open chromatin regions, requiring fewer cells than DNase-seq.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -389,7 +389,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20118932",
     "notes": "Uses formaldehyde to crosslink protein-bound DNA, leaving protein-free DNA fragments for sequencing.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -403,7 +403,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28655330",
     "notes": "Uses the DNA nicking enzyme Nt.CviPII to sequence open chromatin regions;  requires low cell counts.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -417,7 +417,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19706456",
     "notes": "An open chromatin mapping method that can be performed along with ChIP-seq; the DNA breakage pattern may be different from DNase-seq (see the original study).",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -431,7 +431,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25953818",
     "notes": "Uses a combinatorial barcoding technique to mark open chromatin regions in single cells.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -445,7 +445,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/11847345",
     "notes": "A method for testing a \"one-to-one\" interaction between two genomic regions.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -459,7 +459,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17033624",
     "notes": "A method for testing \"one-to-many\" interactions between a fixed genomic region of interest and a set of genomic regions.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -473,7 +473,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19706456",
     "notes": "A method for testing \"many-to-many\" interactions between a set of genomic regions and several genomic regions of interest.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -487,7 +487,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19815776",
     "notes": "A high-throughput method for profiling \"all-vs-all\" genome-wide interactions between any pairs of genomic regions.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -501,7 +501,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19890323",
     "notes": "A method for profiling genome-wide interactions between a given protein and any genomic region.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -515,7 +515,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27685100",
     "notes": "Similar to Hi-C, but can reach higher effective resolution (see the original study).",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -529,7 +529,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28024297",
     "notes": "Utilizes ionizing radiation to break DNA in interacting chomatin loci;  can obtain chromatin conformation structure at a 50-500 bp scale.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -543,7 +543,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26119342",
     "notes": "A sequencing method for nucleosome-resolution analysis of chromosome folding; micrococcal nuclease is used instead of restriction enzymes to fragment chromatin; reaches 1-200bp resolution.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -557,7 +557,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28135255",
     "notes": "Uses a combinatorial cellular indexing technique to map chromatin interactions in a single cell.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -571,7 +571,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22387027",
     "notes": "Maps the genome-wide locations of DNA-RNA hybrids (R-loops).",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -585,7 +585,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22025700",
     "notes": "Maps genome-wide nucleosome locations; utilizes micrococcal nuclease to cut DNA; known to have a GC-content bias.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -599,7 +599,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22722846",
     "notes": "A method for mapping nucleosome dyads by introducing a site-specific chemical cleavage; can reach base-pair resolution of nucleosome locations; serine 47 is mutated to a cystein in histone H4.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -613,7 +613,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26080409",
     "notes": "Utilizes MPE-Fe(II) to cleave chromatin with a minimal DNA sequence bias.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -627,7 +627,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22960375",
     "notes": "Can measure nucleosome locations and DNA methylation status from the same set of DNA, using fewer than 1 million cells.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -641,7 +641,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26751768",
     "notes": "A method for sequenceing purified Okazaki fragments at replication forks.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -655,7 +655,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25513782",
     "notes": "A useful method for profiling CRISPR off-target events.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "Epigenetics",
@@ -669,7 +669,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27626377",
     "notes": "Uses a small mount of DNA to profile histone modifications; recovers 85% of ENCODE peaks using as few as 500 cells.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -683,7 +683,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19015660",
     "notes": "A widely used sequencing method for quantifying gene-level or transcript-level expression.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -697,7 +697,7 @@
     "paper_link": "https://www.illumina.com/content/dam/illumina-marketing/documents/products/datasheets/datasheet_truseq_sample_prep_kits.pdf",
     "notes": "A library preparation kit that can be used for genomic DNA fragments, or double-stranded cDNA converted from RNA.",
     "showRCR": 0,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -711,7 +711,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/23615609",
     "notes": "A method for sequencing isoforms by circularizing the two ends of transcripts.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -725,7 +725,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21248844",
     "notes": "A method for sequencing the 3' ends of nascent transcripts associated with the RNA polymerase; uses an engineered RNAPII elongating complex from yeast.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -739,7 +739,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22362160",
     "notes": "A sequencing method that tags the 5' end of mRNA to profile transcriptional start sites; useful for annotating cell type-specific promoter usage.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -753,7 +753,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19056941",
     "notes": "A method for sequencing newly synthesized RNA; has resolution of ~50bp.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -767,7 +767,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/23430654",
     "notes": "Maps genome-wide distribution of transcriptionally engaged Pol II at base pair resolution; utilizes the fact that Pol II accumulates immediately downstream of promoters.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -781,7 +781,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21963238",
     "notes": "Maps interactions between non-coding RNA and chromatin; must design probes for specific lncRNAs.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -795,7 +795,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22575960",
     "notes": "Maps the m6A modification sites on RNA; also called MeRIPseq.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -809,7 +809,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21172659",
     "notes": "A method for capturing RNA-protein complexes; the RNA version of ChIP-seq.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -823,7 +823,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18978773",
     "notes": "A method for producing a fine-resolution mapping of RBP binding sites; uses a different RNA-RBP cross-linking method compared to PAR-CLIP.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -837,7 +837,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20371350",
     "notes": "A method for mapping the binding sites of RBPs and microRNA-binding proteins.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -851,7 +851,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19213877",
     "notes": "A method for profiling the locations of ribosomes on actively translated mRNAs; also called ribosome footprinting.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -865,7 +865,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/23558785",
     "notes": "A method for profiling RNA structure by utilizing enzymes that are specific to single-stranded or double-strand RNA.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -879,7 +879,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/21642531",
     "notes": "Uses the chemical \"1M7\" to map loops in folded RNA.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -893,7 +893,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/24270811",
     "notes": "Uses the chemical dimethyl sulphate (DMS) to measure the difference in base-pairing of RNA.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -907,7 +907,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26000488, https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
     "notes": "A single-cell technique for quickly profiling thousands of individual cells by separating them into nanoliter-sized aqueous droplets, associating a different barcode with each cell’s RNA, and sequencing them all together. See the paper references below for other scRNA-seq techniques.",
     "showRCR": 1,
-    "": ""
+   
   },
  {
     "seq_goal_level1": "RNA",
@@ -921,7 +921,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
     "notes": " The Chromium system can be used  for single cell RNA-seq, linked-reads sequencing, and other sequencing projects. The steps are similar to Drop-seq, but may have higher cell capture efficiency. See the paper references below for other scRNA-seq techniques.",
     "showRCR": 0,
-    "": ""
+   
   },
    {
     "seq_goal_level1": "RNA",
@@ -935,7 +935,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22820318, https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
     "notes": "A robust mRNA-Seq protocol that is also applicable to single cell assays; designed to improve on mRNA coverage. The second version, Smart-seq2, provides improvements over Smart-seq. See the paper references below for other scRNA-seq techniques.",
     "showRCR": 1,
-    "": ""
+   
   },
    {
     "seq_goal_level1": "RNA",
@@ -949,7 +949,7 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/29474909, https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
     "notes": "A high-throughput and low-cost scRNA-seq platform using simple, inexpensive devices. See the paper references below for other scRNA-seq techniques.",
     "showRCR": 1,
-    "": ""
+   
   },
   {
     "seq_goal_level1": "RNA",
@@ -963,6 +963,6 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
     "notes": "Uses a two-stage barcoding technique to label RNA from individual cells. Besides sci-RNA-seq, there are other single-cell RNA-seq techniques. See the paper references below for other scRNA-seq techniques.",
     "showRCR": 1,
-    "": ""
+   
   }
 ]

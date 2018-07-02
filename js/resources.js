@@ -13,10 +13,16 @@ $('.pipeline-systems button').click(function(){
 
 	$("#resources #chart").empty();
 	$("#resources  #svgContainer svg path").remove();
+
+
 	$(".pipelines-selection").show();
 	$(".curr-pipeline").text("");
 
 	let systemName = $(this).text();
+	if(systemName==='Cistrome'){
+		$(".pipelines-selection").hide();
+	}
+
 	let a = ['A','E','I','O', 'U'].indexOf(systemName.charAt(0))!==-1?'an':'a';
 	$("#resources  .pipeline-title").empty().append("Select " + a + " <span style='color:coral;'> " + systemName + "</span> pipeline")
 	$.get('./data/'+ systemName + '/' + systemName + '-list.txt').done(function(data){
@@ -51,9 +57,7 @@ $('.pipeline-systems button').click(function(){
 
 
 				}
-				if(systemName==='Cistrome'){
-					$(".pipelines-selection").hide();
-				}
+				
 				
 
 			}).slideDown('slow', function(){
@@ -157,6 +161,20 @@ $('.pipeline-systems button').click(function(){
 				                    connectAll(seq_id, Blocks, "#resources");
 				                    $(".resource-tooltip").hide();
 
+				                    for(let key in Blocks){
+				                    	let stepName = key;
+				    
+				                    	let buttonWidth =(($("#" + stepName + "-container .row").width()/2) + $("#" + stepName + "-container .row > button").width()/2 + 20) + 'px';
+										
+										let tooltipPostion = $("#" + stepName + "-container .row > .resource-tooltip").hasClass('resource-tooltip-right')?'left':'right';
+
+										$("#" + stepName + "-container .row > .resource-tooltip").css(tooltipPostion, buttonWidth);
+
+
+				                    }
+
+				                 
+
 				                    if($(window).width() < 900){
 				                       $("#resources .chart-row").removeClass("justify-content-center");
 
@@ -176,6 +194,7 @@ $('.pipeline-systems button').click(function(){
 
 					if(systemName==="Cistrome"){
 						$("#" + seq_id).click();
+						$("#" + seq_id).hide();
 
 					}
 

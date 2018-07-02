@@ -345,11 +345,13 @@ function searchTree(data, search, path){
      
         }
         
-
-       
-        $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
+          $specContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper)
+            $divContainer.append($specContainer, $imgBox, $divRowButton);
+             $(".show-chart").on('click', show_chart);
+       if(data.showRCR===1){
+          $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
          
-          if(response.data[0] && pmids && data.showRCR){
+          if(response.data[0] && pmids){
              $rcr.append('<div class="col-md-12">RCR(Relative Citation Ratio) : ' + response.data[0].relative_citation_ratio + '</div>');
             $rcr.append('<div class="col-md-12">Citation Counts : ' + response.data[0].citation_count + '</div>');
             $rcr.append('<div class="col-md-12">Citations per year : ' + response.data[0].citations_per_year + '</div>');
@@ -357,14 +359,13 @@ function searchTree(data, search, path){
           }
 
          
-          else if(response.data[0]===null && data.showRCR){
+          else if(response.data[0]===null){
             $rcr.append('<div class="col-md-12">Relative Citation Ratios are available for articles published between 1995 and 2017.</div>')
 
           }
            
-            $specContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper,$rcr)
-            $divContainer.append($specContainer, $imgBox, $divRowButton);
-            $(".show-chart").on('click', show_chart);
+            $specContainer.append($rcr);
+           
 
             if(!localStorage.getItem('intro_shown')){
               //global
@@ -372,6 +373,9 @@ function searchTree(data, search, path){
               show_intro();
             }
         });
+
+       }
+      
        
 
 
