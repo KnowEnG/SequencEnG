@@ -1,7 +1,7 @@
 [
   {
     "seq_goal_level1": "DNA",
-    "seq_goal_level2": "Whole genome ",
+    "seq_goal_level2": "Whole genome",
     "seq_name": "WGS",
     "plot": 1,
     "seq_fullname": "<strong>W</strong>hole <strong>G</strong>enome <strong>S</strong>equencing",
@@ -10,6 +10,34 @@
     "paper_title": "Whole genome sequencing, Coming of age: ten years of next-generation sequencing technologies, GATK website, McKenna et al. 2010 Genome Research (GATK framework paper), DePristo et al. 2011 Nature Genetics (GATK best practices 1.x and 2.x paper), Van der Auwera et al. 2013 Current Protocols In Bioinformatics (GATK Best Practices for Variant Discovery v2.x)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20238084, https://www.ncbi.nlm.nih.gov/pubmed/27184599, https://software.broadinstitute.org/gatk/, http://www.ncbi.nlm.nih.gov/pubmed?term=20644199, http://www.ncbi.nlm.nih.gov/pubmed?term=21478889, http://www.ncbi.nlm.nih.gov/pubmed/?term=25431634",
     "notes": "A sequencing method for obtaining whole-genome DNA sequences; typically uses short reads and relies on having a reference genome. Different sequencing methods include chain termination sequencing (sanger), sequencing by synthesis, sequencing by ligation, single-molecule real-time sequencing, and Nanopore sequencing, etc.. The figure below shows the steps of sequencing by synthesis.",
+    "showRCR": 0,
+    "": ""
+  },
+  {
+    "seq_goal_level1": "DNA",
+    "seq_goal_level2": "Whole genome",
+    "seq_name": "CPT-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>C</strong>ontiguity-<strong>P</strong>reserving <strong>T</strong>ransposition <strong>seq</strong>uencing",
+    "seq_fullname_old": "contiguity-preserving transposition sequencing",
+    "year": 2014,
+    "paper_title": "In vitro, long-range sequence information for de novo genome assembly via transposase contiguity.,Haplotype-resolved whole-genome sequencing by contiguity-preserving transposition and combinatorial indexing.,Haplotype-resolved genome sequencing: experimental methods and applications.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25327137,https://www.ncbi.nlm.nih.gov/pubmed/25326703,https://www.ncbi.nlm.nih.gov/pubmed/25948246",
+    "notes": "An experimental approach for genome-wide haplotyping based on contiguity-preserving transposition (CPT-seq) and combinatorial indexing.",
+    "showRCR": 1,
+    "": ""
+  },
+  {
+    "seq_goal_level1": "DNA",
+    "seq_goal_level2": "Whole genome",
+    "seq_name": "Nextera: DNA library prep",
+    "plot": 0,
+    "seq_fullname": "<strong>Nextera</strong>: DNA library preparation kit",
+    "seq_fullname_old": "DNA-library prep",
+    "year": "",
+    "paper_title": "Illumina's Nextera DNA library preparation kit",
+    "paper_link": "https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-dna-flex.html",
+    "notes": "A DNA library preparation kit.",
     "showRCR": 0,
     "": ""
   },
@@ -655,6 +683,20 @@
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19015660",
     "notes": "A widely used sequencing method for quantifying gene-level or transcript-level expression.",
     "showRCR": 1,
+    "": ""
+  },
+  {
+    "seq_goal_level1": "RNA",
+    "seq_goal_level2": "RNA",
+    "seq_name": "TrueSeq: DNA/RNA library prep",
+    "plot": 0,
+    "seq_fullname": "<strong>TrueSeq</strong>: an RNA and DNA library preparation kit",
+    "seq_fullname_old": "RNA-seq library prep",
+    "year": "",
+    "paper_title": "TruSeq data sheet",
+    "paper_link": "https://www.illumina.com/content/dam/illumina-marketing/documents/products/datasheets/datasheet_truseq_sample_prep_kits.pdf",
+    "notes": "A library preparation kit that can be used for genomic DNA fragments, or double-stranded cDNA converted from RNA.",
+    "showRCR": 0,
     "": ""
   },
   {
