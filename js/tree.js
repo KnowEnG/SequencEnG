@@ -16,6 +16,7 @@ const introTargetThree = "TF_ChIP-seq";
 
 const has_step = ["WGS", "WES", "RNA-seq", "TF_ChIP-seq", "Histone_ChIP-seq", "DNase-seq", "ChIA-PET", "Hi-C", "WGBS"];
 
+const scRNA = ["Drop-seq", "10X", "Smart-seq", "Microwell-seq", "sci-RNA-seq"];
 
 var nodeDepthOne = 150;
 var nodeDepthTwo = 220;
@@ -499,7 +500,7 @@ if(!isMobile){
   
   draw_tree();
 
-  $(".analysis-pipeline .row div button").click(click_pipeline_button);
+  $(".analysis-pipeline .dropdown .dropdown-menu .dropdown-item").click(click_pipeline_button);
 
   
 }
@@ -510,7 +511,7 @@ else{
 
   draw_table();
   
-  $(".analysis-pipeline .row div button").click(click_pipeline_button);
+  $(".analysis-pipeline .dropdown .dropdown-menu .dropdown-item").click(click_pipeline_button);
 
   $(".chart-row").removeClass("justify-content-center");
 
