@@ -499,7 +499,7 @@ if(!isMobile){
   
   draw_tree();
 
-  $(".analysis-pipeline .row div button").click(click_pipeline_button);
+  $(".analysis-pipeline .dropdown .dropdown-menu .dropdown-item").click(click_pipeline_button);
 
   
 }
@@ -510,7 +510,7 @@ else{
 
   draw_table();
   
-  $(".analysis-pipeline .row div button").click(click_pipeline_button);
+  $(".analysis-pipeline .dropdown .dropdown-menu .dropdown-item").click(click_pipeline_button);
 
   $(".chart-row").removeClass("justify-content-center");
 

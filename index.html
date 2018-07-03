@@ -92,15 +92,61 @@
 	
 			</div>
 
-			<div class="col-12 col-sm-12 col-md-8" data-step="12" data-intro="If you want to access the pipelines directly, click one of the buttons. ">
+			<div class="col-12 col-sm-12 col-md-6" data-step="12" data-intro="If you want to access the pipelines directly, click one of the buttons. ">
 
 				<div class="container">
 					<div class="chart-wrapper  analysis-pipeline">
 						<div class="chart-title">
 							Analysis Pipelines
 						</div>
+						
+						<div class="row justify-content-center">
+							<div class="dropdown col-md-4">
+						  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    DNA
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						    <a class="dropdown-item" data-seqname='WGS' href="#">WGS</a>
+						    <a class="dropdown-item" data-seqname='WES' href="#">WES</a>
+						    <a class="dropdown-item" data-seqname='WGBS' href="#">Bisulfite Sequencing</a>
+						  </div>
+						</div>
 
-						<div class="row ">
+						<div class="dropdown col-md-4">
+						  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    RNA
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						    <a class="dropdown-item" data-seqname='RNA-seq' href="#">RNA-seq</a>
+						   <!--  <a class="dropdown-item" data-seqname='scRNA-seq' href="#">scRNA-seq</a>
+						    <a class="dropdown-item" href="#">CLIP-seq</a> -->
+						  </div>
+						</div>
+						<div class="dropdown col-md-4">
+						  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						    Epigenetics
+						  </button>
+						  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						    <a class="dropdown-item" data-seqname='TF_ChIP-seq' href="#">TF ChIP-seq</a>
+						    <a class="dropdown-item" data-seqname='Histone_ChIP-seq' href="#">Histone ChIP-seq</a>
+						    <a class="dropdown-item" data-seqname='Hi-C' href="#">Hi-C</a>
+						    <a class="dropdown-item" data-seqname='DNase-seq' href="#">DNase-seq</a>
+
+						  <!--   <a class="dropdown-item" data-seqname='ChIA-PET' href="#">ChIA-PET</a>
+						    <a class="dropdown-item" data-seqname='ATAC-seq' href="#">ATAC-seq</a>
+						    <a class="dropdown-item" data-seqname='MNase-seq' href="#">MNase-seq</a> -->
+
+						  </div>
+						</div>
+
+
+
+						</div>
+						
+						<!-- <div class="row"></div>
+						<div class="row"></div> -->
+						
+						<!-- <div class="row ">
 							<div class="col-md-3"><button class="btn btn-outline-success" data-seqname='WGS'>
 								WGS
 							</button></div>
@@ -150,7 +196,7 @@
 								CLIP-seq 
 						</button></div>	
 						</div>
-						
+						 -->
 					</div>
 
 				</div>
