@@ -27,7 +27,7 @@
     "step": "Viewing read quality",
     "Software": "FastQC",
     "Description": "A quality control tool for high throughput raw sequence data.",
-    "Features": "It generates quality reports for NGS data and gives pass/fail results for the following checks: Per base sequence quality, Per sequence quality scores, Per base sequence content, Per base GC content, Per sequence GC content, Per base N content, Sequence Length Distribution, Sequence Duplication Levels, Overrepresented sequences, Kmer Content. It also has a Graphic User Interface.",
+    "Features": "It generates quality reports for NGS data and gives pass/fail results for the following checks: Per base sequence quality, Per sequence quality scores, Per base sequence content, Per base GC content, Per sequence GC content, Per base N content, Sequence length distribution, Sequence duplication levels, Overrepresented sequences, Kmer content. It also has a Graphic User Interface.",
     "Strength": "It is easy to use; provides visualization in HTML reports; can be used on Illumina, PacBio, 454 reads.",
     "RCR": "",
     "Limitation": "",
