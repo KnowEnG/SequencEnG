@@ -20,7 +20,7 @@
     "seq_fullname": "<strong>C</strong>ontiguity-<strong>P</strong>reserving <strong>T</strong>ransposition <strong>seq</strong>uencing",
     "seq_fullname_old": "contiguity-preserving transposition sequencing",
     "year": 2014,
-    "paper_title": "In vitro, long-range sequence information for de novo genome assembly via transposase contiguity.,Haplotype-resolved whole-genome sequencing by contiguity-preserving transposition and combinatorial indexing.,Haplotype-resolved genome sequencing: experimental methods and applications.",
+    "paper_title": "In vitro long-range sequence information for de novo genome assembly via transposase contiguity.,Haplotype-resolved whole-genome sequencing by contiguity-preserving transposition and combinatorial indexing.,Haplotype-resolved genome sequencing: experimental methods and applications.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25327137,https://www.ncbi.nlm.nih.gov/pubmed/25326703,https://www.ncbi.nlm.nih.gov/pubmed/25948246",
     "notes": "An experimental approach for genome-wide haplotyping based on contiguity-preserving transposition (CPT-seq) and combinatorial indexing.",
     "showRCR": 1
@@ -30,12 +30,12 @@
     "seq_goal_level2": "Whole genome",
     "seq_name": "Nextera: DNA library prep",
     "plot": 0,
-    "seq_fullname": "<strong>Nextera</strong>: DNA library preparation kit",
+    "seq_fullname": "<strong>Nextera</strong>: DNA library preparation kit, from Illumina",
     "seq_fullname_old": "DNA-library prep",
     "year": "",
-    "paper_title": "Illumina's Nextera DNA library preparation kit",
-    "paper_link": "https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-dna-flex.html",
-    "notes": "A DNA library preparation kit.",
+    "paper_title": "Illumina Nextera DNA kit for WGS (Enzymatic fragmentation), Illumina Nextera DNA Flex for WGS (Bead-linked fragmentation) with a nice animation showing how the kit works., Nextera DNA Exome for WES",
+    "paper_link": "https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-dna.html,https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/nextera-dna-flex.html,https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits/truseq-rapid-exome.html",
+    "notes": "A DNA library preparation kit for whole-genome sequencing from Illumina. Transposomes are linked to beads, where DNA tagmentation and primer addition are done, followed by PCR amplicfication and sequencing.",
     "showRCR": 0
   },
   {
@@ -639,14 +639,14 @@
   {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA",
-    "seq_name": "TrueSeq: DNA/RNA library prep",
+    "seq_name": "TruSeq: DNA/RNA library prep",
     "plot": 0,
-    "seq_fullname": "<strong>TrueSeq</strong>: an RNA and DNA library preparation kit",
+    "seq_fullname": "<strong>TruSeq</strong>: an RNA and DNA library preparation kit, from Illumina",
     "seq_fullname_old": "RNA-seq library prep",
     "year": "",
-    "paper_title": "TruSeq data sheet",
-    "paper_link": "https://www.illumina.com/content/dam/illumina-marketing/documents/products/datasheets/datasheet_truseq_sample_prep_kits.pdf",
-    "notes": "A library preparation kit that can be used for genomic DNA fragments, or double-stranded cDNA converted from RNA.",
+    "paper_title": "TruSeq RNA library preparation v2, TruSeq library preparation data sheet with a figure showing how the kit works on page3,A list of libary preparation kits from Illumina.",
+    "paper_link": "https://www.illumina.com/content/illumina-marketing/amr/en_US/products/by-type/sequencing-kits/library-prep-kits/truseq-rna-v2.html, https://www.illumina.com/content/dam/illumina-marketing/documents/products/datasheets/datasheet_truseq_sample_prep_kits.pdf, https://www.illumina.com/products/by-type/sequencing-kits/library-prep-kits.html",
+    "notes": "A library preparation kit that can be used for genomic DNA or double-stranded cDNA fragments. In addition to RNA-seq, it is thus also suitable for whole-genome sequencing, exome sequencing, or DNA methylation sequencing.",
     "showRCR": 0
   },
   {
@@ -841,7 +841,7 @@
     "year": 2015,
     "paper_title": "Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets, Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq (Current method): loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26000488, https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": "A single-cell technique for quickly profiling thousands of individual cells by separating them into nanoliter-sized aqueous droplets, associating a different barcode with each cell’s RNA, and sequencing them all together. See the paper references below for other scRNA-seq techniques.",
+    "notes": "A single-cell technique for quickly profiling thousands of individual cells by separating them into nanoliter-sized aqueous droplets, associating a different barcode with each cell’s RNA, and sequencing them all together. See the references below for other scRNA-seq techniques.",
     "showRCR": 1
   },
  {
@@ -854,7 +854,7 @@
     "year": 2012,
     "paper_title": "Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq: loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": " The Chromium system can be used  for single cell RNA-seq, linked-reads sequencing, and other sequencing projects. The steps are similar to Drop-seq, but may have higher cell capture efficiency. See the paper references below for other scRNA-seq techniques.",
+    "notes": " The Chromium system can be used  for single cell RNA-seq, linked-reads sequencing, and other sequencing projects. The steps are similar to Drop-seq, but may have higher cell capture efficiency. See the references below for other scRNA-seq techniques.",
     "showRCR": 0
   },
    {
@@ -867,7 +867,7 @@
     "year": 2012,
     "paper_title": "Full-length mRNA-Seq from single-cell levels of RNA and individual circulating tumor cells, Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq: loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22820318, https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": "A robust mRNA-Seq protocol that is also applicable to single cell assays; designed to improve on mRNA coverage. The second version, Smart-seq2, provides improvements over Smart-seq. See the paper references below for other scRNA-seq techniques.",
+    "notes": "A robust mRNA-Seq protocol that is also applicable to single cell assays; designed to improve on mRNA coverage. The second version, Smart-seq2, provides improvements over Smart-seq. See the references below for other scRNA-seq techniques.",
     "showRCR": 1
   },
    {
@@ -880,7 +880,7 @@
     "year": 2018,
     "paper_title": "Mapping the Mouse Cell Atlas by Microwell-Seq, Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq: loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/29474909, https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": "A high-throughput and low-cost scRNA-seq platform using simple, inexpensive devices. See the paper references below for other scRNA-seq techniques.",
+    "notes": "A high-throughput and low-cost scRNA-seq platform using simple, inexpensive devices. See the references below for other scRNA-seq techniques.",
     "showRCR": 1
   },
   {
@@ -893,7 +893,7 @@
     "year": 2017,
     "paper_title": "Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq: loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": "Uses a two-stage barcoding technique to label RNA from individual cells. Besides sci-RNA-seq, there are other single-cell RNA-seq techniques. See the paper references below for other scRNA-seq techniques.",
+    "notes": "Uses a two-stage barcoding technique to label RNA from individual cells. Besides sci-RNA-seq, there are other single-cell RNA-seq techniques. See the references below for other scRNA-seq techniques.",
     "showRCR": 1
   }
 ]

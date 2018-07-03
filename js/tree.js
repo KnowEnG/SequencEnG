@@ -16,6 +16,7 @@ const introTargetThree = "TF_ChIP-seq";
 
 const has_step = ["WGS", "WES", "RNA-seq", "TF_ChIP-seq", "Histone_ChIP-seq", "DNase-seq", "ChIA-PET", "Hi-C", "WGBS"];
 
+const scRNA = ["Drop-seq", "10X", "Smart-seq", "Microwell-seq", "sci-RNA-seq"];
 
 var nodeDepthOne = 150;
 var nodeDepthTwo = 220;
