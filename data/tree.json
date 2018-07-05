@@ -761,9 +761,9 @@
     "seq_fullname": "<strong>C</strong>ross-<strong>L</strong>inking <strong>I</strong>mmuno<strong>P</strong>recipitation and <strong>seq</strong>uencing",
     "seq_fullname_old": "cross-linking immunoprecipitation and sequencing",
     "year": 2008,
-    "paper_title": "HITS-CLIP: panoramic views of protein-RNA regulation in living cells.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18978773",
-    "notes": "A method for producing a fine-resolution mapping of RBP binding sites; uses a different RNA-RBP cross-linking method compared to PAR-CLIP.",
+    "paper_title": "HITS-CLIP: panoramic views of protein-RNA regulation in living cells., A review paper by Uhl et al, 2017",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18978773, https://www.ncbi.nlm.nih.gov/pubmed/28254606",
+    "notes": "A method for producing a fine-resolution mapping of RBP binding sites; uses a different RNA-RBP cross-linking method compared to PAR-CLIP. See the 2nd paper reference for a review paper including other CLIP-related experimental and computational methods.",
     "showRCR": 1
   },
   {
