@@ -348,7 +348,7 @@ function searchTree(data, search, path){
         
           $specContainer.append($divRowName, $divRowNote, $divRowYear, $divRowPaper)
             $divContainer.append($specContainer, $imgBox, $divRowButton);
-             $(".show-chart").on('click', show_chart);
+            
        if(data.showRCR===1){
           $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
          
@@ -688,6 +688,7 @@ function draw_tree(){
                 $("#desc").fadeIn('slow');
                 if(has_step.indexOf(d.data.name)!==-1){
                       pipeline_load(d.data.name);
+                       $(".show-chart").on('click', show_chart);
                   }
                 
             }
@@ -789,6 +790,7 @@ function draw_tree(){
 
                   if(has_step.indexOf(d.data.name)!==-1){
                       pipeline_load(d.data.name);
+                       $(".show-chart").on('click', show_chart);
                   }
                 
             }
@@ -835,6 +837,7 @@ function draw_tree(){
                 $("#desc").fadeIn('slow');
                 if(has_step.indexOf(d.data.name)!==-1){
                       pipeline_load(d.data.name);
+                       $(".show-chart").on('click', show_chart);
                   }
                 d.foundShow = true;
             }
@@ -1108,6 +1111,7 @@ function draw_table(){
 
                   if(has_step.indexOf(d.data.name)!==-1){
                       pipeline_load(d.data.name);
+                       $(".show-chart").on('click', show_chart);
                   }
             }
 
