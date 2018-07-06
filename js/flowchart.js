@@ -255,7 +255,7 @@ var pipeline_load = function(seq_name){
 
                      //redraw flow chart
                     $("div[id^=\'" + seq_name + "-" + target.orderNumber + "."  + "\']").slideDown('slow', function(){
-                             $("#" + id).addClass("hassub-button-selected");
+                          //   $("#" + id).addClass("hassub-button-selected");
                            
                             resetSVGsize("#main");
                             connectAll(seq_name, Blocks, "#main");

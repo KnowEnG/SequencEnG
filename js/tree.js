@@ -247,7 +247,7 @@ function searchTree(data, search, path){
 
   function show_description(data){
 
-      let checkStep = has_step.indexOf(data.seq_name)!==-1?true:false;
+      let checkStep = (has_step.concat(scRNA)).indexOf(data.seq_name)!==-1?true:false;
 
       let name = data.name.replace("_", " ");
 
@@ -686,8 +686,9 @@ function draw_tree(){
                 
                 $descText.fadeIn('slow');
                 $("#desc").fadeIn('slow');
-                if(has_step.indexOf(d.data.name)!==-1){
-                      pipeline_load(d.data.name);
+                if((has_step.concat(scRNA)).indexOf(d.data.name)!==-1){
+                      let pipe_load_name = scRNA.indexOf(d.data.name)!==-1?'scRNA-seq':d.data.name;
+                      pipeline_load(pipe_load_name);
                        $(".show-chart").on('click', show_chart);
                   }
                 
@@ -765,7 +766,7 @@ function draw_tree(){
               name = name.replace("_", " ");
           }
 
-          return name + (has_step.indexOf(d.data.name)!==-1?"*":""); })
+          return name + ((has_step.concat(scRNA)).indexOf(d.data.name)!==-1?"*":""); })
         .on("click", function(d){
           
           
@@ -788,8 +789,9 @@ function draw_tree(){
                 $descText.fadeIn('slow');
                 $("#desc").fadeIn('slow');
 
-                  if(has_step.indexOf(d.data.name)!==-1){
-                      pipeline_load(d.data.name);
+                  if((has_step.concat(scRNA)).indexOf(d.data.name)!==-1){
+                      let pipe_load_name = scRNA.indexOf(d.data.name)!==-1?'scRNA-seq':d.data.name;
+                      pipeline_load(pipe_load_name);
                        $(".show-chart").on('click', show_chart);
                   }
                 
@@ -835,8 +837,9 @@ function draw_tree(){
                 
                 $descText.fadeIn('slow');
                 $("#desc").fadeIn('slow');
-                if(has_step.indexOf(d.data.name)!==-1){
-                      pipeline_load(d.data.name);
+                if((has_step.concat(scRNA)).indexOf(d.data.name)!==-1){
+                      let pipe_load_name = scRNA.indexOf(d.data.name)!==-1?'scRNA-seq':d.data.name;
+                      pipeline_load(pipe_load_name);
                        $(".show-chart").on('click', show_chart);
                   }
                 d.foundShow = true;
@@ -1104,13 +1107,12 @@ function draw_table(){
 
                 $("#desc").html($descText);
 
-                 $(".show-chart").on('click', show_chart);
-
                 $descText.fadeIn('slow');
                 $("#desc").fadeIn('slow');
 
-                  if(has_step.indexOf(d.data.name)!==-1){
-                      pipeline_load(d.data.name);
+                  if((has_step.concat(scRNA)).indexOf(d.data.name)!==-1){
+                      let pipe_load_name = scRNA.indexOf(d.data.name)!==-1?'scRNA-seq':d.data.name;
+                      pipeline_load(pipe_load_name);
                        $(".show-chart").on('click', show_chart);
                   }
             }
