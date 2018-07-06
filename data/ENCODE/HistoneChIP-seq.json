@@ -5,7 +5,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Read mapping",
-    "Software": "BWA",
+    "Software": "{\"value\": \"BWA\", \"link\":\"http://bio-bwa.sourceforge.net/\"}",
     "Position": "right"
   },
   {

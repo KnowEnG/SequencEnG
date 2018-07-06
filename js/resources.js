@@ -70,7 +70,7 @@ $('.pipeline-systems button').click(function(){
 					let seq_id = seq_name.replace(/[^a-zA-Z0-9\-]/g,'');
 					$("#resources  #" + seq_id).click(function(){
 
-						$("#resources .curr-pipeline").text(seq_name);
+						$("#resources .curr-pipeline").empty().append("<span style='color:coral;'>" + seq_name + "</span>");
 						$("#resources #chart").empty();
 						$("#resources #svgContainer svg path").remove();
 					
