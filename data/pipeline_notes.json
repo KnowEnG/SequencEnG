@@ -1,0 +1,54 @@
+[
+{
+	"seq_name": "WGS",
+	"note": "<li> An example description with {\"value\": \"some text\", \"link\": \"some link\"}</li>."
+},
+{
+	"seq_name": "WES",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "RNA-seq",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "scRNA-seq",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "CLIP-seq",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "TF_ChIP-seq",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "Histone_ChIP-seq",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "Hi-C",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "ChIA-PET",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "DNase-seq",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "ATAC-seq",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "Bisulfite sequencing",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+},
+{
+	"seq_name": "MNase-seq",
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
+}
+]
