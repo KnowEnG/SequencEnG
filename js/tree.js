@@ -11,7 +11,7 @@ const TREE_HEIGHT = 1500;
 
 //intro
 const introTragetOne = "Epigenetics";
-const introTargetTwo = "TF Binding";
+const introTargetTwo = "TF binding";
 const introTargetThree = "TF_ChIP-seq";
 
 const has_step = ["WGS", "WES", "RNA-seq", "CLIP-seq", "TF_ChIP-seq", "Histone_ChIP-seq", "DNase-seq", "ATAC-seq","ChIA-PET", "Hi-C", "WGBS"];
@@ -33,14 +33,12 @@ var intro = introJs();
 
  intro.setOption("showStepNumbers", false).onbeforechange(function(targetElement) {
 
-            if(this._currentStep === 9){
-              $("#peakcalling").click();
-            }
+        
             if(this._currentStep >= 8 && this._currentStep !== 11){
 
               if($('#main').css('display')==='none'){
                 $(".show-chart").click();
-                
+               
               }
 
               
@@ -370,7 +368,7 @@ function searchTree(data, search, path){
 
             if(!localStorage.getItem('intro_shown')){
               //global
-              pipeline_load(data.seq_name);
+              
               show_intro();
             }
         });
@@ -431,15 +429,6 @@ $.getJSON("./data/tree.json")
         if(typeof dataObject[data[i].seq_goal_level1] !== 'undefined'){
           let leafNode = data[i];
           leafNode.name = data[i].seq_name;
-
-          //set intro
-          if(leafNode.name === introTargetThree && !localStorage.getItem('intro_shown')){
-            let $introDesc =  show_description(data[i]);
-
-              $("#desc").html($introDesc);
-
-
-          }
 
 
           if(typeof dataObject[data[i].seq_goal_level1].child[data[i].seq_goal_level2] !== "undefined"){
@@ -529,6 +518,26 @@ function show_chart(){
     $("#main").delay('850').slideDown('slow',function(){
         $("#chart-button").click();
 
+        if(!localStorage.getItem('intro_shown')){
+           $("#Peakcalling").click();
+
+            let offset = $(".introjs-showElement").offset();
+                  let introwidth = $(".introjs-showElement").width();
+                  let introheight = $(".introjs-showElement").height();
+                  $('.introjs-helperLayer').css('left', offset.left);
+                  $('.introjs-helperLayer').css('top', offset.top);
+                  $('.introjs-helperLayer').height(introheight+10);
+                  $('.introjs-helperLayer').width(introwidth+10);
+
+                  $('.introjs-tooltipReferenceLayer').css('left', offset.left);
+                  $('.introjs-tooltipReferenceLayer').css('top', offset.top);
+                  $('.introjs-tooltipReferenceLayer').height(introheight+10);
+                  $('.introjs-tooltipReferenceLayer').width(introwidth+10);
+
+                  $('.introjs-tooltip').css('bottom', introheight+10);
+                  $('.introjs-arrow').removeClass('left').addClass('bottom');
+        }
+
 
     });
   
@@ -560,20 +569,13 @@ function draw_tree(){
       .attr("transform", "translate("
             + margin.left + "," + margin.top + ")");
 
-  //let svg_width = $("svg").width();
-
-
-  // let box_size =  ($(window).width() - svg_width);
-         
-  // $("#desc").css("width", box_size);
+ 
  
   let i = 0,
       duration = 750,
       root;
 
-  // let tree_detail_box_width = box_size + TREE_FIELD_WIDTH;
-
-  // $(".tree-field").width(tree_detail_box_width);
+ 
 
   //tree option buttons 
    $("#expand-all").click(() => expandAll(root, update));
@@ -728,7 +730,14 @@ function draw_tree(){
           else if(d.data.name === introTargetThree && d.parent.data.name === introTargetTwo){
             if(!localStorage.getItem('intro_shown')){
 
-             d.selected = 'selected';
+              //set intro
+              pipeline_load(d.data.name);
+              let $introDesc =  show_description(d.data);
+
+              $("#desc").html($introDesc);
+              $(".show-chart").on('click', show_chart);  
+
+              d.selected = 'selected';
             }
             return "5";
           }

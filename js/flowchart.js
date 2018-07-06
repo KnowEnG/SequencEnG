@@ -357,21 +357,7 @@ var pipeline_load = function(seq_name){
 
              //intro
              if(!localStorage.getItem('intro_shown')){
-              let offset = $(".introjs-showElement").offset();
-                  let introwidth = $(".introjs-showElement").width();
-                  let introheight = $(".introjs-showElement").height();
-                  $('.introjs-helperLayer').css('left', offset.left);
-                  $('.introjs-helperLayer').css('top', offset.top);
-                  $('.introjs-helperLayer').height(introheight+10);
-                  $('.introjs-helperLayer').width(introwidth+10);
-
-                  $('.introjs-tooltipReferenceLayer').css('left', offset.left);
-                  $('.introjs-tooltipReferenceLayer').css('top', offset.top);
-                  $('.introjs-tooltipReferenceLayer').height(introheight+10);
-                  $('.introjs-tooltipReferenceLayer').width(introwidth+10);
-
-                  $('.introjs-tooltip').css('bottom', introheight+10);
-                  $('.introjs-arrow').removeClass('left').addClass('bottom');
+             
              }
 
 
