@@ -148,7 +148,7 @@
     "Software": "Bowtie2",
     "Description": "Bowtie 2 is an ultrafast and memory-efficient tool for aligning sequencing reads to long reference sequences.",
     "Features": "Bowtie2 first extracts \"seed\" substrings in reads, aligns seeds in an ungapped way, and then performs extension in a gapped way.",
-    "Strength": "Bowtie 2 supports gapped, local, and paired-end alignment modes. It indexes the genome with an FM Index to keep its memory footprint small: for the human genome, its memory footprint is typically around 3.2 GB. For reads longer than about 50 bp, Bowtie 2 is generally faster, more sensitive, and uses less memory than Bowtie 1. It is particularly good at aligning reads of about 50 up to 100s or 1,000s of characters, and good at aligning to relatively long (i.e. mammalian) genomes.  {\"value\":\"see Bowtie2 page\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}",
+    "Strength": "It is used by the ATAC-seq pipeline package {\"value\": \"esATAC\", \"link\": \"https://www.ncbi.nlm.nih.gov/pubmed/29522192\"}, and the ATAC-seq tutorial from {\"value\": \"here\", \"link\": \"https://informatics.fas.harvard.edu/atac-seq-guidelines.html\"}. Bowtie 2 supports gapped, local, and paired-end alignment modes. It indexes the genome with an FM Index to keep its memory footprint small: for the human genome, its memory footprint is typically around 3.2 GB. For reads longer than about 50 bp, Bowtie 2 is generally faster, more sensitive, and uses less memory than Bowtie 1. It is particularly good at aligning reads of about 50 up to 100s or 1,000s of characters, and good at aligning to relatively long (i.e. mammalian) genomes.  {\"value\":\"see Bowtie2 page\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/index.shtml\"}",
     "RCR": "",
     "Limitation": "For relatively short reads (e.g. less than 50 bp) Bowtie 1 is sometimes faster and more sensitive than Bowtie 2. {\"value\":\"see this\",\"link\":\"http://bowtie-bio.sourceforge.net/bowtie2/faq.shtml\"}",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
@@ -201,8 +201,8 @@
   },
   {
     "order": 3.1,
-    "nextStep": 4,
-    "nextStepCount": 1,
+    "nextStep": 3.2,
+    "nextStepCount": 2,
     "parent": "Quality control after mapping",
     "step": "Viewing mapping statistics",
     "Software": "SAMtools",
@@ -220,14 +220,14 @@
     "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19505943"
   },
   {
-    "order": 3.1,
+    "order": 3.2,
     "nextStep": 4,
     "nextStepCount": 1,
     "parent": "Quality control after mapping",
     "step": "Assessing ATAC-seq data quality",
     "Software": "ATACseqQC",
     "Description": "ATAC-seq post-alignment quality control",
-    "Features": "\"ATACseqQC package not only includes most of the commonly adopted QA metrics such as fragment size distribution, mitochondrial read fraction, duplication rate, and aggregated read distribution along proximal promoters, but also provides new functionalities such as gene-centric view of signal distribution, library complexity evaluation and sequencing depth analysis.\" (see {\"value\": \"the package paper\", \"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/29490630\"})",
+    "Features": "\"ATACseqQC package not only includes most of the commonly adopted QA metrics such as fragment size distribution, {\"value\": \"mitochondrial read fraction\", \"text\": \"It is a known issue that ATAC-seq datasets can contain lots of mitochondrial reads that need to be removed. \"}, duplication rate, and aggregated read distribution along proximal promoters, but also provides new functionalities such as gene-centric view of signal distribution, library complexity evaluation and sequencing depth analysis.\" (see {\"value\": \"the package paper\", \"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/29490630\"})",
     "Strength": "",
     "RCR": "",
     "Limitation": "",
@@ -240,7 +240,7 @@
     "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/29490630"
   },
   {
-    "order": 3.1,
+    "order": 3.2,
     "nextStep": 4,
     "nextStepCount": 1,
     "parent": "Quality control after mapping",
@@ -260,7 +260,7 @@
     "Paper": "NA"
   },
   {
-    "order": 3.1,
+    "order": 3.2,
     "nextStep": 4,
     "nextStepCount": 1,
     "parent": "Quality control after mapping",
@@ -324,7 +324,7 @@
     "Software": "F-Seq",
     "Description": "Originally developed particularly for DNase-seq data, F-Seq summarizes the data over genomic loci.",
     "Features": "F-Seq offers fragment length estimation, enforces strandedness, corrects for copy number and uses a background model that takes into account repeat sequences in the DNA.",
-    "Strength": "F-Seq runs relatively faster than most other peak callers as benchmarked by {\"value\":\"Koohy et al., (2014) PLoS One\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/24810143\"}. F-Seq also does not require control and mappability data.",
+    "Strength": "It is used by the ATAC-seq analysis pipeline package It is used by the ATAC-seq pipeline package {\"value\": \"esATAC\", \"link\": \"https://www.ncbi.nlm.nih.gov/pubmed/29522192\"}. F-Seq runs relatively faster than most other peak callers as benchmarked by {\"value\":\"Koohy et al., (2014) PLoS One\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/24810143\"}. F-Seq also does not require control and mappability data.",
     "RCR": "",
     "Limitation": "",
     "Format_input": "BED",
@@ -350,6 +350,26 @@
     "Platform requirement": "Perl, C++",
     "Link": "http://homer.ucsd.edu/homer/ngs/peaks.html",
     "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/20513432"
+  },
+    {
+    "order": 4,
+    "nextStep": 5,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Peak calling",
+    "Software": "DFilter",
+    "Description": "ROC-AUC maximizing detection filter (DFilter)",
+    "Features": "It needs positive training sets that can be estimated from the dataset. Based on the positive sets, it constructs filters to detect signal above the noise which is assumed Gaussian distribution. ",
+    "Strength": "It can also be used on histone and TF ChIP-seq, DNase-seq and FAIRE-seq data.",
+    "RCR": "",
+    "Limitation": "",
+    "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
+    "Good for ChIP target: {\"value\":\"TF\",\"text\":\"Transcription Factor, has narrow signal\"} or {\"value\":\"histone\",\"text\":\"Histone modification, has broad signal. Besides, PolII ChIP-seq signal is between the narrow signal as TF has, and the broad signal as histone modification has.\"}": "",
+    "Format_input": "BED, BedGraph, SAM, BAM",
+    "Format_output": "Text, BED",
+    "Platform requirement": "Linux, Matlab",
+    "Link": "http://collaborations.gis.a-star.edu.sg/~cmb6/kumarv1/dfilter/",
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/23770639"
   },
   {
     "order": 4,
@@ -390,6 +410,26 @@
     "Platform requirement": "R",
     "Link": "https://code.google.com/archive/p/zinba/",
     "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/21787385"
+  },
+  {
+    "order": 4,
+    "nextStep": 5,
+    "nextStepCount": 2,
+    "parent": "",
+    "step": "Peak calling",
+    "Software": "esATAC",
+    "Description": "An Easy-to-use Systematic pipeline for ATACseq data analysis.",
+    "Features": "The packages uses F-seq as the peak caller. Besides, \"it covers raw sequencing reads preprocessing (FASTQ files), reads alignment (Rbowtie2), aligned reads file operations (SAM, BAM, and BED files), peak calling (F-seq), genome annotations (Motif, GO, SNP analysis) and quality control report.\" (see link)",
+    "Strength": "It organizes a complete analysis pipeline.",
+    "RCR": "",
+    "Limitation": "Consumes more memory and significantly longer runtime compared to other peak calling software  (benchmarked by  {\"value\":\"Koohy et al., (2014) PLoS One\",\"link\":\"https://www.ncbi.nlm.nih.gov/pubmed/24810143\"}).",
+    "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
+    "Good for ChIP target: {\"value\":\"TF\",\"text\":\"Transcription Factor, has narrow signal\"} or {\"value\":\"histone\",\"text\":\"Histone modification, has broad signal. Besides, PolII ChIP-seq signal is between the narrow signal as TF has, and the broad signal as histone modification has.\"}": "",
+    "Format_input": "FASTQ, BAM",
+    "Format_output": "Text, plots",
+    "Platform requirement": "R",
+    "Link": "https://www.bioconductor.org/packages/release/bioc/html/esATAC.html",
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/29522192"
   },
   {
     "order": 5,
@@ -478,17 +518,17 @@
     "parent": "",
     "step": "Nucleosome mapping",
     "Software": "NucleoATAC",
-    "Description": "",
-    "Features": "",
-    "Strength": "",
+    "Description": "Python package for calling nucleosomes using ATAC-seq data.",
+    "Features": "The original paper analyzed ATAC-seq data for nucleosome positioning in <i>Saccharomyces cerevisiae</i>. Bowtie2 and MACS2 are used in the pacakge. ",
+    "Strength": "Besides python, also has a R package {\"value\": \"NucleoATACR\", \"link\":\"https://github.com/GreenleafLab/NucleoATACR/\"}",
     "RCR": "",
     "Limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "Good for ChIP target: {\"value\":\"TF\",\"text\":\"Transcription Factor, has narrow signal\"} or {\"value\":\"histone\",\"text\":\"Histone modification, has broad signal. Besides, PolII ChIP-seq signal is between the narrow signal as TF has, and the broad signal as histone modification has.\"}": "",
-    "Format_input": "",
-    "Format_output": "",
-    "Platform requirement": "",
-    "Link": "",
-    "Paper": ""
+    "Format_input": "BAM",
+    "Format_output": "Text",
+    "Platform requirement": "Python",
+    "Link": "https://github.com/GreenleafLab/NucleoATAC",
+    "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/26314830"
   }
 ]
