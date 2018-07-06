@@ -405,7 +405,7 @@
     "nextStepCount": 5,
     "parent": "",
     "step": "Peak calling",
-    "Software": "Homer-findPeaks",
+    "Software": "Homer - findPeaks",
     "Description": "Software for motif discovery and next-gen sequencing analysis (Homer)",
     "Features": "It has 7 basic operations: factor, histone, super (super enhancer ), groseq, tss, dnase, mC(DNA methylation). It assumes the local density of tags in the data follows a Poisson distribution. Input of control data is highly recommended.",
     "Strength": "Homer suite in general has a good tutorial to follow.",

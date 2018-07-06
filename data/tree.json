@@ -15,19 +15,6 @@
   {
     "seq_goal_level1": "DNA",
     "seq_goal_level2": "Whole genome",
-    "seq_name": "CPT-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>C</strong>ontiguity-<strong>P</strong>reserving <strong>T</strong>ransposition <strong>seq</strong>uencing",
-    "seq_fullname_old": "contiguity-preserving transposition sequencing",
-    "year": 2014,
-    "paper_title": "In vitro long-range sequence information for de novo genome assembly via transposase contiguity.,Haplotype-resolved whole-genome sequencing by contiguity-preserving transposition and combinatorial indexing.,Haplotype-resolved genome sequencing: experimental methods and applications.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25327137,https://www.ncbi.nlm.nih.gov/pubmed/25326703,https://www.ncbi.nlm.nih.gov/pubmed/25948246",
-    "notes": "An experimental approach for genome-wide haplotyping based on contiguity-preserving transposition (CPT-seq) and combinatorial indexing.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "Whole genome",
     "seq_name": "Nextera: DNA library prep",
     "plot": 0,
     "seq_fullname": "<strong>Nextera</strong>: DNA library preparation kit, from Illumina",
@@ -53,7 +40,20 @@
   },
   {
     "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF Binding",
+    "seq_goal_level2": "Haplotyping",
+    "seq_name": "CPT-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>C</strong>ontiguity-<strong>P</strong>reserving <strong>T</strong>ransposition <strong>seq</strong>uencing",
+    "seq_fullname_old": "contiguity-preserving transposition sequencing",
+    "year": 2014,
+    "paper_title": "In vitro long-range sequence information for de novo genome assembly via transposase contiguity.,Haplotype-resolved whole-genome sequencing by contiguity-preserving transposition and combinatorial indexing.,Haplotype-resolved genome sequencing: experimental methods and applications.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25327137,https://www.ncbi.nlm.nih.gov/pubmed/25326703,https://www.ncbi.nlm.nih.gov/pubmed/25948246",
+    "notes": "An experimental approach for genome-wide haplotyping based on contiguity-preserving transposition (CPT-seq) and combinatorial indexing.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
     "seq_name": "TF_ChIP-seq",
     "plot": 1,
     "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation <strong>seq</strong>uencing",
@@ -65,8 +65,8 @@
     "showRCR": 1
   },
   {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF Binding",
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
     "seq_name": "ChIP-exo",
     "plot": 1,
     "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation with lambda <strong>exo</strong>nuclease digestion followed by high-throughput <strong>seq</strong>uencing",
@@ -78,8 +78,8 @@
     "showRCR": 1
   },
   {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF Binding",
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
     "seq_name": "ULI-NChIP-seq",
     "plot": 1,
     "seq_fullname": "<strong>U</strong>ltra-<strong>L</strong>ow-<strong>I</strong>nput micrococcal nuclease-based native <strong>ChIP</strong> and <strong>seq</strong>uencing",
@@ -91,8 +91,8 @@
     "showRCR": 1
   },
   {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF Binding",
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
     "seq_name": "ReChIP-seq",
     "plot": 1,
     "seq_fullname": "<strong>ReChIP-seq</strong>",
@@ -104,8 +104,8 @@
     "showRCR": 1
   },
   {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF Binding",
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
     "seq_name": "CETCh-seq",
     "plot": 1,
     "seq_fullname": "<strong>C</strong>RISPR <strong>E</strong>pitope <strong>T</strong>agging <strong>Ch</strong>IP with <strong>seq</strong>uencing",
@@ -117,8 +117,8 @@
     "showRCR": 1
   },
   {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF Binding",
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
     "seq_name": "SMILE-seq",
     "plot": 1,
     "seq_fullname": "<strong>S</strong>elective <strong>MI</strong>crofluidics-based <strong>L</strong>igand <strong>E</strong>nrichment followed by <strong>seq</strong>uencing",
@@ -130,8 +130,8 @@
     "showRCR": 1
   },
   {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF Binding",
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
     "seq_name": "ChEC-seq",
     "plot": 1,
     "seq_fullname": "<strong>Ch</strong>romatin <strong>E</strong>ndogenous <strong>C</strong>leavage <strong>seq</strong>uencing",
@@ -179,6 +179,19 @@
     "paper_title": "Genome-wide mapping of in vivo protein-DNA interactions.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17540862",
     "notes": "A widely used sequencing method for mapping the locations of DNA-binding components, such as transcription factors (TFs) and histones with epigenetic modifications.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "Micro-scale histone modification",
+    "seq_name": "uChIP-seq",
+    "plot": 1,
+    "seq_fullname": "micro-scale (<strong>u</strong>) <strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation and <strong>seq</strong>uencing",
+    "seq_fullname_old": "micro-scale chromatin immunoprecipitation and sequencing",
+    "year": 2016,
+    "paper_title": "Broad histone H3K4me3 domains in mouse oocytes modulate maternal-to-zygotic transition",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27626377",
+    "notes": "Uses a small mount of DNA to profile histone modifications; recovers 85% of ENCODE peaks using as few as 500 cells.",
     "showRCR": 1
   },
   {
@@ -585,7 +598,7 @@
     "showRCR": 1
   },
   {
-    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level1": "DNA",
     "seq_goal_level2": "DNA Okazaki fragments",
     "seq_name": "OK-seq",
     "plot": 1,
@@ -598,7 +611,7 @@
     "showRCR": 1
   },
   {
-    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level1": "DNA",
     "seq_goal_level2": "DNA double-strand breaks",
     "seq_name": "GUIDE-seq",
     "plot": 1,
@@ -608,19 +621,6 @@
     "paper_title": "GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25513782",
     "notes": "A useful method for profiling CRISPR off-target events.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "Epigenetics",
-    "seq_goal_level2": "Micro-scale histone modification",
-    "seq_name": "uChIP-seq",
-    "plot": 1,
-    "seq_fullname": "micro-scale (<strong>u</strong>) <strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation and <strong>seq</strong>uencing",
-    "seq_fullname_old": "micro-scale chromatin immunoprecipitation and sequencing",
-    "year": 2016,
-    "paper_title": "Broad histone H3K4me3 domains in mouse oocytes modulate maternal-to-zygotic transition",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27626377",
-    "notes": "Uses a small mount of DNA to profile histone modifications; recovers 85% of ENCODE peaks using as few as 500 cells.",
     "showRCR": 1
   },
   {

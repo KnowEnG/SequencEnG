@@ -10,11 +10,11 @@ const TREE_HEIGHT = 1500;
 
 
 //intro
-const introTragetOne = "DNA";
+const introTragetOne = "Epigenetics";
 const introTargetTwo = "TF Binding";
 const introTargetThree = "TF_ChIP-seq";
 
-const has_step = ["WGS", "WES", "RNA-seq", "CLIP-seq", "TF_ChIP-seq", "Histone_ChIP-seq", "DNase-seq", "ChIA-PET", "Hi-C", "WGBS"];
+const has_step = ["WGS", "WES", "RNA-seq", "CLIP-seq", "TF_ChIP-seq", "Histone_ChIP-seq", "DNase-seq", "ATAC-seq","ChIA-PET", "Hi-C", "WGBS"];
 
 const scRNA = ["Drop-seq", "10X", "Smart-seq", "Microwell-seq", "sci-RNA-seq"];
 
