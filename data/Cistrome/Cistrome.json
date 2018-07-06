@@ -5,7 +5,7 @@
     "nextStepCount": 1,
     "parent": "",
     "step": "Data preprocessing",
-    "Software": "",
+    "Software": "{\"value\": \"Data uploaded can be processed on Galaxy/Cistrome\", \"link\": \"http://cistrome.org/ap/root\"}",
     "Position": "right"
   },
   {

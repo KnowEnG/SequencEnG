@@ -201,7 +201,7 @@
   },
   {
     "order": 3.1,
-    "nextStep": 4,
+    "nextStep": 3.2,
     "nextStepCount": 1,
     "parent": "Quality control after mapping",
     "step": "Viewing mapping statistics",
@@ -220,7 +220,7 @@
     "Paper": "https://www.ncbi.nlm.nih.gov/pubmed/19505943"
   },
   {
-    "order": 3.1,
+    "order": 3.2,
     "nextStep": 4,
     "nextStepCount": 1,
     "parent": "Quality control after mapping",
