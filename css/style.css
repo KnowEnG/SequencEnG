@@ -153,8 +153,6 @@ div.dataTables_wrapper {
   width: 0;
   height: 0;
   opacity: 0;
-
-
   
 }
 
@@ -181,6 +179,10 @@ div.dataTables_wrapper {
   to {
      stroke-dashoffset: 0;
   }
+}
+
+.seq-note{
+  margin: 0px 150px;
 }
 
 
