@@ -10,7 +10,7 @@ const TREE_HEIGHT = 1500;
 
 
 //intro
-const introTragetOne = "DNA";
+const introTragetOne = "Epigenetics";
 const introTargetTwo = "TF binding";
 const introTargetThree = "TF_ChIP-seq";
 
@@ -253,7 +253,7 @@ function searchTree(data, search, path){
       let $divContainer = $("<div>", {id: "desc-detail", "class": "container chart-wrapper"});
     
       // notes, seq_fullname, year, paper_title paper_link
-      let $specContainer = $("<div>", {id: "spec-detail", "class": "container", "data-step":"6", "data-intro":"Information for the current NGS technique, and the reference of original study."});
+      let $specContainer = $("<div>", {id: "spec-detail", "class": "container", "data-step":"6", "data-intro":"Information for the current NGS technique, reference of original study, and other useful references."});
 
 
         let $divRowName = data.seq_fullname?
@@ -299,7 +299,7 @@ function searchTree(data, search, path){
              
 
         let $divRowButton = $("<div>", {"class": "row justify-content-center button-row"});
-        let $has_Step = checkStep?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the five NGS techniques (TF ChIP-seq, Histone ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing) with distinct analysis strategies, interactive data analysis pipelines are available, along with comparison of popular software/tools.'>Analysis Pipeline</button>":"";
+        let $has_Step = checkStep?"<button class='btn btn-success show-chart' data-step='8' data-intro='For 13 NGS techniques (examples are TF ChIP-seq, RNA-seq data analyses), interactive data analysis pipelines are available, along with comparison of popular software/tools. Click the buttons to visit.'>Analysis Pipeline</button>":"";
         if(checkStep){
           $("#chart").empty();
         
@@ -749,10 +749,10 @@ function draw_tree(){
         })
         .attr("data-intro", function(d){
            if(d.data.name === introTragetOne){
-              return "The general sequencing category, including DNA, epigenetics and RNA. i.e. DNA";
+              return "The general sequencing category, including DNA, epigenetics and RNA. i.e. Epigenetics";
           }
           else if(d.data.name === introTargetTwo){
-              return  "The detailed sequencing category, i.e. transcription factor (TF) Binding";
+              return  "The detailed sequencing category, i.e. transcription factor (TF) binding on DNA";
           }
           else if(d.data.name === introTargetThree && d.parent.data.name === introTargetTwo){
               return "NGS techniques as leaves. * Interactive analysis pipelines are available.";

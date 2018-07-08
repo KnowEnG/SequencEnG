@@ -1,54 +1,54 @@
 [
 {
 	"seq_name": "WGS",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. "
+	"note": "Random component in WGS analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments."
 },
 {
 	"seq_name": "WES",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. "
+	"note": "Random component in WES analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments."
 },
 {
 	"seq_name": "RNA-seq",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. If mapping-free methods are used, the expectation maximization step can have random component during optimization as well."
+	"note": "Random components in RNA-seq analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments. When mapping-free methods are used, the expectation maximization step can have a random component during optimization as well. The dimensional reduction method t-SNE is also not deterministic."
 },
 {
 	"seq_name": "scRNA-seq",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. If mapping-free methods are used, the expectation maximization step can have random component during optimization as well. Also, the dimension reduction method t-SNE, if used, is not determinstic."
+	"note": "Random components in scRNA-seq analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments. When mapping-free methods are used, the expectation maximization step can have a random component during optimization as well. The dimensional reduction method t-SNE is also not deterministic."
 },
 {
 	"seq_name": "CLIP-seq",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes."
+	"note": "Random components in CLIP-seq analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments. During peak calling, statistical assessment of peak quality may differ due to sampling procedures."
 },
 {
 	"seq_name": "TF_ChIP-seq",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes."
+	"note": "Random components in TF ChIP-seq analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments. During peak calling, statistical assessment of peak quality may differ due to sampling procedures."
 },
 {
 	"seq_name": "Histone_ChIP-seq",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes."
+	"note": "Random components in Histone ChIP-seq analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments. During peak calling, statistical assessment of peak quality may differ due to sampling procedures."
 },
 {
 	"seq_name": "Hi-C",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. "
+	"note": "Random component in Hi-C analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments."
 },
 {
 	"seq_name": "ChIA-PET",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes."
+	"note": "Random components in ChIA-PET analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments. During peak calling, statistical assessment of peak quality may differ due to sampling procedures."
 },
 {
 	"seq_name": "DNase-seq",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak/hotspot calling, statistics result of peak significance can be different due to sampling processes."
+	"note": "Random component in DNase-seq analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments. During peak calling, statistical assessment of peak quality may differ due to sampling procedures."
 },
 {
 	"seq_name": "ATAC-seq",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes."
+	"note": "Random components in ATAC-seq analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments. During peak calling, statistical assessment of peak quality may differ due to sampling procedures."
 },
 {
 	"seq_name": "Bisulfite sequencing",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same."
+	"note": "Random component in Bisulfite sequencing analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments."
 },
 {
 	"seq_name": "MNase-seq",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same."
+	"note": "Random component in MNase-seq analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments."
 }
 ]
