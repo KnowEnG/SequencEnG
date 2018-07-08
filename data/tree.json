@@ -52,6 +52,58 @@
     "showRCR": 1
   },
   {
+    "seq_goal_level1": "DNA",
+    "seq_goal_level2": "Ribonucleotide incorporation",
+    "seq_name": "Ribose-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>Ribo</strong>nucleotide <strong>seq</strong>uencing",
+    "seq_fullname_old": "Ribonucleotide sequencing",
+    "year": 2015,
+    "paper_title": "Ribose-seq: global mapping of ribonucleotides embedded in genomic DNA",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25622106",
+    "notes": "Maps the genome-wide locations of ribonucleotides that can be incorporated into DNA during eukaryotic DNA replication.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "DNA",
+    "seq_goal_level2": "DNA excision repair",
+    "seq_name": "XR-seq",
+    "plot": 1,
+    "seq_fullname": "E<strong>X</strong>cision <strong>R</strong>epair <strong>seq</strong>uencing",
+    "seq_fullname_old": "Excision repair sequencing",
+    "year": 2015,
+    "paper_title": "Genome-wide analysis of human global and transcription-coupled excision repair of UV damage at single-nucleotide resolution",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25934506",
+    "notes": "Maps the locations of DNA excision caused by DNA repair.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "DNA",
+    "seq_goal_level2": "DNA Okazaki fragments",
+    "seq_name": "OK-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>OK</strong>azaki fragments <strong>seq</strong>uencing",
+    "seq_fullname_old": "Okazaki fragments sequencing",
+    "year": 2016,
+    "paper_title": "Replication landscape of the human genome.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26751768",
+    "notes": "A method for sequenceing purified Okazaki fragments at replication forks.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "DNA",
+    "seq_goal_level2": "DNA double-strand breaks",
+    "seq_name": "GUIDE-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>G</strong>enome-wide, <strong>U</strong>nbiased <strong>I</strong>dentification of <strong>D</strong>ouble strand breaks <strong>E</strong>nabled by <strong>seq</strong>uencing ",
+    "seq_fullname_old": "genome-wide, unbiased identification of DSBs enabled by sequencing ",
+    "year": 2015,
+    "paper_title": "GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25513782",
+    "notes": "A useful method for profiling CRISPR off-target events.",
+    "showRCR": 1
+  },
+  {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "TF binding",
     "seq_name": "TF_ChIP-seq",
@@ -140,32 +192,6 @@
     "paper_title": "ChEC-seq kinetics discriminates transcription factor binding sites by DNA sequence and shape in vivo",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26669278",
     "notes": "A method for measuring protein-DNA binding dynamics; fuses MNase with the protein of interest and uses calcium to control binding affinity and study binding dynamics.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "Ribonucleotide incorporation",
-    "seq_name": "Ribose-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>Ribo</strong>nucleotide <strong>seq</strong>uencing",
-    "seq_fullname_old": "Ribonucleotide sequencing",
-    "year": 2015,
-    "paper_title": "Ribose-seq: global mapping of ribonucleotides embedded in genomic DNA",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25622106",
-    "notes": "Maps the genome-wide locations of ribonucleotides that can be incorporated into DNA during eukaryotic DNA replication.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "DNA excision repair",
-    "seq_name": "XR-seq",
-    "plot": 1,
-    "seq_fullname": "E<strong>X</strong>cision <strong>R</strong>epair <strong>seq</strong>uencing",
-    "seq_fullname_old": "Excision repair sequencing",
-    "year": 2015,
-    "paper_title": "Genome-wide analysis of human global and transcription-coupled excision repair of UV damage at single-nucleotide resolution",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25934506",
-    "notes": "Maps the locations of DNA excision caused by DNA repair.",
     "showRCR": 1
   },
   {
@@ -595,32 +621,6 @@
     "paper_title": "Genome-wide mapping of nucleosome positioning and DNA methylation within individual DNA molecules",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22960375",
     "notes": "Can measure nucleosome locations and DNA methylation status from the same set of DNA, using fewer than 1 million cells.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "DNA Okazaki fragments",
-    "seq_name": "OK-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>OK</strong>azaki fragments <strong>seq</strong>uencing",
-    "seq_fullname_old": "Okazaki fragments sequencing",
-    "year": 2016,
-    "paper_title": "Replication landscape of the human genome.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26751768",
-    "notes": "A method for sequenceing purified Okazaki fragments at replication forks.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "DNA double-strand breaks",
-    "seq_name": "GUIDE-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>G</strong>enome-wide, <strong>U</strong>nbiased <strong>I</strong>dentification of <strong>D</strong>ouble strand breaks <strong>E</strong>nabled by <strong>seq</strong>uencing ",
-    "seq_fullname_old": "genome-wide, unbiased identification of DSBs enabled by sequencing ",
-    "year": 2015,
-    "paper_title": "GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25513782",
-    "notes": "A useful method for profiling CRISPR off-target events.",
     "showRCR": 1
   },
   {
