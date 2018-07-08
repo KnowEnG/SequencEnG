@@ -37,7 +37,7 @@
 },
 {
 	"seq_name": "DNase-seq",
-	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes."
+	"note": "The pipeline has some randomness component, for example, read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak/hotspot calling, statistics result of peak significance can be different due to sampling processes."
 },
 {
 	"seq_name": "ATAC-seq",
