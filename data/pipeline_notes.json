@@ -1,7 +1,7 @@
 [
 {
 	"seq_name": "WGS",
-	"note": "<li> An example description with {\"value\": \"some text\", \"link\": \"some link\"}</li>."
+	"note": "An example description with {\"value\": \"some text\", \"link\": \"some link\"}."
 },
 {
 	"seq_name": "WES",

@@ -10,7 +10,6 @@ const TREE_HEIGHT = 1500;
 
 
 //intro
-
 const introTragetOne = "DNA";
 const introTargetTwo = "TF binding";
 const introTargetThree = "TF_ChIP-seq";

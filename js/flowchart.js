@@ -27,6 +27,8 @@ function showToolTip(e){
 
 
 }
+
+/*hide tooltip*/
 function hideTooltip(e){
   e.stopPropagation();
   $('#tooltip-box').css('visibility', 'hidden');
@@ -35,10 +37,11 @@ function hideTooltip(e){
 
 }
 
+/* load "seq_name (sequence name) " pipeline chart */ 
 var pipeline_load = function(seq_name){
 
-   $("#chart").empty();
-  // var step = ['quality control of reads','read mapping', 'quality control after mapping','differential binding', 'peak calling','peak annotation','motif analysis',  'gene ontology analysis']
+  $("#chart").empty();
+
   var tableHeaders = ["Software","Description","Features","Strength","Limitation","Format_input","Format_output","Platform requirement","Link","Paper","RCR"];
   let name = seq_name;
   if(name==='WGBS'){
@@ -53,6 +56,23 @@ var pipeline_load = function(seq_name){
   name = name.replace('_', " ");
   $(".pipeline-title").text('').append("Flowchart for <span style='color:coral;'>" + name + "</span>");
 
+
+  //get notes about the pipelines 
+  $.getJSON("./data/pipeline_notes.json")
+    .done(function(data){
+      
+      //update it 
+      data.map((curr)=>{
+        if(curr.seq_name === seq_name){
+          $(".seq-note").remove();
+          $(".chart-container").append("<div class='row justify-content-center seq-note'>" + analyzeValueInString(curr.note));
+        }
+
+      });
+
+    });   
+
+
   $.getJSON("./data/" + seq_name + ".json")
     .done(function( data ) {
 
@@ -60,6 +80,8 @@ var pipeline_load = function(seq_name){
       $("#svgContainer svg path").remove();
       var Blocks = {};  
        
+
+       //Make Blocks object using data 
        for(let i= 0; i < data.length; i++){
           let name = data[i].step;
           let key = name.replace(/[^a-zA-Z0-9]/g,''); // steps 
@@ -78,6 +100,7 @@ var pipeline_load = function(seq_name){
           else{
 
             //set a block key as step name
+            //key : step name, value = Block Object 
             Blocks[key] = new Block(name, data[i].order, data[i].parent, data[i].nextStep, data[i].nextStepCount, seq_name);
 
             let parent = Blocks[key].parent;
@@ -105,11 +128,12 @@ var pipeline_load = function(seq_name){
 
        }
 
-       
+       //make step Blocks for pipeline and render 
+       //bind event to each step Blocks 
        for(let key in Blocks){
-       
+          
+          //render the blocks 
           Blocks[key].render();
-        
 
 
           //bind button event 
@@ -355,12 +379,6 @@ var pipeline_load = function(seq_name){
 
             });
 
-             //intro
-             if(!localStorage.getItem('intro_shown')){
-             
-             }
-
-
               
 
           });
@@ -370,7 +388,7 @@ var pipeline_load = function(seq_name){
 
 };
 
-  
+//Connect all step blocks by svg 
 function connectAll(seq_name, Blocks, layout){
  
     let currentLayout = $(layout);
