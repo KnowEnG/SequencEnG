@@ -469,6 +469,7 @@
     "Description": "An optional filtering step on somatic vairants called by Mutect2, based on nucleotide mutation orientation bias. ",
     "Features": "An optional step following GATK - FilterMutectCalls.",
     "Strength": "",
+    "RCR": "",
     "Limitation": "",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",
     "Good for ChIP target: {\"value\":\"TF\",\"text\":\"Transcription Factor, has narrow signal\"} or {\"value\":\"histone\",\"text\":\"Histone modification, has broad signal. Besides, PolII ChIP-seq signal is between the narrow signal as TF has, and the broad signal as histone modification has.\"}": "",
