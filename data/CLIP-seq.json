@@ -166,7 +166,7 @@
     "Software": "STAR",
     "Description": "Spliced Transcripts Alignment to a Reference (STAR) ",
     "Features": "An ultrafast universal RNA-seq aligner. It can also do de novo detection of canonical junctions, and discovers non-canonical splices and chimeric (fusion) transcripts.",
-    "Strength": "It runs fast; can also be used in differential splicing analysis if ran in 2-pass mode. STAR is used by {\"value\": \"ENCODE eCLIP pipeline\", \"link\": \"https://www.encodeproject.org/eclip/\"} (with an additional {\"value\": \"repetitive element removal\", \"text\": \"Removing rRNA, tRNA repeats by mapping to RepBase database. \"} step before read mapping, and duplicate removal step after read mapping). It is also used by {\"value\":\"GATK\",\"link\":\"https://software.broadinstitute.org/gatk/\"} best practices. ",
+    "Strength": "It runs fast; can also be used in differential splicing analysis if run in 2-pass mode. STAR is used by {\"value\": \"ENCODE eCLIP pipeline\", \"link\": \"https://www.encodeproject.org/eclip/\"} (with an additional {\"value\": \"repetitive element removal\", \"text\": \"Removing rRNA, tRNA repeats by mapping to RepBase database. \"} step before read mapping, and duplicate removal step after read mapping). It is also used by {\"value\":\"GATK\",\"link\":\"https://software.broadinstitute.org/gatk/\"} best practices. ",
     "RCR": "",
     "Limitation": "It requires large memory (~27Gb for human genome).",
     "{\"value\" : \"single-end\" , \"text\": \"A read comes from one end of a fragment.\"} or {\"value\":\"paired-end\", \"text\": \"Two reads, paired, come from two ends of a fragment.\"}": "",

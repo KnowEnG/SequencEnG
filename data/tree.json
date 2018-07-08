@@ -9,7 +9,7 @@
     "year": "",
     "paper_title": "Whole genome sequencing, Coming of age: ten years of next-generation sequencing technologies, GATK website, McKenna et al. 2010 Genome Research (GATK framework paper), DePristo et al. 2011 Nature Genetics (GATK best practices 1.x and 2.x paper), Van der Auwera et al. 2013 Current Protocols In Bioinformatics (GATK Best Practices for Variant Discovery v2.x)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/20238084, https://www.ncbi.nlm.nih.gov/pubmed/27184599, https://software.broadinstitute.org/gatk/, http://www.ncbi.nlm.nih.gov/pubmed?term=20644199, http://www.ncbi.nlm.nih.gov/pubmed?term=21478889, http://www.ncbi.nlm.nih.gov/pubmed/?term=25431634",
-    "notes": "A sequencing method for obtaining whole-genome DNA sequences; typically uses short reads and relies on having a reference genome. Different sequencing methods include chain termination sequencing (sanger), sequencing by synthesis, sequencing by ligation, single-molecule real-time sequencing, and Nanopore sequencing, etc.. The figure below shows the steps of sequencing by synthesis.",
+    "notes": "A sequencing method for obtaining whole-genome DNA sequences; typically uses short reads and relies on having a reference genome. Different sequencing methods include chain termination sequencing (sanger), sequencing by synthesis, sequencing by ligation, single-molecule real-time sequencing, and Nanopore sequencing, etc.. The figure below shows the steps of sequencing by synthesis. <p></p>Random component in WGS analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same.",
     "showRCR": 0
   },
   {
@@ -35,7 +35,7 @@
     "year": "",
     "paper_title": "Targeted capture and massively parallel sequencing of 12 human exomes, Exome Sequencing: Current and Future Perspectives",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19684571, https://www.ncbi.nlm.nih.gov/pubmed/26139844",
-    "notes": "A targeted sequencing method for obtaining exonic sequences; can be used to detect exonic mutations; especially suitable for studying Mendelian diseases.",
+    "notes": "A targeted sequencing method for obtaining exonic sequences; can be used to detect exonic mutations; especially suitable for studying Mendelian diseases.  <p></p>Random component in WES analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same.",
     "showRCR": 0
   },
   {
@@ -49,97 +49,6 @@
     "paper_title": "In vitro long-range sequence information for de novo genome assembly via transposase contiguity.,Haplotype-resolved whole-genome sequencing by contiguity-preserving transposition and combinatorial indexing.,Haplotype-resolved genome sequencing: experimental methods and applications.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25327137,https://www.ncbi.nlm.nih.gov/pubmed/25326703,https://www.ncbi.nlm.nih.gov/pubmed/25948246",
     "notes": "An experimental approach for genome-wide haplotyping based on contiguity-preserving transposition (CPT-seq) and combinatorial indexing.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF binding",
-    "seq_name": "TF_ChIP-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation <strong>seq</strong>uencing",
-    "seq_fullname_old": "chromatin immunoprecipitation sequencing",
-    "year": 2007,
-    "paper_title": "Genome-wide mapping of in vivo protein-DNA interactions.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17540862",
-    "notes": "A sequencing method for mapping the locations of chosen DNA-binding proteins, such as transcription factors (TFs) and histones with epigenetic modifications.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF binding",
-    "seq_name": "ChIP-exo",
-    "plot": 1,
-    "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation with lambda <strong>exo</strong>nuclease digestion followed by high-throughput <strong>seq</strong>uencing",
-    "seq_fullname_old": "chromatin immunoprecipitation (ChIP) with lambda exonuclease digestion (exo) followed by high-throughput sequencing",
-    "year": 2011,
-    "paper_title": "Comprehensive genome-wide protein-DNA interactions detected at single-nucleotide resolution.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22153082",
-    "notes": "A variation of ChIP-seq, using an exonuclease to increase the resolution of protein binding site identification; can reach single basepair accuracy.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF binding",
-    "seq_name": "ULI-NChIP-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>U</strong>ltra-<strong>L</strong>ow-<strong>I</strong>nput micrococcal nuclease-based native <strong>ChIP</strong> and <strong>seq</strong>uencing",
-    "seq_fullname_old": "ultra-low-input micrococcal nuclease-based native ChIP and sequencing",
-    "year": 2015,
-    "paper_title": "An ultra-low-input native ChIP-seq protocol for genome-wide profiling of rare cell populations.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25607992",
-    "notes": "A variation of ChIP-seq requiring as few as ~1000 cells to measure transcription binding sites.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF binding",
-    "seq_name": "ReChIP-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>ReChIP-seq</strong>",
-    "seq_fullname_old": "reChIP-seq",
-    "year": 2016,
-    "paper_title": "reChIP-seq reveals widespread bivalency of H3K4me3 and H3K27me3 in CD4(+) memory T cells.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27530917",
-    "notes": "A method for detecting the co-localization of two proteins or patterns, such as transcription facors or epigenetic modifications. The original paper measured the co-localization of H3K4me3 and H3K27me3 in bivalently modified nucleosomes.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF binding",
-    "seq_name": "CETCh-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>C</strong>RISPR <strong>E</strong>pitope <strong>T</strong>agging <strong>Ch</strong>IP with <strong>seq</strong>uencing",
-    "seq_fullname_old": "CRISPR epitope tagging ChIP-seq",
-    "year": 2015,
-    "paper_title": "CETCh-seq: CRISPR epitope tagging ChIP-seq of DNA-binding proteins",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26355004",
-    "notes": "Uses CRISPR/cas9 to engineer transcription factors (especially those lacking good antibodies), followed by ChIP-seq.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF binding",
-    "seq_name": "SMILE-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>S</strong>elective <strong>MI</strong>crofluidics-based <strong>L</strong>igand <strong>E</strong>nrichment followed by <strong>seq</strong>uencing",
-    "seq_fullname_old": "selective microfluidics-based ligand enrichment followed by sequencing",
-    "year": 2017,
-    "paper_title": "SMiLE-seq identifies binding motifs of single and dimeric transcription factors.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28092692",
-    "notes": "Uses a semiautomated microfluidic platform to characterize transcription factor binding affinities.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "TF binding",
-    "seq_name": "ChEC-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>Ch</strong>romatin <strong>E</strong>ndogenous <strong>C</strong>leavage <strong>seq</strong>uencing",
-    "seq_fullname_old": "Chromatin endogenous cleavage sequencing",
-    "year": 2015,
-    "paper_title": "ChEC-seq kinetics discriminates transcription factor binding sites by DNA sequence and shape in vivo",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26669278",
-    "notes": "A method for measuring protein-DNA binding dynamics; fuses MNase with the protein of interest and uses calcium to control binding affinity and study binding dynamics.",
     "showRCR": 1
   },
   {
@@ -169,6 +78,123 @@
     "showRCR": 1
   },
   {
+    "seq_goal_level1": "DNA",
+    "seq_goal_level2": "DNA Okazaki fragments",
+    "seq_name": "OK-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>OK</strong>azaki fragments <strong>seq</strong>uencing",
+    "seq_fullname_old": "Okazaki fragments sequencing",
+    "year": 2016,
+    "paper_title": "Replication landscape of the human genome.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26751768",
+    "notes": "A method for sequenceing purified Okazaki fragments at replication forks.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "DNA",
+    "seq_goal_level2": "DNA double-strand breaks",
+    "seq_name": "GUIDE-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>G</strong>enome-wide, <strong>U</strong>nbiased <strong>I</strong>dentification of <strong>D</strong>ouble strand breaks <strong>E</strong>nabled by <strong>seq</strong>uencing ",
+    "seq_fullname_old": "genome-wide, unbiased identification of DSBs enabled by sequencing ",
+    "year": 2015,
+    "paper_title": "GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25513782",
+    "notes": "A useful method for profiling CRISPR off-target events.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
+    "seq_name": "TF_ChIP-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation <strong>seq</strong>uencing",
+    "seq_fullname_old": "chromatin immunoprecipitation sequencing",
+    "year": 2007,
+    "paper_title": "Genome-wide mapping of in vivo protein-DNA interactions.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17540862",
+    "notes": "A sequencing method for mapping the locations of chosen DNA-binding proteins, such as transcription factors (TFs) and histones with epigenetic modifications. <p></p>Random component in TF ChIP-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
+    "seq_name": "ChIP-exo",
+    "plot": 1,
+    "seq_fullname": "<strong>Ch</strong>romatin <strong>I</strong>mmuno<strong>P</strong>recipitation with lambda <strong>exo</strong>nuclease digestion followed by high-throughput <strong>seq</strong>uencing",
+    "seq_fullname_old": "chromatin immunoprecipitation (ChIP) with lambda exonuclease digestion (exo) followed by high-throughput sequencing",
+    "year": 2011,
+    "paper_title": "Comprehensive genome-wide protein-DNA interactions detected at single-nucleotide resolution.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22153082",
+    "notes": "A variation of ChIP-seq, using an exonuclease to increase the resolution of protein binding site identification; can reach single basepair accuracy.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
+    "seq_name": "ULI-NChIP-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>U</strong>ltra-<strong>L</strong>ow-<strong>I</strong>nput micrococcal nuclease-based native <strong>ChIP</strong> and <strong>seq</strong>uencing",
+    "seq_fullname_old": "ultra-low-input micrococcal nuclease-based native ChIP and sequencing",
+    "year": 2015,
+    "paper_title": "An ultra-low-input native ChIP-seq protocol for genome-wide profiling of rare cell populations.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25607992",
+    "notes": "A variation of ChIP-seq requiring as few as ~1000 cells to measure transcription binding sites.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
+    "seq_name": "ReChIP-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>ReChIP-seq</strong>",
+    "seq_fullname_old": "reChIP-seq",
+    "year": 2016,
+    "paper_title": "reChIP-seq reveals widespread bivalency of H3K4me3 and H3K27me3 in CD4(+) memory T cells.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/27530917",
+    "notes": "A method for detecting the co-localization of two proteins or patterns, such as transcription facors or epigenetic modifications. The original paper measured the co-localization of H3K4me3 and H3K27me3 in bivalently modified nucleosomes.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
+    "seq_name": "CETCh-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>C</strong>RISPR <strong>E</strong>pitope <strong>T</strong>agging <strong>Ch</strong>IP with <strong>seq</strong>uencing",
+    "seq_fullname_old": "CRISPR epitope tagging ChIP-seq",
+    "year": 2015,
+    "paper_title": "CETCh-seq: CRISPR epitope tagging ChIP-seq of DNA-binding proteins",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26355004",
+    "notes": "Uses CRISPR/cas9 to engineer transcription factors (especially those lacking good antibodies), followed by ChIP-seq.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
+    "seq_name": "SMILE-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>S</strong>elective <strong>MI</strong>crofluidics-based <strong>L</strong>igand <strong>E</strong>nrichment followed by <strong>seq</strong>uencing",
+    "seq_fullname_old": "selective microfluidics-based ligand enrichment followed by sequencing",
+    "year": 2017,
+    "paper_title": "SMiLE-seq identifies binding motifs of single and dimeric transcription factors.",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28092692",
+    "notes": "Uses a semiautomated microfluidic platform to characterize transcription factor binding affinities.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "TF binding",
+    "seq_name": "ChEC-seq",
+    "plot": 1,
+    "seq_fullname": "<strong>Ch</strong>romatin <strong>E</strong>ndogenous <strong>C</strong>leavage <strong>seq</strong>uencing",
+    "seq_fullname_old": "Chromatin endogenous cleavage sequencing",
+    "year": 2015,
+    "paper_title": "ChEC-seq kinetics discriminates transcription factor binding sites by DNA sequence and shape in vivo",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26669278",
+    "notes": "A method for measuring protein-DNA binding dynamics; fuses MNase with the protein of interest and uses calcium to control binding affinity and study binding dynamics.",
+    "showRCR": 1
+  },
+  {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Histone modification",
     "seq_name": "Histone_ChIP-seq",
@@ -178,7 +204,7 @@
     "year": 2007,
     "paper_title": "Genome-wide mapping of in vivo protein-DNA interactions.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/17540862",
-    "notes": "A widely used sequencing method for mapping the locations of DNA-binding components, such as transcription factors (TFs) and histones with epigenetic modifications.",
+    "notes": "A widely used sequencing method for mapping the locations of DNA-binding components, such as transcription factors (TFs) and histones with epigenetic modifications. <p></p>Random component in Histone ChIP-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes.",
     "showRCR": 1
   },
   {
@@ -204,7 +230,7 @@
     "year": "",
     "paper_title": "Analysing and interpreting DNA methylation data",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22986265",
-    "notes": "A genome-wide sequencing method for DNA methylation quantification.",
+    "notes": "A genome-wide sequencing method for DNA methylation quantification. <p></p>Random component in WGBS analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same.",
     "showRCR": 0
   },
   {
@@ -321,7 +347,7 @@
     "year": 2012,
     "paper_title": "Ultra-low-input, tagmentation-based whole-genome bisulfite sequencing",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22466172",
-    "notes": "A DNA methylation profiling method that needs only ~10 ng of input DNA,  which is  100-fold less than required by the conventional WGBS; also called t-WGBS (tagmentation based whole genome bisulfite sequencing).",
+    "notes": "A DNA methylation profiling method that needs only ~10 ng of input DNA,  which is  100-fold less than required by the conventional WGBS; also called t-WGBS (tagmentation based whole genome bisulfite sequencing). ",
     "showRCR": 1
   },
   {
@@ -347,7 +373,7 @@
     "year": 2008,
     "paper_title": "High-resolution mapping and characterization of open chromatin across the genome.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18243105",
-    "notes": "A high-throughput sequencing method for mapping genome-wide open chromatin regions.",
+    "notes": "A high-throughput sequencing method for mapping genome-wide open chromatin regions. <p></p>Random component in DNase-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak/hotspot calling, statistics result of peak significance can be different due to sampling processes.",
     "showRCR": 1
   },
   {
@@ -360,7 +386,7 @@
     "year": 2013,
     "paper_title": "Transposition of native chromatin for fast and sensitive epigenomic profiling of open chromatin DNA-binding proteins and nucleosome position",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/24097267",
-    "notes": "A method for mapping genome-wide open chromatin regions, requiring fewer cells than DNase-seq.",
+    "notes": "A method for mapping genome-wide open chromatin regions, requiring fewer cells than DNase-seq. <p></p>Random component in ATAC-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes.",
     "showRCR": 1
   },
   {
@@ -464,7 +490,7 @@
     "year": 2009,
     "paper_title": "Comprehensive mapping of long-range interactions reveals folding principles of the human genome",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19815776",
-    "notes": "A high-throughput method for profiling \"all-vs-all\" genome-wide interactions between any pairs of genomic regions.",
+    "notes": "A high-throughput method for profiling \"all-vs-all\" genome-wide interactions between any pairs of genomic regions. <p></p>Random component in Hi-C analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same.",
     "showRCR": 1
   },
   {
@@ -477,7 +503,7 @@
     "year": 2009,
     "paper_title": "An oestrogen-receptor-alpha-bound human chromatin interactome.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19890323",
-    "notes": "A method for profiling genome-wide interactions between a given protein and any genomic region.",
+    "notes": "A method for profiling genome-wide interactions between a given protein and any genomic region. <p></p>Random component in ChIA-PET analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes.",
     "showRCR": 1
   },
   {
@@ -555,7 +581,7 @@
     "year": 2011,
     "paper_title": "Epigenome characterization at single base-pair resolution",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22025700",
-    "notes": "Maps genome-wide nucleosome locations; utilizes micrococcal nuclease to cut DNA; known to have a GC-content bias.",
+    "notes": "Maps genome-wide nucleosome locations; utilizes micrococcal nuclease to cut DNA; known to have a GC-content bias. <p></p>Random component in MNase-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same.",
     "showRCR": 1
   },
   {
@@ -598,32 +624,6 @@
     "showRCR": 1
   },
   {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "DNA Okazaki fragments",
-    "seq_name": "OK-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>OK</strong>azaki fragments <strong>seq</strong>uencing",
-    "seq_fullname_old": "Okazaki fragments sequencing",
-    "year": 2016,
-    "paper_title": "Replication landscape of the human genome.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26751768",
-    "notes": "A method for sequenceing purified Okazaki fragments at replication forks.",
-    "showRCR": 1
-  },
-  {
-    "seq_goal_level1": "DNA",
-    "seq_goal_level2": "DNA double-strand breaks",
-    "seq_name": "GUIDE-seq",
-    "plot": 1,
-    "seq_fullname": "<strong>G</strong>enome-wide, <strong>U</strong>nbiased <strong>I</strong>dentification of <strong>D</strong>ouble strand breaks <strong>E</strong>nabled by <strong>seq</strong>uencing ",
-    "seq_fullname_old": "genome-wide, unbiased identification of DSBs enabled by sequencing ",
-    "year": 2015,
-    "paper_title": "GUIDE-seq enables genome-wide profiling of off-target cleavage by CRISPR-Cas nucleases.",
-    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/25513782",
-    "notes": "A useful method for profiling CRISPR off-target events.",
-    "showRCR": 1
-  },
-  {
     "seq_goal_level1": "RNA",
     "seq_goal_level2": "RNA",
     "seq_name": "RNA-seq",
@@ -633,7 +633,7 @@
     "year": 2009,
     "paper_title": "RNA-Seq: a revolutionary tool for transcriptomics.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19015660",
-    "notes": "A widely used sequencing method for quantifying gene-level or transcript-level expression.",
+    "notes": "A widely used sequencing method for quantifying gene-level or transcript-level expression. <p></p>Random component in RNA-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. If mapping-free methods are used, the expectation maximization step can have random component during optimization as well.",
     "showRCR": 1
   },
   {
@@ -763,7 +763,7 @@
     "year": 2008,
     "paper_title": "HITS-CLIP: panoramic views of protein-RNA regulation in living cells., A review paper by Uhl et al, 2017",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/18978773, https://www.ncbi.nlm.nih.gov/pubmed/28254606",
-    "notes": "A method for producing a fine-resolution mapping of RBP binding sites; uses a different RNA-RBP cross-linking method compared to PAR-CLIP. See the 2nd paper reference for a review paper including other CLIP-related experimental and computational methods.",
+    "notes": "A method for producing a fine-resolution mapping of RBP binding sites; uses a different RNA-RBP cross-linking method compared to PAR-CLIP. See the 2nd paper reference for a review paper including other CLIP-related experimental and computational methods. <p></p>Random component in CLIP-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. In another major step of peak calling, statistics result of peak significance can be different due to sampling processes.",
     "showRCR": 1
   },
   {
@@ -841,7 +841,7 @@
     "year": 2015,
     "paper_title": "Highly Parallel Genome-wide Expression Profiling of Individual Cells Using Nanoliter Droplets, Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq (Current method): loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/26000488, https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": "A single-cell technique for quickly profiling thousands of individual cells by separating them into nanoliter-sized aqueous droplets, associating a different barcode with each cell’s RNA, and sequencing them all together. See the references below for other scRNA-seq techniques.",
+    "notes": "A single-cell technique for quickly profiling thousands of individual cells by separating them into nanoliter-sized aqueous droplets, associating a different barcode with each cell’s RNA, and sequencing them all together. See the references below for other scRNA-seq techniques. <p></p>Random component in scRNA-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. If mapping-free methods are used, the expectation maximization step can have random component during optimization as well. Also, the dimension reduction method t-SNE, if used, is not determinstic.",
     "showRCR": 1
   },
  {
@@ -854,7 +854,7 @@
     "year": 2012,
     "paper_title": "Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq: loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": " The Chromium system can be used  for single cell RNA-seq, linked-reads sequencing, and other sequencing projects. The steps are similar to Drop-seq, but may have higher cell capture efficiency. See the references below for other scRNA-seq techniques.",
+    "notes": " The Chromium system can be used  for single cell RNA-seq, linked-reads sequencing, and other sequencing projects. The steps are similar to Drop-seq, but may have higher cell capture efficiency. See the references below for other scRNA-seq techniques. <p></p>Random component in scRNA-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. If mapping-free methods are used, the expectation maximization step can have random component during optimization as well. Also, the dimension reduction method t-SNE, if used, is not determinstic.",
     "showRCR": 0
   },
    {
@@ -867,7 +867,7 @@
     "year": 2012,
     "paper_title": "Full-length mRNA-Seq from single-cell levels of RNA and individual circulating tumor cells, Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq: loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/22820318, https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": "A robust mRNA-Seq protocol that is also applicable to single cell assays; designed to improve on mRNA coverage. The second version, Smart-seq2, provides improvements over Smart-seq. See the references below for other scRNA-seq techniques.",
+    "notes": "A robust mRNA-Seq protocol that is also applicable to single cell assays; designed to improve on mRNA coverage. The second version, Smart-seq2, provides improvements over Smart-seq. See the references below for other scRNA-seq techniques. <p></p>Random component in scRNA-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. If mapping-free methods are used, the expectation maximization step can have random component during optimization as well. Also, the dimension reduction method t-SNE, if used, is not determinstic.",
     "showRCR": 1
   },
    {
@@ -880,7 +880,7 @@
     "year": 2018,
     "paper_title": "Mapping the Mouse Cell Atlas by Microwell-Seq, Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq: loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/29474909, https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": "A high-throughput and low-cost scRNA-seq platform using simple, inexpensive devices. See the references below for other scRNA-seq techniques.",
+    "notes": "A high-throughput and low-cost scRNA-seq platform using simple, inexpensive devices. See the references below for other scRNA-seq techniques. <p></p>Random component in scRNA-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. If mapping-free methods are used, the expectation maximization step can have random component during optimization as well. Also, the dimension reduction method t-SNE, if used, is not determinstic.",
     "showRCR": 1
   },
   {
@@ -893,7 +893,7 @@
     "year": 2017,
     "paper_title": "Comprehensive single-cell transcriptional profiling of a multicellular organism, Exponential scaling of single-cell RNA-seq in the past decade,  Single cells are manually picked (Tang et al. 2009; 1 cell.), SMART-seq: using FACS sorting (Ramskold et al. 2012; 12 cells.), single cell RNA-seq using fluidigm system (Brennecke et al. 2013; 100 cells.), CytoSeq: depositing cells into picowells (Fan et al 2015; 15000 cells.), Drop-seq: loading cells in nano-droplets (Macoscko et al 2015; 44808 cells.), STRT-seq (Islam et al. 2011), CEL-seq (Hashimshony et al. 2012), MARS-seq (Jaitin et al. 2014), inDrop (Klein et al. 2015), DroNc-seq (Habib et al. 2017), Seq-Well (Gierahn et al. 2017), SPLiT-seq (Rosenberg et al. 2018)",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28818938, https://www.nature.com/articles/nprot.2017.149, https://www.ncbi.nlm.nih.gov/pubmed/19349980, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3467340/, https://www.nature.com/articles/nmeth.2645, http://science.sciencemag.org/content/347/6222/1258367, https://www.cell.com/abstract/S0092-8674(15)00549-8?code=cell-site, https://genome.cshlp.org/content/21/7/1160.full, https://www.cell.com/cell-reports/abstract/S2211-1247(12)00228-8?code=cell-site, http://science.sciencemag.org/content/343/6172/776, https://www.cell.com/cell/fulltext/S0092-8674(15)00500-0, https://www.nature.com/articles/nmeth.4407, https://www.nature.com/articles/nmeth.4179, http://science.sciencemag.org/content/early/2018/03/14/science.aam8999",
-    "notes": "Uses a two-stage barcoding technique to label RNA from individual cells. Besides sci-RNA-seq, there are other single-cell RNA-seq techniques. See the references below for other scRNA-seq techniques.",
+    "notes": "Uses a two-stage barcoding technique to label RNA from individual cells. Besides sci-RNA-seq, there are other single-cell RNA-seq techniques. See the references below for other scRNA-seq techniques. <p></p>Random component in scRNA-seq analysis: The pipeline has some randomness component, for example, the read mapping step may not be determinstic: Bowtie2, if used, assigns mapping location of a read randomly if mapping score are the same. If mapping-free methods are used, the expectation maximization step can have random component during optimization as well. Also, the dimension reduction method t-SNE, if used, is not determinstic.",
     "showRCR": 1
   }
 ]

@@ -14,10 +14,10 @@ const introTragetOne = "DNA";
 const introTargetTwo = "TF binding";
 const introTargetThree = "TF_ChIP-seq";
 
-const has_step = ["WGS", "WES", "RNA-seq", "CLIP-seq", "TF_ChIP-seq", "Histone_ChIP-seq", "DNase-seq", "ATAC-seq","ChIA-PET", "Hi-C", "WGBS"];
+const has_step = ["WGS", "WES", "RNA-seq", "CLIP-seq", "TF_ChIP-seq", "Histone_ChIP-seq", "DNase-seq", "ATAC-seq","ChIA-PET", "Hi-C", "WGBS", "MNase-seq"];
 
-const scRNA = [];
-// const scRNA = ["Drop-seq", "10X", "Smart-seq", "Microwell-seq", "sci-RNA-seq"];
+//const scRNA = [];
+const scRNA = ["Drop-seq", "10X", "Smart-seq", "Microwell-seq", "sci-RNA-seq"];
 
 var nodeDepthOne = 150;
 var nodeDepthTwo = 220;
@@ -296,8 +296,8 @@ function searchTree(data, search, path){
           }
             
                         
-
              
+
         let $divRowButton = $("<div>", {"class": "row justify-content-center button-row"});
         let $has_Step = checkStep?"<button class='btn btn-success show-chart' data-step='8' data-intro='For the five NGS techniques (TF ChIP-seq, Histone ChIP-seq, RNA-seq, Hi-C, Bisulfite sequencing) with distinct analysis strategies, interactive data analysis pipelines are available, along with comparison of popular software/tools.'>Analysis Pipeline</button>":"";
         if(checkStep){
