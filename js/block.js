@@ -66,9 +66,9 @@ Block.prototype.push_data = function(data, key) {
 			let pmids = links[links.length - 1];
 			let self = this; 
 			 $.ajax('https://icite.od.nih.gov/api/pubs?pmids=' + pmids).done(function(response){
-			
-	            self.data[key]['RCR'] = parseFloat(response.data[0].relative_citation_ratio).toFixed(2) || 0;
-
+				
+				let rcrFloat = parseFloat(response.data[0].relative_citation_ratio).toFixed(2);
+	            self.data[key]['RCR'] =  isNaN(rcrFloat)?0:rcrFloat;
 
 	        });
 
