@@ -7,7 +7,7 @@
    
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item">
-        <a class="nav-link active">Home </a>
+        <a class="nav-link page-content active">Home </a>
       </li>
      <!--  <li class="nav-item">
           <a class="nav-link" >About</a>
@@ -15,12 +15,21 @@
       <li class="nav-item">
           <a target="_blank" class="nav-link" href="https://github.com/KnowEnG/SequencEnG">Github</a>
       </li>
+    
+      <li class="nav-item">
+          <a class="nav-link page-content" >Resources</a>
+      </li>
 
       <li class="nav-item">
-          <a class="nav-link" >Resources</a>
+        <a class="nav-link" href="http://education.knoweng.org/clustereng/" target="_blank">ClusterEnG</a>
       </li>
+
       <li class="nav-item">
-          <a class="nav-link" >Contact</a>
+        <a class="nav-link" href="http://teacheng.illinois.edu/" target="_blank">TeachEnG</a>
+      </li>
+
+      <li class="nav-item">
+          <a class="nav-link page-content" >Contact</a>
       </li>
      
       
@@ -53,12 +62,13 @@
 
 <script type="text/javascript">
   let other = ['About','Contact','Resources'];
-  $(".nav-link").on('click',function(e){
-    $('.nav-link').removeClass('active');
-    $(this).addClass('active');
+  $(".page-content").on('click',function(e){
+    $('.page-content').removeClass('active');
+  $(this).addClass('active');
     let text = $(this).text();
   
     if(other.indexOf(text)!==-1){
+        
         $(".main-home").hide();
         $("#other").load("./docs/" + text + ".html");
     }
