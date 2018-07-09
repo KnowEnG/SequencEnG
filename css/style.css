@@ -465,6 +465,12 @@ footer .img-box img{
     border-color: transparent black transparent transparent;
 }
 
+/*CONTACT*/
+.contact-img{
+  height:24px;
+  margin-bottom: 3px;
+}
+
 /*MODAL*/
 .modal{
    display: none; /* Hidden by default */
