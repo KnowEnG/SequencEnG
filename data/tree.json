@@ -522,6 +522,19 @@
   {
     "seq_goal_level1": "Epigenetics",
     "seq_goal_level2": "Chromosome interaction ",
+    "seq_name": "GAM",
+    "plot": 1,
+    "seq_fullname": "<strong>G</strong>enome <strong>A</strong>rchitecture <strong>M</strong>apping",
+    "seq_fullname_old": "in situ DNase Hi-C",
+    "year": 2017,
+    "paper_title": "Complex multi-enhancer contacts captured by Genome Architecture Mapping (GAM)",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/28273065",
+    "notes": "A ligation-free method (cf. 3C-related methods) for \"measuring chromatin contacts and other features of three-dimensional chromatin topology\", by slicing the nucleus into sections containing physically proximal chromatin regions. ",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "Epigenetics",
+    "seq_goal_level2": "Chromosome interaction ",
     "seq_name": "RICC-seq",
     "plot": 1,
     "seq_fullname": "ionizing <strong>R</strong>adiation-<strong>I</strong>nduced spatially <strong>C</strong>orrelated <strong>C</strong>leavage of DNA with <strong>seq</strong>uencing",
@@ -634,6 +647,19 @@
     "paper_title": "RNA-Seq: a revolutionary tool for transcriptomics.",
     "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/19015660",
     "notes": "A widely used sequencing method for quantifying gene-level or transcript-level expression. <p></p>Random component in RNA-seq analysis: The pipeline may have some randomness; for example, Bowtie2 may randomly select a location from equally good alignments. When mapping-free methods are used, the expectation maximization step can have a random component during optimization as well.",
+    "showRCR": 1
+  },
+  {
+    "seq_goal_level1": "RNA",
+    "seq_goal_level2": "Transcription boundaries",
+    "seq_name": "GIS",
+    "plot": 1,
+    "seq_fullname": "<strong>G</strong>ene <strong>I</strong>dentification <strong>S</strong>ignature",
+    "seq_fullname_old": "Gene identification signature (GIS) ",
+    "year": 2005,
+    "paper_title": "Gene identification signature (GIS) analysis for transcriptome characterization and genome annotation, DNA-PET with the similar terminal-ligation idea measuring DNA structure variants, ChIP-PET with the similar terminal-ligation idea measuring TF binding boundaries, A Paired-End Tag (PET) review paper (2009)",
+    "paper_link": "https://www.ncbi.nlm.nih.gov/pubmed/15782207, https://www.ncbi.nlm.nih.gov/pubmed/23029419, https://www.ncbi.nlm.nih.gov/pubmed/16413492, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3807531/",
+    "notes": "A DNA tag sequencing technique that maps the 5' and 3' ends of transcripts by concatenating cDNA. ",
     "showRCR": 1
   },
   {
